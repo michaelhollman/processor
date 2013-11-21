@@ -1,14 +1,8 @@
-processor
+RAIK 184H Final Project
 =========
 
-Final project for RAIK 284H Fall 2013
-
-Built using Quartus II Web Edition 9.0 sp2 for the Altera FLEX 10K.
+Final project for RAIK 284H (Computer Systems, a Programmer's Perspective) during the Fall 2013 semester.  This project consists of an 8-bit RISC Processor and an Assembler to build programs for the processor.
 
 Built by [michaelhollman](https://github.com/michaelhollman) and [ryanerdmann](https://github.com/ryanerdmann)
 
-See README.md in subdirectories for specifications and documentation.
-
----
-
-Todo: build a processor.
+See README.md in the processor/ and assembler/ subdirectories for specifications and documentation.
