@@ -5,4 +5,6 @@ Final project for RAIK 284H (Computer Systems, a Programmer's Perspective) durin
 
 Built by [michaelhollman](https://github.com/michaelhollman) and [ryanerdmann](https://github.com/ryanerdmann)
 
-See README.md in the processor/ and assembler/ subdirectories for specifications and documentation.
+See [`processor/README.md`](processor/README.md) and [`assembler/README.md`](processor/README.md) for component specific information.
+
+See [`docs/`](docs/) for assignment specifications and documentation.
