@@ -7,7 +7,7 @@ Built using Quartus II Web Edition 9.0 sp2 for the Altera FLEX 10K.
 
 Built by [michaelhollman](https://github.com/michaelhollman) and [ryanerdmann](https://github.com/ryanerdmann)
 
-See [`docs/`](docs/) for assignment specifications and documentation.
+See README.md in subdirectories for specifications and documentation.
 
 ---
 
