@@ -1,0 +1,322 @@
+Classic Timing Analyzer report for ALU
+Sun Dec 15 00:46:27 2013
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. tsu
+  7. tco
+  8. th
+  9. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                         ;
++------------------------------+-------+---------------+-------------+-----------------+-----------------+------------+------------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time ; From            ; To              ; From Clock ; To Clock   ; Failed Paths ;
++------------------------------+-------+---------------+-------------+-----------------+-----------------+------------+------------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 13.500 ns   ; inputOne[6]     ; output[6]$latch ; --         ; aluCode[1] ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 29.400 ns   ; output[1]$latch ; output[1]       ; aluCode[0] ; --         ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 7.100 ns    ; inputOne[1]     ; output[1]$latch ; --         ; aluCode[0] ; 0            ;
+; Total number of failed paths ;       ;               ;             ;                 ;                 ;            ;            ; 0            ;
++------------------------------+-------+---------------+-------------+-----------------+-----------------+------------+------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EPF10K70RC240-4    ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; aluCode[1]      ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; aluCode[2]      ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; aluCode[0]      ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------+
+; tsu                                                                            ;
++-------+--------------+------------+-------------+-----------------+------------+
+; Slack ; Required tsu ; Actual tsu ; From        ; To              ; To Clock   ;
++-------+--------------+------------+-------------+-----------------+------------+
+; N/A   ; None         ; 13.500 ns  ; inputOne[6] ; output[6]$latch ; aluCode[1] ;
+; N/A   ; None         ; 13.200 ns  ; inputOne[6] ; output[6]$latch ; aluCode[2] ;
+; N/A   ; None         ; 13.200 ns  ; inputOne[6] ; output[6]$latch ; aluCode[0] ;
+; N/A   ; None         ; 11.700 ns  ; inputTwo[7] ; output[7]$latch ; aluCode[1] ;
+; N/A   ; None         ; 11.700 ns  ; inputTwo[6] ; output[6]$latch ; aluCode[1] ;
+; N/A   ; None         ; 11.700 ns  ; inputTwo[5] ; output[5]$latch ; aluCode[1] ;
+; N/A   ; None         ; 11.400 ns  ; inputTwo[7] ; output[7]$latch ; aluCode[2] ;
+; N/A   ; None         ; 11.400 ns  ; inputTwo[7] ; output[7]$latch ; aluCode[0] ;
+; N/A   ; None         ; 11.400 ns  ; inputTwo[6] ; output[6]$latch ; aluCode[2] ;
+; N/A   ; None         ; 11.400 ns  ; inputTwo[6] ; output[6]$latch ; aluCode[0] ;
+; N/A   ; None         ; 11.400 ns  ; inputTwo[5] ; output[5]$latch ; aluCode[2] ;
+; N/A   ; None         ; 11.400 ns  ; inputTwo[5] ; output[5]$latch ; aluCode[0] ;
+; N/A   ; None         ; 10.000 ns  ; inputOne[7] ; output[7]$latch ; aluCode[1] ;
+; N/A   ; None         ; 10.000 ns  ; inputOne[5] ; output[5]$latch ; aluCode[1] ;
+; N/A   ; None         ; 9.700 ns   ; inputOne[7] ; output[7]$latch ; aluCode[2] ;
+; N/A   ; None         ; 9.700 ns   ; inputOne[7] ; output[7]$latch ; aluCode[0] ;
+; N/A   ; None         ; 9.700 ns   ; inputOne[5] ; output[5]$latch ; aluCode[2] ;
+; N/A   ; None         ; 9.700 ns   ; inputOne[5] ; output[5]$latch ; aluCode[0] ;
+; N/A   ; None         ; 8.100 ns   ; inputOne[4] ; output[4]$latch ; aluCode[1] ;
+; N/A   ; None         ; 8.100 ns   ; inputOne[3] ; output[3]$latch ; aluCode[1] ;
+; N/A   ; None         ; 7.800 ns   ; inputTwo[4] ; output[4]$latch ; aluCode[1] ;
+; N/A   ; None         ; 7.800 ns   ; inputOne[4] ; output[4]$latch ; aluCode[2] ;
+; N/A   ; None         ; 7.800 ns   ; inputOne[4] ; output[4]$latch ; aluCode[0] ;
+; N/A   ; None         ; 7.800 ns   ; inputTwo[3] ; output[3]$latch ; aluCode[1] ;
+; N/A   ; None         ; 7.800 ns   ; inputOne[3] ; output[3]$latch ; aluCode[2] ;
+; N/A   ; None         ; 7.800 ns   ; inputOne[3] ; output[3]$latch ; aluCode[0] ;
+; N/A   ; None         ; 7.500 ns   ; inputTwo[4] ; output[4]$latch ; aluCode[2] ;
+; N/A   ; None         ; 7.500 ns   ; inputTwo[4] ; output[4]$latch ; aluCode[0] ;
+; N/A   ; None         ; 7.500 ns   ; inputTwo[3] ; output[3]$latch ; aluCode[2] ;
+; N/A   ; None         ; 7.500 ns   ; inputTwo[3] ; output[3]$latch ; aluCode[0] ;
+; N/A   ; None         ; 5.500 ns   ; inputOne[2] ; output[2]$latch ; aluCode[1] ;
+; N/A   ; None         ; 5.200 ns   ; inputOne[2] ; output[2]$latch ; aluCode[2] ;
+; N/A   ; None         ; 5.200 ns   ; inputOne[2] ; output[2]$latch ; aluCode[0] ;
+; N/A   ; None         ; 5.200 ns   ; inputTwo[1] ; output[1]$latch ; aluCode[1] ;
+; N/A   ; None         ; 4.900 ns   ; inputTwo[1] ; output[1]$latch ; aluCode[2] ;
+; N/A   ; None         ; 4.900 ns   ; inputTwo[1] ; output[1]$latch ; aluCode[0] ;
+; N/A   ; None         ; 2.300 ns   ; inputTwo[2] ; output[2]$latch ; aluCode[1] ;
+; N/A   ; None         ; 2.100 ns   ; inputOne[0] ; output[0]$latch ; aluCode[1] ;
+; N/A   ; None         ; 2.000 ns   ; inputTwo[2] ; output[2]$latch ; aluCode[2] ;
+; N/A   ; None         ; 2.000 ns   ; inputTwo[2] ; output[2]$latch ; aluCode[0] ;
+; N/A   ; None         ; 1.800 ns   ; inputTwo[0] ; output[0]$latch ; aluCode[1] ;
+; N/A   ; None         ; 1.800 ns   ; inputOne[0] ; output[0]$latch ; aluCode[2] ;
+; N/A   ; None         ; 1.800 ns   ; inputOne[0] ; output[0]$latch ; aluCode[0] ;
+; N/A   ; None         ; 1.500 ns   ; inputTwo[0] ; output[0]$latch ; aluCode[2] ;
+; N/A   ; None         ; 1.500 ns   ; inputTwo[0] ; output[0]$latch ; aluCode[0] ;
+; N/A   ; None         ; -1.200 ns  ; inputOne[1] ; output[1]$latch ; aluCode[1] ;
+; N/A   ; None         ; -1.500 ns  ; inputOne[1] ; output[1]$latch ; aluCode[2] ;
+; N/A   ; None         ; -1.500 ns  ; inputOne[1] ; output[1]$latch ; aluCode[0] ;
++-------+--------------+------------+-------------+-----------------+------------+
+
+
++------------------------------------------------------------------------------+
+; tco                                                                          ;
++-------+--------------+------------+-----------------+-----------+------------+
+; Slack ; Required tco ; Actual tco ; From            ; To        ; From Clock ;
++-------+--------------+------------+-----------------+-----------+------------+
+; N/A   ; None         ; 29.400 ns  ; output[2]$latch ; output[2] ; aluCode[2] ;
+; N/A   ; None         ; 29.400 ns  ; output[2]$latch ; output[2] ; aluCode[0] ;
+; N/A   ; None         ; 29.400 ns  ; output[1]$latch ; output[1] ; aluCode[2] ;
+; N/A   ; None         ; 29.400 ns  ; output[1]$latch ; output[1] ; aluCode[0] ;
+; N/A   ; None         ; 29.100 ns  ; output[2]$latch ; output[2] ; aluCode[1] ;
+; N/A   ; None         ; 29.100 ns  ; output[1]$latch ; output[1] ; aluCode[1] ;
+; N/A   ; None         ; 26.600 ns  ; output[4]$latch ; output[4] ; aluCode[2] ;
+; N/A   ; None         ; 26.600 ns  ; output[4]$latch ; output[4] ; aluCode[0] ;
+; N/A   ; None         ; 26.600 ns  ; output[3]$latch ; output[3] ; aluCode[2] ;
+; N/A   ; None         ; 26.600 ns  ; output[3]$latch ; output[3] ; aluCode[0] ;
+; N/A   ; None         ; 26.600 ns  ; output[0]$latch ; output[0] ; aluCode[2] ;
+; N/A   ; None         ; 26.600 ns  ; output[0]$latch ; output[0] ; aluCode[0] ;
+; N/A   ; None         ; 26.300 ns  ; output[4]$latch ; output[4] ; aluCode[1] ;
+; N/A   ; None         ; 26.300 ns  ; output[3]$latch ; output[3] ; aluCode[1] ;
+; N/A   ; None         ; 26.300 ns  ; output[0]$latch ; output[0] ; aluCode[1] ;
+; N/A   ; None         ; 22.700 ns  ; output[6]$latch ; output[6] ; aluCode[2] ;
+; N/A   ; None         ; 22.700 ns  ; output[6]$latch ; output[6] ; aluCode[0] ;
+; N/A   ; None         ; 22.600 ns  ; output[7]$latch ; output[7] ; aluCode[2] ;
+; N/A   ; None         ; 22.600 ns  ; output[7]$latch ; output[7] ; aluCode[0] ;
+; N/A   ; None         ; 22.400 ns  ; output[6]$latch ; output[6] ; aluCode[1] ;
+; N/A   ; None         ; 22.300 ns  ; output[7]$latch ; output[7] ; aluCode[1] ;
+; N/A   ; None         ; 22.200 ns  ; output[5]$latch ; output[5] ; aluCode[2] ;
+; N/A   ; None         ; 22.200 ns  ; output[5]$latch ; output[5] ; aluCode[0] ;
+; N/A   ; None         ; 21.900 ns  ; output[5]$latch ; output[5] ; aluCode[1] ;
++-------+--------------+------------+-----------------+-----------+------------+
+
+
++--------------------------------------------------------------------------------------+
+; th                                                                                   ;
++---------------+-------------+-----------+-------------+-----------------+------------+
+; Minimum Slack ; Required th ; Actual th ; From        ; To              ; To Clock   ;
++---------------+-------------+-----------+-------------+-----------------+------------+
+; N/A           ; None        ; 7.100 ns  ; inputOne[1] ; output[1]$latch ; aluCode[2] ;
+; N/A           ; None        ; 7.100 ns  ; inputOne[1] ; output[1]$latch ; aluCode[0] ;
+; N/A           ; None        ; 6.800 ns  ; inputOne[1] ; output[1]$latch ; aluCode[1] ;
+; N/A           ; None        ; 4.100 ns  ; inputTwo[0] ; output[0]$latch ; aluCode[2] ;
+; N/A           ; None        ; 4.100 ns  ; inputTwo[0] ; output[0]$latch ; aluCode[0] ;
+; N/A           ; None        ; 3.800 ns  ; inputTwo[0] ; output[0]$latch ; aluCode[1] ;
+; N/A           ; None        ; 3.800 ns  ; inputOne[0] ; output[0]$latch ; aluCode[2] ;
+; N/A           ; None        ; 3.800 ns  ; inputOne[0] ; output[0]$latch ; aluCode[0] ;
+; N/A           ; None        ; 3.600 ns  ; inputTwo[2] ; output[2]$latch ; aluCode[2] ;
+; N/A           ; None        ; 3.600 ns  ; inputTwo[2] ; output[2]$latch ; aluCode[0] ;
+; N/A           ; None        ; 3.500 ns  ; inputOne[0] ; output[0]$latch ; aluCode[1] ;
+; N/A           ; None        ; 3.300 ns  ; inputTwo[2] ; output[2]$latch ; aluCode[1] ;
+; N/A           ; None        ; 0.700 ns  ; inputTwo[1] ; output[1]$latch ; aluCode[2] ;
+; N/A           ; None        ; 0.700 ns  ; inputTwo[1] ; output[1]$latch ; aluCode[0] ;
+; N/A           ; None        ; 0.400 ns  ; inputOne[2] ; output[2]$latch ; aluCode[2] ;
+; N/A           ; None        ; 0.400 ns  ; inputOne[2] ; output[2]$latch ; aluCode[0] ;
+; N/A           ; None        ; 0.400 ns  ; inputTwo[1] ; output[1]$latch ; aluCode[1] ;
+; N/A           ; None        ; 0.100 ns  ; inputOne[2] ; output[2]$latch ; aluCode[1] ;
+; N/A           ; None        ; -1.900 ns ; inputTwo[4] ; output[4]$latch ; aluCode[2] ;
+; N/A           ; None        ; -1.900 ns ; inputTwo[4] ; output[4]$latch ; aluCode[0] ;
+; N/A           ; None        ; -1.900 ns ; inputTwo[3] ; output[3]$latch ; aluCode[2] ;
+; N/A           ; None        ; -1.900 ns ; inputTwo[3] ; output[3]$latch ; aluCode[0] ;
+; N/A           ; None        ; -2.200 ns ; inputTwo[4] ; output[4]$latch ; aluCode[1] ;
+; N/A           ; None        ; -2.200 ns ; inputOne[4] ; output[4]$latch ; aluCode[2] ;
+; N/A           ; None        ; -2.200 ns ; inputOne[4] ; output[4]$latch ; aluCode[0] ;
+; N/A           ; None        ; -2.200 ns ; inputTwo[3] ; output[3]$latch ; aluCode[1] ;
+; N/A           ; None        ; -2.200 ns ; inputOne[3] ; output[3]$latch ; aluCode[2] ;
+; N/A           ; None        ; -2.200 ns ; inputOne[3] ; output[3]$latch ; aluCode[0] ;
+; N/A           ; None        ; -2.500 ns ; inputOne[4] ; output[4]$latch ; aluCode[1] ;
+; N/A           ; None        ; -2.500 ns ; inputOne[3] ; output[3]$latch ; aluCode[1] ;
+; N/A           ; None        ; -4.100 ns ; inputOne[7] ; output[7]$latch ; aluCode[2] ;
+; N/A           ; None        ; -4.100 ns ; inputOne[7] ; output[7]$latch ; aluCode[0] ;
+; N/A           ; None        ; -4.100 ns ; inputOne[5] ; output[5]$latch ; aluCode[2] ;
+; N/A           ; None        ; -4.100 ns ; inputOne[5] ; output[5]$latch ; aluCode[0] ;
+; N/A           ; None        ; -4.400 ns ; inputOne[7] ; output[7]$latch ; aluCode[1] ;
+; N/A           ; None        ; -4.400 ns ; inputOne[5] ; output[5]$latch ; aluCode[1] ;
+; N/A           ; None        ; -5.800 ns ; inputTwo[7] ; output[7]$latch ; aluCode[2] ;
+; N/A           ; None        ; -5.800 ns ; inputTwo[7] ; output[7]$latch ; aluCode[0] ;
+; N/A           ; None        ; -5.800 ns ; inputTwo[6] ; output[6]$latch ; aluCode[2] ;
+; N/A           ; None        ; -5.800 ns ; inputTwo[6] ; output[6]$latch ; aluCode[0] ;
+; N/A           ; None        ; -5.800 ns ; inputTwo[5] ; output[5]$latch ; aluCode[2] ;
+; N/A           ; None        ; -5.800 ns ; inputTwo[5] ; output[5]$latch ; aluCode[0] ;
+; N/A           ; None        ; -6.100 ns ; inputTwo[7] ; output[7]$latch ; aluCode[1] ;
+; N/A           ; None        ; -6.100 ns ; inputTwo[6] ; output[6]$latch ; aluCode[1] ;
+; N/A           ; None        ; -6.100 ns ; inputTwo[5] ; output[5]$latch ; aluCode[1] ;
+; N/A           ; None        ; -7.600 ns ; inputOne[6] ; output[6]$latch ; aluCode[2] ;
+; N/A           ; None        ; -7.600 ns ; inputOne[6] ; output[6]$latch ; aluCode[0] ;
+; N/A           ; None        ; -7.900 ns ; inputOne[6] ; output[6]$latch ; aluCode[1] ;
++---------------+-------------+-----------+-------------+-----------------+------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sun Dec 15 00:46:27 2013
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off ALU -c ALU
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "output[0]$latch" is a latch
+    Warning: Node "output[1]$latch" is a latch
+    Warning: Node "output[2]$latch" is a latch
+    Warning: Node "output[3]$latch" is a latch
+    Warning: Node "output[4]$latch" is a latch
+    Warning: Node "output[5]$latch" is a latch
+    Warning: Node "output[6]$latch" is a latch
+    Warning: Node "output[7]$latch" is a latch
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "aluCode[1]" is a latch enable and/or memory write/read enable. Will not compute fmax for this pin.
+    Info: Assuming node "aluCode[2]" is a latch enable and/or memory write/read enable. Will not compute fmax for this pin.
+    Info: Assuming node "aluCode[0]" is a latch enable and/or memory write/read enable. Will not compute fmax for this pin.
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected gated clock "Equal0~0" as buffer
+Info: tsu for register "output[6]$latch" (data pin = "inputOne[6]", clock pin = "aluCode[1]") is 13.500 ns
+    Info: + Longest pin to register delay is 22.700 ns
+        Info: 1: + IC(0.000 ns) + CELL(10.300 ns) = 10.300 ns; Loc. = PIN_226; Fanout = 1; PIN Node = 'inputOne[6]'
+        Info: 2: + IC(6.500 ns) + CELL(2.700 ns) = 19.500 ns; Loc. = LC4_F42; Fanout = 1; COMB Node = 'output~6'
+        Info: 3: + IC(0.500 ns) + CELL(2.700 ns) = 22.700 ns; Loc. = LC8_F42; Fanout = 1; REG Node = 'output[6]$latch'
+        Info: Total cell delay = 15.700 ns ( 69.16 % )
+        Info: Total interconnect delay = 7.000 ns ( 30.84 % )
+    Info: + Micro setup delay of destination is 5.600 ns
+    Info: - Shortest clock path from clock "aluCode[1]" to destination register is 14.800 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_211; Fanout = 1; CLK Node = 'aluCode[1]'
+        Info: 2: + IC(6.600 ns) + CELL(2.400 ns) = 11.900 ns; Loc. = LC2_F42; Fanout = 8; COMB Node = 'Equal0~0'
+        Info: 3: + IC(0.500 ns) + CELL(2.400 ns) = 14.800 ns; Loc. = LC8_F42; Fanout = 1; REG Node = 'output[6]$latch'
+        Info: Total cell delay = 7.700 ns ( 52.03 % )
+        Info: Total interconnect delay = 7.100 ns ( 47.97 % )
+Info: tco from clock "aluCode[2]" to destination pin "output[2]" through register "output[2]$latch" is 29.400 ns
+    Info: + Longest clock path from clock "aluCode[2]" to source register is 22.000 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_92; Fanout = 1; CLK Node = 'aluCode[2]'
+        Info: 2: + IC(6.600 ns) + CELL(2.700 ns) = 12.200 ns; Loc. = LC2_F42; Fanout = 8; COMB Node = 'Equal0~0'
+        Info: 3: + IC(7.400 ns) + CELL(2.400 ns) = 22.000 ns; Loc. = LC6_B1; Fanout = 1; REG Node = 'output[2]$latch'
+        Info: Total cell delay = 8.000 ns ( 36.36 % )
+        Info: Total interconnect delay = 14.000 ns ( 63.64 % )
+    Info: + Micro clock to output delay of source is 0.000 ns
+    Info: + Longest register to pin delay is 7.400 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC6_B1; Fanout = 1; REG Node = 'output[2]$latch'
+        Info: 2: + IC(2.400 ns) + CELL(5.000 ns) = 7.400 ns; Loc. = PIN_166; Fanout = 0; PIN Node = 'output[2]'
+        Info: Total cell delay = 5.000 ns ( 67.57 % )
+        Info: Total interconnect delay = 2.400 ns ( 32.43 % )
+Info: th for register "output[1]$latch" (data pin = "inputOne[1]", clock pin = "aluCode[2]") is 7.100 ns
+    Info: + Longest clock path from clock "aluCode[2]" to destination register is 22.000 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_92; Fanout = 1; CLK Node = 'aluCode[2]'
+        Info: 2: + IC(6.600 ns) + CELL(2.700 ns) = 12.200 ns; Loc. = LC2_F42; Fanout = 8; COMB Node = 'Equal0~0'
+        Info: 3: + IC(7.400 ns) + CELL(2.400 ns) = 22.000 ns; Loc. = LC4_B1; Fanout = 1; REG Node = 'output[1]$latch'
+        Info: Total cell delay = 8.000 ns ( 36.36 % )
+        Info: Total interconnect delay = 14.000 ns ( 63.64 % )
+    Info: + Micro hold delay of destination is 0.000 ns
+    Info: - Shortest pin to register delay is 14.900 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_91; Fanout = 1; PIN Node = 'inputOne[1]'
+        Info: 2: + IC(6.100 ns) + CELL(2.700 ns) = 11.700 ns; Loc. = LC1_B1; Fanout = 1; COMB Node = 'output~1'
+        Info: 3: + IC(0.500 ns) + CELL(2.700 ns) = 14.900 ns; Loc. = LC4_B1; Fanout = 1; REG Node = 'output[1]$latch'
+        Info: Total cell delay = 8.300 ns ( 55.70 % )
+        Info: Total interconnect delay = 6.600 ns ( 44.30 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 193 megabytes
+    Info: Processing ended: Sun Dec 15 00:46:27 2013
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
