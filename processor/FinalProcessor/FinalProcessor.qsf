@@ -47,3 +47,5 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name BDF_FILE FinalProcessor.bdf
 set_global_assignment -name QIP_FILE ROM.qip
+set_global_assignment -name QIP_FILE RAM.qip
+set_global_assignment -name VHDL_FILE Clock1Hz.vhd
