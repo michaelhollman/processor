@@ -253,7 +253,11 @@ applicable agreement for further details.
 	)
 )
 (symbol
+<<<<<<< HEAD
 	(rect 1088 128 1264 288)
+=======
+	(rect 1080 336 1272 496)
+>>>>>>> michael
 	(text "RegFile" (rect 5 0 42 12)(font "Arial" ))
 	(text "inst12" (rect 8 144 37 156)(font "Arial" ))
 	(port
@@ -306,6 +310,7 @@ applicable agreement for further details.
 		(line (pt 0 128)(pt 16 128)(line_width 3))
 	)
 	(port
+<<<<<<< HEAD
 		(pt 176 32)
 		(output)
 		(text "out1[7..0]" (rect 0 0 47 12)(font "Arial" ))
@@ -321,6 +326,23 @@ applicable agreement for further details.
 	)
 	(drawing
 		(rectangle (rect 16 16 160 144)(line_width 1))
+=======
+		(pt 192 32)
+		(output)
+		(text "output1[7..0]" (rect 0 0 62 12)(font "Arial" ))
+		(text "output1[7..0]" (rect 109 27 171 39)(font "Arial" ))
+		(line (pt 192 32)(pt 176 32)(line_width 3))
+	)
+	(port
+		(pt 192 48)
+		(output)
+		(text "output2[7..0]" (rect 0 0 62 12)(font "Arial" ))
+		(text "output2[7..0]" (rect 109 43 171 55)(font "Arial" ))
+		(line (pt 192 48)(pt 176 48)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 176 144)(line_width 1))
+>>>>>>> michael
 	)
 )
 (connector

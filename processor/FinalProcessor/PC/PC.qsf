@@ -18,21 +18,31 @@
 #
 # Quartus II
 # Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-<<<<<<< HEAD
-# Date created = 15:17:17  December 16, 2013
-=======
-# Date created = 00:19:58  December 15, 2013
->>>>>>> michael
+# Date created = 13:32:24  December 16, 2013
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		PC_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
 #
 # -------------------------------------------------------------------------- #
 
-QUARTUS_VERSION = "9.0"
-<<<<<<< HEAD
-DATE = "15:17:17  December 16, 2013"
-=======
-DATE = "00:19:58  December 15, 2013"
->>>>>>> michael
 
-# Revisions
-
-PROJECT_REVISION = "FinalProcessor"
+set_global_assignment -name FAMILY FLEX10K
+set_global_assignment -name DEVICE "EPF10K70RC240-4"
+set_global_assignment -name TOP_LEVEL_ENTITY PC
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.0 SP2"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:32:24  DECEMBER 16, 2013"
+set_global_assignment -name LAST_QUARTUS_VERSION "9.0 SP2"
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name VHDL_FILE PC.vhd

@@ -18,6 +18,7 @@
 #
 # Quartus II
 # Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+<<<<<<< HEAD
 # Date created = 15:17:17  December 16, 2013
 #
 # -------------------------------------------------------------------------- #
@@ -56,6 +57,8 @@
 #
 # Quartus II
 # Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+=======
+>>>>>>> michael
 # Date created = 00:19:58  December 15, 2013
 #
 # -------------------------------------------------------------------------- #
