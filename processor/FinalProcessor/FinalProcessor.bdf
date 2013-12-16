@@ -53,7 +53,7 @@ applicable agreement for further details.
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
 )
 (symbol
-	(rect 512 120 728 256)
+	(rect 584 120 800 256)
 	(text "ROM" (rect 93 1 128 17)(font "Arial" (font_size 10)))
 	(text "inst" (rect 8 120 25 132)(font "Arial" ))
 	(port
@@ -98,7 +98,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 784 120 1000 256)
+	(rect 856 120 1072 256)
 	(text "RAM" (rect 94 1 128 17)(font "Arial" (font_size 10)))
 	(text "inst1" (rect 8 120 31 132)(font "Arial" ))
 	(port
