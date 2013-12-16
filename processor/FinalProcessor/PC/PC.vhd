@@ -16,7 +16,7 @@ architecture dataflow of PC is
 begin
 	process(clk)
 	begin
-		if RISING_EDGE(clk) then
+		if rising_edge(clk) then
 			output <= input;
 		end if;
 	end process;
