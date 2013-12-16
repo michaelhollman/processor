@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Sun Dec 15 00:46:18 2013
+Mon Dec 16 12:59:20 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -12,9 +12,12 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   4. Analysis & Synthesis Source Files Read
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
-  7. User-Specified and Inferred Latches
-  8. General Register Statistics
-  9. Analysis & Synthesis Messages
+  7. General Register Statistics
+  8. Source assignments for lpm_add_sub:Add1|addcore:adder
+  9. Source assignments for lpm_add_sub:Add0|addcore:adder
+ 10. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add1
+ 11. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add0
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -40,12 +43,12 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sun Dec 15 00:46:18 2013        ;
+; Analysis & Synthesis Status ; Successful - Mon Dec 16 12:59:20 2013        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; ALU                                          ;
 ; Top-level Entity Name       ; ALU                                          ;
 ; Family                      ; FLEX10K                                      ;
-; Total logic elements        ; 17                                           ;
+; Total logic elements        ; 116                                          ;
 ; Total pins                  ; 30                                           ;
 ; Total memory bits           ; 0                                            ;
 +-----------------------------+----------------------------------------------+
@@ -113,62 +116,63 @@ applicable agreement for further details.
 +--------------------------------------------------------------+-----------------+---------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                          ;
-+----------------------------------+-----------------+-----------------+------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path             ;
-+----------------------------------+-----------------+-----------------+------------------------------------------+
-; ALU.vhd                          ; yes             ; User VHDL File  ; C:/Repos/processor/processor/ALU/ALU.vhd ;
-+----------------------------------+-----------------+-----------------+------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                            ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+
+; ALU.vhd                          ; yes             ; User VHDL File  ; C:/Repos/processor/processor/ALU/ALU.vhd                                ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction    ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;
+; addcore.inc                      ; yes             ; Megafunction    ; c:/altera/90sp2/quartus/libraries/megafunctions/addcore.inc             ;
+; look_add.inc                     ; yes             ; Megafunction    ; c:/altera/90sp2/quartus/libraries/megafunctions/look_add.inc            ;
+; bypassff.inc                     ; yes             ; Megafunction    ; c:/altera/90sp2/quartus/libraries/megafunctions/bypassff.inc            ;
+; altshift.inc                     ; yes             ; Megafunction    ; c:/altera/90sp2/quartus/libraries/megafunctions/altshift.inc            ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction    ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;
+; alt_mercury_add_sub.inc          ; yes             ; Megafunction    ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_mercury_add_sub.inc ;
+; aglobal90.inc                    ; yes             ; Megafunction    ; c:/altera/90sp2/quartus/libraries/megafunctions/aglobal90.inc           ;
+; addcore.tdf                      ; yes             ; Megafunction    ; c:/altera/90sp2/quartus/libraries/megafunctions/addcore.tdf             ;
+; a_csnbuffer.inc                  ; yes             ; Megafunction    ; c:/altera/90sp2/quartus/libraries/megafunctions/a_csnbuffer.inc         ;
+; a_csnbuffer.tdf                  ; yes             ; Megafunction    ; c:/altera/90sp2/quartus/libraries/megafunctions/a_csnbuffer.tdf         ;
+; altshift.tdf                     ; yes             ; Megafunction    ; c:/altera/90sp2/quartus/libraries/megafunctions/altshift.tdf            ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+
 
 
-+---------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary ;
-+--------------------------------+------------+
-; Resource                       ; Usage      ;
-+--------------------------------+------------+
-; Total logic elements           ; 17         ;
-; Total combinational functions  ; 17         ;
-;     -- Total 4-input functions ; 0          ;
-;     -- Total 3-input functions ; 9          ;
-;     -- Total 2-input functions ; 8          ;
-;     -- Total 1-input functions ; 0          ;
-;     -- Total 0-input functions ; 0          ;
-; Total registers                ; 0          ;
-; I/O pins                       ; 30         ;
-; Maximum fan-out node           ; Equal0~0   ;
-; Maximum fan-out                ; 8          ;
-; Total fan-out                  ; 51         ;
-; Average fan-out                ; 1.09       ;
-+--------------------------------+------------+
++------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary    ;
++-----------------------------------+------------+
+; Resource                          ; Usage      ;
++-----------------------------------+------------+
+; Total logic elements              ; 116        ;
+; Total combinational functions     ; 115        ;
+;     -- Total 4-input functions    ; 56         ;
+;     -- Total 3-input functions    ; 34         ;
+;     -- Total 2-input functions    ; 24         ;
+;     -- Total 1-input functions    ; 0          ;
+;     -- Total 0-input functions    ; 1          ;
+; Total registers                   ; 10         ;
+; Total logic cells in carry chains ; 17         ;
+; I/O pins                          ; 30         ;
+; Maximum fan-out node              ; aluCode[1] ;
+; Maximum fan-out                   ; 30         ;
+; Total fan-out                     ; 416        ;
+; Average fan-out                   ; 2.85       ;
++-----------------------------------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                    ;
-+----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-; |ALU                       ; 17 (17)     ; 0            ; 0           ; 30   ; 17 (17)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ALU                ; work         ;
-+----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                    ;
++------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node         ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                         ; Library Name ;
++------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------+--------------+
+; |ALU                               ; 116 (100)   ; 10           ; 0           ; 30   ; 106 (90)     ; 1 (1)             ; 9 (9)            ; 17 (1)          ; 0 (0)      ; |ALU                                                        ; work         ;
+;    |lpm_add_sub:Add0|              ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |ALU|lpm_add_sub:Add0                                       ; work         ;
+;       |addcore:adder|              ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |ALU|lpm_add_sub:Add0|addcore:adder                         ; work         ;
+;          |a_csnbuffer:result_node| ; 8 (8)       ; 0            ; 0           ; 0    ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 8 (8)           ; 0 (0)      ; |ALU|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node ; work         ;
+;    |lpm_add_sub:Add1|              ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |ALU|lpm_add_sub:Add1                                       ; work         ;
+;       |addcore:adder|              ; 8 (1)       ; 0            ; 0           ; 0    ; 8 (1)        ; 0 (0)             ; 0 (0)            ; 8 (1)           ; 0 (0)      ; |ALU|lpm_add_sub:Add1|addcore:adder                         ; work         ;
+;          |a_csnbuffer:result_node| ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |ALU|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node ; work         ;
++------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; output[0]$latch                                    ; Equal0              ; yes                    ;
-; output[1]$latch                                    ; Equal0              ; yes                    ;
-; output[2]$latch                                    ; Equal0              ; yes                    ;
-; output[3]$latch                                    ; Equal0              ; yes                    ;
-; output[4]$latch                                    ; Equal0              ; yes                    ;
-; output[5]$latch                                    ; Equal0              ; yes                    ;
-; output[6]$latch                                    ; Equal0              ; yes                    ;
-; output[7]$latch                                    ; Equal0              ; yes                    ;
-; Number of user-specified and inferred latches = 8  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -176,14 +180,88 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 10    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 2     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-------------------------------------------------------+
+; Source assignments for lpm_add_sub:Add1|addcore:adder ;
++---------------------------+-------+------+------------+
+; Assignment                ; Value ; From ; To         ;
++---------------------------+-------+------+------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -          ;
++---------------------------+-------+------+------------+
+
+
++-------------------------------------------------------+
+; Source assignments for lpm_add_sub:Add0|addcore:adder ;
++---------------------------+-------+------+------------+
+; Assignment                ; Value ; From ; To         ;
++---------------------------+-------+------+------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -          ;
++---------------------------+-------+------+------------+
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add1 ;
++------------------------+-------------+----------------------------+
+; Parameter Name         ; Value       ; Type                       ;
++------------------------+-------------+----------------------------+
+; LPM_WIDTH              ; 9           ; Untyped                    ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                    ;
+; LPM_DIRECTION          ; ADD         ; Untyped                    ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                    ;
+; LPM_PIPELINE           ; 0           ; Untyped                    ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                    ;
+; REGISTERED_AT_END      ; 0           ; Untyped                    ;
+; OPTIMIZE_FOR_SPEED     ; 1           ; Untyped                    ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                    ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                    ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH         ;
+; DEVICE_FAMILY          ; FLEX10K     ; Untyped                    ;
+; USE_WYS                ; OFF         ; Untyped                    ;
+; STYLE                  ; FAST        ; Untyped                    ;
+; CBXI_PARAMETER         ; add_sub_sjh ; Untyped                    ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY               ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE               ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE             ;
++------------------------+-------------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add0 ;
++------------------------+-------------+----------------------------+
+; Parameter Name         ; Value       ; Type                       ;
++------------------------+-------------+----------------------------+
+; LPM_WIDTH              ; 9           ; Untyped                    ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                    ;
+; LPM_DIRECTION          ; ADD         ; Untyped                    ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                    ;
+; LPM_PIPELINE           ; 0           ; Untyped                    ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                    ;
+; REGISTERED_AT_END      ; 0           ; Untyped                    ;
+; OPTIMIZE_FOR_SPEED     ; 1           ; Untyped                    ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                    ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                    ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH         ;
+; DEVICE_FAMILY          ; FLEX10K     ; Untyped                    ;
+; USE_WYS                ; OFF         ; Untyped                    ;
+; STYLE                  ; FAST        ; Untyped                    ;
+; CBXI_PARAMETER         ; add_sub_sjh ; Untyped                    ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY               ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE               ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE             ;
++------------------------+-------------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------+
@@ -192,41 +270,40 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sun Dec 15 00:46:16 2013
+    Info: Processing started: Mon Dec 16 12:59:17 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
 Info: Found 2 design units, including 1 entities, in source file ALU.vhd
     Info: Found design unit 1: ALU-architectureALU
     Info: Found entity 1: ALU
 Info: Elaborating entity "ALU" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at ALU.vhd(36): signal "inputOne" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(36): signal "inputTwo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at ALU.vhd(32): inferring latch(es) for signal or variable "output", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at ALU.vhd(32): inferring latch(es) for signal or variable "zero", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at ALU.vhd(32): inferring latch(es) for signal or variable "overflow", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at ALU.vhd(32): inferring latch(es) for signal or variable "carry", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "carry" at ALU.vhd(32)
-Info (10041): Inferred latch for "overflow" at ALU.vhd(32)
-Info (10041): Inferred latch for "zero" at ALU.vhd(32)
-Info (10041): Inferred latch for "output[0]" at ALU.vhd(32)
-Info (10041): Inferred latch for "output[1]" at ALU.vhd(32)
-Info (10041): Inferred latch for "output[2]" at ALU.vhd(32)
-Info (10041): Inferred latch for "output[3]" at ALU.vhd(32)
-Info (10041): Inferred latch for "output[4]" at ALU.vhd(32)
-Info (10041): Inferred latch for "output[5]" at ALU.vhd(32)
-Info (10041): Inferred latch for "output[6]" at ALU.vhd(32)
-Info (10041): Inferred latch for "output[7]" at ALU.vhd(32)
-Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "zero" is stuck at GND
-    Warning (13410): Pin "overflow" is stuck at GND
-    Warning (13410): Pin "carry" is stuck at GND
-Info: Implemented 47 device resources after synthesis - the final resource count might be different
-    Info: Implemented 19 input pins
-    Info: Implemented 11 output pins
-    Info: Implemented 17 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 236 megabytes
-    Info: Processing ended: Sun Dec 15 00:46:18 2013
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+Info: Inferred 2 megafunctions from design logic
+    Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add1"
+    Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add0"
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add1"
+Info: Instantiated megafunction "lpm_add_sub:Add1" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "9"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add1|addcore:adder", which is child of megafunction instantiation "lpm_add_sub:Add1"
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add1|addcore:adder|a_csnbuffer:oflow_node", which is child of megafunction instantiation "lpm_add_sub:Add1"
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node", which is child of megafunction instantiation "lpm_add_sub:Add1"
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add1|altshift:result_ext_latency_ffs", which is child of megafunction instantiation "lpm_add_sub:Add1"
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add1|altshift:carry_ext_latency_ffs", which is child of megafunction instantiation "lpm_add_sub:Add1"
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add0"
+Info: Instantiated megafunction "lpm_add_sub:Add0" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "9"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
+Info: Implemented 146 device resources after synthesis - the final resource count might be different
+    Info: Implemented 20 input pins
+    Info: Implemented 10 output pins
+    Info: Implemented 116 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 239 megabytes
+    Info: Processing ended: Mon Dec 16 12:59:20 2013
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 

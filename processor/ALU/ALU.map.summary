@@ -1,8 +1,8 @@
-Analysis & Synthesis Status : Successful - Sun Dec 15 00:46:18 2013
+Analysis & Synthesis Status : Successful - Mon Dec 16 12:59:20 2013
 Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
 Revision Name : ALU
 Top-level Entity Name : ALU
 Family : FLEX10K
-Total logic elements : 17
+Total logic elements : 116
 Total pins : 30
 Total memory bits : 0
