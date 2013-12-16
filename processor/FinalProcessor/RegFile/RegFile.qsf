@@ -18,14 +18,14 @@
 #
 # Quartus II
 # Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-# Date created = 00:19:58  December 15, 2013
+# Date created = 14:47:06  December 16, 2013
 #
 # -------------------------------------------------------------------------- #
 #
 # Notes:
 #
 # 1) The default values for assignments are stored in the file:
-#		FinalProcessor_assignment_defaults.qdf
+#		RegFile_assignment_defaults.qdf
 #    If this file doesn't exist, see file:
 #		assignment_defaults.qdf
 #
@@ -38,15 +38,11 @@
 
 set_global_assignment -name FAMILY FLEX10K
 set_global_assignment -name DEVICE "EPF10K70RC240-4"
-set_global_assignment -name TOP_LEVEL_ENTITY FinalProcessor
+set_global_assignment -name TOP_LEVEL_ENTITY RegFile
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.0 SP2"
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "00:19:58  DECEMBER 15, 2013"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:47:06  DECEMBER 16, 2013"
 set_global_assignment -name LAST_QUARTUS_VERSION "9.0 SP2"
 set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
-set_global_assignment -name BDF_FILE FinalProcessor.bdf
-set_global_assignment -name QIP_FILE ROM.qip
-set_global_assignment -name QIP_FILE RAM.qip
-set_global_assignment -name VHDL_FILE Clock1Hz.vhd
-set_global_assignment -name SEARCH_PATH components
+set_global_assignment -name VHDL_FILE RegFile.vhd
