@@ -1,0 +1,47 @@
+|Decoder
+instruction[0] => immediate[0].DATAIN
+instruction[0] => aluCode[0].DATAIN
+instruction[1] => immediate[1].DATAIN
+instruction[1] => aluCode[1].DATAIN
+instruction[2] => immediate[2].DATAIN
+instruction[2] => aluCode[2].DATAIN
+instruction[3] => immediate[3].DATAIN
+instruction[3] => rt[0].DATAIN
+instruction[4] => immediate[4].DATAIN
+instruction[4] => rt[1].DATAIN
+instruction[5] => immediate[5].DATAIN
+instruction[5] => rt[2].DATAIN
+instruction[6] => rs[0].DATAIN
+instruction[7] => rs[1].DATAIN
+instruction[8] => rs[2].DATAIN
+instruction[9] => rd[0].DATAIN
+instruction[10] => rd[1].DATAIN
+instruction[11] => rd[2].DATAIN
+instruction[12] => opCode[0].DATAIN
+instruction[13] => opCode[1].DATAIN
+instruction[14] => opCode[2].DATAIN
+instruction[15] => opCode[3].DATAIN
+opCode[0] <= instruction[12].DB_MAX_OUTPUT_PORT_TYPE
+opCode[1] <= instruction[13].DB_MAX_OUTPUT_PORT_TYPE
+opCode[2] <= instruction[14].DB_MAX_OUTPUT_PORT_TYPE
+opCode[3] <= instruction[15].DB_MAX_OUTPUT_PORT_TYPE
+aluCode[0] <= instruction[0].DB_MAX_OUTPUT_PORT_TYPE
+aluCode[1] <= instruction[1].DB_MAX_OUTPUT_PORT_TYPE
+aluCode[2] <= instruction[2].DB_MAX_OUTPUT_PORT_TYPE
+rd[0] <= instruction[9].DB_MAX_OUTPUT_PORT_TYPE
+rd[1] <= instruction[10].DB_MAX_OUTPUT_PORT_TYPE
+rd[2] <= instruction[11].DB_MAX_OUTPUT_PORT_TYPE
+rs[0] <= instruction[6].DB_MAX_OUTPUT_PORT_TYPE
+rs[1] <= instruction[7].DB_MAX_OUTPUT_PORT_TYPE
+rs[2] <= instruction[8].DB_MAX_OUTPUT_PORT_TYPE
+rt[0] <= instruction[3].DB_MAX_OUTPUT_PORT_TYPE
+rt[1] <= instruction[4].DB_MAX_OUTPUT_PORT_TYPE
+rt[2] <= instruction[5].DB_MAX_OUTPUT_PORT_TYPE
+immediate[0] <= instruction[0].DB_MAX_OUTPUT_PORT_TYPE
+immediate[1] <= instruction[1].DB_MAX_OUTPUT_PORT_TYPE
+immediate[2] <= instruction[2].DB_MAX_OUTPUT_PORT_TYPE
+immediate[3] <= instruction[3].DB_MAX_OUTPUT_PORT_TYPE
+immediate[4] <= instruction[4].DB_MAX_OUTPUT_PORT_TYPE
+immediate[5] <= instruction[5].DB_MAX_OUTPUT_PORT_TYPE
+
+
