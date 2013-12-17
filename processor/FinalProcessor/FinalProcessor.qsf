@@ -87,6 +87,7 @@ set_global_assignment -name BDF_FILE FinalProcessor.bdf
 set_global_assignment -name QIP_FILE ROM.qip
 set_global_assignment -name QIP_FILE RAM.qip
 set_global_assignment -name VHDL_FILE Clock1Hz.vhd
+set_global_assignment -name SEARCH_PATH ramhelper
 set_global_assignment -name SEARCH_PATH controller
 set_global_assignment -name SEARCH_PATH alucontroller
 set_global_assignment -name SEARCH_PATH signextender
@@ -97,3 +98,5 @@ set_global_assignment -name SEARCH_PATH pc
 set_global_assignment -name SEARCH_PATH decoder
 set_global_assignment -name SEARCH_PATH clock
 set_global_assignment -name SEARCH_PATH alu
+set_global_assignment -name QIP_FILE Mux2x3.qip
+set_global_assignment -name QIP_FILE Mux2x8.qip

@@ -4,12 +4,14 @@ use IEEE.numeric_std.all;
 
 entity SevenSegmentDisplay is
 	port(
-		input : in std_logic_vector(7 downto 0);
-		a, b, c, d, e, f, g : out bit
+		input : in std_logic_vector(3 downto 0);
+		output: out std_logic_vector(6 downto 0)
+		--a, b, c, d, e, f, g : out bit
 	);
 end SevenSegmentDisplay;
 
 architecture arc of SevenSegmentDisplay is
+signal a,b,c,d,e,f,g: std_logic;
 begin
 	process(input)
 	begin
@@ -150,6 +152,7 @@ begin
 				e <= '0';
 				f <= '0';
 				g <= '0';
-		end case;		
+		end case;	
+	output <= a & b & c & d & e & f & g;	
 	end process;
 end arc;
