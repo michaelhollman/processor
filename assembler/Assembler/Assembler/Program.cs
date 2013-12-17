@@ -17,6 +17,9 @@ namespace Assembler
             var mif = assembler.GetMachineCode();
             var outputPath = "C:/Users/Ryan/Desktop/program.mif";
             File.WriteAllLines(outputPath, mif);
+
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadLine();
         }
     }
 }

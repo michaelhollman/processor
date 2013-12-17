@@ -75,11 +75,17 @@ namespace Assembler
                 "",
                 "CONTENT",
                 "\tBEGIN",
-                "\t[0..255]\t:\t000000000000000000000000000000000000;"
+                "\t[0..255]\t:\t0000000000000000;"
+            };
+
+            // Add footer
+            var footer = new string[] 
+            {
+                "END;"
             };
 
             // Return header + results of second pass
-            return Enumerable.Concat(header, binaryCommands).ToArray();
+            return Enumerable.Concat(Enumerable.Concat(header, binaryCommands), footer).ToArray();
         }
 
         private string GetRType(Command command)
