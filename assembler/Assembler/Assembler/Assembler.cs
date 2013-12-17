@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Assembler
@@ -83,7 +84,22 @@ namespace Assembler
 
         private string GetRType(Command command)
         {
-            return null;
+            if (command.Tokens.Length != 4)
+            {
+                throw new Exception("RType instuctions must have the command and 3 arguments");
+            }
+
+            var instruction = OperationCodes.Instructions[command.Tokens[0]];
+            var rd = ParseRegisterIndex(command.Tokens[1]);
+            var rs = ParseRegisterIndex(command.Tokens[2]);
+            var rt = ParseRegisterIndex(command.Tokens[3]);
+
+            return String.Format("{0}{1}{2}{3}{4}",
+                 instruction.OpCode,
+                 DecToBinary(rd, 3),
+                 DecToBinary(rs, 3),
+                 DecToBinary(rt, 3),
+                 instruction.ALUCode);
         }
 
         private string GetIType(Command command)
@@ -94,6 +110,74 @@ namespace Assembler
         private string GetJType(Command command)
         {
             return null;
+        }
+
+        private int ParseRegisterIndex(string value)
+        {
+            // Pattern: $X
+            if (Regex.IsMatch(value, @"\d+$"))
+            {
+                var s = value.Substring(1);
+                var num =  int.Parse(s);
+                if (num > 7 || num < 0) {
+                    throw new Exception("Please enter a register index from 0 to 7");
+                }
+                return num;
+            }
+            else
+            {
+                throw new Exception("Register is an invalid format.  Please enter it as $X, where X is an integer from 0 to 7.");
+            }
+        }
+
+        private string DecToBinary(int dec, int length)
+        {
+            return DecToBinary(dec).PadLeft(length, '0');
+        }
+
+        private string DecToBinary(int dec)
+        {
+            return Convert.ToString(dec, 2);
+        }
+
+        private int ParseValue(string value)
+        {
+            // Cases
+            // X($Y)
+            // $Y
+            // Z
+
+            if (Regex.IsMatch(value, @"\d+\(\$\d+\)$"))
+            {
+                var s1 = value.Substring(0, value.IndexOf('('));
+                var s2 = value.Substring(value.IndexOf('$') + 1);
+                s2 = s2.Substring(0, s2.Length - 1);
+
+                var num1 = int.Parse(s1);
+                var num2 = int.Parse(s2);
+
+                var registerWidth = 8;
+
+                return num1 * registerWidth; // TODO: check this
+
+            }
+            else if (Regex.IsMatch(value, @"\$\d+$"))
+            {
+                var s = value.Substring(1);
+                var num = int.Parse(s);
+                return num;
+            }
+            else if (Regex.IsMatch(value, @"\d+$"))
+            {
+                var num = int.Parse(value);
+                return num;
+            }
+            else
+            {
+                // Error
+            }
+
+            return 1;
         }
 
     }
