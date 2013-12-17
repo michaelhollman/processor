@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 11.900 ns
+From           : button_2
+To             : RAMHelper:inst20|output[0]
+From Clock     : --
+To Clock       : board_clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 85.300 ns
+From           : Controller:inst2|ALUSrc
+To             : debug_alu_output[5]
+From Clock     : board_clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 1.300 ns
+From           : dipswitch[7]
+To             : RAMHelper:inst20|output[7]
+From Clock     : --
+To Clock       : board_clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'board_clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 8.74 MHz ( period = 114.400 ns )
+From           : ALU:inst8|zero
+To             : PC:inst10|output[0]
+From Clock     : board_clk
+To Clock       : board_clk
+Failed Paths   : 0
+
+Type           : Clock Hold: 'board_clk'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : RegFile:inst13|out2[3]
+To             : ALU:inst8|zero
+From Clock     : board_clk
+To Clock       : board_clk
+Failed Paths   : 257
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 257
+
+--------------------------------------------------------------------------------------
+

@@ -38,7 +38,7 @@ begin
 				elsif (address = "00000010") then
 					decimal_r <= to_bit(data(0));
 				end if;
-			
+				
 			-- read values; aka pass along button/dipswitch values
 			else
 				if (address = "00000000") then

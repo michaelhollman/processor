@@ -54,15 +54,15 @@ applicable agreement for further details.
 	(port
 		(pt 0 96)
 		(input)
-		(text "button_l" (rect 0 0 38 12)(font "Arial" ))
-		(text "button_l" (rect 21 91 59 103)(font "Arial" ))
+		(text "button_1" (rect 0 0 42 12)(font "Arial" ))
+		(text "button_1" (rect 21 91 63 103)(font "Arial" ))
 		(line (pt 0 96)(pt 16 96)(line_width 1))
 	)
 	(port
 		(pt 0 112)
 		(input)
-		(text "button_r" (rect 0 0 40 12)(font "Arial" ))
-		(text "button_r" (rect 21 107 61 119)(font "Arial" ))
+		(text "button_2" (rect 0 0 42 12)(font "Arial" ))
+		(text "button_2" (rect 21 107 63 119)(font "Arial" ))
 		(line (pt 0 112)(pt 16 112)(line_width 1))
 	)
 	(port
