@@ -133,7 +133,7 @@ END SYN;
 -- Retrieval info: PRIVATE: RegData NUMERIC "1"
 -- Retrieval info: PRIVATE: RegOutput NUMERIC "0"
 -- Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
--- Retrieval info: PRIVATE: SingleClock NUMERIC "1"
+-- Retrieval info: PRIVATE: SingleClock NUMERIC "0"
 -- Retrieval info: PRIVATE: UseDQRAM NUMERIC "0"
 -- Retrieval info: PRIVATE: WRCONTROL_ACLR_A NUMERIC "0"
 -- Retrieval info: PRIVATE: WidthAddr NUMERIC "8"

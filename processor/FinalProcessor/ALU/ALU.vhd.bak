@@ -12,7 +12,6 @@ entity ALU is
 	port(
 		inputOne, inputTwo : in std_logic_vector(7 downto 0);
 		aluCode : in std_logic_vector(2 downto 0);
-		clk_in : std_logic;
 		output : out std_logic_vector(7 downto 0);
 		zero, overflow : out bit
 	);
@@ -47,9 +46,9 @@ begin
 				overflowSum := std_logic_vector(unsigned(extendedOne) + unsigned(extendedTwo));
 				
 				if (to_integer(unsigned(overflowSum(15 downto 8))) = 0) then
-					overflow <= 0;
+					overflow <= '0';
 				else
-					overflow <= 1;
+					overflow <= '1';
 				end if;				
 				
 				output <= std_logic_vector(unsigned(inputOne) + unsigned(inputTwo));
