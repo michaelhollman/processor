@@ -55,10 +55,10 @@ namespace Assembler
                         machineCode = GetRType(command);
                         break;
                     case InstructionType.I:
-                        machineCode = GetIType(command);
+                        machineCode = GetIType(command, labels);
                         break;
                     case InstructionType.J:
-                        machineCode = GetJType(command);
+                        machineCode = GetJType(command, labels);
                         break;
                 }
 
@@ -84,12 +84,18 @@ namespace Assembler
 
         private string GetRType(Command command)
         {
+            var instruction = OperationCodes.Instructions[command.Tokens[0]];
+
+            if (instruction.Instruction == "jr")
+            {
+                return ""; // TODO: implement
+            }
+            
             if (command.Tokens.Length != 4)
             {
                 throw new Exception("RType instuctions must have the command and 3 arguments");
             }
 
-            var instruction = OperationCodes.Instructions[command.Tokens[0]];
             var rd = ParseRegisterIndex(command.Tokens[1]);
             var rs = ParseRegisterIndex(command.Tokens[2]);
             var rt = ParseRegisterIndex(command.Tokens[3]);
@@ -102,20 +108,77 @@ namespace Assembler
                  instruction.ALUCode);
         }
 
-        private string GetIType(Command command)
+        private string GetIType(Command command, List<Label> labels)
         {
-            return null;
+            var instruction = OperationCodes.Instructions[command.Tokens[0]];
+            var code = instruction.Instruction;
+            
+            var rd = ParseRegisterIndex(command.Tokens[1]);
+            var rs = 0;
+            var immediate = 0;
+
+            if (code == "beq" || code == "bne")
+            {
+                rs = ParseRegisterIndex(command.Tokens[2]);
+
+                var label = labels.FirstOrDefault(l => l.Name == command.Tokens[3]);
+                if (label == null)
+                {
+                    throw new Exception("Cannot find label");
+                }
+                immediate = label.Index;
+            }
+            else if (code == "lw" || code == "sw")
+            {
+                rs = 0;
+                immediate = ParseImmediate(command.Tokens[2]);
+            }
+            else
+            {
+                rs = ParseRegisterIndex(command.Tokens[2]);
+                immediate = ParseImmediate(command.Tokens[3]);
+            }
+
+            return String.Format("{0}{1}{2}{3}",
+                 instruction.OpCode,
+                 DecToBinary(rd, 3),
+                 DecToBinary(rs, 3),
+                 DecToBinary(immediate, 6));
         }
 
-        private string GetJType(Command command)
+        private string GetJType(Command command, List<Label> labels)
         {
-            return null;
+            var instruction = OperationCodes.Instructions[command.Tokens[0]];
+
+            var immediate = 0;
+
+            var isLabel = true;
+            try
+            {
+                immediate = ParseImmediate(command.Tokens[1]);
+                isLabel = false;
+            }
+            catch (Exception e) { } // Do nothing; we have the flag
+
+            if (isLabel)
+            {
+                var label = labels.FirstOrDefault(l => l.Name == command.Tokens[1]);
+                if (label == null)
+                {
+                    throw new Exception("Cannot find label");
+                }
+                immediate = label.Index;
+            }
+
+            return String.Format("{0}{1}{2}",
+                instruction.OpCode,
+                DecToBinary(0, 6),
+                DecToBinary(immediate, 6));
         }
 
         private int ParseRegisterIndex(string value)
         {
-            // Pattern: $X
-            if (Regex.IsMatch(value, @"\d+$"))
+            if (Regex.IsMatch(value, @"^\$\d+$")) // $X
             {
                 var s = value.Substring(1);
                 var num =  int.Parse(s);
@@ -130,6 +193,24 @@ namespace Assembler
             }
         }
 
+        private int ParseImmediate(string value)
+        {
+            if (Regex.IsMatch(value, @"^\d+\(\$0\)$")) // X($0)
+            {
+                var s = value.Substring(0, value.IndexOf('('));
+                var registerWidth = 8;
+                return int.Parse(s) * registerWidth;
+            }
+            else if (Regex.IsMatch(value, @"^\d+$")) // X
+            {
+                return int.Parse(value);
+            }
+            else
+            {
+                throw new Exception("Immediate value is in an invalid format");
+            }
+        }
+
         private string DecToBinary(int dec, int length)
         {
             return DecToBinary(dec).PadLeft(length, '0');
@@ -138,46 +219,6 @@ namespace Assembler
         private string DecToBinary(int dec)
         {
             return Convert.ToString(dec, 2);
-        }
-
-        private int ParseValue(string value)
-        {
-            // Cases
-            // X($Y)
-            // $Y
-            // Z
-
-            if (Regex.IsMatch(value, @"\d+\(\$\d+\)$"))
-            {
-                var s1 = value.Substring(0, value.IndexOf('('));
-                var s2 = value.Substring(value.IndexOf('$') + 1);
-                s2 = s2.Substring(0, s2.Length - 1);
-
-                var num1 = int.Parse(s1);
-                var num2 = int.Parse(s2);
-
-                var registerWidth = 8;
-
-                return num1 * registerWidth; // TODO: check this
-
-            }
-            else if (Regex.IsMatch(value, @"\$\d+$"))
-            {
-                var s = value.Substring(1);
-                var num = int.Parse(s);
-                return num;
-            }
-            else if (Regex.IsMatch(value, @"\d+$"))
-            {
-                var num = int.Parse(value);
-                return num;
-            }
-            else
-            {
-                // Error
-            }
-
-            return 1;
         }
 
     }
