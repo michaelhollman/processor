@@ -17,46 +17,46 @@ end RegFile;
 architecture processRegisters of RegFile is
 
 -- use 8 "static variables" for registers
-signal zero, one, two, three, four, five, six, seven : std_logic_vector(7 downto 0) := "00000000";
+signal r0, r1, r2, r3, r4, r5, r6, r7 : std_logic_vector(7 downto 0) := "00000000";
 	
 begin
 	process(clk_r)
 	begin
 		if clk_r'event and clk_r='1' then
 			if RS="000" then
-				output1 <= "00000000";
+				out1 <= "00000000";
 			elsif RS="001" then
-				output1 <= one;
+				out1 <= r1;
 			elsif RS="010" then
-				output1 <= two;
+				out1 <= r2;
 			elsif RS="011" then
-				output1 <= three;
+				out1 <= r3;
 			elsif RS="100" then
-				output1 <= four;
+				out1 <= r4;
 			elsif RS="101" then
-				output1 <= five;
+				out1 <= r5;
 			elsif RS="110" then
-				output1 <= six;
+				out1 <= r6;
 			elsif RS="111" then
-				output1 <= seven;
+				out1 <= r7;
 			end if;
 			
 			if RT="000" then
-				output2 <= "00000000";
+				out2 <= "00000000";
 			elsif RT="001" then
-				output2 <= one;
+				out2 <= r1;
 			elsif RT="010" then
-				output2 <= two;
+				out2 <= r2;
 			elsif RT="011" then
-				output2 <= three;
+				out2 <= r3;
 			elsif RT="100" then
-				output2 <= four;
+				out2 <= r4;
 			elsif RT="101" then
-				output2 <= five;
+				out2 <= r5;
 			elsif RT="110" then
-				output2 <= six;
+				out2 <= r6;
 			elsif RT="111" then
-				output2 <= seven;
+				out2 <= r7;
 			end if;
 		end if;
 	end process;
@@ -66,14 +66,14 @@ begin
 		if clk_w'event and clk_w='1' then
 			if RegWrite='1' then
 				case RD is
-					when "000" => zero <= "00000000";
-					when "001" => one <= WriteData;
-					when "010" => two <= WriteData;
-					when "011" => three <= WriteData;
-					when "100" => four <= WriteData;
-					when "101" => five <= WriteData;
-					when "110" => six <= WriteData;
-					when "111" => seven <= WriteData;
+					when "000" => r0 <= "00000000";
+					when "001" => r1 <= WriteData;
+					when "010" => r2 <= WriteData;
+					when "011" => r3 <= WriteData;
+					when "100" => r4 <= WriteData;
+					when "101" => r5 <= WriteData;
+					when "110" => r6 <= WriteData;
+					when "111" => r7 <= WriteData;
 				end case;
 			end if;
 		end if;

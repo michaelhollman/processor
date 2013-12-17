@@ -7,7 +7,7 @@ entity Decoder is
 		instruction : in std_logic_vector(15 downto 0);
 		opCode : out std_logic_vector(3 downto 0);
 		aluCode : out std_logic_vector(2 downto 0);
-		rd, rs, rt : out std_logic_vector(2 downto 0);
+		rs, rt, rd : out std_logic_vector(2 downto 0);
 		immediate: out std_logic_vector(5 downto 0)
 	);
 end Decoder;
