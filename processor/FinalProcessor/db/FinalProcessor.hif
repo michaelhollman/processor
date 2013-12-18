@@ -96,39 +96,6 @@ Clock:inst9
 
 # end
 # entity
-Controller
-# storage
-db|FinalProcessor.(3).cnf
-db|FinalProcessor.(3).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-controller|Controller.vhd
-ff1cd836c77c1b47ba4e619cd2564c6
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-Controller:inst2
-}
-# lmf
-..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
 Decoder
 # storage
 db|FinalProcessor.(4).cnf
@@ -3130,6 +3097,39 @@ data0
 -1
 3
 }
+# macro_sequence
+
+# end
+# entity
+Controller
+# storage
+db|FinalProcessor.(3).cnf
+db|FinalProcessor.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+controller|Controller.vhd
+ccf5a45617ffe86274f3b53ccc15791
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+Controller:inst2
+}
+# lmf
+..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
 # macro_sequence
 
 # end

@@ -13,7 +13,7 @@ entity Controller is
 		RegWrite : out bit;
 		Jump : out bit;
 		JumpReg : out bit;
-		ALUOp : out std_logic_vector(2 downto 0)
+		ALUOp : out std_logic_vector(2 downto 0) -- 000 if ALU handles it, 010 for ADD, 110 for SUB
 	);
 end Controller;
 
@@ -59,7 +59,7 @@ begin
 				RegWrite <= '1';
 				Jump <= '0';
 				JumpReg <= '0';
-				ALUOp <= "011";
+				ALUOp <= "110";
 			when "0011" =>
 				-- addi
 				RegDst <= '0';
@@ -83,7 +83,7 @@ begin
 				RegWrite <= '1';
 				Jump <= '0';
 				JumpReg <= '0';
-				ALUOp <= "011";
+				ALUOp <= "110";
 			when "0101" =>
 				-- j
 				RegDst <= '0';
@@ -122,7 +122,7 @@ begin
 				RegWrite <= '0';
 				Jump <= '0';
 				JumpReg <= '0';
-				ALUOp <= "011";
+				ALUOp <= "110";
 			when "1001" =>
 				-- bne
 				RegDst <= '0';
@@ -134,7 +134,7 @@ begin
 				RegWrite <= '0';
 				Jump <= '0';
 				JumpReg <= '0';
-				ALUOp <= "011";
+				ALUOp <= "110";
 			when "1010" =>
 				-- lw
 				RegDst <= '0';

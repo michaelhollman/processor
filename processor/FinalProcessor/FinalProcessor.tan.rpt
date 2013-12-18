@@ -1,0 +1,819 @@
+Classic Timing Analyzer report for FinalProcessor
+Wed Dec 18 16:08:08 2013
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'board_clk'
+  7. Clock Hold: 'board_clk'
+  8. tsu
+  9. tco
+ 10. th
+ 11. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                                        ;
++------------------------------+------------------------------------------+---------------+----------------------------------+--------------------------------------------------------------+----------------------------+------------+-----------+--------------+
+; Type                         ; Slack                                    ; Required Time ; Actual Time                      ; From                                                         ; To                         ; From Clock ; To Clock  ; Failed Paths ;
++------------------------------+------------------------------------------+---------------+----------------------------------+--------------------------------------------------------------+----------------------------+------------+-----------+--------------+
+; Worst-case tsu               ; N/A                                      ; None          ; 12.500 ns                        ; dipswitch[2]                                                 ; RAMHelper:inst20|output[2] ; --         ; board_clk ; 0            ;
+; Worst-case tco               ; N/A                                      ; None          ; 32.800 ns                        ; RAMHelper:inst20|digit_r[2]                                  ; digit_r[0]                 ; board_clk  ; --        ; 0            ;
+; Worst-case th                ; N/A                                      ; None          ; 3.600 ns                         ; button_r                                                     ; RAMHelper:inst20|output[0] ; --         ; board_clk ; 0            ;
+; Clock Setup: 'board_clk'     ; N/A                                      ; None          ; 12.08 MHz ( period = 82.800 ns ) ; Controller:inst2|ALUSrc                                      ; RAMHelper:inst20|output[6] ; board_clk  ; board_clk ; 0            ;
+; Clock Hold: 'board_clk'      ; Not operational: Clock Skew > Data Delay ; None          ; N/A                              ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra0 ; Controller:inst2|JumpReg   ; board_clk  ; board_clk ; 224          ;
+; Total number of failed paths ;                                          ;               ;                                  ;                                                              ;                            ;            ;           ; 224          ;
++------------------------------+------------------------------------------+---------------+----------------------------------+--------------------------------------------------------------+----------------------------+------------+-----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EPF10K70RC240-4    ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; board_clk       ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'board_clk'                                                                                                                                                                                                                                                                               ;
++-----------------------------------------+-----------------------------------------------------+-------------------------------------------------------------+-----------------------------+------------+-----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                                                        ; To                          ; From Clock ; To Clock  ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+-------------------------------------------------------------+-----------------------------+------------+-----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 12.08 MHz ( period = 82.800 ns )                    ; Controller:inst2|ALUSrc                                     ; RAMHelper:inst20|output[4]  ; board_clk  ; board_clk ; None                        ; None                      ; 51.500 ns               ;
+; N/A                                     ; 12.08 MHz ( period = 82.800 ns )                    ; Controller:inst2|ALUSrc                                     ; RAMHelper:inst20|output[1]  ; board_clk  ; board_clk ; None                        ; None                      ; 51.500 ns               ;
+; N/A                                     ; 12.08 MHz ( period = 82.800 ns )                    ; Controller:inst2|ALUSrc                                     ; RAMHelper:inst20|output[3]  ; board_clk  ; board_clk ; None                        ; None                      ; 51.500 ns               ;
+; N/A                                     ; 12.08 MHz ( period = 82.800 ns )                    ; Controller:inst2|ALUSrc                                     ; RAMHelper:inst20|output[6]  ; board_clk  ; board_clk ; None                        ; None                      ; 51.500 ns               ;
+; N/A                                     ; 12.11 MHz ( period = 82.600 ns )                    ; Controller:inst2|ALUSrc                                     ; RAMHelper:inst20|digit_r[2] ; board_clk  ; board_clk ; None                        ; None                      ; 51.600 ns               ;
+; N/A                                     ; 12.11 MHz ( period = 82.600 ns )                    ; Controller:inst2|ALUSrc                                     ; RAMHelper:inst20|output[2]  ; board_clk  ; board_clk ; None                        ; None                      ; 51.500 ns               ;
+; N/A                                     ; 12.33 MHz ( period = 81.100 ns )                    ; Controller:inst2|ALUSrc                                     ; RAMHelper:inst20|output[0]  ; board_clk  ; board_clk ; None                        ; None                      ; 50.000 ns               ;
+; N/A                                     ; 12.35 MHz ( period = 81.000 ns )                    ; Controller:inst2|ALUSrc                                     ; RAMHelper:inst20|decimal_l  ; board_clk  ; board_clk ; None                        ; None                      ; 49.600 ns               ;
+; N/A                                     ; 12.44 MHz ( period = 80.400 ns )                    ; Controller:inst2|ALUSrc                                     ; RAMHelper:inst20|digit_l[0] ; board_clk  ; board_clk ; None                        ; None                      ; 49.400 ns               ;
+; N/A                                     ; 12.44 MHz ( period = 80.400 ns )                    ; Controller:inst2|ALUSrc                                     ; RAMHelper:inst20|digit_l[1] ; board_clk  ; board_clk ; None                        ; None                      ; 49.400 ns               ;
+; N/A                                     ; 12.44 MHz ( period = 80.400 ns )                    ; Controller:inst2|ALUSrc                                     ; RAMHelper:inst20|digit_l[2] ; board_clk  ; board_clk ; None                        ; None                      ; 49.400 ns               ;
+; N/A                                     ; 12.44 MHz ( period = 80.400 ns )                    ; Controller:inst2|ALUSrc                                     ; RAMHelper:inst20|digit_l[3] ; board_clk  ; board_clk ; None                        ; None                      ; 49.400 ns               ;
+; N/A                                     ; 12.44 MHz ( period = 80.400 ns )                    ; Controller:inst2|ALUSrc                                     ; RAMHelper:inst20|digit_r[0] ; board_clk  ; board_clk ; None                        ; None                      ; 49.400 ns               ;
+; N/A                                     ; 12.44 MHz ( period = 80.400 ns )                    ; Controller:inst2|ALUSrc                                     ; RAMHelper:inst20|digit_r[1] ; board_clk  ; board_clk ; None                        ; None                      ; 49.400 ns               ;
+; N/A                                     ; 12.44 MHz ( period = 80.400 ns )                    ; Controller:inst2|ALUSrc                                     ; RAMHelper:inst20|digit_r[3] ; board_clk  ; board_clk ; None                        ; None                      ; 49.400 ns               ;
+; N/A                                     ; 12.45 MHz ( period = 80.300 ns )                    ; Controller:inst2|ALUSrc                                     ; RAMHelper:inst20|output[5]  ; board_clk  ; board_clk ; None                        ; None                      ; 49.100 ns               ;
+; N/A                                     ; 12.45 MHz ( period = 80.300 ns )                    ; Controller:inst2|ALUSrc                                     ; RAMHelper:inst20|output[7]  ; board_clk  ; board_clk ; None                        ; None                      ; 49.100 ns               ;
+; N/A                                     ; 12.53 MHz ( period = 79.800 ns )                    ; Controller:inst2|ALUSrc                                     ; RAMHelper:inst20|decimal_r  ; board_clk  ; board_clk ; None                        ; None                      ; 48.400 ns               ;
+; N/A                                     ; 12.76 MHz ( period = 78.400 ns )                    ; Controller:inst2|ALUSrc                                     ; RegFile:inst13|r3[0]        ; board_clk  ; board_clk ; None                        ; None                      ; 48.800 ns               ;
+; N/A                                     ; 12.76 MHz ( period = 78.400 ns )                    ; Controller:inst2|ALUSrc                                     ; RegFile:inst13|r2[0]        ; board_clk  ; board_clk ; None                        ; None                      ; 48.800 ns               ;
+; N/A                                     ; 12.84 MHz ( period = 77.900 ns )                    ; Controller:inst2|ALUSrc                                     ; RAMHelper:inst20|override   ; board_clk  ; board_clk ; None                        ; None                      ; 46.800 ns               ;
+; N/A                                     ; 13.19 MHz ( period = 75.800 ns )                    ; Controller:inst2|ALUSrc                                     ; RegFile:inst13|r1[0]        ; board_clk  ; board_clk ; None                        ; None                      ; 46.200 ns               ;
+; N/A                                     ; 13.21 MHz ( period = 75.700 ns )                    ; Controller:inst2|ALUSrc                                     ; RegFile:inst13|r6[0]        ; board_clk  ; board_clk ; None                        ; None                      ; 46.100 ns               ;
+; N/A                                     ; 13.21 MHz ( period = 75.700 ns )                    ; Controller:inst2|ALUSrc                                     ; RegFile:inst13|r7[0]        ; board_clk  ; board_clk ; None                        ; None                      ; 46.100 ns               ;
+; N/A                                     ; 13.23 MHz ( period = 75.600 ns )                    ; Controller:inst2|ALUSrc                                     ; RegFile:inst13|r5[0]        ; board_clk  ; board_clk ; None                        ; None                      ; 46.000 ns               ;
+; N/A                                     ; 13.23 MHz ( period = 75.600 ns )                    ; Controller:inst2|ALUSrc                                     ; RegFile:inst13|r4[0]        ; board_clk  ; board_clk ; None                        ; None                      ; 46.000 ns               ;
+; N/A                                     ; 13.35 MHz ( period = 74.900 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra0 ; RAMHelper:inst20|digit_r[2] ; board_clk  ; board_clk ; None                        ; None                      ; 72.800 ns               ;
+; N/A                                     ; 13.35 MHz ( period = 74.900 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra1 ; RAMHelper:inst20|digit_r[2] ; board_clk  ; board_clk ; None                        ; None                      ; 72.800 ns               ;
+; N/A                                     ; 13.35 MHz ( period = 74.900 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra2 ; RAMHelper:inst20|digit_r[2] ; board_clk  ; board_clk ; None                        ; None                      ; 72.800 ns               ;
+; N/A                                     ; 13.35 MHz ( period = 74.900 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra3 ; RAMHelper:inst20|digit_r[2] ; board_clk  ; board_clk ; None                        ; None                      ; 72.800 ns               ;
+; N/A                                     ; 13.35 MHz ( period = 74.900 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra4 ; RAMHelper:inst20|digit_r[2] ; board_clk  ; board_clk ; None                        ; None                      ; 72.800 ns               ;
+; N/A                                     ; 13.35 MHz ( period = 74.900 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra5 ; RAMHelper:inst20|digit_r[2] ; board_clk  ; board_clk ; None                        ; None                      ; 72.800 ns               ;
+; N/A                                     ; 13.35 MHz ( period = 74.900 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra6 ; RAMHelper:inst20|digit_r[2] ; board_clk  ; board_clk ; None                        ; None                      ; 72.800 ns               ;
+; N/A                                     ; 13.35 MHz ( period = 74.900 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra7 ; RAMHelper:inst20|digit_r[2] ; board_clk  ; board_clk ; None                        ; None                      ; 72.800 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; Controller:inst2|ALUOp[1]                                   ; RAMHelper:inst20|digit_r[2] ; board_clk  ; board_clk ; None                        ; None                      ; 41.800 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra0 ; RAMHelper:inst20|output[4]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra1 ; RAMHelper:inst20|output[4]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra2 ; RAMHelper:inst20|output[4]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra3 ; RAMHelper:inst20|output[4]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra4 ; RAMHelper:inst20|output[4]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra5 ; RAMHelper:inst20|output[4]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra6 ; RAMHelper:inst20|output[4]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra7 ; RAMHelper:inst20|output[4]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra0 ; RAMHelper:inst20|output[1]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra1 ; RAMHelper:inst20|output[1]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra2 ; RAMHelper:inst20|output[1]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra3 ; RAMHelper:inst20|output[1]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra4 ; RAMHelper:inst20|output[1]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra5 ; RAMHelper:inst20|output[1]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra6 ; RAMHelper:inst20|output[1]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra7 ; RAMHelper:inst20|output[1]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra0 ; RAMHelper:inst20|output[3]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra1 ; RAMHelper:inst20|output[3]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra2 ; RAMHelper:inst20|output[3]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra3 ; RAMHelper:inst20|output[3]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra4 ; RAMHelper:inst20|output[3]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra5 ; RAMHelper:inst20|output[3]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra6 ; RAMHelper:inst20|output[3]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra7 ; RAMHelper:inst20|output[3]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra0 ; RAMHelper:inst20|output[6]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra1 ; RAMHelper:inst20|output[6]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra2 ; RAMHelper:inst20|output[6]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra3 ; RAMHelper:inst20|output[6]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra4 ; RAMHelper:inst20|output[6]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra5 ; RAMHelper:inst20|output[6]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra6 ; RAMHelper:inst20|output[6]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.57 MHz ( period = 73.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra7 ; RAMHelper:inst20|output[6]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.300 ns               ;
+; N/A                                     ; 13.62 MHz ( period = 73.400 ns )                    ; Controller:inst2|ALUOp[2]                                   ; RAMHelper:inst20|digit_r[2] ; board_clk  ; board_clk ; None                        ; None                      ; 41.500 ns               ;
+; N/A                                     ; 13.62 MHz ( period = 73.400 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra0 ; RAMHelper:inst20|output[0]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.200 ns               ;
+; N/A                                     ; 13.62 MHz ( period = 73.400 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra1 ; RAMHelper:inst20|output[0]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.200 ns               ;
+; N/A                                     ; 13.62 MHz ( period = 73.400 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra2 ; RAMHelper:inst20|output[0]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.200 ns               ;
+; N/A                                     ; 13.62 MHz ( period = 73.400 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra3 ; RAMHelper:inst20|output[0]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.200 ns               ;
+; N/A                                     ; 13.62 MHz ( period = 73.400 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra4 ; RAMHelper:inst20|output[0]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.200 ns               ;
+; N/A                                     ; 13.62 MHz ( period = 73.400 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra5 ; RAMHelper:inst20|output[0]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.200 ns               ;
+; N/A                                     ; 13.62 MHz ( period = 73.400 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra6 ; RAMHelper:inst20|output[0]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.200 ns               ;
+; N/A                                     ; 13.62 MHz ( period = 73.400 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra7 ; RAMHelper:inst20|output[0]  ; board_clk  ; board_clk ; None                        ; None                      ; 71.200 ns               ;
+; N/A                                     ; 13.64 MHz ( period = 73.300 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra0 ; RAMHelper:inst20|decimal_l  ; board_clk  ; board_clk ; None                        ; None                      ; 70.800 ns               ;
+; N/A                                     ; 13.64 MHz ( period = 73.300 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra1 ; RAMHelper:inst20|decimal_l  ; board_clk  ; board_clk ; None                        ; None                      ; 70.800 ns               ;
+; N/A                                     ; 13.64 MHz ( period = 73.300 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra2 ; RAMHelper:inst20|decimal_l  ; board_clk  ; board_clk ; None                        ; None                      ; 70.800 ns               ;
+; N/A                                     ; 13.64 MHz ( period = 73.300 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra3 ; RAMHelper:inst20|decimal_l  ; board_clk  ; board_clk ; None                        ; None                      ; 70.800 ns               ;
+; N/A                                     ; 13.64 MHz ( period = 73.300 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra4 ; RAMHelper:inst20|decimal_l  ; board_clk  ; board_clk ; None                        ; None                      ; 70.800 ns               ;
+; N/A                                     ; 13.64 MHz ( period = 73.300 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra5 ; RAMHelper:inst20|decimal_l  ; board_clk  ; board_clk ; None                        ; None                      ; 70.800 ns               ;
+; N/A                                     ; 13.64 MHz ( period = 73.300 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra6 ; RAMHelper:inst20|decimal_l  ; board_clk  ; board_clk ; None                        ; None                      ; 70.800 ns               ;
+; N/A                                     ; 13.64 MHz ( period = 73.300 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra7 ; RAMHelper:inst20|decimal_l  ; board_clk  ; board_clk ; None                        ; None                      ; 70.800 ns               ;
+; N/A                                     ; 13.68 MHz ( period = 73.100 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra0 ; RAMHelper:inst20|output[2]  ; board_clk  ; board_clk ; None                        ; None                      ; 70.900 ns               ;
+; N/A                                     ; 13.68 MHz ( period = 73.100 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra1 ; RAMHelper:inst20|output[2]  ; board_clk  ; board_clk ; None                        ; None                      ; 70.900 ns               ;
+; N/A                                     ; 13.68 MHz ( period = 73.100 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra2 ; RAMHelper:inst20|output[2]  ; board_clk  ; board_clk ; None                        ; None                      ; 70.900 ns               ;
+; N/A                                     ; 13.68 MHz ( period = 73.100 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra3 ; RAMHelper:inst20|output[2]  ; board_clk  ; board_clk ; None                        ; None                      ; 70.900 ns               ;
+; N/A                                     ; 13.68 MHz ( period = 73.100 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra4 ; RAMHelper:inst20|output[2]  ; board_clk  ; board_clk ; None                        ; None                      ; 70.900 ns               ;
+; N/A                                     ; 13.68 MHz ( period = 73.100 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra5 ; RAMHelper:inst20|output[2]  ; board_clk  ; board_clk ; None                        ; None                      ; 70.900 ns               ;
+; N/A                                     ; 13.68 MHz ( period = 73.100 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra6 ; RAMHelper:inst20|output[2]  ; board_clk  ; board_clk ; None                        ; None                      ; 70.900 ns               ;
+; N/A                                     ; 13.68 MHz ( period = 73.100 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra7 ; RAMHelper:inst20|output[2]  ; board_clk  ; board_clk ; None                        ; None                      ; 70.900 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra0 ; RAMHelper:inst20|digit_l[0] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra1 ; RAMHelper:inst20|digit_l[0] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra2 ; RAMHelper:inst20|digit_l[0] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra3 ; RAMHelper:inst20|digit_l[0] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra4 ; RAMHelper:inst20|digit_l[0] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra5 ; RAMHelper:inst20|digit_l[0] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra6 ; RAMHelper:inst20|digit_l[0] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra7 ; RAMHelper:inst20|digit_l[0] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra0 ; RAMHelper:inst20|digit_l[1] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra1 ; RAMHelper:inst20|digit_l[1] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra2 ; RAMHelper:inst20|digit_l[1] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra3 ; RAMHelper:inst20|digit_l[1] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra4 ; RAMHelper:inst20|digit_l[1] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra5 ; RAMHelper:inst20|digit_l[1] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra6 ; RAMHelper:inst20|digit_l[1] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra7 ; RAMHelper:inst20|digit_l[1] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra0 ; RAMHelper:inst20|digit_l[2] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra1 ; RAMHelper:inst20|digit_l[2] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra2 ; RAMHelper:inst20|digit_l[2] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra3 ; RAMHelper:inst20|digit_l[2] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra4 ; RAMHelper:inst20|digit_l[2] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra5 ; RAMHelper:inst20|digit_l[2] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra6 ; RAMHelper:inst20|digit_l[2] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra7 ; RAMHelper:inst20|digit_l[2] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra0 ; RAMHelper:inst20|digit_l[3] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra1 ; RAMHelper:inst20|digit_l[3] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra2 ; RAMHelper:inst20|digit_l[3] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra3 ; RAMHelper:inst20|digit_l[3] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra4 ; RAMHelper:inst20|digit_l[3] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra5 ; RAMHelper:inst20|digit_l[3] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra6 ; RAMHelper:inst20|digit_l[3] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra7 ; RAMHelper:inst20|digit_l[3] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra0 ; RAMHelper:inst20|digit_r[0] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra1 ; RAMHelper:inst20|digit_r[0] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra2 ; RAMHelper:inst20|digit_r[0] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra3 ; RAMHelper:inst20|digit_r[0] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra4 ; RAMHelper:inst20|digit_r[0] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra5 ; RAMHelper:inst20|digit_r[0] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra6 ; RAMHelper:inst20|digit_r[0] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra7 ; RAMHelper:inst20|digit_r[0] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra0 ; RAMHelper:inst20|digit_r[1] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra1 ; RAMHelper:inst20|digit_r[1] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra2 ; RAMHelper:inst20|digit_r[1] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra3 ; RAMHelper:inst20|digit_r[1] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra4 ; RAMHelper:inst20|digit_r[1] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra5 ; RAMHelper:inst20|digit_r[1] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra6 ; RAMHelper:inst20|digit_r[1] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra7 ; RAMHelper:inst20|digit_r[1] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra0 ; RAMHelper:inst20|digit_r[3] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra1 ; RAMHelper:inst20|digit_r[3] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra2 ; RAMHelper:inst20|digit_r[3] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra3 ; RAMHelper:inst20|digit_r[3] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra4 ; RAMHelper:inst20|digit_r[3] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra5 ; RAMHelper:inst20|digit_r[3] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra6 ; RAMHelper:inst20|digit_r[3] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.76 MHz ( period = 72.700 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]~reg_ra7 ; RAMHelper:inst20|digit_r[3] ; board_clk  ; board_clk ; None                        ; None                      ; 70.600 ns               ;
+; N/A                                     ; 13.77 MHz ( period = 72.600 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[1]~reg_ra0 ; RAMHelper:inst20|digit_r[2] ; board_clk  ; board_clk ; None                        ; None                      ; 70.500 ns               ;
+; N/A                                     ; 13.77 MHz ( period = 72.600 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[1]~reg_ra1 ; RAMHelper:inst20|digit_r[2] ; board_clk  ; board_clk ; None                        ; None                      ; 70.500 ns               ;
+; N/A                                     ; 13.77 MHz ( period = 72.600 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[1]~reg_ra2 ; RAMHelper:inst20|digit_r[2] ; board_clk  ; board_clk ; None                        ; None                      ; 70.500 ns               ;
+; N/A                                     ; 13.77 MHz ( period = 72.600 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[1]~reg_ra3 ; RAMHelper:inst20|digit_r[2] ; board_clk  ; board_clk ; None                        ; None                      ; 70.500 ns               ;
+; N/A                                     ; 13.77 MHz ( period = 72.600 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[1]~reg_ra4 ; RAMHelper:inst20|digit_r[2] ; board_clk  ; board_clk ; None                        ; None                      ; 70.500 ns               ;
+; N/A                                     ; 13.77 MHz ( period = 72.600 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[1]~reg_ra5 ; RAMHelper:inst20|digit_r[2] ; board_clk  ; board_clk ; None                        ; None                      ; 70.500 ns               ;
+; N/A                                     ; 13.77 MHz ( period = 72.600 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[1]~reg_ra6 ; RAMHelper:inst20|digit_r[2] ; board_clk  ; board_clk ; None                        ; None                      ; 70.500 ns               ;
+; N/A                                     ; 13.77 MHz ( period = 72.600 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[1]~reg_ra7 ; RAMHelper:inst20|digit_r[2] ; board_clk  ; board_clk ; None                        ; None                      ; 70.500 ns               ;
+; N/A                                     ; 13.79 MHz ( period = 72.500 ns )                    ; Controller:inst2|ALUOp[1]                                   ; RAMHelper:inst20|output[4]  ; board_clk  ; board_clk ; None                        ; None                      ; 40.300 ns               ;
+; N/A                                     ; 13.79 MHz ( period = 72.500 ns )                    ; Controller:inst2|ALUOp[1]                                   ; RAMHelper:inst20|output[1]  ; board_clk  ; board_clk ; None                        ; None                      ; 40.300 ns               ;
+; N/A                                     ; 13.79 MHz ( period = 72.500 ns )                    ; Controller:inst2|ALUOp[1]                                   ; RAMHelper:inst20|output[3]  ; board_clk  ; board_clk ; None                        ; None                      ; 40.300 ns               ;
+; N/A                                     ; 13.79 MHz ( period = 72.500 ns )                    ; Controller:inst2|ALUOp[1]                                   ; RAMHelper:inst20|output[6]  ; board_clk  ; board_clk ; None                        ; None                      ; 40.300 ns               ;
+; N/A                                     ; 13.83 MHz ( period = 72.300 ns )                    ; Controller:inst2|ALUSrc                                     ; RegFile:inst13|r3[2]        ; board_clk  ; board_clk ; None                        ; None                      ; 42.700 ns               ;
+; N/A                                     ; 13.85 MHz ( period = 72.200 ns )                    ; Controller:inst2|ALUOp[1]                                   ; RAMHelper:inst20|output[0]  ; board_clk  ; board_clk ; None                        ; None                      ; 40.200 ns               ;
+; N/A                                     ; 13.85 MHz ( period = 72.200 ns )                    ; Controller:inst2|ALUOp[2]                                   ; RAMHelper:inst20|output[4]  ; board_clk  ; board_clk ; None                        ; None                      ; 40.000 ns               ;
+; N/A                                     ; 13.85 MHz ( period = 72.200 ns )                    ; Controller:inst2|ALUOp[2]                                   ; RAMHelper:inst20|output[1]  ; board_clk  ; board_clk ; None                        ; None                      ; 40.000 ns               ;
+; N/A                                     ; 13.85 MHz ( period = 72.200 ns )                    ; Controller:inst2|ALUOp[2]                                   ; RAMHelper:inst20|output[3]  ; board_clk  ; board_clk ; None                        ; None                      ; 40.000 ns               ;
+; N/A                                     ; 13.85 MHz ( period = 72.200 ns )                    ; Controller:inst2|ALUOp[2]                                   ; RAMHelper:inst20|output[6]  ; board_clk  ; board_clk ; None                        ; None                      ; 40.000 ns               ;
+; N/A                                     ; 13.87 MHz ( period = 72.100 ns )                    ; Controller:inst2|ALUOp[1]                                   ; RAMHelper:inst20|decimal_l  ; board_clk  ; board_clk ; None                        ; None                      ; 39.800 ns               ;
+; N/A                                     ; 13.87 MHz ( period = 72.100 ns )                    ; Controller:inst2|ALUSrc                                     ; RegFile:inst13|r2[5]        ; board_clk  ; board_clk ; None                        ; None                      ; 42.500 ns               ;
+; N/A                                     ; 13.89 MHz ( period = 72.000 ns )                    ; Controller:inst2|ALUSrc                                     ; RegFile:inst13|r2[2]        ; board_clk  ; board_clk ; None                        ; None                      ; 42.400 ns               ;
+; N/A                                     ; 13.91 MHz ( period = 71.900 ns )                    ; Controller:inst2|ALUOp[2]                                   ; RAMHelper:inst20|output[0]  ; board_clk  ; board_clk ; None                        ; None                      ; 39.900 ns               ;
+; N/A                                     ; 13.91 MHz ( period = 71.900 ns )                    ; Controller:inst2|ALUOp[1]                                   ; RAMHelper:inst20|output[2]  ; board_clk  ; board_clk ; None                        ; None                      ; 39.900 ns               ;
+; N/A                                     ; 13.93 MHz ( period = 71.800 ns )                    ; Controller:inst2|ALUOp[2]                                   ; RAMHelper:inst20|decimal_l  ; board_clk  ; board_clk ; None                        ; None                      ; 39.500 ns               ;
+; N/A                                     ; 13.93 MHz ( period = 71.800 ns )                    ; Controller:inst2|ALUSrc                                     ; RegFile:inst13|r5[4]        ; board_clk  ; board_clk ; None                        ; None                      ; 42.200 ns               ;
+; N/A                                     ; 13.93 MHz ( period = 71.800 ns )                    ; Controller:inst2|ALUSrc                                     ; RegFile:inst13|r7[4]        ; board_clk  ; board_clk ; None                        ; None                      ; 42.200 ns               ;
+; N/A                                     ; 13.93 MHz ( period = 71.800 ns )                    ; Controller:inst2|ALUSrc                                     ; RegFile:inst13|r3[4]        ; board_clk  ; board_clk ; None                        ; None                      ; 42.200 ns               ;
+; N/A                                     ; 13.95 MHz ( period = 71.700 ns )                    ; Controller:inst2|ALUSrc                                     ; RegFile:inst13|r1[4]        ; board_clk  ; board_clk ; None                        ; None                      ; 42.100 ns               ;
+; N/A                                     ; 13.97 MHz ( period = 71.600 ns )                    ; Controller:inst2|ALUOp[2]                                   ; RAMHelper:inst20|output[2]  ; board_clk  ; board_clk ; None                        ; None                      ; 39.600 ns               ;
+; N/A                                     ; 13.99 MHz ( period = 71.500 ns )                    ; Controller:inst2|ALUOp[1]                                   ; RAMHelper:inst20|digit_l[0] ; board_clk  ; board_clk ; None                        ; None                      ; 39.600 ns               ;
+; N/A                                     ; 13.99 MHz ( period = 71.500 ns )                    ; Controller:inst2|ALUOp[1]                                   ; RAMHelper:inst20|digit_l[1] ; board_clk  ; board_clk ; None                        ; None                      ; 39.600 ns               ;
+; N/A                                     ; 13.99 MHz ( period = 71.500 ns )                    ; Controller:inst2|ALUOp[1]                                   ; RAMHelper:inst20|digit_l[2] ; board_clk  ; board_clk ; None                        ; None                      ; 39.600 ns               ;
+; N/A                                     ; 13.99 MHz ( period = 71.500 ns )                    ; Controller:inst2|ALUOp[1]                                   ; RAMHelper:inst20|digit_l[3] ; board_clk  ; board_clk ; None                        ; None                      ; 39.600 ns               ;
+; N/A                                     ; 13.99 MHz ( period = 71.500 ns )                    ; Controller:inst2|ALUOp[1]                                   ; RAMHelper:inst20|digit_r[0] ; board_clk  ; board_clk ; None                        ; None                      ; 39.600 ns               ;
+; N/A                                     ; 13.99 MHz ( period = 71.500 ns )                    ; Controller:inst2|ALUOp[1]                                   ; RAMHelper:inst20|digit_r[1] ; board_clk  ; board_clk ; None                        ; None                      ; 39.600 ns               ;
+; N/A                                     ; 13.99 MHz ( period = 71.500 ns )                    ; Controller:inst2|ALUOp[1]                                   ; RAMHelper:inst20|digit_r[3] ; board_clk  ; board_clk ; None                        ; None                      ; 39.600 ns               ;
+; N/A                                     ; 13.99 MHz ( period = 71.500 ns )                    ; Controller:inst2|ALUSrc                                     ; RegFile:inst13|r6[4]        ; board_clk  ; board_clk ; None                        ; None                      ; 41.900 ns               ;
+; N/A                                     ; 13.99 MHz ( period = 71.500 ns )                    ; Controller:inst2|ALUSrc                                     ; RegFile:inst13|r4[4]        ; board_clk  ; board_clk ; None                        ; None                      ; 41.900 ns               ;
+; N/A                                     ; 13.99 MHz ( period = 71.500 ns )                    ; Controller:inst2|ALUSrc                                     ; RegFile:inst13|r2[4]        ; board_clk  ; board_clk ; None                        ; None                      ; 41.900 ns               ;
+; N/A                                     ; 14.01 MHz ( period = 71.400 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[1]~reg_ra2 ; RAMHelper:inst20|output[3]  ; board_clk  ; board_clk ; None                        ; None                      ; 69.000 ns               ;
+; N/A                                     ; 14.01 MHz ( period = 71.400 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[1]~reg_ra3 ; RAMHelper:inst20|output[3]  ; board_clk  ; board_clk ; None                        ; None                      ; 69.000 ns               ;
+; N/A                                     ; 14.01 MHz ( period = 71.400 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[1]~reg_ra4 ; RAMHelper:inst20|output[3]  ; board_clk  ; board_clk ; None                        ; None                      ; 69.000 ns               ;
+; N/A                                     ; 14.01 MHz ( period = 71.400 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[1]~reg_ra5 ; RAMHelper:inst20|output[3]  ; board_clk  ; board_clk ; None                        ; None                      ; 69.000 ns               ;
+; N/A                                     ; 14.01 MHz ( period = 71.400 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[1]~reg_ra6 ; RAMHelper:inst20|output[3]  ; board_clk  ; board_clk ; None                        ; None                      ; 69.000 ns               ;
+; N/A                                     ; 14.01 MHz ( period = 71.400 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[1]~reg_ra7 ; RAMHelper:inst20|output[3]  ; board_clk  ; board_clk ; None                        ; None                      ; 69.000 ns               ;
+; N/A                                     ; 14.01 MHz ( period = 71.400 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[1]~reg_ra0 ; RAMHelper:inst20|output[6]  ; board_clk  ; board_clk ; None                        ; None                      ; 69.000 ns               ;
+; N/A                                     ; 14.01 MHz ( period = 71.400 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[1]~reg_ra1 ; RAMHelper:inst20|output[6]  ; board_clk  ; board_clk ; None                        ; None                      ; 69.000 ns               ;
+; N/A                                     ; 14.01 MHz ( period = 71.400 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[1]~reg_ra2 ; RAMHelper:inst20|output[6]  ; board_clk  ; board_clk ; None                        ; None                      ; 69.000 ns               ;
+; N/A                                     ; 14.01 MHz ( period = 71.400 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[1]~reg_ra3 ; RAMHelper:inst20|output[6]  ; board_clk  ; board_clk ; None                        ; None                      ; 69.000 ns               ;
+; N/A                                     ; 14.01 MHz ( period = 71.400 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[1]~reg_ra4 ; RAMHelper:inst20|output[6]  ; board_clk  ; board_clk ; None                        ; None                      ; 69.000 ns               ;
+; N/A                                     ; 14.01 MHz ( period = 71.400 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[1]~reg_ra5 ; RAMHelper:inst20|output[6]  ; board_clk  ; board_clk ; None                        ; None                      ; 69.000 ns               ;
+; N/A                                     ; 14.01 MHz ( period = 71.400 ns )                    ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[1]~reg_ra6 ; RAMHelper:inst20|output[6]  ; board_clk  ; board_clk ; None                        ; None                      ; 69.000 ns               ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                                             ;                             ;            ;           ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+-------------------------------------------------------------+-----------------------------+------------+-----------+-----------------------------+---------------------------+-------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Hold: 'board_clk'                                                                                                                                                                                                                           ;
++------------------------------------------+--------------------------------------------------------------+---------------------------+------------+-----------+----------------------------+----------------------------+--------------------------+
+; Minimum Slack                            ; From                                                         ; To                        ; From Clock ; To Clock  ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
++------------------------------------------+--------------------------------------------------------------+---------------------------+------------+-----------+----------------------------+----------------------------+--------------------------+
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra0 ; Controller:inst2|JumpReg  ; board_clk  ; board_clk ; None                       ; None                       ; 21.200 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra1 ; Controller:inst2|JumpReg  ; board_clk  ; board_clk ; None                       ; None                       ; 21.200 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra2 ; Controller:inst2|JumpReg  ; board_clk  ; board_clk ; None                       ; None                       ; 21.200 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra3 ; Controller:inst2|JumpReg  ; board_clk  ; board_clk ; None                       ; None                       ; 21.200 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra4 ; Controller:inst2|JumpReg  ; board_clk  ; board_clk ; None                       ; None                       ; 21.200 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra5 ; Controller:inst2|JumpReg  ; board_clk  ; board_clk ; None                       ; None                       ; 21.200 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra6 ; Controller:inst2|JumpReg  ; board_clk  ; board_clk ; None                       ; None                       ; 21.200 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra7 ; Controller:inst2|JumpReg  ; board_clk  ; board_clk ; None                       ; None                       ; 21.200 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra0 ; Controller:inst2|JumpReg  ; board_clk  ; board_clk ; None                       ; None                       ; 21.500 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra1 ; Controller:inst2|JumpReg  ; board_clk  ; board_clk ; None                       ; None                       ; 21.500 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra2 ; Controller:inst2|JumpReg  ; board_clk  ; board_clk ; None                       ; None                       ; 21.500 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra3 ; Controller:inst2|JumpReg  ; board_clk  ; board_clk ; None                       ; None                       ; 21.500 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra4 ; Controller:inst2|JumpReg  ; board_clk  ; board_clk ; None                       ; None                       ; 21.500 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra5 ; Controller:inst2|JumpReg  ; board_clk  ; board_clk ; None                       ; None                       ; 21.500 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra6 ; Controller:inst2|JumpReg  ; board_clk  ; board_clk ; None                       ; None                       ; 21.500 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra7 ; Controller:inst2|JumpReg  ; board_clk  ; board_clk ; None                       ; None                       ; 21.500 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra0 ; Controller:inst2|MemtoReg ; board_clk  ; board_clk ; None                       ; None                       ; 26.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra1 ; Controller:inst2|MemtoReg ; board_clk  ; board_clk ; None                       ; None                       ; 26.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra2 ; Controller:inst2|MemtoReg ; board_clk  ; board_clk ; None                       ; None                       ; 26.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra3 ; Controller:inst2|MemtoReg ; board_clk  ; board_clk ; None                       ; None                       ; 26.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra4 ; Controller:inst2|MemtoReg ; board_clk  ; board_clk ; None                       ; None                       ; 26.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra5 ; Controller:inst2|MemtoReg ; board_clk  ; board_clk ; None                       ; None                       ; 26.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra6 ; Controller:inst2|MemtoReg ; board_clk  ; board_clk ; None                       ; None                       ; 26.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra7 ; Controller:inst2|MemtoReg ; board_clk  ; board_clk ; None                       ; None                       ; 26.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra0 ; Controller:inst2|MemWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.200 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra1 ; Controller:inst2|MemWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.200 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra2 ; Controller:inst2|MemWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.200 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra3 ; Controller:inst2|MemWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.200 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra4 ; Controller:inst2|MemWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.200 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra5 ; Controller:inst2|MemWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.200 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra6 ; Controller:inst2|MemWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.200 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra7 ; Controller:inst2|MemWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.200 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra0 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 28.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra1 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 28.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra2 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 28.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra3 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 28.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra4 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 28.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra5 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 28.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra6 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 28.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra7 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 28.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra0 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.200 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra1 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.200 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra2 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.200 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra3 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.200 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra4 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.200 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra5 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.200 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra6 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.200 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra7 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.200 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra0 ; Controller:inst2|MemWrite ; board_clk  ; board_clk ; None                       ; None                       ; 26.400 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra1 ; Controller:inst2|MemWrite ; board_clk  ; board_clk ; None                       ; None                       ; 26.400 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra2 ; Controller:inst2|MemWrite ; board_clk  ; board_clk ; None                       ; None                       ; 26.400 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra3 ; Controller:inst2|MemWrite ; board_clk  ; board_clk ; None                       ; None                       ; 26.400 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra4 ; Controller:inst2|MemWrite ; board_clk  ; board_clk ; None                       ; None                       ; 26.400 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra5 ; Controller:inst2|MemWrite ; board_clk  ; board_clk ; None                       ; None                       ; 26.400 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra6 ; Controller:inst2|MemWrite ; board_clk  ; board_clk ; None                       ; None                       ; 26.400 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra7 ; Controller:inst2|MemWrite ; board_clk  ; board_clk ; None                       ; None                       ; 26.400 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra0 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 29.800 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra1 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 29.800 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra2 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 29.800 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra3 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 29.800 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra4 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 29.800 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra5 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 29.800 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra6 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 29.800 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra7 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 29.800 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra0 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 28.700 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra1 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 28.700 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra2 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 28.700 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra3 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 28.700 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra4 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 28.700 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra5 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 28.700 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra6 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 28.700 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra7 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 28.700 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra0 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 26.400 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra1 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 26.400 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra2 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 26.400 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra3 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 26.400 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra4 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 26.400 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra5 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 26.400 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra6 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 26.400 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra7 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 26.400 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra0 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 27.900 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra1 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 27.900 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra2 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 27.900 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra3 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 27.900 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra4 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 27.900 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra5 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 27.900 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra6 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 27.900 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra7 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 27.900 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra0 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 29.900 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra1 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 29.900 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra2 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 29.900 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra3 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 29.900 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra4 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 29.900 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra5 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 29.900 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra6 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 29.900 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra7 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 29.900 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra0 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 29.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra1 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 29.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra2 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 29.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra3 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 29.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra4 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 29.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra5 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 29.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra6 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 29.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra7 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 29.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra0 ; Controller:inst2|MemtoReg ; board_clk  ; board_clk ; None                       ; None                       ; 25.500 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra1 ; Controller:inst2|MemtoReg ; board_clk  ; board_clk ; None                       ; None                       ; 25.500 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra2 ; Controller:inst2|MemtoReg ; board_clk  ; board_clk ; None                       ; None                       ; 25.500 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra3 ; Controller:inst2|MemtoReg ; board_clk  ; board_clk ; None                       ; None                       ; 25.500 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra4 ; Controller:inst2|MemtoReg ; board_clk  ; board_clk ; None                       ; None                       ; 25.500 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra5 ; Controller:inst2|MemtoReg ; board_clk  ; board_clk ; None                       ; None                       ; 25.500 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra6 ; Controller:inst2|MemtoReg ; board_clk  ; board_clk ; None                       ; None                       ; 25.500 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra7 ; Controller:inst2|MemtoReg ; board_clk  ; board_clk ; None                       ; None                       ; 25.500 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra0 ; Controller:inst2|MemWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra1 ; Controller:inst2|MemWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra2 ; Controller:inst2|MemWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra3 ; Controller:inst2|MemWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra4 ; Controller:inst2|MemWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra5 ; Controller:inst2|MemWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra6 ; Controller:inst2|MemWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra7 ; Controller:inst2|MemWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra0 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 29.000 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra1 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 29.000 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra2 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 29.000 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra3 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 29.000 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra4 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 29.000 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra5 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 29.000 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra6 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 29.000 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra7 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 29.000 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra0 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 29.000 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra1 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 29.000 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra2 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 29.000 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra3 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 29.000 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra4 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 29.000 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra5 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 29.000 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra6 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 29.000 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra7 ; Controller:inst2|ALUOp[1] ; board_clk  ; board_clk ; None                       ; None                       ; 29.000 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra0 ; Controller:inst2|MemtoReg ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra1 ; Controller:inst2|MemtoReg ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra2 ; Controller:inst2|MemtoReg ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra3 ; Controller:inst2|MemtoReg ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra4 ; Controller:inst2|MemtoReg ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra5 ; Controller:inst2|MemtoReg ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra6 ; Controller:inst2|MemtoReg ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra7 ; Controller:inst2|MemtoReg ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra0 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra1 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra2 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra3 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra4 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra5 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra6 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra7 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra0 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra1 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra2 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra3 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra4 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra5 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra6 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra7 ; Controller:inst2|RegWrite ; board_clk  ; board_clk ; None                       ; None                       ; 25.600 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra0 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 29.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra1 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 29.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra2 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 29.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra3 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 29.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra4 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 29.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra5 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 29.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra6 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 29.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra7 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 29.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra0 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 29.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra1 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 29.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra2 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 29.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra3 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 29.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra4 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 29.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra5 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 29.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra6 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 29.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra7 ; Controller:inst2|ALUOp[2] ; board_clk  ; board_clk ; None                       ; None                       ; 29.100 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra0 ; Controller:inst2|RegDst   ; board_clk  ; board_clk ; None                       ; None                       ; 27.400 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra1 ; Controller:inst2|RegDst   ; board_clk  ; board_clk ; None                       ; None                       ; 27.400 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra2 ; Controller:inst2|RegDst   ; board_clk  ; board_clk ; None                       ; None                       ; 27.400 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra3 ; Controller:inst2|RegDst   ; board_clk  ; board_clk ; None                       ; None                       ; 27.400 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra4 ; Controller:inst2|RegDst   ; board_clk  ; board_clk ; None                       ; None                       ; 27.400 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra5 ; Controller:inst2|RegDst   ; board_clk  ; board_clk ; None                       ; None                       ; 27.400 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra6 ; Controller:inst2|RegDst   ; board_clk  ; board_clk ; None                       ; None                       ; 27.400 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra7 ; Controller:inst2|RegDst   ; board_clk  ; board_clk ; None                       ; None                       ; 27.400 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra0 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 28.300 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra1 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 28.300 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra2 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 28.300 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra3 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 28.300 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra4 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 28.300 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra5 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 28.300 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra6 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 28.300 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra7 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 28.300 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra0 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 28.300 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra1 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 28.300 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra2 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 28.300 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra3 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 28.300 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra4 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 28.300 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra5 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 28.300 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra6 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 28.300 ns                ;
+; Not operational: Clock Skew > Data Delay ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra7 ; Controller:inst2|ALUSrc   ; board_clk  ; board_clk ; None                       ; None                       ; 28.300 ns                ;
+; Timing analysis restricted to 200 rows.  ; To change the limit use Settings (Assignments menu)          ;                           ;            ;           ;                            ;                            ;                          ;
++------------------------------------------+--------------------------------------------------------------+---------------------------+------------+-----------+----------------------------+----------------------------+--------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; tsu                                                                                       ;
++-------+--------------+------------+--------------+----------------------------+-----------+
+; Slack ; Required tsu ; Actual tsu ; From         ; To                         ; To Clock  ;
++-------+--------------+------------+--------------+----------------------------+-----------+
+; N/A   ; None         ; 12.500 ns  ; dipswitch[2] ; RAMHelper:inst20|output[2] ; board_clk ;
+; N/A   ; None         ; 10.200 ns  ; reset        ; Clock:inst9|clock3         ; board_clk ;
+; N/A   ; None         ; 10.200 ns  ; reset        ; Clock:inst9|clock1         ; board_clk ;
+; N/A   ; None         ; 10.200 ns  ; reset        ; Clock:inst9|clock2         ; board_clk ;
+; N/A   ; None         ; 10.200 ns  ; reset        ; Clock:inst9|clock0         ; board_clk ;
+; N/A   ; None         ; 10.200 ns  ; reset        ; Clock:inst9|clock4         ; board_clk ;
+; N/A   ; None         ; 10.000 ns  ; dipswitch[4] ; RAMHelper:inst20|output[4] ; board_clk ;
+; N/A   ; None         ; 9.800 ns   ; dipswitch[5] ; RAMHelper:inst20|output[5] ; board_clk ;
+; N/A   ; None         ; 7.400 ns   ; dipswitch[7] ; RAMHelper:inst20|output[7] ; board_clk ;
+; N/A   ; None         ; 7.400 ns   ; dipswitch[6] ; RAMHelper:inst20|output[6] ; board_clk ;
+; N/A   ; None         ; 7.400 ns   ; dipswitch[3] ; RAMHelper:inst20|output[3] ; board_clk ;
+; N/A   ; None         ; 7.000 ns   ; dipswitch[1] ; RAMHelper:inst20|output[1] ; board_clk ;
+; N/A   ; None         ; 2.700 ns   ; button_l     ; RAMHelper:inst20|output[0] ; board_clk ;
+; N/A   ; None         ; 2.700 ns   ; dipswitch[0] ; RAMHelper:inst20|output[0] ; board_clk ;
+; N/A   ; None         ; 2.100 ns   ; button_r     ; RAMHelper:inst20|output[0] ; board_clk ;
++-------+--------------+------------+--------------+----------------------------+-----------+
+
+
++-------------------------------------------------------------------------------------------+
+; tco                                                                                       ;
++-------+--------------+------------+-----------------------------+------------+------------+
+; Slack ; Required tco ; Actual tco ; From                        ; To         ; From Clock ;
++-------+--------------+------------+-----------------------------+------------+------------+
+; N/A   ; None         ; 32.800 ns  ; RAMHelper:inst20|digit_r[2] ; digit_r[0] ; board_clk  ;
+; N/A   ; None         ; 32.600 ns  ; RAMHelper:inst20|digit_r[1] ; digit_r[0] ; board_clk  ;
+; N/A   ; None         ; 32.600 ns  ; RAMHelper:inst20|digit_r[3] ; digit_r[0] ; board_clk  ;
+; N/A   ; None         ; 32.500 ns  ; RAMHelper:inst20|digit_r[1] ; digit_r[6] ; board_clk  ;
+; N/A   ; None         ; 32.500 ns  ; RAMHelper:inst20|digit_r[3] ; digit_r[6] ; board_clk  ;
+; N/A   ; None         ; 32.500 ns  ; RAMHelper:inst20|digit_l[3] ; digit_l[4] ; board_clk  ;
+; N/A   ; None         ; 32.400 ns  ; RAMHelper:inst20|digit_r[2] ; digit_r[6] ; board_clk  ;
+; N/A   ; None         ; 32.400 ns  ; RAMHelper:inst20|digit_l[1] ; digit_l[4] ; board_clk  ;
+; N/A   ; None         ; 32.400 ns  ; RAMHelper:inst20|digit_l[2] ; digit_l[4] ; board_clk  ;
+; N/A   ; None         ; 32.300 ns  ; RAMHelper:inst20|digit_r[0] ; digit_r[0] ; board_clk  ;
+; N/A   ; None         ; 32.200 ns  ; RAMHelper:inst20|digit_r[0] ; digit_r[6] ; board_clk  ;
+; N/A   ; None         ; 32.200 ns  ; RAMHelper:inst20|digit_l[0] ; digit_l[4] ; board_clk  ;
+; N/A   ; None         ; 30.600 ns  ; RAMHelper:inst20|digit_r[2] ; digit_r[1] ; board_clk  ;
+; N/A   ; None         ; 30.400 ns  ; RAMHelper:inst20|digit_r[1] ; digit_r[1] ; board_clk  ;
+; N/A   ; None         ; 30.400 ns  ; RAMHelper:inst20|digit_r[3] ; digit_r[1] ; board_clk  ;
+; N/A   ; None         ; 30.200 ns  ; RAMHelper:inst20|digit_l[3] ; digit_l[6] ; board_clk  ;
+; N/A   ; None         ; 30.100 ns  ; RAMHelper:inst20|digit_r[0] ; digit_r[1] ; board_clk  ;
+; N/A   ; None         ; 30.100 ns  ; RAMHelper:inst20|digit_l[3] ; digit_l[1] ; board_clk  ;
+; N/A   ; None         ; 30.100 ns  ; RAMHelper:inst20|digit_l[3] ; digit_l[5] ; board_clk  ;
+; N/A   ; None         ; 30.100 ns  ; RAMHelper:inst20|digit_l[1] ; digit_l[6] ; board_clk  ;
+; N/A   ; None         ; 30.100 ns  ; RAMHelper:inst20|digit_l[2] ; digit_l[6] ; board_clk  ;
+; N/A   ; None         ; 30.000 ns  ; RAMHelper:inst20|digit_l[1] ; digit_l[1] ; board_clk  ;
+; N/A   ; None         ; 30.000 ns  ; RAMHelper:inst20|digit_l[2] ; digit_l[1] ; board_clk  ;
+; N/A   ; None         ; 30.000 ns  ; RAMHelper:inst20|digit_l[1] ; digit_l[5] ; board_clk  ;
+; N/A   ; None         ; 30.000 ns  ; RAMHelper:inst20|digit_l[2] ; digit_l[5] ; board_clk  ;
+; N/A   ; None         ; 29.900 ns  ; RAMHelper:inst20|digit_l[0] ; digit_l[6] ; board_clk  ;
+; N/A   ; None         ; 29.800 ns  ; RAMHelper:inst20|digit_l[0] ; digit_l[1] ; board_clk  ;
+; N/A   ; None         ; 29.800 ns  ; RAMHelper:inst20|digit_l[0] ; digit_l[5] ; board_clk  ;
+; N/A   ; None         ; 29.600 ns  ; RAMHelper:inst20|digit_l[3] ; digit_l[2] ; board_clk  ;
+; N/A   ; None         ; 29.600 ns  ; RAMHelper:inst20|digit_l[3] ; digit_l[3] ; board_clk  ;
+; N/A   ; None         ; 29.500 ns  ; RAMHelper:inst20|digit_l[3] ; digit_l[0] ; board_clk  ;
+; N/A   ; None         ; 29.500 ns  ; RAMHelper:inst20|digit_l[1] ; digit_l[2] ; board_clk  ;
+; N/A   ; None         ; 29.500 ns  ; RAMHelper:inst20|digit_l[2] ; digit_l[2] ; board_clk  ;
+; N/A   ; None         ; 29.500 ns  ; RAMHelper:inst20|digit_l[1] ; digit_l[3] ; board_clk  ;
+; N/A   ; None         ; 29.500 ns  ; RAMHelper:inst20|digit_l[2] ; digit_l[3] ; board_clk  ;
+; N/A   ; None         ; 29.400 ns  ; RAMHelper:inst20|digit_r[2] ; digit_r[4] ; board_clk  ;
+; N/A   ; None         ; 29.400 ns  ; RAMHelper:inst20|digit_r[2] ; digit_r[5] ; board_clk  ;
+; N/A   ; None         ; 29.400 ns  ; RAMHelper:inst20|digit_l[1] ; digit_l[0] ; board_clk  ;
+; N/A   ; None         ; 29.400 ns  ; RAMHelper:inst20|digit_l[2] ; digit_l[0] ; board_clk  ;
+; N/A   ; None         ; 29.300 ns  ; RAMHelper:inst20|digit_l[0] ; digit_l[2] ; board_clk  ;
+; N/A   ; None         ; 29.300 ns  ; RAMHelper:inst20|digit_l[0] ; digit_l[3] ; board_clk  ;
+; N/A   ; None         ; 29.200 ns  ; RAMHelper:inst20|digit_r[1] ; digit_r[4] ; board_clk  ;
+; N/A   ; None         ; 29.200 ns  ; RAMHelper:inst20|digit_r[3] ; digit_r[4] ; board_clk  ;
+; N/A   ; None         ; 29.200 ns  ; RAMHelper:inst20|digit_r[1] ; digit_r[5] ; board_clk  ;
+; N/A   ; None         ; 29.200 ns  ; RAMHelper:inst20|digit_r[3] ; digit_r[5] ; board_clk  ;
+; N/A   ; None         ; 29.200 ns  ; RAMHelper:inst20|digit_l[0] ; digit_l[0] ; board_clk  ;
+; N/A   ; None         ; 28.900 ns  ; RAMHelper:inst20|digit_r[0] ; digit_r[4] ; board_clk  ;
+; N/A   ; None         ; 28.900 ns  ; RAMHelper:inst20|digit_r[0] ; digit_r[5] ; board_clk  ;
+; N/A   ; None         ; 28.700 ns  ; RAMHelper:inst20|digit_r[2] ; digit_r[2] ; board_clk  ;
+; N/A   ; None         ; 28.700 ns  ; RAMHelper:inst20|digit_r[2] ; digit_r[3] ; board_clk  ;
+; N/A   ; None         ; 28.500 ns  ; RAMHelper:inst20|digit_r[1] ; digit_r[2] ; board_clk  ;
+; N/A   ; None         ; 28.500 ns  ; RAMHelper:inst20|digit_r[3] ; digit_r[2] ; board_clk  ;
+; N/A   ; None         ; 28.500 ns  ; RAMHelper:inst20|digit_r[1] ; digit_r[3] ; board_clk  ;
+; N/A   ; None         ; 28.500 ns  ; RAMHelper:inst20|digit_r[3] ; digit_r[3] ; board_clk  ;
+; N/A   ; None         ; 28.200 ns  ; RAMHelper:inst20|digit_r[0] ; digit_r[2] ; board_clk  ;
+; N/A   ; None         ; 28.200 ns  ; RAMHelper:inst20|digit_r[0] ; digit_r[3] ; board_clk  ;
+; N/A   ; None         ; 24.300 ns  ; RAMHelper:inst20|decimal_l  ; decimal_l  ; board_clk  ;
+; N/A   ; None         ; 22.400 ns  ; RAMHelper:inst20|decimal_r  ; decimal_r  ; board_clk  ;
++-------+--------------+------------+-----------------------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; th                                                                                              ;
++---------------+-------------+-----------+--------------+----------------------------+-----------+
+; Minimum Slack ; Required th ; Actual th ; From         ; To                         ; To Clock  ;
++---------------+-------------+-----------+--------------+----------------------------+-----------+
+; N/A           ; None        ; 3.600 ns  ; button_r     ; RAMHelper:inst20|output[0] ; board_clk ;
+; N/A           ; None        ; 3.000 ns  ; button_l     ; RAMHelper:inst20|output[0] ; board_clk ;
+; N/A           ; None        ; 3.000 ns  ; dipswitch[0] ; RAMHelper:inst20|output[0] ; board_clk ;
+; N/A           ; None        ; -1.300 ns ; dipswitch[1] ; RAMHelper:inst20|output[1] ; board_clk ;
+; N/A           ; None        ; -1.700 ns ; dipswitch[7] ; RAMHelper:inst20|output[7] ; board_clk ;
+; N/A           ; None        ; -1.700 ns ; dipswitch[6] ; RAMHelper:inst20|output[6] ; board_clk ;
+; N/A           ; None        ; -1.700 ns ; dipswitch[3] ; RAMHelper:inst20|output[3] ; board_clk ;
+; N/A           ; None        ; -4.100 ns ; dipswitch[5] ; RAMHelper:inst20|output[5] ; board_clk ;
+; N/A           ; None        ; -4.300 ns ; dipswitch[4] ; RAMHelper:inst20|output[4] ; board_clk ;
+; N/A           ; None        ; -4.500 ns ; reset        ; Clock:inst9|clock3         ; board_clk ;
+; N/A           ; None        ; -4.500 ns ; reset        ; Clock:inst9|clock1         ; board_clk ;
+; N/A           ; None        ; -4.500 ns ; reset        ; Clock:inst9|clock2         ; board_clk ;
+; N/A           ; None        ; -4.500 ns ; reset        ; Clock:inst9|clock0         ; board_clk ;
+; N/A           ; None        ; -4.500 ns ; reset        ; Clock:inst9|clock4         ; board_clk ;
+; N/A           ; None        ; -6.800 ns ; dipswitch[2] ; RAMHelper:inst20|output[2] ; board_clk ;
++---------------+-------------+-----------+--------------+----------------------------+-----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Wed Dec 18 16:08:07 2013
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off FinalProcessor -c FinalProcessor
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "Controller:inst2|MemWrite" is a latch
+    Warning: Node "Controller:inst2|ALUSrc" is a latch
+    Warning: Node "Controller:inst2|JumpReg" is a latch
+    Warning: Node "Controller:inst2|ALUOp[1]" is a latch
+    Warning: Node "Controller:inst2|ALUOp[2]" is a latch
+    Warning: Node "Controller:inst2|RegDst" is a latch
+    Warning: Node "Controller:inst2|MemtoReg" is a latch
+    Warning: Node "Controller:inst2|RegWrite" is a latch
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "board_clk" is an undefined clock
+Warning: Found 41 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "Clock:inst9|clock4" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra7" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra6" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra5" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra4" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra3" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra2" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra1" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~reg_ra0" as buffer
+    Info: Detected gated clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]~mem_cell_ra0" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra7" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra6" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra5" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra4" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra3" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra2" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra1" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra0" as buffer
+    Info: Detected gated clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~mem_cell_ra0" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra7" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra6" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra5" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra4" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra3" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra2" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra1" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~reg_ra0" as buffer
+    Info: Detected gated clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]~mem_cell_ra0" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra7" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra6" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra5" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra4" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra3" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra2" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra1" as buffer
+    Info: Detected ripple clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~reg_ra0" as buffer
+    Info: Detected gated clock "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]~mem_cell_ra0" as buffer
+    Info: Detected ripple clock "Clock:inst9|clock0" as buffer
+    Info: Detected ripple clock "Clock:inst9|clock2" as buffer
+    Info: Detected ripple clock "Clock:inst9|clock1" as buffer
+    Info: Detected ripple clock "Clock:inst9|clock3" as buffer
+Info: Clock "board_clk" has Internal fmax of 12.08 MHz between source register "Controller:inst2|ALUSrc" and destination register "RAMHelper:inst20|output[4]" (period= 82.8 ns)
+    Info: + Longest register to register delay is 51.500 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC2_H33; Fanout = 47; REG Node = 'Controller:inst2|ALUSrc'
+        Info: 2: + IC(5.200 ns) + CELL(2.700 ns) = 7.900 ns; Loc. = LC5_H39; Fanout = 4; COMB Node = 'Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~2'
+        Info: 3: + IC(3.000 ns) + CELL(1.400 ns) = 12.300 ns; Loc. = LC1_H42; Fanout = 2; COMB Node = 'ALU:inst8|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~COUT'
+        Info: 4: + IC(0.000 ns) + CELL(0.300 ns) = 12.600 ns; Loc. = LC2_H42; Fanout = 2; COMB Node = 'ALU:inst8|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~COUT'
+        Info: 5: + IC(0.000 ns) + CELL(0.300 ns) = 12.900 ns; Loc. = LC3_H42; Fanout = 2; COMB Node = 'ALU:inst8|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]~COUT'
+        Info: 6: + IC(0.000 ns) + CELL(0.300 ns) = 13.200 ns; Loc. = LC4_H42; Fanout = 2; COMB Node = 'ALU:inst8|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]~COUT'
+        Info: 7: + IC(0.000 ns) + CELL(0.300 ns) = 13.500 ns; Loc. = LC5_H42; Fanout = 2; COMB Node = 'ALU:inst8|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]~COUT'
+        Info: 8: + IC(0.000 ns) + CELL(0.300 ns) = 13.800 ns; Loc. = LC6_H42; Fanout = 2; COMB Node = 'ALU:inst8|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]~COUT'
+        Info: 9: + IC(0.000 ns) + CELL(0.300 ns) = 14.100 ns; Loc. = LC7_H42; Fanout = 1; COMB Node = 'ALU:inst8|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]~COUT'
+        Info: 10: + IC(0.000 ns) + CELL(1.200 ns) = 15.300 ns; Loc. = LC8_H42; Fanout = 2; COMB Node = 'ALU:inst8|lpm_add_sub:Add1|addcore:adder|unreg_res_node[8]'
+        Info: 11: + IC(2.900 ns) + CELL(2.000 ns) = 20.200 ns; Loc. = LC3_H43; Fanout = 1; COMB Node = 'ALU:inst8|LessThan0~9'
+        Info: 12: + IC(0.000 ns) + CELL(2.000 ns) = 22.200 ns; Loc. = LC4_H43; Fanout = 1; COMB Node = 'ALU:inst8|LessThan0~6'
+        Info: 13: + IC(0.500 ns) + CELL(2.700 ns) = 25.400 ns; Loc. = LC7_H43; Fanout = 1; COMB Node = 'ALU:inst8|output[0]~89'
+        Info: 14: + IC(0.500 ns) + CELL(2.700 ns) = 28.600 ns; Loc. = LC1_H43; Fanout = 1; COMB Node = 'ALU:inst8|output[0]~90'
+        Info: 15: + IC(3.700 ns) + CELL(2.700 ns) = 35.000 ns; Loc. = LC5_H24; Fanout = 28; COMB Node = 'ALU:inst8|output[0]~91'
+        Info: 16: + IC(3.300 ns) + CELL(2.700 ns) = 41.000 ns; Loc. = LC1_H23; Fanout = 4; COMB Node = 'RAMHelper:inst20|Equal2~0'
+        Info: 17: + IC(2.900 ns) + CELL(2.700 ns) = 46.600 ns; Loc. = LC2_H24; Fanout = 7; COMB Node = 'RAMHelper:inst20|output~40'
+        Info: 18: + IC(2.900 ns) + CELL(2.000 ns) = 51.500 ns; Loc. = LC6_H25; Fanout = 2; REG Node = 'RAMHelper:inst20|output[4]'
+        Info: Total cell delay = 26.600 ns ( 51.65 % )
+        Info: Total interconnect delay = 24.900 ns ( 48.35 % )
+    Info: - Smallest clock skew is -28.700 ns
+        Info: + Shortest clock path from clock "board_clk" to destination register is 14.900 ns
+            Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_91; Fanout = 21; CLK Node = 'board_clk'
+            Info: 2: + IC(4.100 ns) + CELL(1.400 ns) = 8.400 ns; Loc. = LC7_A26; Fanout = 172; REG Node = 'Clock:inst9|clock3'
+            Info: 3: + IC(6.500 ns) + CELL(0.000 ns) = 14.900 ns; Loc. = LC6_H25; Fanout = 2; REG Node = 'RAMHelper:inst20|output[4]'
+            Info: Total cell delay = 4.300 ns ( 28.86 % )
+            Info: Total interconnect delay = 10.600 ns ( 71.14 % )
+        Info: - Longest clock path from clock "board_clk" to source register is 43.600 ns
+            Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_91; Fanout = 21; CLK Node = 'board_clk'
+            Info: 2: + IC(4.100 ns) + CELL(1.400 ns) = 8.400 ns; Loc. = LC4_A26; Fanout = 129; REG Node = 'Clock:inst9|clock1'
+            Info: 3: + IC(5.700 ns) + CELL(0.600 ns) = 14.700 ns; Loc. = EC5_F; Fanout = 1; MEM Node = 'ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra7'
+            Info: 4: + IC(0.000 ns) + CELL(10.700 ns) = 25.400 ns; Loc. = EC5_F; Fanout = 1; MEM Node = 'ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~mem_cell_ra0'
+            Info: 5: + IC(0.000 ns) + CELL(2.500 ns) = 27.900 ns; Loc. = EC5_F; Fanout = 9; MEM Node = 'ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]'
+            Info: 6: + IC(4.000 ns) + CELL(2.700 ns) = 34.600 ns; Loc. = LC8_F1; Fanout = 8; COMB Node = 'Controller:inst2|Mux11~0'
+            Info: 7: + IC(6.300 ns) + CELL(2.700 ns) = 43.600 ns; Loc. = LC2_H33; Fanout = 47; REG Node = 'Controller:inst2|ALUSrc'
+            Info: Total cell delay = 23.500 ns ( 53.90 % )
+            Info: Total interconnect delay = 20.100 ns ( 46.10 % )
+    Info: + Micro clock to output delay of source is 0.000 ns
+    Info: + Micro setup delay of destination is 2.600 ns
+Warning: Circuit may not operate. Detected 201 non-operational path(s) clocked by clock "board_clk" with clock skew larger than data delay. See Compilation Report for details.
+Info: Found hold time violation between source  pin or register "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra0" and destination pin or register "Controller:inst2|JumpReg" for clock "board_clk" (Hold time is 5.2 ns)
+    Info: + Largest clock skew is 27.000 ns
+        Info: + Longest clock path from clock "board_clk" to destination register is 41.100 ns
+            Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_91; Fanout = 21; CLK Node = 'board_clk'
+            Info: 2: + IC(4.100 ns) + CELL(1.400 ns) = 8.400 ns; Loc. = LC4_A26; Fanout = 129; REG Node = 'Clock:inst9|clock1'
+            Info: 3: + IC(5.700 ns) + CELL(0.600 ns) = 14.700 ns; Loc. = EC5_F; Fanout = 1; MEM Node = 'ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra7'
+            Info: 4: + IC(0.000 ns) + CELL(10.700 ns) = 25.400 ns; Loc. = EC5_F; Fanout = 1; MEM Node = 'ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~mem_cell_ra0'
+            Info: 5: + IC(0.000 ns) + CELL(2.500 ns) = 27.900 ns; Loc. = EC5_F; Fanout = 9; MEM Node = 'ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]'
+            Info: 6: + IC(4.000 ns) + CELL(2.700 ns) = 34.600 ns; Loc. = LC8_F1; Fanout = 8; COMB Node = 'Controller:inst2|Mux11~0'
+            Info: 7: + IC(3.800 ns) + CELL(2.700 ns) = 41.100 ns; Loc. = LC2_F25; Fanout = 8; REG Node = 'Controller:inst2|JumpReg'
+            Info: Total cell delay = 23.500 ns ( 57.18 % )
+            Info: Total interconnect delay = 17.600 ns ( 42.82 % )
+        Info: - Shortest clock path from clock "board_clk" to source memory is 14.100 ns
+            Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_91; Fanout = 21; CLK Node = 'board_clk'
+            Info: 2: + IC(4.100 ns) + CELL(1.400 ns) = 8.400 ns; Loc. = LC4_A26; Fanout = 129; REG Node = 'Clock:inst9|clock1'
+            Info: 3: + IC(5.700 ns) + CELL(0.000 ns) = 14.100 ns; Loc. = EC5_F; Fanout = 1; MEM Node = 'ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra0'
+            Info: Total cell delay = 4.300 ns ( 30.50 % )
+            Info: Total interconnect delay = 9.800 ns ( 69.50 % )
+    Info: - Micro clock to output delay of source is 0.600 ns
+    Info: - Shortest memory to register delay is 21.200 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = EC5_F; Fanout = 1; MEM Node = 'ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra0'
+        Info: 2: + IC(0.000 ns) + CELL(10.700 ns) = 10.700 ns; Loc. = EC5_F; Fanout = 1; MEM Node = 'ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~mem_cell_ra0'
+        Info: 3: + IC(0.000 ns) + CELL(2.500 ns) = 13.200 ns; Loc. = EC5_F; Fanout = 9; MEM Node = 'ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]'
+        Info: 4: + IC(2.700 ns) + CELL(2.400 ns) = 18.300 ns; Loc. = LC3_F25; Fanout = 1; COMB Node = 'Controller:inst2|Mux3~5'
+        Info: 5: + IC(0.500 ns) + CELL(2.400 ns) = 21.200 ns; Loc. = LC2_F25; Fanout = 8; REG Node = 'Controller:inst2|JumpReg'
+        Info: Total cell delay = 18.000 ns ( 84.91 % )
+        Info: Total interconnect delay = 3.200 ns ( 15.09 % )
+    Info: + Micro hold delay of destination is 0.000 ns
+Info: tsu for register "RAMHelper:inst20|output[2]" (data pin = "dipswitch[2]", clock pin = "board_clk") is 12.500 ns
+    Info: + Longest pin to register delay is 25.000 ns
+        Info: 1: + IC(0.000 ns) + CELL(10.300 ns) = 10.300 ns; Loc. = PIN_182; Fanout = 1; PIN Node = 'dipswitch[2]'
+        Info: 2: + IC(7.300 ns) + CELL(2.700 ns) = 20.300 ns; Loc. = LC6_H24; Fanout = 1; COMB Node = 'RAMHelper:inst20|output~39'
+        Info: 3: + IC(2.700 ns) + CELL(2.000 ns) = 25.000 ns; Loc. = LC7_H23; Fanout = 2; REG Node = 'RAMHelper:inst20|output[2]'
+        Info: Total cell delay = 15.000 ns ( 60.00 % )
+        Info: Total interconnect delay = 10.000 ns ( 40.00 % )
+    Info: + Micro setup delay of destination is 2.600 ns
+    Info: - Shortest clock path from clock "board_clk" to destination register is 15.100 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_91; Fanout = 21; CLK Node = 'board_clk'
+        Info: 2: + IC(4.100 ns) + CELL(1.400 ns) = 8.400 ns; Loc. = LC7_A26; Fanout = 172; REG Node = 'Clock:inst9|clock3'
+        Info: 3: + IC(6.700 ns) + CELL(0.000 ns) = 15.100 ns; Loc. = LC7_H23; Fanout = 2; REG Node = 'RAMHelper:inst20|output[2]'
+        Info: Total cell delay = 4.300 ns ( 28.48 % )
+        Info: Total interconnect delay = 10.800 ns ( 71.52 % )
+Info: tco from clock "board_clk" to destination pin "digit_r[0]" through register "RAMHelper:inst20|digit_r[2]" is 32.800 ns
+    Info: + Longest clock path from clock "board_clk" to source register is 15.200 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_91; Fanout = 21; CLK Node = 'board_clk'
+        Info: 2: + IC(4.100 ns) + CELL(1.400 ns) = 8.400 ns; Loc. = LC7_A26; Fanout = 172; REG Node = 'Clock:inst9|clock3'
+        Info: 3: + IC(6.800 ns) + CELL(0.000 ns) = 15.200 ns; Loc. = LC5_H21; Fanout = 7; REG Node = 'RAMHelper:inst20|digit_r[2]'
+        Info: Total cell delay = 4.300 ns ( 28.29 % )
+        Info: Total interconnect delay = 10.900 ns ( 71.71 % )
+    Info: + Micro clock to output delay of source is 1.400 ns
+    Info: + Longest register to pin delay is 16.200 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC5_H21; Fanout = 7; REG Node = 'RAMHelper:inst20|digit_r[2]'
+        Info: 2: + IC(3.200 ns) + CELL(2.700 ns) = 5.900 ns; Loc. = LC5_H6; Fanout = 1; COMB Node = 'SevenSegmentDisplay:inst18|Mux6~0'
+        Info: 3: + IC(5.300 ns) + CELL(5.000 ns) = 16.200 ns; Loc. = PIN_44; Fanout = 0; PIN Node = 'digit_r[0]'
+        Info: Total cell delay = 7.700 ns ( 47.53 % )
+        Info: Total interconnect delay = 8.500 ns ( 52.47 % )
+Info: th for register "RAMHelper:inst20|output[0]" (data pin = "button_r", clock pin = "board_clk") is 3.600 ns
+    Info: + Longest clock path from clock "board_clk" to destination register is 15.100 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_91; Fanout = 21; CLK Node = 'board_clk'
+        Info: 2: + IC(4.100 ns) + CELL(1.400 ns) = 8.400 ns; Loc. = LC7_A26; Fanout = 172; REG Node = 'Clock:inst9|clock3'
+        Info: 3: + IC(6.700 ns) + CELL(0.000 ns) = 15.100 ns; Loc. = LC2_H23; Fanout = 2; REG Node = 'RAMHelper:inst20|output[0]'
+        Info: Total cell delay = 4.300 ns ( 28.48 % )
+        Info: Total interconnect delay = 10.800 ns ( 71.52 % )
+    Info: + Micro hold delay of destination is 3.100 ns
+    Info: - Shortest pin to register delay is 14.600 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_211; Fanout = 1; PIN Node = 'button_r'
+        Info: 2: + IC(7.100 ns) + CELL(2.400 ns) = 12.400 ns; Loc. = LC6_H23; Fanout = 1; COMB Node = 'RAMHelper:inst20|output~38'
+        Info: 3: + IC(0.500 ns) + CELL(1.700 ns) = 14.600 ns; Loc. = LC2_H23; Fanout = 2; REG Node = 'RAMHelper:inst20|output[0]'
+        Info: Total cell delay = 7.000 ns ( 47.95 % )
+        Info: Total interconnect delay = 7.600 ns ( 52.05 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 191 megabytes
+    Info: Processing ended: Wed Dec 18 16:08:09 2013
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

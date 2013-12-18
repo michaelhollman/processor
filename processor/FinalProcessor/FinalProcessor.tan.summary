@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 12.500 ns
+From           : dipswitch[2]
+To             : RAMHelper:inst20|output[2]
+From Clock     : --
+To Clock       : board_clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 32.800 ns
+From           : RAMHelper:inst20|digit_r[2]
+To             : digit_r[0]
+From Clock     : board_clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 3.600 ns
+From           : button_r
+To             : RAMHelper:inst20|output[0]
+From Clock     : --
+To Clock       : board_clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'board_clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 12.08 MHz ( period = 82.800 ns )
+From           : Controller:inst2|ALUSrc
+To             : RAMHelper:inst20|output[6]
+From Clock     : board_clk
+To Clock       : board_clk
+Failed Paths   : 0
+
+Type           : Clock Hold: 'board_clk'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]~reg_ra0
+To             : Controller:inst2|JumpReg
+From Clock     : board_clk
+To Clock       : board_clk
+Failed Paths   : 224
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 224
+
+--------------------------------------------------------------------------------------
+
