@@ -1,4 +1,4 @@
-RAIK 184H Final Project
+RAIK 284H Final Project
 =========
 
 Final project for RAIK 284H (Computer Systems, a Programmer's Perspective) during the Fall 2013 semester.  This project consists of an 8-bit RISC Processor and an Assembler to build programs for the processor.
