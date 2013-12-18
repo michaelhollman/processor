@@ -1,5 +1,5 @@
 Flow report for FinalProcessor
-Tue Dec 17 02:28:31 2013
+Wed Dec 18 17:20:58 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Flow Summary                                                           ;
 +-------------------------+----------------------------------------------+
-; Flow Status             ; Successful - Tue Dec 17 02:28:31 2013        ;
+; Flow Status             ; Successful - Wed Dec 18 17:20:58 2013        ;
 ; Quartus II Version      ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name           ; FinalProcessor                               ;
 ; Top-level Entity Name   ; FinalProcessor                               ;
@@ -46,8 +46,8 @@ applicable agreement for further details.
 ; Device                  ; EPF10K70RC240-4                              ;
 ; Timing Models           ; Final                                        ;
 ; Met timing requirements ; No                                           ;
-; Total logic elements    ; 473 / 3,744 ( 13 % )                         ;
-; Total pins              ; 164 / 189 ( 87 % )                           ;
+; Total logic elements    ; 487 / 3,744 ( 13 % )                         ;
+; Total pins              ; 173 / 189 ( 92 % )                           ;
 ; Total memory bits       ; 6,144 / 18,432 ( 33 % )                      ;
 +-------------------------+----------------------------------------------+
 
@@ -57,7 +57,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/17/2013 02:28:16 ;
+; Start date & time ; 12/18/2013 17:20:40 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; FinalProcessor      ;
 +-------------------+---------------------+
@@ -68,7 +68,7 @@ applicable agreement for further details.
 +------------------------------------+--------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                                                        ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+--------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 137240371535419.138726889502688                              ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 137240371535419.138740884005976                              ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; ROM: 1-PORT                                                  ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; RAM: 1-PORT                                                  ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_MUX                                                      ; --            ; --          ; --             ;
@@ -79,6 +79,7 @@ applicable agreement for further details.
 ; IP_TOOL_VERSION                    ; 9.0                                                          ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP             ; 85                                                           ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP             ; 0                                                            ; --            ; --          ; --             ;
+; MISC_FILE                          ; C:/git/processor/processor/FinalProcessor/FinalProcessor.dpf ; --            ; --          ; --             ;
 ; MISC_FILE                          ; ROM.bsf                                                      ; --            ; --          ; --             ;
 ; MISC_FILE                          ; ROM.cmp                                                      ; --            ; --          ; --             ;
 ; MISC_FILE                          ; RAM.bsf                                                      ; --            ; --          ; --             ;
@@ -87,7 +88,7 @@ applicable agreement for further details.
 ; MISC_FILE                          ; Mux2x3.cmp                                                   ; --            ; --          ; --             ;
 ; MISC_FILE                          ; Mux2x8.bsf                                                   ; --            ; --          ; --             ;
 ; MISC_FILE                          ; Mux2x8.cmp                                                   ; --            ; --          ; --             ;
-; MISC_FILE                          ; C:/git/processor/processor/FinalProcessor/FinalProcessor.dpf ; --            ; --          ; --             ;
+; SEARCH_PATH                        ; megaclock                                                    ; --            ; --          ; --             ;
 ; SEARCH_PATH                        ; ramhelper                                                    ; --            ; --          ; --             ;
 ; SEARCH_PATH                        ; controller                                                   ; --            ; --          ; --             ;
 ; SEARCH_PATH                        ; alucontroller                                                ; --            ; --          ; --             ;
@@ -97,7 +98,6 @@ applicable agreement for further details.
 ; SEARCH_PATH                        ; plusone                                                      ; --            ; --          ; --             ;
 ; SEARCH_PATH                        ; pc                                                           ; --            ; --          ; --             ;
 ; SEARCH_PATH                        ; decoder                                                      ; --            ; --          ; --             ;
-; SEARCH_PATH                        ; clock                                                        ; --            ; --          ; --             ;
 ; SEARCH_PATH                        ; alu                                                          ; --            ; --          ; --             ;
 ; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                                          ; --            ; --          ; eda_blast_fpga ;
 +------------------------------------+--------------------------------------------------------------+---------------+-------------+----------------+
@@ -108,11 +108,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:03     ; 1.0                     ; 243 MB              ; 00:00:03                           ;
-; Fitter                  ; 00:00:10     ; 1.0                     ; 215 MB              ; 00:00:10                           ;
-; Assembler               ; 00:00:01     ; 1.0                     ; 206 MB              ; 00:00:00                           ;
+; Analysis & Synthesis    ; 00:00:03     ; 1.0                     ; 244 MB              ; 00:00:03                           ;
+; Fitter                  ; 00:00:11     ; 1.0                     ; 215 MB              ; 00:00:11                           ;
+; Assembler               ; 00:00:00     ; 1.0                     ; 206 MB              ; 00:00:00                           ;
 ; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 174 MB              ; 00:00:00                           ;
-; Total                   ; 00:00:15     ; --                      ; --                  ; 00:00:13                           ;
+; Total                   ; 00:00:15     ; --                      ; --                  ; 00:00:14                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
