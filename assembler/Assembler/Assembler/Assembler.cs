@@ -51,6 +51,9 @@ namespace Assembler
                 var machineCode = "";
                 switch (instruction.InstructionType)
                 {
+                    case InstructionType.NoOp:
+                        machineCode = GetNoOp(command);
+                        break;
                     case InstructionType.R:
                         machineCode = GetRType(command);
                         break;
@@ -86,6 +89,17 @@ namespace Assembler
 
             // Return header + results of second pass
             return Enumerable.Concat(Enumerable.Concat(header, binaryCommands), footer).ToArray();
+        }
+
+        private string GetNoOp(Command command)
+        {
+            // Use: Add $0 to $0 and store to $0 as our noop
+            var noopCommand = new Command
+            {
+                Index = command.Index,
+                Tokens = new string[] { "add", "$0", "$0", "$0" }
+            };
+            return GetRType(noopCommand);
         }
 
         private string GetRType(Command command)
