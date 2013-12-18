@@ -159,6 +159,8 @@ begin
 				Jump <= '0';
 				JumpReg <= '0';
 				ALUOp <= "010";
+			when others =>
+				-- Do nothing
 		end case;
 	end process;
 

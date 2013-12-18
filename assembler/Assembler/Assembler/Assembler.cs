@@ -125,6 +125,7 @@ namespace Assembler
 
             if (code == "beq" || code == "bne")
             {
+                // Format: beq $rd, $rs, label
                 rs = ParseRegisterIndex(command.Tokens[2]);
 
                 var label = labels.FirstOrDefault(l => l.Name == command.Tokens[3]);
@@ -136,8 +137,10 @@ namespace Assembler
             }
             else if (code == "lw" || code == "sw")
             {
-                rs = 0;
-                immediate = ParseImmediate(command.Tokens[2]);
+                // Format: lw $rd, offset($rs)
+                var offsetAndRegister = command.Tokens[2].Split(new char[] { '(', ')' }, StringSplitOptions.RemoveEmptyEntries);
+                immediate = ParseOffset(offsetAndRegister[0]);
+                rs = ParseRegisterIndex(offsetAndRegister[1]);
             }
             else
             {
@@ -201,19 +204,27 @@ namespace Assembler
 
         private int ParseImmediate(string value)
         {
-            if (Regex.IsMatch(value, @"^\d+\(\$0\)$")) // X($0)
-            {
-                var s = value.Substring(0, value.IndexOf('('));
-                var registerWidth = 8;
-                return int.Parse(s) * registerWidth;
-            }
-            else if (Regex.IsMatch(value, @"^\d+$")) // X
+            if (Regex.IsMatch(value, @"^\d+$")) // X
             {
                 return int.Parse(value);
             }
             else
             {
                 throw new Exception("Immediate value is in an invalid format");
+            }
+        }
+
+        private int ParseOffset(string value)
+        {
+            if (Regex.IsMatch(value, @"^\d+$"))
+            {
+                var num = int.Parse(value);
+                var registerWidth = 8;
+                return num * registerWidth;
+            }
+            else
+            {
+                throw new Exception("Cannot parse offset.");
             }
         }
 

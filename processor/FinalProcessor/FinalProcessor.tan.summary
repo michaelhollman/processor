@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 18.100 ns
-From           : dipswitch[5]
-To             : RAMHelper:inst20|output[5]
+Actual Time    : 10.500 ns
+From           : button_1
+To             : RAMHelper:inst20|output[0]
 From Clock     : --
 To Clock       : board_clk
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 85.400 ns
-From           : ALU:inst8|zero
-To             : debug_jump_mux3result[2]
+Actual Time    : 62.700 ns
+From           : Controller:inst2|ALUOp[2]
+To             : debug_alucont_output[0]
 From Clock     : board_clk
 To Clock       : --
 Failed Paths   : 0
@@ -25,7 +25,7 @@ Failed Paths   : 0
 Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 19.200 ns
+Actual Time    : 20.200 ns
 From           : board_clk
 To             : debug_clk_board
 From Clock     : --
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -3.600 ns
-From           : reset
-To             : MegaClock:inst4|clk_4
+Actual Time    : -0.600 ns
+From           : dipswitch[5]
+To             : RAMHelper:inst20|output[5]
 From Clock     : --
 To Clock       : board_clk
 Failed Paths   : 0
@@ -45,7 +45,7 @@ Failed Paths   : 0
 Type           : Clock Setup: 'board_clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 8.26 MHz ( period = 121.000 ns )
+Actual Time    : 7.92 MHz ( period = 126.200 ns )
 From           : ALU:inst8|zero
 To             : PC:inst10|output[3]
 From Clock     : board_clk
@@ -56,11 +56,11 @@ Type           : Clock Hold: 'board_clk'
 Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
-From           : RegFile:inst13|out2[7]
+From           : RegFile:inst13|out1[6]
 To             : ALU:inst8|zero
 From Clock     : board_clk
 To Clock       : board_clk
-Failed Paths   : 320
+Failed Paths   : 321
 
 Type           : Total number of failed paths
 Slack          : 
@@ -70,7 +70,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 320
+Failed Paths   : 321
 
 --------------------------------------------------------------------------------------
 

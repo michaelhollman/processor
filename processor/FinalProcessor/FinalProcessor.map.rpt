@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FinalProcessor
-Wed Dec 18 17:20:43 2013
+Wed Dec 18 17:33:26 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -17,8 +17,8 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   9. General Register Statistics
  10. Source assignments for MegaClock:inst4|lpm_counter:clk_sys_rtl_0
  11. Source assignments for PlusOne:inst12|lpm_add_sub:Add0|addcore:adder
- 12. Source assignments for ALU:inst8|lpm_add_sub:Add1|addcore:adder
- 13. Source assignments for ALU:inst8|lpm_add_sub:Add0|addcore:adder
+ 12. Source assignments for ALU:inst8|lpm_add_sub:Add0|addcore:adder
+ 13. Source assignments for ALU:inst8|lpm_add_sub:Add1|addcore:adder
  14. Parameter Settings for User Entity Instance: ROM:inst|lpm_rom:lpm_rom_component
  15. Parameter Settings for User Entity Instance: Mux2x8:inst43|LPM_MUX:lpm_mux_component
  16. Parameter Settings for User Entity Instance: Mux2x8:inst44|LPM_MUX:lpm_mux_component
@@ -30,8 +30,8 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
  22. Parameter Settings for User Entity Instance: Mux2x8:inst39|LPM_MUX:lpm_mux_component
  23. Parameter Settings for Inferred Entity Instance: MegaClock:inst4|lpm_counter:clk_sys_rtl_0
  24. Parameter Settings for Inferred Entity Instance: PlusOne:inst12|lpm_add_sub:Add0
- 25. Parameter Settings for Inferred Entity Instance: ALU:inst8|lpm_add_sub:Add1
- 26. Parameter Settings for Inferred Entity Instance: ALU:inst8|lpm_add_sub:Add0
+ 25. Parameter Settings for Inferred Entity Instance: ALU:inst8|lpm_add_sub:Add0
+ 26. Parameter Settings for Inferred Entity Instance: ALU:inst8|lpm_add_sub:Add1
  27. Analysis & Synthesis Messages
 
 
@@ -58,12 +58,12 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Dec 18 17:20:43 2013        ;
+; Analysis & Synthesis Status ; Successful - Wed Dec 18 17:33:26 2013        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; FinalProcessor                               ;
 ; Top-level Entity Name       ; FinalProcessor                               ;
 ; Family                      ; FLEX10K                                      ;
-; Total logic elements        ; 465                                          ;
+; Total logic elements        ; 448                                          ;
 ; Total pins                  ; 173                                          ;
 ; Total memory bits           ; 6,144                                        ;
 +-----------------------------+----------------------------------------------+
@@ -131,68 +131,67 @@ applicable agreement for further details.
 +--------------------------------------------------------------+-----------------+----------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                              ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                          ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------+
-; FinalProcessor.bdf               ; yes             ; User Block Diagram/Schematic File      ; C:/git/processor/processor/FinalProcessor/FinalProcessor.bdf                          ;
-; ROM.vhd                          ; yes             ; User Wizard-Generated File             ; C:/git/processor/processor/FinalProcessor/ROM.vhd                                     ;
-; RAM.vhd                          ; yes             ; User Wizard-Generated File             ; C:/git/processor/processor/FinalProcessor/RAM.vhd                                     ;
-; Mux2x3.vhd                       ; yes             ; User Wizard-Generated File             ; C:/git/processor/processor/FinalProcessor/Mux2x3.vhd                                  ;
-; Mux2x8.vhd                       ; yes             ; User Wizard-Generated File             ; C:/git/processor/processor/FinalProcessor/Mux2x8.vhd                                  ;
-; RAMHelper.vhd                    ; yes             ; Auto-Found VHDL File                   ; C:/git/processor/processor/FinalProcessor/ramhelper/RAMHelper.vhd                     ;
-; MegaClock.vhd                    ; yes             ; Auto-Found VHDL File                   ; C:/git/processor/processor/FinalProcessor/megaclock/MegaClock.vhd                     ;
-; Controller.vhd                   ; yes             ; Auto-Found VHDL File                   ; C:/git/processor/processor/FinalProcessor/controller/Controller.vhd                   ;
-; Decoder.vhd                      ; yes             ; Auto-Found VHDL File                   ; C:/git/processor/processor/FinalProcessor/decoder/Decoder.vhd                         ;
-; lpm_rom.tdf                      ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_rom.tdf                           ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/altrom.inc                            ;
-; aglobal90.inc                    ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/aglobal90.inc                         ;
-; altrom.tdf                       ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/altrom.tdf                            ;
-; memmodes.inc                     ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/others/maxplus2/memmodes.inc                        ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_decode.inc                        ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_mux.inc                           ;
-; altqpram.inc                     ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/altqpram.inc                          ;
-; altsyncram.inc                   ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/altsyncram.inc                        ;
-; program.mif                      ; yes             ; Auto-Found Memory Initialization File  ; C:/git/processor/processor/FinalProcessor/program.mif                                 ;
-; PC.vhd                           ; yes             ; Auto-Found VHDL File                   ; C:/git/processor/processor/FinalProcessor/pc/PC.vhd                                   ;
-; LPM_MUX.tdf                      ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/LPM_MUX.tdf                           ;
-; muxlut.inc                       ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/muxlut.inc                            ;
-; bypassff.inc                     ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/bypassff.inc                          ;
-; altshift.inc                     ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/altshift.inc                          ;
-; altshift.tdf                     ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/altshift.tdf                          ;
-; muxlut.tdf                       ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/muxlut.tdf                            ;
-; ALU.vhd                          ; yes             ; Auto-Found VHDL File                   ; C:/git/processor/processor/FinalProcessor/alu/ALU.vhd                                 ;
-; ALUController.vhd                ; yes             ; Auto-Found VHDL File                   ; C:/git/processor/processor/FinalProcessor/alucontroller/ALUController.vhd             ;
-; RegFile.vhd                      ; yes             ; Auto-Found VHDL File                   ; C:/git/processor/processor/FinalProcessor/regfile/RegFile.vhd                         ;
-; lpm_ram_dq.tdf                   ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_ram_dq.tdf                        ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/altram.inc                            ;
-; altram.tdf                       ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/altram.tdf                            ;
-; SignExtender.vhd                 ; yes             ; Auto-Found VHDL File                   ; C:/git/processor/processor/FinalProcessor/signextender/SignExtender.vhd               ;
-; PlusOne.vhd                      ; yes             ; Auto-Found VHDL File                   ; C:/git/processor/processor/FinalProcessor/plusone/PlusOne.vhd                         ;
-; SevenSegmentDisplay.vhd          ; yes             ; Auto-Found VHDL File                   ; C:/git/processor/processor/FinalProcessor/sevensegmentdisplay/SevenSegmentDisplay.vhd ;
-; lpm_counter.tdf                  ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_counter.tdf                       ;
-; lpm_constant.inc                 ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_constant.inc                      ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_add_sub.inc                       ;
-; cmpconst.inc                     ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/cmpconst.inc                          ;
-; lpm_compare.inc                  ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_compare.inc                       ;
-; lpm_counter.inc                  ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_counter.inc                       ;
-; dffeea.inc                       ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/dffeea.inc                            ;
-; alt_synch_counter.inc            ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_synch_counter.inc                 ;
-; alt_synch_counter_f.inc          ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_synch_counter_f.inc               ;
-; alt_counter_f10ke.inc            ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_counter_f10ke.inc                 ;
-; alt_counter_stratix.inc          ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_counter_stratix.inc               ;
-; alt_counter_f10ke.tdf            ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_counter_f10ke.tdf                 ;
-; flex10ke_lcell.inc               ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/flex10ke_lcell.inc                    ;
-; lpm_add_sub.tdf                  ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_add_sub.tdf                       ;
-; addcore.inc                      ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/addcore.inc                           ;
-; look_add.inc                     ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/look_add.inc                          ;
-; alt_stratix_add_sub.inc          ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_stratix_add_sub.inc               ;
-; alt_mercury_add_sub.inc          ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_mercury_add_sub.inc               ;
-; addcore.tdf                      ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/addcore.tdf                           ;
-; a_csnbuffer.inc                  ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/a_csnbuffer.inc                       ;
-; a_csnbuffer.tdf                  ; yes             ; Megafunction                           ; c:/altera/90sp2/quartus/libraries/megafunctions/a_csnbuffer.tdf                       ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                          ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                          ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------+
+; FinalProcessor.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/git/processor/processor/FinalProcessor/FinalProcessor.bdf                          ;
+; ROM.vhd                          ; yes             ; User Wizard-Generated File         ; C:/git/processor/processor/FinalProcessor/ROM.vhd                                     ;
+; RAM.vhd                          ; yes             ; User Wizard-Generated File         ; C:/git/processor/processor/FinalProcessor/RAM.vhd                                     ;
+; Mux2x3.vhd                       ; yes             ; User Wizard-Generated File         ; C:/git/processor/processor/FinalProcessor/Mux2x3.vhd                                  ;
+; Mux2x8.vhd                       ; yes             ; User Wizard-Generated File         ; C:/git/processor/processor/FinalProcessor/Mux2x8.vhd                                  ;
+; RAMHelper.vhd                    ; yes             ; Auto-Found VHDL File               ; C:/git/processor/processor/FinalProcessor/ramhelper/RAMHelper.vhd                     ;
+; MegaClock.vhd                    ; yes             ; Auto-Found VHDL File               ; C:/git/processor/processor/FinalProcessor/megaclock/MegaClock.vhd                     ;
+; Controller.vhd                   ; yes             ; Auto-Found VHDL File               ; C:/git/processor/processor/FinalProcessor/controller/Controller.vhd                   ;
+; Decoder.vhd                      ; yes             ; Auto-Found VHDL File               ; C:/git/processor/processor/FinalProcessor/decoder/Decoder.vhd                         ;
+; lpm_rom.tdf                      ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_rom.tdf                           ;
+; altrom.inc                       ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/altrom.inc                            ;
+; aglobal90.inc                    ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/aglobal90.inc                         ;
+; altrom.tdf                       ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/altrom.tdf                            ;
+; memmodes.inc                     ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/others/maxplus2/memmodes.inc                        ;
+; lpm_decode.inc                   ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_decode.inc                        ;
+; lpm_mux.inc                      ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_mux.inc                           ;
+; altqpram.inc                     ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/altqpram.inc                          ;
+; altsyncram.inc                   ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/altsyncram.inc                        ;
+; PC.vhd                           ; yes             ; Auto-Found VHDL File               ; C:/git/processor/processor/FinalProcessor/pc/PC.vhd                                   ;
+; LPM_MUX.tdf                      ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/LPM_MUX.tdf                           ;
+; muxlut.inc                       ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/muxlut.inc                            ;
+; bypassff.inc                     ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/bypassff.inc                          ;
+; altshift.inc                     ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/altshift.inc                          ;
+; altshift.tdf                     ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/altshift.tdf                          ;
+; muxlut.tdf                       ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/muxlut.tdf                            ;
+; ALU.vhd                          ; yes             ; Auto-Found VHDL File               ; C:/git/processor/processor/FinalProcessor/alu/ALU.vhd                                 ;
+; ALUController.vhd                ; yes             ; Auto-Found VHDL File               ; C:/git/processor/processor/FinalProcessor/alucontroller/ALUController.vhd             ;
+; RegFile.vhd                      ; yes             ; Auto-Found VHDL File               ; C:/git/processor/processor/FinalProcessor/regfile/RegFile.vhd                         ;
+; lpm_ram_dq.tdf                   ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_ram_dq.tdf                        ;
+; altram.inc                       ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/altram.inc                            ;
+; altram.tdf                       ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/altram.tdf                            ;
+; SignExtender.vhd                 ; yes             ; Auto-Found VHDL File               ; C:/git/processor/processor/FinalProcessor/signextender/SignExtender.vhd               ;
+; PlusOne.vhd                      ; yes             ; Auto-Found VHDL File               ; C:/git/processor/processor/FinalProcessor/plusone/PlusOne.vhd                         ;
+; SevenSegmentDisplay.vhd          ; yes             ; Auto-Found VHDL File               ; C:/git/processor/processor/FinalProcessor/sevensegmentdisplay/SevenSegmentDisplay.vhd ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_counter.tdf                       ;
+; lpm_constant.inc                 ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_constant.inc                      ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_add_sub.inc                       ;
+; cmpconst.inc                     ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/cmpconst.inc                          ;
+; lpm_compare.inc                  ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_compare.inc                       ;
+; lpm_counter.inc                  ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_counter.inc                       ;
+; dffeea.inc                       ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/dffeea.inc                            ;
+; alt_synch_counter.inc            ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_synch_counter.inc                 ;
+; alt_synch_counter_f.inc          ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_synch_counter_f.inc               ;
+; alt_counter_f10ke.inc            ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_counter_f10ke.inc                 ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_counter_stratix.inc               ;
+; alt_counter_f10ke.tdf            ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_counter_f10ke.tdf                 ;
+; flex10ke_lcell.inc               ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/flex10ke_lcell.inc                    ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_add_sub.tdf                       ;
+; addcore.inc                      ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/addcore.inc                           ;
+; look_add.inc                     ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/look_add.inc                          ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_stratix_add_sub.inc               ;
+; alt_mercury_add_sub.inc          ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_mercury_add_sub.inc               ;
+; addcore.tdf                      ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/addcore.tdf                           ;
+; a_csnbuffer.inc                  ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/a_csnbuffer.inc                       ;
+; a_csnbuffer.tdf                  ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/a_csnbuffer.tdf                       ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------+
@@ -200,11 +199,11 @@ applicable agreement for further details.
 +-----------------------------------+---------------------------------------------------------------------+
 ; Resource                          ; Usage                                                               ;
 +-----------------------------------+---------------------------------------------------------------------+
-; Total logic elements              ; 465                                                                 ;
-; Total combinational functions     ; 453                                                                 ;
-;     -- Total 4-input functions    ; 213                                                                 ;
-;     -- Total 3-input functions    ; 181                                                                 ;
-;     -- Total 2-input functions    ; 35                                                                  ;
+; Total logic elements              ; 448                                                                 ;
+; Total combinational functions     ; 436                                                                 ;
+;     -- Total 4-input functions    ; 200                                                                 ;
+;     -- Total 3-input functions    ; 178                                                                 ;
+;     -- Total 2-input functions    ; 34                                                                  ;
 ;     -- Total 1-input functions    ; 24                                                                  ;
 ;     -- Total 0-input functions    ; 0                                                                   ;
 ; Total registers                   ; 121                                                                 ;
@@ -213,8 +212,8 @@ applicable agreement for further details.
 ; Total memory bits                 ; 6144                                                                ;
 ; Maximum fan-out node              ; Mux2x3:inst38|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~2 ;
 ; Maximum fan-out                   ; 63                                                                  ;
-; Total fan-out                     ; 2130                                                                ;
-; Average fan-out                   ; 3.22                                                                ;
+; Total fan-out                     ; 2024                                                                ;
+; Average fan-out                   ; 3.14                                                                ;
 +-----------------------------------+---------------------------------------------------------------------+
 
 
@@ -223,8 +222,8 @@ applicable agreement for further details.
 +-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                      ; Library Name ;
 +-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------+--------------+
-; |FinalProcessor                           ; 465 (1)     ; 121          ; 6144        ; 173  ; 344 (1)      ; 12 (0)            ; 109 (0)          ; 38 (0)          ; 0 (0)      ; |FinalProcessor                                                                          ; work         ;
-;    |ALU:inst8|                            ; 143 (127)   ; 0            ; 0           ; 0    ; 143 (127)    ; 0 (0)             ; 0 (0)            ; 16 (0)          ; 0 (0)      ; |FinalProcessor|ALU:inst8                                                                ; work         ;
+; |FinalProcessor                           ; 448 (0)     ; 121          ; 6144        ; 173  ; 327 (0)      ; 12 (0)            ; 109 (0)          ; 38 (0)          ; 0 (0)      ; |FinalProcessor                                                                          ; work         ;
+;    |ALU:inst8|                            ; 144 (128)   ; 0            ; 0           ; 0    ; 144 (128)    ; 0 (0)             ; 0 (0)            ; 16 (0)          ; 0 (0)      ; |FinalProcessor|ALU:inst8                                                                ; work         ;
 ;       |lpm_add_sub:Add0|                  ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |FinalProcessor|ALU:inst8|lpm_add_sub:Add0                                               ; work         ;
 ;          |addcore:adder|                  ; 8 (1)       ; 0            ; 0           ; 0    ; 8 (1)        ; 0 (0)             ; 0 (0)            ; 8 (1)           ; 0 (0)      ; |FinalProcessor|ALU:inst8|lpm_add_sub:Add0|addcore:adder                                 ; work         ;
 ;             |a_csnbuffer:result_node|     ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |FinalProcessor|ALU:inst8|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node         ; work         ;
@@ -249,36 +248,17 @@ applicable agreement for further details.
 ;          |muxlut:$00017|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00017                    ; work         ;
 ;          |muxlut:$00019|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00019                    ; work         ;
 ;          |muxlut:$00021|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00021                    ; work         ;
-;    |Mux2x8:inst42|                        ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst42                                                            ; work         ;
-;       |lpm_mux:lpm_mux_component|         ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst42|lpm_mux:lpm_mux_component                                  ; work         ;
-;          |muxlut:$00009|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst42|lpm_mux:lpm_mux_component|muxlut:$00009                    ; work         ;
-;          |muxlut:$00011|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst42|lpm_mux:lpm_mux_component|muxlut:$00011                    ; work         ;
-;          |muxlut:$00013|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst42|lpm_mux:lpm_mux_component|muxlut:$00013                    ; work         ;
-;          |muxlut:$00015|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst42|lpm_mux:lpm_mux_component|muxlut:$00015                    ; work         ;
-;          |muxlut:$00017|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst42|lpm_mux:lpm_mux_component|muxlut:$00017                    ; work         ;
-;          |muxlut:$00019|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst42|lpm_mux:lpm_mux_component|muxlut:$00019                    ; work         ;
-;          |muxlut:$00021|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst42|lpm_mux:lpm_mux_component|muxlut:$00021                    ; work         ;
-;          |muxlut:$00023|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst42|lpm_mux:lpm_mux_component|muxlut:$00023                    ; work         ;
-;    |Mux2x8:inst43|                        ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst43                                                            ; work         ;
-;       |lpm_mux:lpm_mux_component|         ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst43|lpm_mux:lpm_mux_component                                  ; work         ;
-;          |muxlut:$00009|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst43|lpm_mux:lpm_mux_component|muxlut:$00009                    ; work         ;
+;    |Mux2x8:inst43|                        ; 5 (0)       ; 0            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst43                                                            ; work         ;
+;       |lpm_mux:lpm_mux_component|         ; 5 (0)       ; 0            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst43|lpm_mux:lpm_mux_component                                  ; work         ;
 ;          |muxlut:$00011|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst43|lpm_mux:lpm_mux_component|muxlut:$00011                    ; work         ;
 ;          |muxlut:$00013|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst43|lpm_mux:lpm_mux_component|muxlut:$00013                    ; work         ;
 ;          |muxlut:$00015|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst43|lpm_mux:lpm_mux_component|muxlut:$00015                    ; work         ;
 ;          |muxlut:$00017|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst43|lpm_mux:lpm_mux_component|muxlut:$00017                    ; work         ;
 ;          |muxlut:$00019|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst43|lpm_mux:lpm_mux_component|muxlut:$00019                    ; work         ;
-;          |muxlut:$00021|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst43|lpm_mux:lpm_mux_component|muxlut:$00021                    ; work         ;
-;          |muxlut:$00023|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst43|lpm_mux:lpm_mux_component|muxlut:$00023                    ; work         ;
-;    |Mux2x8:inst44|                        ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst44                                                            ; work         ;
-;       |lpm_mux:lpm_mux_component|         ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst44|lpm_mux:lpm_mux_component                                  ; work         ;
+;    |Mux2x8:inst44|                        ; 2 (0)       ; 0            ; 0           ; 0    ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst44                                                            ; work         ;
+;       |lpm_mux:lpm_mux_component|         ; 2 (0)       ; 0            ; 0           ; 0    ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst44|lpm_mux:lpm_mux_component                                  ; work         ;
 ;          |muxlut:$00009|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst44|lpm_mux:lpm_mux_component|muxlut:$00009                    ; work         ;
-;          |muxlut:$00011|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst44|lpm_mux:lpm_mux_component|muxlut:$00011                    ; work         ;
-;          |muxlut:$00013|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst44|lpm_mux:lpm_mux_component|muxlut:$00013                    ; work         ;
-;          |muxlut:$00015|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst44|lpm_mux:lpm_mux_component|muxlut:$00015                    ; work         ;
-;          |muxlut:$00017|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst44|lpm_mux:lpm_mux_component|muxlut:$00017                    ; work         ;
 ;          |muxlut:$00019|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst44|lpm_mux:lpm_mux_component|muxlut:$00019                    ; work         ;
-;          |muxlut:$00021|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst44|lpm_mux:lpm_mux_component|muxlut:$00021                    ; work         ;
-;          |muxlut:$00023|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst44|lpm_mux:lpm_mux_component|muxlut:$00023                    ; work         ;
 ;    |Mux2x8:inst46|                        ; 16 (0)      ; 0            ; 0           ; 0    ; 16 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst46                                                            ; work         ;
 ;       |lpm_mux:lpm_mux_component|         ; 16 (0)      ; 0            ; 0           ; 0    ; 16 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst46|lpm_mux:lpm_mux_component                                  ; work         ;
 ;          |muxlut:$00009|                  ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst46|lpm_mux:lpm_mux_component|muxlut:$00009                    ; work         ;
@@ -332,9 +312,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Controller:inst2|RegWrite                           ; Controller:inst2|Mux11 ; yes                    ;
 ; Controller:inst2|Jump                               ; Controller:inst2|Mux11 ; yes                    ;
 ; Controller:inst2|JumpReg                            ; Controller:inst2|Mux11 ; yes                    ;
-; ALU:inst8|zero                                      ; ALU:inst8|zero~0       ; yes                    ;
+; Controller:inst2|ALUOp[2]                           ; Controller:inst2|Mux11 ; yes                    ;
 ; Controller:inst2|ALUOp[1]                           ; Controller:inst2|Mux11 ; yes                    ;
-; Controller:inst2|ALUOp[0]                           ; Controller:inst2|Mux11 ; yes                    ;
 ; ALU:inst8|output[6]                                 ; ALU:inst8|output[7]~15 ; yes                    ;
 ; ALU:inst8|output[5]                                 ; ALU:inst8|output[7]~15 ; yes                    ;
 ; ALU:inst8|output[4]                                 ; ALU:inst8|output[7]~15 ; yes                    ;
@@ -343,6 +322,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ALU:inst8|output[1]                                 ; ALU:inst8|output[7]~15 ; yes                    ;
 ; ALU:inst8|output[0]                                 ; ALU:inst8|output[7]~15 ; yes                    ;
 ; ALU:inst8|output[7]                                 ; ALU:inst8|output[7]~15 ; yes                    ;
+; ALU:inst8|zero                                      ; ALU:inst8|zero~0       ; yes                    ;
 ; Number of user-specified and inferred latches = 20  ;                        ;                        ;
 +-----------------------------------------------------+------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -384,7 +364,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 
 
 +-----------------------------------------------------------------+
-; Source assignments for ALU:inst8|lpm_add_sub:Add1|addcore:adder ;
+; Source assignments for ALU:inst8|lpm_add_sub:Add0|addcore:adder ;
 +---------------------------+-------+------+----------------------+
 ; Assignment                ; Value ; From ; To                   ;
 +---------------------------+-------+------+----------------------+
@@ -393,7 +373,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 
 
 +-----------------------------------------------------------------+
-; Source assignments for ALU:inst8|lpm_add_sub:Add0|addcore:adder ;
+; Source assignments for ALU:inst8|lpm_add_sub:Add1|addcore:adder ;
 +---------------------------+-------+------+----------------------+
 ; Assignment                ; Value ; From ; To                   ;
 +---------------------------+-------+------+----------------------+
@@ -633,34 +613,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ALU:inst8|lpm_add_sub:Add1 ;
-+------------------------+-------------+--------------------------------------+
-; Parameter Name         ; Value       ; Type                                 ;
-+------------------------+-------------+--------------------------------------+
-; LPM_WIDTH              ; 9           ; Untyped                              ;
-; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                              ;
-; LPM_DIRECTION          ; ADD         ; Untyped                              ;
-; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                              ;
-; LPM_PIPELINE           ; 0           ; Untyped                              ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                              ;
-; REGISTERED_AT_END      ; 0           ; Untyped                              ;
-; OPTIMIZE_FOR_SPEED     ; 1           ; Untyped                              ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                              ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                              ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                   ;
-; DEVICE_FAMILY          ; FLEX10K     ; Untyped                              ;
-; USE_WYS                ; OFF         ; Untyped                              ;
-; STYLE                  ; FAST        ; Untyped                              ;
-; CBXI_PARAMETER         ; add_sub_sjh ; Untyped                              ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                           ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                         ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                         ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                       ;
-+------------------------+-------------+--------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: ALU:inst8|lpm_add_sub:Add0 ;
 +------------------------+-------------+--------------------------------------+
 ; Parameter Name         ; Value       ; Type                                 ;
@@ -688,13 +640,41 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ALU:inst8|lpm_add_sub:Add1 ;
++------------------------+-------------+--------------------------------------+
+; Parameter Name         ; Value       ; Type                                 ;
++------------------------+-------------+--------------------------------------+
+; LPM_WIDTH              ; 9           ; Untyped                              ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                              ;
+; LPM_DIRECTION          ; ADD         ; Untyped                              ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                              ;
+; LPM_PIPELINE           ; 0           ; Untyped                              ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                              ;
+; REGISTERED_AT_END      ; 0           ; Untyped                              ;
+; OPTIMIZE_FOR_SPEED     ; 1           ; Untyped                              ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                              ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                              ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                   ;
+; DEVICE_FAMILY          ; FLEX10K     ; Untyped                              ;
+; USE_WYS                ; OFF         ; Untyped                              ;
+; STYLE                  ; FAST        ; Untyped                              ;
+; CBXI_PARAMETER         ; add_sub_sjh ; Untyped                              ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                         ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                       ;
++------------------------+-------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Dec 18 17:20:40 2013
+    Info: Processing started: Wed Dec 18 17:33:23 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FinalProcessor -c FinalProcessor
 Info: Found 1 design units, including 1 entities, in source file FinalProcessor.bdf
     Info: Found entity 1: FinalProcessor
@@ -714,10 +694,18 @@ Info: Found 2 design units, including 1 entities, in source file Mux2x8.vhd
 Info: Elaborating entity "FinalProcessor" for the top level hierarchy
 Warning: Pin "debug_alu_zero" is missing source
 Warning: Pin "debug_alu_overflow" is missing source
+Warning: Pin "debug_jump_mux1sel" is missing source
+Warning: Pin "debug_jump_mux2sel" is missing source
+Warning: Pin "debug_jump_mux3sel" is missing source
 Warning: Pin "debug_alu_aluCode[2..0]" is missing source
 Warning: Pin "debug_alu_inputOne[7..0]" is missing source
 Warning: Pin "debug_alu_inputTwo[7..0]" is missing source
 Warning: Pin "debug_alu_output[7..0]" is missing source
+Warning: Pin "debug_jump_mux1result[7..0]" is missing source
+Warning: Pin "debug_jump_mux2result[7..0]" is missing source
+Warning: Pin "debug_jump_mux3result[7..0]" is missing source
+Warning: Pin "debug_plusone[7..0]" is missing source
+Warning: Pin "debug_signextender[7..0]" is missing source
 Warning: Using design file ramhelper/RAMHelper.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info: Found design unit 1: RAMHelper-dataflow
     Info: Found entity 1: RAMHelper
@@ -768,18 +756,6 @@ Info: Instantiated megafunction "ROM:inst|lpm_rom:lpm_rom_component" with the fo
     Info: Parameter "lpm_width" = "16"
     Info: Parameter "lpm_widthad" = "8"
 Info: Elaborating entity "altrom" for hierarchy "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom"
-Warning: Width of data items in "program.mif" is greater than the memory width. Truncating data items to fit in memory.
-Warning: 99 out of 256 addresses are reinitialized. The latest initialized data will replace the existing data. There are 99 warnings found, and 10 warnings are reported.
-    Warning: Memory Initialization File address 0 is reinitialized
-    Warning: Memory Initialization File address 1 is reinitialized
-    Warning: Memory Initialization File address 2 is reinitialized
-    Warning: Memory Initialization File address 3 is reinitialized
-    Warning: Memory Initialization File address 4 is reinitialized
-    Warning: Memory Initialization File address 5 is reinitialized
-    Warning: Memory Initialization File address 6 is reinitialized
-    Warning: Memory Initialization File address 7 is reinitialized
-    Warning: Memory Initialization File address 8 is reinitialized
-    Warning: Memory Initialization File address 9 is reinitialized
 Info: Elaborated megafunction instantiation "ROM:inst|lpm_rom:lpm_rom_component|altrom:srom", which is child of megafunction instantiation "ROM:inst|lpm_rom:lpm_rom_component"
 Warning: Using design file pc/PC.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info: Found design unit 1: PC-dataflow
@@ -870,7 +846,6 @@ Info: Instantiated megafunction "RAM:inst1|lpm_ram_dq:lpm_ram_dq_component" with
     Info: Parameter "lpm_width" = "8"
     Info: Parameter "lpm_widthad" = "8"
 Info: Elaborating entity "altram" for hierarchy "RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram"
-Critical Warning: Can't find Memory Initialization File or Hexadecimal (Intel-Format) File C:/git/processor/processor/FinalProcessor/none.mif -- setting all initial values to 0
 Info: Elaborated megafunction instantiation "RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram", which is child of megafunction instantiation "RAM:inst1|lpm_ram_dq:lpm_ram_dq_component"
 Warning: Using design file signextender/SignExtender.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info: Found design unit 1: SignExtender-dataflow
@@ -895,8 +870,8 @@ Info: Inferred 1 megafunctions from design logic
     Info: Inferred lpm_counter megafunction (LPM_WIDTH=14) from the following logic: "MegaClock:inst4|clk_sys[0]~0"
 Info: Inferred 3 megafunctions from design logic
     Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "PlusOne:inst12|Add0"
-    Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "ALU:inst8|Add1"
     Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "ALU:inst8|Add0"
+    Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "ALU:inst8|Add1"
 Info: Elaborated megafunction instantiation "MegaClock:inst4|lpm_counter:clk_sys_rtl_0"
 Info: Instantiated megafunction "MegaClock:inst4|lpm_counter:clk_sys_rtl_0" with the following parameter:
     Info: Parameter "LPM_WIDTH" = "14"
@@ -914,6 +889,13 @@ Info: Elaborated megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0|add
 Info: Elaborated megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node", which is child of megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0"
 Info: Elaborated megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0|altshift:result_ext_latency_ffs", which is child of megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0"
 Info: Elaborated megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0|altshift:carry_ext_latency_ffs", which is child of megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0"
+Info: Elaborated megafunction instantiation "ALU:inst8|lpm_add_sub:Add0"
+Info: Instantiated megafunction "ALU:inst8|lpm_add_sub:Add0" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "8"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
+Info: Elaborated megafunction instantiation "ALU:inst8|lpm_add_sub:Add0|addcore:adder", which is child of megafunction instantiation "ALU:inst8|lpm_add_sub:Add0"
 Info: Elaborated megafunction instantiation "ALU:inst8|lpm_add_sub:Add1"
 Info: Instantiated megafunction "ALU:inst8|lpm_add_sub:Add1" with the following parameter:
     Info: Parameter "LPM_WIDTH" = "9"
@@ -924,35 +906,22 @@ Info: Elaborated megafunction instantiation "ALU:inst8|lpm_add_sub:Add1|addcore:
 Info: Elaborated megafunction instantiation "ALU:inst8|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:oflow_node", which is child of megafunction instantiation "ALU:inst8|lpm_add_sub:Add1"
 Info: Elaborated megafunction instantiation "ALU:inst8|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node", which is child of megafunction instantiation "ALU:inst8|lpm_add_sub:Add1"
 Info: Elaborated megafunction instantiation "ALU:inst8|lpm_add_sub:Add1|altshift:result_ext_latency_ffs", which is child of megafunction instantiation "ALU:inst8|lpm_add_sub:Add1"
-Info: Elaborated megafunction instantiation "ALU:inst8|lpm_add_sub:Add0"
-Info: Instantiated megafunction "ALU:inst8|lpm_add_sub:Add0" with the following parameter:
-    Info: Parameter "LPM_WIDTH" = "8"
-    Info: Parameter "LPM_DIRECTION" = "ADD"
-    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
-Info: Elaborated megafunction instantiation "ALU:inst8|lpm_add_sub:Add0|addcore:adder", which is child of megafunction instantiation "ALU:inst8|lpm_add_sub:Add0"
 Warning: Always-enabled tri-state buffer(s) removed
     Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[2]" to the node "debug_alucont_aluCode[2]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[2]" to the node "debug_decod_aluCode[2]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[2]" to the node "debug_decod_Immediate[2]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[2]" to the node "debug_signextender[2]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[1]" to the node "debug_alucont_aluCode[1]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[1]" to the node "debug_decod_aluCode[1]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[1]" to the node "debug_decod_Immediate[1]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[1]" to the node "debug_signextender[1]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[0]" to the node "debug_alucont_aluCode[0]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[0]" to the node "debug_decod_aluCode[0]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[0]" to the node "debug_decod_Immediate[0]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[0]" to the node "debug_signextender[0]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[5]" to the node "debug_decod_Immediate[5]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[5]" to the node "debug_decod_rt[2]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[5]" to the node "debug_signextender[5]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[4]" to the node "debug_decod_Immediate[4]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[4]" to the node "debug_decod_rt[1]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[4]" to the node "debug_signextender[4]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[3]" to the node "debug_decod_Immediate[3]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[3]" to the node "debug_decod_rt[0]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[3]" to the node "debug_signextender[3]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[15]" to the node "debug_decod_opCode[3]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[14]" to the node "debug_decod_opCode[2]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[13]" to the node "debug_decod_opCode[1]" into a wire
@@ -969,7 +938,7 @@ Warning: Always-enabled tri-state buffer(s) removed
 Warning: Tri-state node(s) do not directly drive top-level pin(s)
     Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[2]" to the node "Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00013|result_node" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[1]" to the node "Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00011|result_node" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[0]" to the node "Mux2x8:inst42|lpm_mux:lpm_mux_component|muxlut:$00009|result_node" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[0]" to the node "Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00009|result_node" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[5]" to the node "Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00019|result_node" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[4]" to the node "Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00017|result_node" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[3]" to the node "Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00015|result_node" into an OR gate
@@ -998,26 +967,26 @@ Warning: Latch Controller:inst2|Jump has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]
 Warning: Latch Controller:inst2|JumpReg has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]
+Warning: Latch Controller:inst2|ALUOp[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]
 Warning: Latch Controller:inst2|ALUOp[1] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]
-Warning: Latch Controller:inst2|ALUOp[0] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]
 Warning: Latch ALU:inst8|output[6] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[2]
+    Warning: Ports D and ENA on the latch are fed by the same signal Controller:inst2|ALUOp[2]
 Warning: Latch ALU:inst8|output[5] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[2]
+    Warning: Ports D and ENA on the latch are fed by the same signal Controller:inst2|ALUOp[2]
 Warning: Latch ALU:inst8|output[4] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[2]
+    Warning: Ports D and ENA on the latch are fed by the same signal Controller:inst2|ALUOp[2]
 Warning: Latch ALU:inst8|output[3] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[2]
+    Warning: Ports D and ENA on the latch are fed by the same signal Controller:inst2|ALUOp[2]
 Warning: Latch ALU:inst8|output[2] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[2]
+    Warning: Ports D and ENA on the latch are fed by the same signal Controller:inst2|ALUOp[2]
 Warning: Latch ALU:inst8|output[1] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[2]
+    Warning: Ports D and ENA on the latch are fed by the same signal Controller:inst2|ALUOp[2]
 Warning: Latch ALU:inst8|output[0] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[2]
+    Warning: Ports D and ENA on the latch are fed by the same signal Controller:inst2|ALUOp[2]
 Warning: Latch ALU:inst8|output[7] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[2]
+    Warning: Ports D and ENA on the latch are fed by the same signal Controller:inst2|ALUOp[2]
 Warning: LATCH primitive "ALU:inst8|output[6]" is permanently enabled
 Warning: LATCH primitive "ALU:inst8|output[5]" is permanently enabled
 Warning: LATCH primitive "ALU:inst8|output[4]" is permanently enabled
@@ -1029,6 +998,9 @@ Warning: LATCH primitive "ALU:inst8|output[7]" is permanently enabled
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "debug_alu_zero" is stuck at GND
     Warning (13410): Pin "debug_alu_overflow" is stuck at GND
+    Warning (13410): Pin "debug_jump_mux1sel" is stuck at GND
+    Warning (13410): Pin "debug_jump_mux2sel" is stuck at GND
+    Warning (13410): Pin "debug_jump_mux3sel" is stuck at GND
     Warning (13410): Pin "debug_alu_aluCode[2]" is stuck at GND
     Warning (13410): Pin "debug_alu_aluCode[1]" is stuck at GND
     Warning (13410): Pin "debug_alu_aluCode[0]" is stuck at GND
@@ -1056,19 +1028,57 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "debug_alu_output[2]" is stuck at GND
     Warning (13410): Pin "debug_alu_output[1]" is stuck at GND
     Warning (13410): Pin "debug_alu_output[0]" is stuck at GND
-    Warning (13410): Pin "debug_alucont_aluOp[2]" is stuck at GND
-    Warning (13410): Pin "debug_contr_ALUOp[2]" is stuck at GND
+    Warning (13410): Pin "debug_alucont_aluOp[0]" is stuck at GND
+    Warning (13410): Pin "debug_contr_ALUOp[0]" is stuck at GND
+    Warning (13410): Pin "debug_jump_mux1result[7]" is stuck at GND
+    Warning (13410): Pin "debug_jump_mux1result[6]" is stuck at GND
+    Warning (13410): Pin "debug_jump_mux1result[5]" is stuck at GND
+    Warning (13410): Pin "debug_jump_mux1result[4]" is stuck at GND
+    Warning (13410): Pin "debug_jump_mux1result[3]" is stuck at GND
+    Warning (13410): Pin "debug_jump_mux1result[2]" is stuck at GND
+    Warning (13410): Pin "debug_jump_mux1result[1]" is stuck at GND
+    Warning (13410): Pin "debug_jump_mux1result[0]" is stuck at GND
+    Warning (13410): Pin "debug_jump_mux2result[7]" is stuck at GND
+    Warning (13410): Pin "debug_jump_mux2result[6]" is stuck at GND
+    Warning (13410): Pin "debug_jump_mux2result[5]" is stuck at GND
+    Warning (13410): Pin "debug_jump_mux2result[4]" is stuck at GND
+    Warning (13410): Pin "debug_jump_mux2result[3]" is stuck at GND
+    Warning (13410): Pin "debug_jump_mux2result[2]" is stuck at GND
+    Warning (13410): Pin "debug_jump_mux2result[1]" is stuck at GND
+    Warning (13410): Pin "debug_jump_mux2result[0]" is stuck at GND
+    Warning (13410): Pin "debug_jump_mux3result[7]" is stuck at GND
+    Warning (13410): Pin "debug_jump_mux3result[6]" is stuck at GND
+    Warning (13410): Pin "debug_jump_mux3result[5]" is stuck at GND
+    Warning (13410): Pin "debug_jump_mux3result[4]" is stuck at GND
+    Warning (13410): Pin "debug_jump_mux3result[3]" is stuck at GND
+    Warning (13410): Pin "debug_jump_mux3result[2]" is stuck at GND
+    Warning (13410): Pin "debug_jump_mux3result[1]" is stuck at GND
+    Warning (13410): Pin "debug_jump_mux3result[0]" is stuck at GND
+    Warning (13410): Pin "debug_plusone[7]" is stuck at GND
+    Warning (13410): Pin "debug_plusone[6]" is stuck at GND
+    Warning (13410): Pin "debug_plusone[5]" is stuck at GND
+    Warning (13410): Pin "debug_plusone[4]" is stuck at GND
+    Warning (13410): Pin "debug_plusone[3]" is stuck at GND
+    Warning (13410): Pin "debug_plusone[2]" is stuck at GND
+    Warning (13410): Pin "debug_plusone[1]" is stuck at GND
+    Warning (13410): Pin "debug_plusone[0]" is stuck at GND
     Warning (13410): Pin "debug_signextender[7]" is stuck at GND
     Warning (13410): Pin "debug_signextender[6]" is stuck at GND
-Info: Implemented 662 device resources after synthesis - the final resource count might be different
+    Warning (13410): Pin "debug_signextender[5]" is stuck at GND
+    Warning (13410): Pin "debug_signextender[4]" is stuck at GND
+    Warning (13410): Pin "debug_signextender[3]" is stuck at GND
+    Warning (13410): Pin "debug_signextender[2]" is stuck at GND
+    Warning (13410): Pin "debug_signextender[1]" is stuck at GND
+    Warning (13410): Pin "debug_signextender[0]" is stuck at GND
+Info: Implemented 645 device resources after synthesis - the final resource count might be different
     Info: Implemented 12 input pins
     Info: Implemented 161 output pins
-    Info: Implemented 465 logic cells
+    Info: Implemented 448 logic cells
     Info: Implemented 24 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 200 warnings
-    Info: Peak virtual memory: 244 megabytes
-    Info: Processing ended: Wed Dec 18 17:20:44 2013
-    Info: Elapsed time: 00:00:04
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 230 warnings
+    Info: Peak virtual memory: 243 megabytes
+    Info: Processing ended: Wed Dec 18 17:33:26 2013
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 
 
