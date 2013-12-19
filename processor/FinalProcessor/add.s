@@ -7,7 +7,7 @@ beq $2,$0,load1 ; If button==1 continue; button==0 loop to load1
 
 addiu $2,$0,1 ; Set the value of R2 to 1
 add $1,$1,$2 ; Add 1 to A
-sw $2,1($0) ; Turn on the decimal
+sw $7,2($0) ; Overflow digit
 sw $1,0($0) ; Output A to display
 
 end: j end ; inf loopy endy

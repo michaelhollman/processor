@@ -12,8 +12,9 @@ namespace Assembler
         static void Main(string[] args)
         {
             Console.WriteLine("Enter base repository directory:  ex: C:/git");
-            var basePath = Console.ReadLine();
-            var program = "multiplier";
+            var basePath = "c:/repos"; // Console.ReadLine();
+            Console.WriteLine("Enter file to compile:");
+            var program = Console.ReadLine();
 
             var inputPath = String.Format("{0}/processor/processor/FinalProcessor/{1}.s", basePath, program);
             var lines = File.ReadAllLines(inputPath);
