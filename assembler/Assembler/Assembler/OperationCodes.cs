@@ -34,7 +34,7 @@ namespace Assembler
 
             Instructions.Add("j", new OperationCode("j", InstructionType.J, "0101"));
             Instructions.Add("jr", new OperationCode("jr", InstructionType.R, "0110"));
-            Instructions.Add("jal", new OperationCode("jal", InstructionType.J, "0111"));
+            //Instructions.Add("jal", new OperationCode("jal", InstructionType.J, "0111"));
 
             Instructions.Add("noop", new OperationCode("noop", InstructionType.NoOp, "0000"));
         }
