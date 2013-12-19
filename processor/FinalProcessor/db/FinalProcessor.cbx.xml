@@ -1,98 +1,15 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="FinalProcessor">
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux11" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux2" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|SevenSegmentDisplay:inst18|LPM_MUX:Mux1" CBX_FILE_NAME="mux_fdc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux12" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux3" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux30" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|SevenSegmentDisplay:inst18|LPM_MUX:Mux2" CBX_FILE_NAME="mux_fdc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux13" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux31" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux4" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|SevenSegmentDisplay:inst18|LPM_MUX:Mux3" CBX_FILE_NAME="mux_fdc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux14" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux32" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux5" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux50" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|SevenSegmentDisplay:inst18|LPM_MUX:Mux4" CBX_FILE_NAME="mux_fdc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux15" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux33" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux51" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux6" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|SevenSegmentDisplay:inst18|LPM_MUX:Mux5" CBX_FILE_NAME="mux_fdc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux16" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux34" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux52" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux7" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|SevenSegmentDisplay:inst18|LPM_MUX:Mux6" CBX_FILE_NAME="mux_fdc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Mux2x8:inst40|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_3od.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux17" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux35" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux53" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux8" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux18" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux36" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux54" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux9" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Controller:inst2|LPM_MUX:Mux6" CBX_FILE_NAME="mux_fdc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Mux2x8:inst42|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_3od.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux19" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux28" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux37" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux46" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux55" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Controller:inst2|LPM_MUX:Mux7" CBX_FILE_NAME="mux_fdc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Mux2x8:inst43|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_3od.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux29" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux38" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux47" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Controller:inst2|LPM_MUX:Mux8" CBX_FILE_NAME="mux_fdc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Mux2x8:inst44|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_3od.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux39" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux48" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Controller:inst2|LPM_MUX:Mux9" CBX_FILE_NAME="mux_fdc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux49" CBX_FILE_NAME="mux_vbc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Mux2x8:inst46|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_3od.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|PlusOne:inst12|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_fnh.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|ALU:inst8|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_sjh.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|MegaClock:inst4|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_soh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Mux2x8:inst43|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_3od.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|ALU:inst8|lpm_add_sub:Add1" CBX_FILE_NAME="add_sub_sjh.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Mux2x8:inst39|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_3od.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux0" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux1" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux10" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|SevenSegmentDisplay:inst18|LPM_MUX:Mux0" CBX_FILE_NAME="mux_fdc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux20" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|SevenSegmentDisplay:inst19|LPM_MUX:Mux0" CBX_FILE_NAME="mux_fdc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux21" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|SevenSegmentDisplay:inst19|LPM_MUX:Mux1" CBX_FILE_NAME="mux_fdc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Controller:inst2|LPM_MUX:Mux0" CBX_FILE_NAME="mux_fdc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Mux2x3:inst41|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_und.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux22" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux40" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|SevenSegmentDisplay:inst19|LPM_MUX:Mux2" CBX_FILE_NAME="mux_fdc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Controller:inst2|LPM_MUX:Mux1" CBX_FILE_NAME="mux_fdc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Controller:inst2|LPM_MUX:Mux10" CBX_FILE_NAME="mux_fdc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux23" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux41" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|SevenSegmentDisplay:inst19|LPM_MUX:Mux3" CBX_FILE_NAME="mux_fdc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Controller:inst2|LPM_MUX:Mux11" CBX_FILE_NAME="mux_fdc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Controller:inst2|LPM_MUX:Mux2" CBX_FILE_NAME="mux_fdc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux24" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux42" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|SevenSegmentDisplay:inst19|LPM_MUX:Mux4" CBX_FILE_NAME="mux_fdc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Controller:inst2|LPM_MUX:Mux3" CBX_FILE_NAME="mux_fdc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux25" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux43" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|SevenSegmentDisplay:inst19|LPM_MUX:Mux5" CBX_FILE_NAME="mux_fdc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Controller:inst2|LPM_MUX:Mux4" CBX_FILE_NAME="mux_fdc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux26" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux44" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|SevenSegmentDisplay:inst19|LPM_MUX:Mux6" CBX_FILE_NAME="mux_fdc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Controller:inst2|LPM_MUX:Mux5" CBX_FILE_NAME="mux_fdc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux27" CBX_FILE_NAME="mux_vbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux45" CBX_FILE_NAME="mux_vbc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Mux2x8:inst39|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_3od.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Mux2x8:inst40|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_3od.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Mux2x8:inst44|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_3od.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

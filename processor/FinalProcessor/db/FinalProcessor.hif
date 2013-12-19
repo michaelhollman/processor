@@ -1435,40 +1435,6 @@ PlusOne:inst12
 
 # end
 # entity
-SevenSegmentDisplay
-# storage
-db|FinalProcessor.(24).cnf
-db|FinalProcessor.(24).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-sevensegmentdisplay|SevenSegmentDisplay.vhd
-bb31803a5ca5c42b41db99698baf22bb
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-SevenSegmentDisplay:inst19
-SevenSegmentDisplay:inst18
-}
-# lmf
-..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
 lpm_counter
 # storage
 db|FinalProcessor.(25).cnf
@@ -3642,26 +3608,6 @@ ROM:inst|lpm_rom:lpm_rom_component|altrom:srom
 
 # end
 # entity
-FinalProcessor
-# storage
-db|FinalProcessor.(0).cnf
-db|FinalProcessor.(0).cnf
-# case_insensitive
-# source_file
-FinalProcessor.bdf
-c98ed33a70d6453ae4d2627eb195ec
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
 Controller
 # storage
 db|FinalProcessor.(3).cnf
@@ -3724,6 +3670,60 @@ RegFile:inst13
 # lmf
 ..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
 9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+SevenSegmentDisplay
+# storage
+db|FinalProcessor.(24).cnf
+db|FinalProcessor.(24).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+sevensegmentdisplay|SevenSegmentDisplay.vhd
+e7c0aa3a9832b918dd166e81d6454fe
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+SevenSegmentDisplay:inst19
+SevenSegmentDisplay:inst18
+}
+# lmf
+..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+FinalProcessor
+# storage
+db|FinalProcessor.(0).cnf
+db|FinalProcessor.(0).cnf
+# case_insensitive
+# source_file
+FinalProcessor.bdf
+e642f2dac5a4bdc111cf618d1efdc93b
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
 # macro_sequence
 
 # end

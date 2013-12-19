@@ -1,10 +1,10 @@
-Fitter Status : Successful - Wed Dec 18 21:04:51 2013
+Fitter Status : Successful - Wed Dec 18 22:54:45 2013
 Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
 Revision Name : FinalProcessor
 Top-level Entity Name : FinalProcessor
 Family : FLEX10K
 Device : EPF10K70RC240-4
 Timing Models : Final
-Total logic elements : 506 / 3,744 ( 14 % )
+Total logic elements : 509 / 3,744 ( 14 % )
 Total pins : 183 / 189 ( 97 % )
 Total memory bits : 6,144 / 18,432 ( 33 % )

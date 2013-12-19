@@ -5,7 +5,7 @@ use IEEE.numeric_std.all;
 entity SevenSegmentDisplay is
 	port(
 		input : in std_logic_vector(3 downto 0);
-		output: out std_logic_vector(7 downto 0)
+		output: out std_logic_vector(6 downto 0)
 		--a, b, c, d, e, f, g : out bit
 	);
 end SevenSegmentDisplay;
@@ -15,8 +15,9 @@ signal a,b,c,d,e,f,g: std_logic;
 begin
 	process(input)
 	begin
-		case to_integer(unsigned(input)) is
-			when 0 => 
+		case input is
+			when "0000" => 
+				--0
 				a <= '1';
 				b <= '1';
 				c <= '1';
@@ -24,7 +25,7 @@ begin
 				e <= '1';
 				f <= '1';
 				g <= '0';
-			when 1 =>
+			when "0001" =>
 				a <= '0';
 				b <= '1';
 				c <= '1';
@@ -32,7 +33,7 @@ begin
 				e <= '0';
 				f <= '0';
 				g <= '0';				
-			when 2 => 
+			when "0010" => 
 				a <= '1';
 				b <= '1';
 				c <= '0';
@@ -40,7 +41,7 @@ begin
 				e <= '1';
 				f <= '0';
 				g <= '1';
-			when 3 =>
+			when "0011" =>
 				a <= '1';
 				b <= '1';
 				c <= '1';
@@ -56,7 +57,7 @@ begin
 				e <= '0';
 				f <= '1';
 				g <= '1';
-			when 5 =>
+			when "0100" =>
 				a <= '1';
 				b <= '0';
 				c <= '1';
@@ -64,7 +65,7 @@ begin
 				e <= '0';
 				f <= '1';
 				g <= '1';
-			when 6 =>
+			when "0101" =>
 				a <= '1';
 				b <= '0';
 				c <= '1';
@@ -72,7 +73,7 @@ begin
 				e <= '1';
 				f <= '1';
 				g <= '1';
-			when 7 =>
+			when "0110" =>
 				a <= '1';
 				b <= '1';
 				c <= '1';
@@ -80,7 +81,7 @@ begin
 				e <= '0';
 				f <= '0';
 				g <= '0';
-			when 8 =>
+			when "0111" =>
 				a <= '1';
 				b <= '1';
 				c <= '1';
@@ -88,7 +89,7 @@ begin
 				e <= '1';
 				f <= '1';
 				g <= '1';
-			when 9 =>
+			when "1000" =>
 				a <= '1';
 				b <= '1';
 				c <= '1';
@@ -96,7 +97,8 @@ begin
 				e <= '0';
 				f <= '1';
 				g <= '1';
-			when 10 =>
+			when "1001" =>
+				--A
 				a <= '1';
 				b <= '1';
 				c <= '1';
@@ -105,6 +107,7 @@ begin
 				f <= '1';
 				g <= '1';
 			when 11 =>
+				--B
 				a <= '0';
 				b <= '0';
 				c <= '1';
@@ -113,6 +116,7 @@ begin
 				f <= '1';
 				g <= '1';
 			when 12 =>
+				--C
 				a <= '1';
 				b <= '0';
 				c <= '0';
@@ -121,6 +125,7 @@ begin
 				f <= '1';
 				g <= '0';
 			when 13 =>
+				--D
 				a <= '0';
 				b <= '1';
 				c <= '1';
@@ -129,6 +134,7 @@ begin
 				f <= '0';
 				g <= '1';
 			when 14 =>
+				--E
 				a <= '1';
 				b <= '0';
 				c <= '0';
@@ -137,6 +143,7 @@ begin
 				f <= '1';
 				g <= '1';
 			when 15 =>
+				--F
 				a <= '1';
 				b <= '0';
 				c <= '0';
@@ -151,7 +158,7 @@ begin
 				d <= '0';
 				e <= '0';
 				f <= '0';
-				g <= '0';
+				g <= '1';
 		end case;	
 	output <= a & b & c & d & e & f & g;	
 	end process;
