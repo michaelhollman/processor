@@ -1,5 +1,5 @@
 Fitter report for ALU
-Mon Dec 16 12:59:27 2013
+Thu Dec 19 03:19:34 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -14,22 +14,21 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   6. Input Pins
   7. Output Pins
   8. All Package Pins
-  9. Control Signals
- 10. Global & Other Fast Signals
- 11. Carry Chains
- 12. Cascade Chains
- 13. Non-Global High Fan-Out Signals
- 14. LAB
- 15. Local Routing Interconnect
- 16. LAB External Interconnect
- 17. Row Interconnect
+  9. Global & Other Fast Signals
+ 10. Carry Chains
+ 11. Cascade Chains
+ 12. Non-Global High Fan-Out Signals
+ 13. LAB
+ 14. Local Routing Interconnect
+ 15. LAB External Interconnect
+ 16. Row Interconnect
+ 17. LAB Column Interconnect
  18. LAB Column Interconnect
- 19. LAB Column Interconnect
- 20. Fitter Resource Usage Summary
- 21. Fitter Resource Utilization by Entity
- 22. Delay Chain Summary
- 23. Pin-Out File
- 24. Fitter Messages
+ 19. Fitter Resource Usage Summary
+ 20. Fitter Resource Utilization by Entity
+ 21. Delay Chain Summary
+ 22. Pin-Out File
+ 23. Fitter Messages
 
 
 
@@ -55,15 +54,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------+
 ; Fitter Summary                                                       ;
 +-----------------------+----------------------------------------------+
-; Fitter Status         ; Successful - Mon Dec 16 12:59:27 2013        ;
+; Fitter Status         ; Successful - Thu Dec 19 03:19:34 2013        ;
 ; Quartus II Version    ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name         ; ALU                                          ;
 ; Top-level Entity Name ; ALU                                          ;
 ; Family                ; FLEX10K                                      ;
 ; Device                ; EPF10K70RC240-4                              ;
 ; Timing Models         ; Final                                        ;
-; Total logic elements  ; 116 / 3,744 ( 3 % )                          ;
-; Total pins            ; 30 / 189 ( 16 % )                            ;
+; Total logic elements  ; 125 / 3,744 ( 3 % )                          ;
+; Total pins            ; 29 / 189 ( 15 % )                            ;
 ; Total memory bits     ; 0 / 18,432 ( 0 % )                           ;
 +-----------------------+----------------------------------------------+
 
@@ -134,25 +133,24 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Name        ; Pin # ; Row ; Col. ; Fan-Out ; Global ; I/O Register ; Use Local Routing Input ; Power Up High ; Single-Pin CE ; I/O Standard ;
 +-------------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+---------------+--------------+
 ; aluCode[2]  ; 92    ; --  ; --   ; 22      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; inputTwo[2] ; 174   ;  A  ; --   ; 10      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; inputTwo[3] ; 239   ; --  ; 51   ; 5       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; inputTwo[5] ; 229   ; --  ; 42   ; 5       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; inputTwo[7] ; 171   ;  A  ; --   ; 5       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; inputTwo[6] ; 88    ; --  ; 27   ; 6       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; inputTwo[4] ; 218   ; --  ; 32   ; 10      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; inputOne[0] ; 234   ; --  ; 45   ; 9       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; inputTwo[0] ; 90    ; --  ; --   ; 24      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; inputTwo[1] ; 210   ; --  ; --   ; 27      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; aluCode[1]  ; 212   ; --  ; --   ; 30      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; inputOne[3] ; 76    ; --  ; 37   ; 8       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; inputOne[2] ; 211   ; --  ; --   ; 10      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; inputOne[1] ; 9     ;  A  ; --   ; 9       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; inputOne[7] ; 200   ; --  ; 20   ; 9       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; inputOne[6] ; 172   ;  A  ; --   ; 10      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; inputOne[5] ; 11    ;  A  ; --   ; 9       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; inputOne[4] ; 203   ; --  ; 22   ; 9       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; aluCode[0]  ; 183   ; --  ; 5    ; 10      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; clk_in      ; 91    ; --  ; --   ; 10      ; yes    ; no           ; no                      ; no            ; no            ; TTL          ;
+; inputTwo[3] ; 133   ;  H  ; --   ; 7       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; inputTwo[5] ; 46    ;  H  ; --   ; 7       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; inputTwo[7] ; 186   ; --  ; 8    ; 7       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; inputTwo[6] ; 191   ; --  ; 12   ; 7       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; inputTwo[4] ; 98    ; --  ; 21   ; 11      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; inputTwo[2] ; 196   ; --  ; 16   ; 11      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; inputOne[0] ; 119   ; --  ; 2    ; 10      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; inputTwo[0] ; 90    ; --  ; --   ; 23      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; inputTwo[1] ; 212   ; --  ; --   ; 30      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; aluCode[1]  ; 210   ; --  ; --   ; 30      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; inputOne[3] ; 211   ; --  ; --   ; 11      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; inputOne[1] ; 102   ; --  ; 17   ; 9       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; inputOne[2] ; 193   ; --  ; 14   ; 11      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; inputOne[7] ; 91    ; --  ; --   ; 11      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; inputOne[6] ; 49    ;  H  ; --   ; 10      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; inputOne[5] ; 110   ; --  ; 10   ; 11      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; inputOne[4] ; 131   ;  H  ; --   ; 11      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; aluCode[0]  ; 50    ;  H  ; --   ; 10      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
 +-------------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+---------------+--------------+
 
 
@@ -162,15 +160,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Name      ; Pin # ; Row ; Col. ; I/O Register ; Use Local Routing Output ; Power Up High ; Slow Slew Rate ; Single-Pin OE ; Single-Pin CE ; Open Drain ; TRI Primitive ; I/O Standard ;
 +-----------+-------+-----+------+--------------+--------------------------+---------------+----------------+---------------+---------------+------------+---------------+--------------+
 ; output[0] ; 7     ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; output[1] ; 175   ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; output[2] ; 99    ; --  ; 19   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; output[3] ; 220   ; --  ; 33   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; output[4] ; 110   ; --  ; 10   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; output[5] ; 188   ; --  ; 10   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; output[6] ; 225   ; --  ; 37   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; output[7] ; 173   ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; zero      ; 6     ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; overflow  ; 8     ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; output[1] ; 137   ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; output[2] ; 134   ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; output[3] ; 113   ; --  ; 8    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; output[4] ; 132   ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; output[5] ; 194   ; --  ; 15   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; output[6] ; 183   ; --  ; 5    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; output[7] ; 114   ; --  ; 7    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; zero      ; 99    ; --  ; 19   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; overflow  ; 48    ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
 +-----------+-------+-----+------+--------------+--------------------------+---------------+----------------+---------------+---------------+------------+---------------+--------------+
 
 
@@ -184,12 +182,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 3     ; ^nCEO       ;              ;
 ; 4     ; #TDO        ;              ;
 ; 5     ; VCC_INT     ;              ;
-; 6     ; zero        ; TTL          ;
+; 6     ; GND*        ;              ;
 ; 7     ; output[0]   ; TTL          ;
-; 8     ; overflow    ; TTL          ;
-; 9     ; inputOne[1] ; TTL          ;
+; 8     ; GND*        ;              ;
+; 9     ; GND*        ;              ;
 ; 10    ; GND_INT     ;              ;
-; 11    ; inputOne[5] ; TTL          ;
+; 11    ; GND*        ;              ;
 ; 12    ; GND*        ;              ;
 ; 13    ; GND*        ;              ;
 ; 14    ; GND*        ;              ;
@@ -224,11 +222,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 43    ; GND*        ;              ;
 ; 44    ; GND*        ;              ;
 ; 45    ; GND*        ;              ;
-; 46    ; GND*        ;              ;
+; 46    ; inputTwo[5] ; TTL          ;
 ; 47    ; VCC_INT     ;              ;
-; 48    ; GND*        ;              ;
-; 49    ; GND*        ;              ;
-; 50    ; GND*        ;              ;
+; 48    ; overflow    ; TTL          ;
+; 49    ; inputOne[6] ; TTL          ;
+; 50    ; aluCode[0]  ; TTL          ;
 ; 51    ; GND*        ;              ;
 ; 52    ; GND_INT     ;              ;
 ; 53    ; GND*        ;              ;
@@ -254,7 +252,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 73    ; GND*        ;              ;
 ; 74    ; GND*        ;              ;
 ; 75    ; GND*        ;              ;
-; 76    ; inputOne[3] ; TTL          ;
+; 76    ; GND*        ;              ;
 ; 77    ; VCC_INT     ;              ;
 ; 78    ; GND*        ;              ;
 ; 79    ; GND*        ;              ;
@@ -266,21 +264,21 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 85    ; GND_INT     ;              ;
 ; 86    ; GND*        ;              ;
 ; 87    ; GND*        ;              ;
-; 88    ; inputTwo[6] ; TTL          ;
+; 88    ; GND*        ;              ;
 ; 89    ; VCC_INT     ;              ;
 ; 90    ; inputTwo[0] ; TTL          ;
-; 91    ; clk_in      ; TTL          ;
+; 91    ; inputOne[7] ; TTL          ;
 ; 92    ; aluCode[2]  ; TTL          ;
 ; 93    ; GND_INT     ;              ;
 ; 94    ; GND*        ;              ;
 ; 95    ; GND*        ;              ;
 ; 96    ; VCC_INT     ;              ;
 ; 97    ; GND*        ;              ;
-; 98    ; GND*        ;              ;
-; 99    ; output[2]   ; TTL          ;
+; 98    ; inputTwo[4] ; TTL          ;
+; 99    ; zero        ; TTL          ;
 ; 100   ; GND*        ;              ;
 ; 101   ; GND*        ;              ;
-; 102   ; GND*        ;              ;
+; 102   ; inputOne[1] ; TTL          ;
 ; 103   ; GND*        ;              ;
 ; 104   ; GND_INT     ;              ;
 ; 105   ; GND*        ;              ;
@@ -288,16 +286,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 107   ; GND*        ;              ;
 ; 108   ; GND*        ;              ;
 ; 109   ; GND*        ;              ;
-; 110   ; output[4]   ; TTL          ;
+; 110   ; inputOne[5] ; TTL          ;
 ; 111   ; GND*        ;              ;
 ; 112   ; VCC_INT     ;              ;
-; 113   ; GND*        ;              ;
-; 114   ; GND*        ;              ;
+; 113   ; output[3]   ; TTL          ;
+; 114   ; output[7]   ; TTL          ;
 ; 115   ; GND*        ;              ;
 ; 116   ; GND*        ;              ;
 ; 117   ; GND*        ;              ;
 ; 118   ; GND*        ;              ;
-; 119   ; GND*        ;              ;
+; 119   ; inputOne[0] ; TTL          ;
 ; 120   ; GND*        ;              ;
 ; 121   ; ^nCONFIG    ;              ;
 ; 122   ; VCC_INT     ;              ;
@@ -309,13 +307,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 128   ; GND*        ;              ;
 ; 129   ; GND*        ;              ;
 ; 130   ; VCC_INT     ;              ;
-; 131   ; GND*        ;              ;
-; 132   ; GND*        ;              ;
-; 133   ; GND*        ;              ;
-; 134   ; GND*        ;              ;
+; 131   ; inputOne[4] ; TTL          ;
+; 132   ; output[4]   ; TTL          ;
+; 133   ; inputTwo[3] ; TTL          ;
+; 134   ; output[2]   ; TTL          ;
 ; 135   ; GND_INT     ;              ;
 ; 136   ; GND*        ;              ;
-; 137   ; GND*        ;              ;
+; 137   ; output[1]   ; TTL          ;
 ; 138   ; GND*        ;              ;
 ; 139   ; GND*        ;              ;
 ; 140   ; VCC_INT     ;              ;
@@ -349,11 +347,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 168   ; GND*        ;              ;
 ; 169   ; GND*        ;              ;
 ; 170   ; VCC_INT     ;              ;
-; 171   ; inputTwo[7] ; TTL          ;
-; 172   ; inputOne[6] ; TTL          ;
-; 173   ; output[7]   ; TTL          ;
-; 174   ; inputTwo[2] ; TTL          ;
-; 175   ; output[1]   ; TTL          ;
+; 171   ; GND*        ;              ;
+; 172   ; GND*        ;              ;
+; 173   ; GND*        ;              ;
+; 174   ; GND*        ;              ;
+; 175   ; GND*        ;              ;
 ; 176   ; GND_INT     ;              ;
 ; 177   ; #TDI        ;              ;
 ; 178   ; ^nCE        ;              ;
@@ -361,76 +359,65 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 180   ; ^DATA0      ;              ;
 ; 181   ; GND*        ;              ;
 ; 182   ; GND*        ;              ;
-; 183   ; aluCode[0]  ; TTL          ;
+; 183   ; output[6]   ; TTL          ;
 ; 184   ; GND*        ;              ;
 ; 185   ; GND*        ;              ;
-; 186   ; GND*        ;              ;
+; 186   ; inputTwo[7] ; TTL          ;
 ; 187   ; GND*        ;              ;
-; 188   ; output[5]   ; TTL          ;
+; 188   ; GND*        ;              ;
 ; 189   ; VCC_INT     ;              ;
 ; 190   ; GND*        ;              ;
-; 191   ; GND*        ;              ;
+; 191   ; inputTwo[6] ; TTL          ;
 ; 192   ; GND*        ;              ;
-; 193   ; GND*        ;              ;
-; 194   ; GND*        ;              ;
+; 193   ; inputOne[2] ; TTL          ;
+; 194   ; output[5]   ; TTL          ;
 ; 195   ; GND*        ;              ;
-; 196   ; GND*        ;              ;
+; 196   ; inputTwo[2] ; TTL          ;
 ; 197   ; GND_INT     ;              ;
 ; 198   ; GND*        ;              ;
 ; 199   ; GND*        ;              ;
-; 200   ; inputOne[7] ; TTL          ;
+; 200   ; GND*        ;              ;
 ; 201   ; GND*        ;              ;
 ; 202   ; GND*        ;              ;
-; 203   ; inputOne[4] ; TTL          ;
+; 203   ; GND*        ;              ;
 ; 204   ; GND*        ;              ;
 ; 205   ; VCC_INT     ;              ;
 ; 206   ; GND*        ;              ;
 ; 207   ; GND*        ;              ;
 ; 208   ; GND*        ;              ;
 ; 209   ; GND*        ;              ;
-; 210   ; inputTwo[1] ; TTL          ;
-; 211   ; inputOne[2] ; TTL          ;
-; 212   ; aluCode[1]  ; TTL          ;
+; 210   ; aluCode[1]  ; TTL          ;
+; 211   ; inputOne[3] ; TTL          ;
+; 212   ; inputTwo[1] ; TTL          ;
 ; 213   ; GND*        ;              ;
 ; 214   ; GND*        ;              ;
 ; 215   ; GND*        ;              ;
 ; 216   ; GND_INT     ;              ;
 ; 217   ; GND*        ;              ;
-; 218   ; inputTwo[4] ; TTL          ;
+; 218   ; GND*        ;              ;
 ; 219   ; GND*        ;              ;
-; 220   ; output[3]   ; TTL          ;
+; 220   ; GND*        ;              ;
 ; 221   ; GND*        ;              ;
 ; 222   ; GND*        ;              ;
 ; 223   ; GND*        ;              ;
 ; 224   ; VCC_INT     ;              ;
-; 225   ; output[6]   ; TTL          ;
+; 225   ; GND*        ;              ;
 ; 226   ; GND*        ;              ;
 ; 227   ; GND*        ;              ;
 ; 228   ; GND*        ;              ;
-; 229   ; inputTwo[5] ; TTL          ;
+; 229   ; GND*        ;              ;
 ; 230   ; GND*        ;              ;
 ; 231   ; GND*        ;              ;
 ; 232   ; GND_INT     ;              ;
 ; 233   ; GND*        ;              ;
-; 234   ; inputOne[0] ; TTL          ;
+; 234   ; GND*        ;              ;
 ; 235   ; GND*        ;              ;
 ; 236   ; GND*        ;              ;
 ; 237   ; GND*        ;              ;
 ; 238   ; GND*        ;              ;
-; 239   ; inputTwo[3] ; TTL          ;
+; 239   ; GND*        ;              ;
 ; 240   ; GND*        ;              ;
 +-------+-------------+--------------+
-
-
-+--------------------------------------------------------------+
-; Control Signals                                              ;
-+------------+---------+---------+--------------+--------------+
-; Name       ; Pin #   ; Fan-Out ; Usage        ; Global Usage ;
-+------------+---------+---------+--------------+--------------+
-; overflow~2 ; LC2_A45 ; 1       ; Clock enable ; Non-global   ;
-; zero~7     ; LC8_A45 ; 1       ; Clock enable ; Non-global   ;
-; clk_in     ; 91      ; 10      ; Clock        ; Pin          ;
-+------------+---------+---------+--------------+--------------+
 
 
 +----------------------------------------+
@@ -439,11 +426,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Name        ; Pin # ; Fan-Out ; Global ;
 +-------------+-------+---------+--------+
 ; aluCode[2]  ; 92    ; 22      ; no     ;
-; inputTwo[0] ; 90    ; 24      ; no     ;
-; inputTwo[1] ; 210   ; 27      ; no     ;
-; aluCode[1]  ; 212   ; 30      ; no     ;
-; inputOne[2] ; 211   ; 10      ; no     ;
-; clk_in      ; 91    ; 10      ; yes    ;
+; inputTwo[0] ; 90    ; 23      ; no     ;
+; inputTwo[1] ; 212   ; 30      ; no     ;
+; aluCode[1]  ; 210   ; 30      ; no     ;
+; inputOne[3] ; 211   ; 11      ; no     ;
+; inputOne[7] ; 91    ; 11      ; no     ;
 +-------------+-------+---------+--------+
 
 
@@ -470,7 +457,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------+-------+
 ; Length ; Count ;
 +--------+-------+
-; 2      ; 4     ;
+; 2      ; 6     ;
 +--------+-------+
 
 
@@ -479,56 +466,56 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------------------------------------------------+---------+
 ; Name                                                                     ; Fan-Out ;
 +--------------------------------------------------------------------------+---------+
+; inputTwo[1]                                                              ; 30      ;
 ; aluCode[1]                                                               ; 30      ;
-; inputTwo[1]                                                              ; 27      ;
-; inputTwo[0]                                                              ; 24      ;
+; inputTwo[0]                                                              ; 23      ;
 ; aluCode[2]                                                               ; 22      ;
 ; ShiftLeft0~36                                                            ; 13      ;
-; inputOne[2]                                                              ; 10      ;
-; inputOne[6]                                                              ; 10      ;
-; inputTwo[2]                                                              ; 10      ;
-; inputTwo[4]                                                              ; 10      ;
+; inputTwo[4]                                                              ; 11      ;
+; inputTwo[2]                                                              ; 11      ;
+; inputOne[3]                                                              ; 11      ;
+; inputOne[2]                                                              ; 11      ;
+; inputOne[5]                                                              ; 11      ;
+; inputOne[4]                                                              ; 11      ;
+; inputOne[7]                                                              ; 11      ;
 ; aluCode[0]                                                               ; 10      ;
+; inputOne[0]                                                              ; 10      ;
+; inputOne[6]                                                              ; 10      ;
 ; inputOne[1]                                                              ; 9       ;
-; inputOne[7]                                                              ; 9       ;
-; inputOne[0]                                                              ; 9       ;
-; inputOne[5]                                                              ; 9       ;
-; inputOne[4]                                                              ; 9       ;
-; inputOne[3]                                                              ; 8       ;
 ; ShiftRight0~35                                                           ; 8       ;
-; inputTwo[6]                                                              ; 6       ;
+; inputTwo[6]                                                              ; 7       ;
+; inputTwo[5]                                                              ; 7       ;
+; inputTwo[7]                                                              ; 7       ;
+; inputTwo[3]                                                              ; 7       ;
 ; ShiftLeft0~35                                                            ; 5       ;
-; inputTwo[7]                                                              ; 5       ;
-; inputTwo[5]                                                              ; 5       ;
-; inputTwo[3]                                                              ; 5       ;
 ; ShiftLeft0~38                                                            ; 4       ;
 ; lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]~COUT ; 3       ;
-; lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]~COUT ; 3       ;
 ; lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~COUT ; 3       ;
-; lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]~COUT ; 3       ;
+; LessThan0~25                                                             ; 3       ;
+; lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]~COUT ; 3       ;
 ; ShiftRight0~32                                                           ; 3       ;
-; ShiftLeft0~43                                                            ; 3       ;
 ; lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~COUT ; 3       ;
 ; lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT ; 3       ;
 ; lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]~COUT ; 3       ;
 ; lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]~COUT ; 3       ;
-; lpm_add_sub:Add1|addcore:adder|unreg_res_node[8]~9                       ; 2       ;
+; lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]~COUT ; 3       ;
+; ShiftRight0~42                                                           ; 2       ;
+; ShiftLeft0~45                                                            ; 2       ;
+; ShiftLeft0~46                                                            ; 2       ;
 ; lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]~COUT ; 2       ;
+; ShiftRight0~37                                                           ; 2       ;
+; lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~COUT ; 2       ;
+; lpm_add_sub:Add1|addcore:adder|unreg_res_node[8]~9                       ; 2       ;
+; LessThan0~24                                                             ; 2       ;
+; ShiftLeft0~49                                                            ; 2       ;
+; ShiftRight0~34                                                           ; 2       ;
 ; lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]~COUT ; 2       ;
 ; lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]~COUT ; 2       ;
-; ShiftRight0~34                                                           ; 2       ;
-; lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]~COUT ; 2       ;
-; lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~COUT ; 2       ;
-; ShiftRight0~41                                                           ; 2       ;
-; ShiftRight0~29                                                           ; 2       ;
-; ShiftRight0~37                                                           ; 2       ;
-; ShiftRight0~33                                                           ; 2       ;
-; ShiftLeft0~48                                                            ; 2       ;
-; ShiftLeft0~45                                                            ; 2       ;
 ; ShiftLeft0~41                                                            ; 2       ;
-; lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~COUT ; 2       ;
-; LessThan0~10                                                             ; 2       ;
-; lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]~COUT ; 2       ;
+; ShiftLeft0~43                                                            ; 2       ;
+; ShiftRight0~29                                                           ; 2       ;
+; ShiftRight0~40                                                           ; 2       ;
+; LessThan0~26                                                             ; 2       ;
 +--------------------------------------------------------------------------+---------+
 
 
@@ -537,15 +524,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------+----------------+
 ; Number of Logic Elements ; Number of LABs ;
 +--------------------------+----------------+
-; 0                        ; 446            ;
-; 1                        ; 5              ;
-; 2                        ; 2              ;
+; 0                        ; 451            ;
+; 1                        ; 0              ;
+; 2                        ; 1              ;
 ; 3                        ; 0              ;
-; 4                        ; 1              ;
+; 4                        ; 0              ;
 ; 5                        ; 0              ;
-; 6                        ; 3              ;
+; 6                        ; 1              ;
 ; 7                        ; 3              ;
-; 8                        ; 8              ;
+; 8                        ; 12             ;
 +--------------------------+----------------+
 
 
@@ -554,14 +541,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------+----------------+
 ; Local Routing Interconnects ; Number of LABs ;
 +-----------------------------+----------------+
-; 0                           ; 455            ;
-; 1                           ; 0              ;
-; 2                           ; 3              ;
-; 3                           ; 2              ;
-; 4                           ; 3              ;
-; 5                           ; 2              ;
-; 6                           ; 1              ;
-; 7                           ; 2              ;
+; 0                           ; 452            ;
+; 1                           ; 2              ;
+; 2                           ; 2              ;
+; 3                           ; 6              ;
+; 4                           ; 1              ;
+; 5                           ; 0              ;
+; 6                           ; 2              ;
+; 7                           ; 3              ;
 +-----------------------------+----------------+
 
 
@@ -570,22 +557,22 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+----------------+
 ; LAB External Interconnects ; Number of LABs ;
 +----------------------------+----------------+
-; 0                          ; 446            ;
+; 0                          ; 451            ;
 ; 1                          ; 0              ;
-; 2                          ; 1              ;
-; 3                          ; 4              ;
+; 2                          ; 0              ;
+; 3                          ; 0              ;
 ; 4                          ; 0              ;
-; 5                          ; 1              ;
-; 6                          ; 0              ;
-; 7                          ; 1              ;
-; 8                          ; 2              ;
-; 9                          ; 2              ;
-; 10                         ; 2              ;
-; 11                         ; 4              ;
+; 5                          ; 0              ;
+; 6                          ; 2              ;
+; 7                          ; 0              ;
+; 8                          ; 0              ;
+; 9                          ; 1              ;
+; 10                         ; 1              ;
+; 11                         ; 5              ;
 ; 12                         ; 1              ;
 ; 13                         ; 1              ;
-; 14                         ; 2              ;
-; 15                         ; 0              ;
+; 14                         ; 4              ;
+; 15                         ; 1              ;
 ; 16                         ; 1              ;
 +----------------------------+----------------+
 
@@ -595,16 +582,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+--------------------+-----------------------------+------------------------------+
 ; Row   ; Interconnect Used  ; Left Half Interconnect Used ; Right Half Interconnect Used ;
 +-------+--------------------+-----------------------------+------------------------------+
-;  A    ;  32 / 208 ( 15 % ) ;  19 / 104 ( 18 % )          ;  18 / 104 ( 17 % )           ;
+;  A    ;  1 / 208 ( < 1 % ) ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
 ;  B    ;  0 / 208 ( 0 % )   ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
 ;  C    ;  0 / 208 ( 0 % )   ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
 ;  D    ;  0 / 208 ( 0 % )   ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
 ;  E    ;  0 / 208 ( 0 % )   ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
 ;  F    ;  0 / 208 ( 0 % )   ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
 ;  G    ;  0 / 208 ( 0 % )   ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
-;  H    ;  0 / 208 ( 0 % )   ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
+;  H    ;  18 / 208 ( 9 % )  ;  55 / 104 ( 53 % )          ;  0 / 104 ( 0 % )             ;
 ;  I    ;  0 / 208 ( 0 % )   ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
-; Total ;  32 / 1872 ( 2 % ) ;  19 / 936 ( 2 % )           ;  18 / 936 ( 2 % )            ;
+; Total ;  19 / 1872 ( 1 % ) ;  55 / 936 ( 6 % )           ;  0 / 936 ( 0 % )             ;
 +-------+--------------------+-----------------------------+------------------------------+
 
 
@@ -614,56 +601,56 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Col.  ; Interconnect Used  ;
 +-------+--------------------+
 ; 1     ;  0 / 24 ( 0 % )    ;
-; 2     ;  0 / 24 ( 0 % )    ;
+; 2     ;  1 / 24 ( 4 % )    ;
 ; 3     ;  0 / 24 ( 0 % )    ;
 ; 4     ;  0 / 24 ( 0 % )    ;
 ; 5     ;  1 / 24 ( 4 % )    ;
 ; 6     ;  0 / 24 ( 0 % )    ;
-; 7     ;  0 / 24 ( 0 % )    ;
-; 8     ;  0 / 24 ( 0 % )    ;
+; 7     ;  1 / 24 ( 4 % )    ;
+; 8     ;  2 / 24 ( 8 % )    ;
 ; 9     ;  0 / 24 ( 0 % )    ;
-; 10    ;  2 / 24 ( 8 % )    ;
+; 10    ;  1 / 24 ( 4 % )    ;
 ; 11    ;  0 / 24 ( 0 % )    ;
-; 12    ;  0 / 24 ( 0 % )    ;
+; 12    ;  1 / 24 ( 4 % )    ;
 ; 13    ;  0 / 24 ( 0 % )    ;
-; 14    ;  0 / 24 ( 0 % )    ;
-; 15    ;  0 / 24 ( 0 % )    ;
-; 16    ;  0 / 24 ( 0 % )    ;
-; 17    ;  0 / 24 ( 0 % )    ;
+; 14    ;  1 / 24 ( 4 % )    ;
+; 15    ;  1 / 24 ( 4 % )    ;
+; 16    ;  1 / 24 ( 4 % )    ;
+; 17    ;  1 / 24 ( 4 % )    ;
 ; 18    ;  0 / 24 ( 0 % )    ;
 ; 19    ;  1 / 24 ( 4 % )    ;
-; 20    ;  1 / 24 ( 4 % )    ;
-; 21    ;  0 / 24 ( 0 % )    ;
+; 20    ;  0 / 24 ( 0 % )    ;
+; 21    ;  1 / 24 ( 4 % )    ;
 ; 22    ;  1 / 24 ( 4 % )    ;
 ; 23    ;  0 / 24 ( 0 % )    ;
 ; 24    ;  0 / 24 ( 0 % )    ;
 ; 25    ;  0 / 24 ( 0 % )    ;
 ; 26    ;  0 / 24 ( 0 % )    ;
-; 27    ;  1 / 24 ( 4 % )    ;
+; 27    ;  0 / 24 ( 0 % )    ;
 ; 28    ;  0 / 24 ( 0 % )    ;
 ; 29    ;  0 / 24 ( 0 % )    ;
 ; 30    ;  0 / 24 ( 0 % )    ;
 ; 31    ;  0 / 24 ( 0 % )    ;
-; 32    ;  1 / 24 ( 4 % )    ;
-; 33    ;  1 / 24 ( 4 % )    ;
+; 32    ;  0 / 24 ( 0 % )    ;
+; 33    ;  0 / 24 ( 0 % )    ;
 ; 34    ;  0 / 24 ( 0 % )    ;
 ; 35    ;  0 / 24 ( 0 % )    ;
 ; 36    ;  0 / 24 ( 0 % )    ;
-; 37    ;  2 / 24 ( 8 % )    ;
+; 37    ;  0 / 24 ( 0 % )    ;
 ; 38    ;  0 / 24 ( 0 % )    ;
 ; 39    ;  0 / 24 ( 0 % )    ;
 ; 40    ;  0 / 24 ( 0 % )    ;
 ; 41    ;  0 / 24 ( 0 % )    ;
-; 42    ;  1 / 24 ( 4 % )    ;
+; 42    ;  0 / 24 ( 0 % )    ;
 ; 43    ;  0 / 24 ( 0 % )    ;
 ; 44    ;  0 / 24 ( 0 % )    ;
-; 45    ;  1 / 24 ( 4 % )    ;
+; 45    ;  0 / 24 ( 0 % )    ;
 ; 46    ;  0 / 24 ( 0 % )    ;
 ; 47    ;  0 / 24 ( 0 % )    ;
 ; 48    ;  0 / 24 ( 0 % )    ;
 ; 49    ;  0 / 24 ( 0 % )    ;
 ; 50    ;  0 / 24 ( 0 % )    ;
-; 51    ;  1 / 24 ( 4 % )    ;
+; 51    ;  0 / 24 ( 0 % )    ;
 ; 52    ;  0 / 24 ( 0 % )    ;
 ; Total ;  14 / 1248 ( 1 % ) ;
 +-------+--------------------+
@@ -679,29 +666,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+-------------------+
 
 
-+----------------------------------------------------------+
-; Fitter Resource Usage Summary                            ;
-+-----------------------------------+----------------------+
-; Resource                          ; Usage                ;
-+-----------------------------------+----------------------+
-; Total logic elements              ; 116 / 3,744 ( 3 % )  ;
-; Registers                         ; 10 / 3,744 ( < 1 % ) ;
-; Logic elements in carry chains    ; 17                   ;
-; User inserted logic elements      ; 0                    ;
-; I/O pins                          ; 30 / 189 ( 16 % )    ;
-;     -- Clock pins                 ; 3 / 2 ( 150 % )      ;
-;     -- Dedicated input pins       ; 6 / 4 ( 150 % )      ;
-; Global signals                    ; 1                    ;
-; EABs                              ; 0 / 9 ( 0 % )        ;
-; Total memory bits                 ; 0 / 18,432 ( 0 % )   ;
-; Total RAM block bits              ; 0 / 18,432 ( 0 % )   ;
-; Maximum fan-out node              ; aluCode[1]           ;
-; Maximum fan-out                   ; 30                   ;
-; Highest non-global fan-out signal ; aluCode[1]           ;
-; Highest non-global fan-out        ; 30                   ;
-; Total fan-out                     ; 416                  ;
-; Average fan-out                   ; 2.85                 ;
-+-----------------------------------+----------------------+
++---------------------------------------------------------+
+; Fitter Resource Usage Summary                           ;
++-----------------------------------+---------------------+
+; Resource                          ; Usage               ;
++-----------------------------------+---------------------+
+; Total logic elements              ; 125 / 3,744 ( 3 % ) ;
+; Registers                         ; 0 / 3,744 ( 0 % )   ;
+; Logic elements in carry chains    ; 17                  ;
+; User inserted logic elements      ; 0                   ;
+; I/O pins                          ; 29 / 189 ( 15 % )   ;
+;     -- Clock pins                 ; 2 / 2 ( 100 % )     ;
+;     -- Dedicated input pins       ; 5 / 4 ( 125 % )     ;
+; Global signals                    ; 0                   ;
+; EABs                              ; 0 / 9 ( 0 % )       ;
+; Total memory bits                 ; 0 / 18,432 ( 0 % )  ;
+; Total RAM block bits              ; 0 / 18,432 ( 0 % )  ;
+; Maximum fan-out node              ; inputTwo[1]         ;
+; Maximum fan-out                   ; 30                  ;
+; Highest non-global fan-out signal ; inputTwo[1]         ;
+; Highest non-global fan-out        ; 30                  ;
+; Total fan-out                     ; 444                 ;
+; Average fan-out                   ; 2.88                ;
++-----------------------------------+---------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -709,7 +696,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node         ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                         ; Library Name ;
 +------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------+--------------+
-; |ALU                               ; 116 (100)   ; 10           ; 0           ; 30   ; 106 (90)     ; 1 (1)             ; 9 (9)            ; 17 (1)          ; 0 (0)      ; |ALU                                                        ; work         ;
+; |ALU                               ; 125 (109)   ; 0            ; 0           ; 29   ; 125 (109)    ; 0 (0)             ; 0 (0)            ; 17 (1)          ; 0 (0)      ; |ALU                                                        ; work         ;
 ;    |lpm_add_sub:Add0|              ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |ALU|lpm_add_sub:Add0                                       ; work         ;
 ;       |addcore:adder|              ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |ALU|lpm_add_sub:Add0|addcore:adder                         ; work         ;
 ;          |a_csnbuffer:result_node| ; 8 (8)       ; 0            ; 0           ; 0    ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 8 (8)           ; 0 (0)      ; |ALU|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node ; work         ;
@@ -726,25 +713,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name        ; Pin Type ; Pad to Core ;
 +-------------+----------+-------------+
 ; aluCode[2]  ; Input    ; OFF         ;
-; inputTwo[2] ; Input    ; OFF         ;
 ; inputTwo[3] ; Input    ; OFF         ;
 ; inputTwo[5] ; Input    ; OFF         ;
 ; inputTwo[7] ; Input    ; OFF         ;
 ; inputTwo[6] ; Input    ; OFF         ;
 ; inputTwo[4] ; Input    ; OFF         ;
+; inputTwo[2] ; Input    ; OFF         ;
 ; inputOne[0] ; Input    ; OFF         ;
 ; inputTwo[0] ; Input    ; OFF         ;
 ; inputTwo[1] ; Input    ; OFF         ;
 ; aluCode[1]  ; Input    ; OFF         ;
 ; inputOne[3] ; Input    ; OFF         ;
-; inputOne[2] ; Input    ; OFF         ;
 ; inputOne[1] ; Input    ; OFF         ;
+; inputOne[2] ; Input    ; OFF         ;
 ; inputOne[7] ; Input    ; OFF         ;
 ; inputOne[6] ; Input    ; OFF         ;
 ; inputOne[5] ; Input    ; OFF         ;
 ; inputOne[4] ; Input    ; OFF         ;
 ; aluCode[0]  ; Input    ; OFF         ;
-; clk_in      ; Input    ; OFF         ;
 ; output[0]   ; Output   ; OFF         ;
 ; output[1]   ; Output   ; OFF         ;
 ; output[2]   ; Output   ; OFF         ;
@@ -761,7 +747,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Repos/processor/processor/ALU/ALU.pin.
+The pin-out file can be found in C:/Repos/processor/processor/FinalProcessor/ALU/ALU.pin.
 
 
 +-----------------+
@@ -770,7 +756,7 @@ The pin-out file can be found in C:/Repos/processor/processor/ALU/ALU.pin.
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Mon Dec 16 12:59:21 2013
+    Info: Processing started: Thu Dec 19 03:19:29 2013
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off ALU -c ALU
 Info: Selected device EPF10K70RC240-4 for design "ALU"
 Info: Fitter is using the Classic Timing Analyzer
@@ -780,17 +766,17 @@ Info: Timing requirements not specified -- optimizing circuit to achieve the fol
     Info: Not setting a global tco requirement
     Info: Not setting a global tpd requirement
 Info: Inserted 0 logic cells in first fitting attempt
-Info: Started fitting attempt 1 on Mon Dec 16 2013 at 12:59:21
+Info: Started fitting attempt 1 on Thu Dec 19 2013 at 03:19:29
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
-Info: Fitter placement operations ending: elapsed time is 00:00:01
+Info: Fitter placement operations ending: elapsed time is 00:00:00
 Info: Fitter routing operations beginning
 Info: Fitter routing operations ending: elapsed time is 00:00:00
 Info: Quartus II Fitter was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 234 megabytes
-    Info: Processing ended: Mon Dec 16 12:59:27 2013
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Peak virtual memory: 238 megabytes
+    Info: Processing ended: Thu Dec 19 03:19:34 2013
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
 
 

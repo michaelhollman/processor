@@ -11,17 +11,29 @@ namespace Assembler
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter base repository directory:  ex: C:/git");
-            var basePath = Console.ReadLine();
+            var basePath = Directory.GetCurrentDirectory();
 
-            var inputPath = String.Format("{0}/processor/processor/FinalProcessor/program.s", basePath);
-            var lines = File.ReadAllLines(inputPath);
-            Console.WriteLine("Assembly file read from {0}", inputPath);
-            var assembler = new Assembler(lines);
-            var mif = assembler.GetMachineCode();
-            var outputPath = String.Format("{0}/processor/processor/FinalProcessor/program.mif", basePath);
-            File.WriteAllLines(outputPath, mif);
-            Console.WriteLine("MIF file saved to {0}", outputPath);
+            Console.Write("Enter file to compile: ");
+            var fileName = Console.ReadLine();
+            if (fileName.EndsWith(".s")) fileName = fileName.Substring(0, fileName.Length - 2);
+
+            try
+            {
+                var inputPath = String.Format("{0}\\{1}.s", basePath, fileName);
+                var lines = File.ReadAllLines(inputPath);
+                Console.WriteLine("Assembly file read from {0}", inputPath);
+
+                var assembler = new Assembler(lines);
+                var mif = assembler.GetMachineCode();
+
+                var outputPath = String.Format("{0}\\{1}.mif", basePath, fileName);
+                File.WriteAllLines(outputPath, mif);
+                Console.WriteLine("MIF file saved to {0}", outputPath);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Sorry, it looks like there was an error. {0}", e.Message);
+            }
 
             Console.WriteLine("Press any key to exit...");
             Console.ReadLine();

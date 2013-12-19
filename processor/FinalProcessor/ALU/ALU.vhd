@@ -28,10 +28,6 @@ end ALU;
 -- 111 srl
 
 architecture architectureALU of ALU is
-
--- Store zero and overflow flags as "static variables"
-signal zero_sig, overflow_sig : bit;
-
 begin
 	process(aluCode)
 		variable extendedOne, extendedTwo, overflowSum : std_logic_vector(15 downto 0);
@@ -49,9 +45,9 @@ begin
 			overflowSum := std_logic_vector(unsigned(extendedOne) + unsigned(extendedTwo));
 			
 			if (to_integer(unsigned(overflowSum(15 downto 8))) = 0) then
-				overflow_sig <= '0';
+				overflow <= '0';
 			else
-				overflow_sig <= '1';
+				overflow <= '1';
 			end if;				
 			
 			output <= std_logic_vector(unsigned(inputOne) + unsigned(inputTwo));
@@ -60,7 +56,7 @@ begin
 			output <= std_logic_vector(unsigned(inputOne) sll to_integer(unsigned(inputTwo)));
 		elsif aluCode = "100" then
 			-- slt
-			if (to_integer( unsigned(inputOne) - unsigned(inputTwo)) > 0) then
+			if (inputOne < inputTwo) then
 				output <= "00000001";
 			else
 				output <= "00000000";
@@ -72,16 +68,13 @@ begin
 			-- sub
 			output <= std_logic_vector(signed(inputOne) - signed(inputTwo));
 			if (to_integer(signed(inputOne) - signed(inputTwo)) = 0) then
-				zero_sig <= '1';
+				zero <= '1';
 			else 
-				zero_sig <= '0';
+				zero <= '0';
 			end if;
 		elsif aluCode = "111" then
 			-- srl
 			output <= std_logic_vector(unsigned(inputOne) srl to_integer(unsigned(inputTwo)));
 		end if;
-		
-		overflow <= overflow_sig;
-		zero <= zero_sig;
 	end process;
 end architectureALU;
