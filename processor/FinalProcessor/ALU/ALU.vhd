@@ -56,7 +56,7 @@ begin
 			output <= std_logic_vector(unsigned(inputOne) sll to_integer(unsigned(inputTwo)));
 		elsif aluCode = "100" then
 			-- slt
-			if (to_integer( unsigned(inputOne) - unsigned(inputTwo)) > 0) then
+			if (inputOne < inputTwo) then
 				output <= "00000001";
 			else
 				output <= "00000000";
