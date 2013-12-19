@@ -135,3 +135,6 @@ set_global_assignment -name SEARCH_PATH plusone
 set_global_assignment -name SEARCH_PATH pc
 set_global_assignment -name SEARCH_PATH decoder
 set_global_assignment -name SEARCH_PATH alu
+set_global_assignment -name ADD_DEFAULT_PINS_TO_SIMULATION_OUTPUT_WAVEFORMS ON
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS OUTPUT DRIVING AN UNSPECIFIED SIGNAL"

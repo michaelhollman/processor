@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FinalProcessor
-Wed Dec 18 17:33:26 2013
+Wed Dec 18 18:06:01 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -16,9 +16,9 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   8. User-Specified and Inferred Latches
   9. General Register Statistics
  10. Source assignments for MegaClock:inst4|lpm_counter:clk_sys_rtl_0
- 11. Source assignments for PlusOne:inst12|lpm_add_sub:Add0|addcore:adder
+ 11. Source assignments for ALU:inst8|lpm_add_sub:Add1|addcore:adder
  12. Source assignments for ALU:inst8|lpm_add_sub:Add0|addcore:adder
- 13. Source assignments for ALU:inst8|lpm_add_sub:Add1|addcore:adder
+ 13. Source assignments for PlusOne:inst12|lpm_add_sub:Add0|addcore:adder
  14. Parameter Settings for User Entity Instance: ROM:inst|lpm_rom:lpm_rom_component
  15. Parameter Settings for User Entity Instance: Mux2x8:inst43|LPM_MUX:lpm_mux_component
  16. Parameter Settings for User Entity Instance: Mux2x8:inst44|LPM_MUX:lpm_mux_component
@@ -29,9 +29,9 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
  21. Parameter Settings for User Entity Instance: RAM:inst1|lpm_ram_dq:lpm_ram_dq_component
  22. Parameter Settings for User Entity Instance: Mux2x8:inst39|LPM_MUX:lpm_mux_component
  23. Parameter Settings for Inferred Entity Instance: MegaClock:inst4|lpm_counter:clk_sys_rtl_0
- 24. Parameter Settings for Inferred Entity Instance: PlusOne:inst12|lpm_add_sub:Add0
+ 24. Parameter Settings for Inferred Entity Instance: ALU:inst8|lpm_add_sub:Add1
  25. Parameter Settings for Inferred Entity Instance: ALU:inst8|lpm_add_sub:Add0
- 26. Parameter Settings for Inferred Entity Instance: ALU:inst8|lpm_add_sub:Add1
+ 26. Parameter Settings for Inferred Entity Instance: PlusOne:inst12|lpm_add_sub:Add0
  27. Analysis & Synthesis Messages
 
 
@@ -58,12 +58,12 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Dec 18 17:33:26 2013        ;
+; Analysis & Synthesis Status ; Successful - Wed Dec 18 18:06:01 2013        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; FinalProcessor                               ;
 ; Top-level Entity Name       ; FinalProcessor                               ;
 ; Family                      ; FLEX10K                                      ;
-; Total logic elements        ; 448                                          ;
+; Total logic elements        ; 450                                          ;
 ; Total pins                  ; 173                                          ;
 ; Total memory bits           ; 6,144                                        ;
 +-----------------------------+----------------------------------------------+
@@ -199,21 +199,21 @@ applicable agreement for further details.
 +-----------------------------------+---------------------------------------------------------------------+
 ; Resource                          ; Usage                                                               ;
 +-----------------------------------+---------------------------------------------------------------------+
-; Total logic elements              ; 448                                                                 ;
-; Total combinational functions     ; 436                                                                 ;
-;     -- Total 4-input functions    ; 200                                                                 ;
+; Total logic elements              ; 450                                                                 ;
+; Total combinational functions     ; 437                                                                 ;
+;     -- Total 4-input functions    ; 197                                                                 ;
 ;     -- Total 3-input functions    ; 178                                                                 ;
-;     -- Total 2-input functions    ; 34                                                                  ;
+;     -- Total 2-input functions    ; 38                                                                  ;
 ;     -- Total 1-input functions    ; 24                                                                  ;
 ;     -- Total 0-input functions    ; 0                                                                   ;
 ; Total registers                   ; 121                                                                 ;
-; Total logic cells in carry chains ; 38                                                                  ;
+; Total logic cells in carry chains ; 39                                                                  ;
 ; I/O pins                          ; 173                                                                 ;
 ; Total memory bits                 ; 6144                                                                ;
 ; Maximum fan-out node              ; Mux2x3:inst38|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~2 ;
 ; Maximum fan-out                   ; 63                                                                  ;
-; Total fan-out                     ; 2024                                                                ;
-; Average fan-out                   ; 3.14                                                                ;
+; Total fan-out                     ; 2026                                                                ;
+; Average fan-out                   ; 3.13                                                                ;
 +-----------------------------------+---------------------------------------------------------------------+
 
 
@@ -222,25 +222,25 @@ applicable agreement for further details.
 +-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                      ; Library Name ;
 +-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------+--------------+
-; |FinalProcessor                           ; 448 (0)     ; 121          ; 6144        ; 173  ; 327 (0)      ; 12 (0)            ; 109 (0)          ; 38 (0)          ; 0 (0)      ; |FinalProcessor                                                                          ; work         ;
-;    |ALU:inst8|                            ; 144 (128)   ; 0            ; 0           ; 0    ; 144 (128)    ; 0 (0)             ; 0 (0)            ; 16 (0)          ; 0 (0)      ; |FinalProcessor|ALU:inst8                                                                ; work         ;
+; |FinalProcessor                           ; 450 (0)     ; 121          ; 6144        ; 173  ; 329 (0)      ; 13 (0)            ; 108 (0)          ; 39 (0)          ; 0 (0)      ; |FinalProcessor                                                                          ; work         ;
+;    |ALU:inst8|                            ; 145 (129)   ; 0            ; 0           ; 0    ; 145 (129)    ; 0 (0)             ; 0 (0)            ; 17 (1)          ; 0 (0)      ; |FinalProcessor|ALU:inst8                                                                ; work         ;
 ;       |lpm_add_sub:Add0|                  ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |FinalProcessor|ALU:inst8|lpm_add_sub:Add0                                               ; work         ;
-;          |addcore:adder|                  ; 8 (1)       ; 0            ; 0           ; 0    ; 8 (1)        ; 0 (0)             ; 0 (0)            ; 8 (1)           ; 0 (0)      ; |FinalProcessor|ALU:inst8|lpm_add_sub:Add0|addcore:adder                                 ; work         ;
-;             |a_csnbuffer:result_node|     ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |FinalProcessor|ALU:inst8|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node         ; work         ;
+;          |addcore:adder|                  ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |FinalProcessor|ALU:inst8|lpm_add_sub:Add0|addcore:adder                                 ; work         ;
+;             |a_csnbuffer:result_node|     ; 8 (8)       ; 0            ; 0           ; 0    ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 8 (8)           ; 0 (0)      ; |FinalProcessor|ALU:inst8|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node         ; work         ;
 ;       |lpm_add_sub:Add1|                  ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |FinalProcessor|ALU:inst8|lpm_add_sub:Add1                                               ; work         ;
 ;          |addcore:adder|                  ; 8 (1)       ; 0            ; 0           ; 0    ; 8 (1)        ; 0 (0)             ; 0 (0)            ; 8 (1)           ; 0 (0)      ; |FinalProcessor|ALU:inst8|lpm_add_sub:Add1|addcore:adder                                 ; work         ;
 ;             |a_csnbuffer:result_node|     ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |FinalProcessor|ALU:inst8|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node         ; work         ;
 ;    |ALUController:inst15|                 ; 3 (3)       ; 0            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|ALUController:inst15                                                     ; work         ;
 ;    |Controller:inst2|                     ; 21 (21)     ; 0            ; 0           ; 0    ; 21 (21)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Controller:inst2                                                         ; work         ;
-;    |MegaClock:inst4|                      ; 33 (19)     ; 22           ; 0           ; 0    ; 11 (11)      ; 2 (2)             ; 20 (6)           ; 14 (0)          ; 0 (0)      ; |FinalProcessor|MegaClock:inst4                                                          ; work         ;
+;    |MegaClock:inst4|                      ; 32 (18)     ; 22           ; 0           ; 0    ; 10 (10)      ; 3 (3)             ; 19 (5)           ; 14 (0)          ; 0 (0)      ; |FinalProcessor|MegaClock:inst4                                                          ; work         ;
 ;       |lpm_counter:clk_sys_rtl_0|         ; 14 (0)      ; 14           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 14 (0)           ; 14 (0)          ; 0 (0)      ; |FinalProcessor|MegaClock:inst4|lpm_counter:clk_sys_rtl_0                                ; work         ;
 ;          |alt_counter_f10ke:wysi_counter| ; 14 (14)     ; 14           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 14 (14)          ; 14 (14)         ; 0 (0)      ; |FinalProcessor|MegaClock:inst4|lpm_counter:clk_sys_rtl_0|alt_counter_f10ke:wysi_counter ; work         ;
 ;    |Mux2x3:inst38|                        ; 2 (0)       ; 0            ; 0           ; 0    ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x3:inst38                                                            ; work         ;
 ;       |lpm_mux:lpm_mux_component|         ; 2 (0)       ; 0            ; 0           ; 0    ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x3:inst38|lpm_mux:lpm_mux_component                                  ; work         ;
 ;          |muxlut:$00009|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x3:inst38|lpm_mux:lpm_mux_component|muxlut:$00009                    ; work         ;
 ;          |muxlut:$00011|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x3:inst38|lpm_mux:lpm_mux_component|muxlut:$00011                    ; work         ;
-;    |Mux2x8:inst39|                        ; 7 (0)       ; 0            ; 0           ; 0    ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst39                                                            ; work         ;
-;       |lpm_mux:lpm_mux_component|         ; 7 (0)       ; 0            ; 0           ; 0    ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst39|lpm_mux:lpm_mux_component                                  ; work         ;
+;    |Mux2x8:inst39|                        ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst39                                                            ; work         ;
+;       |lpm_mux:lpm_mux_component|         ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst39|lpm_mux:lpm_mux_component                                  ; work         ;
 ;          |muxlut:$00009|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00009                    ; work         ;
 ;          |muxlut:$00011|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00011                    ; work         ;
 ;          |muxlut:$00013|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00013                    ; work         ;
@@ -248,6 +248,7 @@ applicable agreement for further details.
 ;          |muxlut:$00017|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00017                    ; work         ;
 ;          |muxlut:$00019|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00019                    ; work         ;
 ;          |muxlut:$00021|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00021                    ; work         ;
+;          |muxlut:$00023|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00023                    ; work         ;
 ;    |Mux2x8:inst43|                        ; 5 (0)       ; 0            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst43                                                            ; work         ;
 ;       |lpm_mux:lpm_mux_component|         ; 5 (0)       ; 0            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst43|lpm_mux:lpm_mux_component                                  ; work         ;
 ;          |muxlut:$00011|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst43|lpm_mux:lpm_mux_component|muxlut:$00011                    ; work         ;
@@ -277,7 +278,7 @@ applicable agreement for further details.
 ;    |RAM:inst1|                            ; 0 (0)       ; 0            ; 2048        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|RAM:inst1                                                                ; work         ;
 ;       |lpm_ram_dq:lpm_ram_dq_component|   ; 0 (0)       ; 0            ; 2048        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|RAM:inst1|lpm_ram_dq:lpm_ram_dq_component                                ; work         ;
 ;          |altram:sram|                    ; 0 (0)       ; 0            ; 2048        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram                    ; work         ;
-;    |RAMHelper:inst20|                     ; 39 (39)     ; 19           ; 0           ; 0    ; 20 (20)      ; 10 (10)           ; 9 (9)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|RAMHelper:inst20                                                         ; work         ;
+;    |RAMHelper:inst20|                     ; 40 (40)     ; 19           ; 0           ; 0    ; 21 (21)      ; 10 (10)           ; 9 (9)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|RAMHelper:inst20                                                         ; work         ;
 ;    |ROM:inst|                             ; 0 (0)       ; 0            ; 4096        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|ROM:inst                                                                 ; work         ;
 ;       |lpm_rom:lpm_rom_component|         ; 0 (0)       ; 0            ; 4096        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|ROM:inst|lpm_rom:lpm_rom_component                                       ; work         ;
 ;          |altrom:srom|                    ; 0 (0)       ; 0            ; 4096        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|ROM:inst|lpm_rom:lpm_rom_component|altrom:srom                           ; work         ;
@@ -312,8 +313,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Controller:inst2|RegWrite                           ; Controller:inst2|Mux11 ; yes                    ;
 ; Controller:inst2|Jump                               ; Controller:inst2|Mux11 ; yes                    ;
 ; Controller:inst2|JumpReg                            ; Controller:inst2|Mux11 ; yes                    ;
+; ALU:inst8|zero                                      ; ALU:inst8|zero~0       ; yes                    ;
+; ALU:inst8|overflow                                  ; ALU:inst8|Equal0       ; yes                    ;
 ; Controller:inst2|ALUOp[2]                           ; Controller:inst2|Mux11 ; yes                    ;
 ; Controller:inst2|ALUOp[1]                           ; Controller:inst2|Mux11 ; yes                    ;
+; ALU:inst8|output[7]                                 ; ALU:inst8|output[7]~15 ; yes                    ;
 ; ALU:inst8|output[6]                                 ; ALU:inst8|output[7]~15 ; yes                    ;
 ; ALU:inst8|output[5]                                 ; ALU:inst8|output[7]~15 ; yes                    ;
 ; ALU:inst8|output[4]                                 ; ALU:inst8|output[7]~15 ; yes                    ;
@@ -321,9 +325,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ALU:inst8|output[2]                                 ; ALU:inst8|output[7]~15 ; yes                    ;
 ; ALU:inst8|output[1]                                 ; ALU:inst8|output[7]~15 ; yes                    ;
 ; ALU:inst8|output[0]                                 ; ALU:inst8|output[7]~15 ; yes                    ;
-; ALU:inst8|output[7]                                 ; ALU:inst8|output[7]~15 ; yes                    ;
-; ALU:inst8|zero                                      ; ALU:inst8|zero~0       ; yes                    ;
-; Number of user-specified and inferred latches = 20  ;                        ;                        ;
+; Number of user-specified and inferred latches = 21  ;                        ;                        ;
 +-----------------------------------------------------+------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -354,13 +356,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +---------------------------+-------+------+-----------------------+
 
 
-+----------------------------------------------------------------------+
-; Source assignments for PlusOne:inst12|lpm_add_sub:Add0|addcore:adder ;
-+---------------------------+-------+------+---------------------------+
-; Assignment                ; Value ; From ; To                        ;
-+---------------------------+-------+------+---------------------------+
-; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                         ;
-+---------------------------+-------+------+---------------------------+
++-----------------------------------------------------------------+
+; Source assignments for ALU:inst8|lpm_add_sub:Add1|addcore:adder ;
++---------------------------+-------+------+----------------------+
+; Assignment                ; Value ; From ; To                   ;
++---------------------------+-------+------+----------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                    ;
++---------------------------+-------+------+----------------------+
 
 
 +-----------------------------------------------------------------+
@@ -372,13 +374,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +---------------------------+-------+------+----------------------+
 
 
-+-----------------------------------------------------------------+
-; Source assignments for ALU:inst8|lpm_add_sub:Add1|addcore:adder ;
-+---------------------------+-------+------+----------------------+
-; Assignment                ; Value ; From ; To                   ;
-+---------------------------+-------+------+----------------------+
-; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                    ;
-+---------------------------+-------+------+----------------------+
++----------------------------------------------------------------------+
+; Source assignments for PlusOne:inst12|lpm_add_sub:Add0|addcore:adder ;
++---------------------------+-------+------+---------------------------+
+; Assignment                ; Value ; From ; To                        ;
++---------------------------+-------+------+---------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                         ;
++---------------------------+-------+------+---------------------------+
 
 
 +---------------------------------------------------------------------------------+
@@ -584,62 +586,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: PlusOne:inst12|lpm_add_sub:Add0 ;
-+------------------------+-------------+-------------------------------------------+
-; Parameter Name         ; Value       ; Type                                      ;
-+------------------------+-------------+-------------------------------------------+
-; LPM_WIDTH              ; 8           ; Untyped                                   ;
-; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                   ;
-; LPM_DIRECTION          ; ADD         ; Untyped                                   ;
-; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                                   ;
-; LPM_PIPELINE           ; 0           ; Untyped                                   ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                                   ;
-; REGISTERED_AT_END      ; 0           ; Untyped                                   ;
-; OPTIMIZE_FOR_SPEED     ; 1           ; Untyped                                   ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                                   ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                   ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                        ;
-; DEVICE_FAMILY          ; FLEX10K     ; Untyped                                   ;
-; USE_WYS                ; OFF         ; Untyped                                   ;
-; STYLE                  ; FAST        ; Untyped                                   ;
-; CBXI_PARAMETER         ; add_sub_fnh ; Untyped                                   ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                              ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                              ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                            ;
-+------------------------+-------------+-------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ALU:inst8|lpm_add_sub:Add0 ;
-+------------------------+-------------+--------------------------------------+
-; Parameter Name         ; Value       ; Type                                 ;
-+------------------------+-------------+--------------------------------------+
-; LPM_WIDTH              ; 8           ; Untyped                              ;
-; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                              ;
-; LPM_DIRECTION          ; ADD         ; Untyped                              ;
-; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                              ;
-; LPM_PIPELINE           ; 0           ; Untyped                              ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                              ;
-; REGISTERED_AT_END      ; 0           ; Untyped                              ;
-; OPTIMIZE_FOR_SPEED     ; 1           ; Untyped                              ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                              ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                              ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                   ;
-; DEVICE_FAMILY          ; FLEX10K     ; Untyped                              ;
-; USE_WYS                ; OFF         ; Untyped                              ;
-; STYLE                  ; FAST        ; Untyped                              ;
-; CBXI_PARAMETER         ; add_sub_19h ; Untyped                              ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                           ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                         ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                         ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                       ;
-+------------------------+-------------+--------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +-----------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: ALU:inst8|lpm_add_sub:Add1 ;
 +------------------------+-------------+--------------------------------------+
@@ -668,13 +614,69 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ALU:inst8|lpm_add_sub:Add0 ;
++------------------------+-------------+--------------------------------------+
+; Parameter Name         ; Value       ; Type                                 ;
++------------------------+-------------+--------------------------------------+
+; LPM_WIDTH              ; 9           ; Untyped                              ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                              ;
+; LPM_DIRECTION          ; ADD         ; Untyped                              ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                              ;
+; LPM_PIPELINE           ; 0           ; Untyped                              ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                              ;
+; REGISTERED_AT_END      ; 0           ; Untyped                              ;
+; OPTIMIZE_FOR_SPEED     ; 1           ; Untyped                              ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                              ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                              ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                   ;
+; DEVICE_FAMILY          ; FLEX10K     ; Untyped                              ;
+; USE_WYS                ; OFF         ; Untyped                              ;
+; STYLE                  ; FAST        ; Untyped                              ;
+; CBXI_PARAMETER         ; add_sub_sjh ; Untyped                              ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                         ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                       ;
++------------------------+-------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: PlusOne:inst12|lpm_add_sub:Add0 ;
++------------------------+-------------+-------------------------------------------+
+; Parameter Name         ; Value       ; Type                                      ;
++------------------------+-------------+-------------------------------------------+
+; LPM_WIDTH              ; 8           ; Untyped                                   ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                   ;
+; LPM_DIRECTION          ; ADD         ; Untyped                                   ;
+; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                                   ;
+; LPM_PIPELINE           ; 0           ; Untyped                                   ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                   ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                   ;
+; OPTIMIZE_FOR_SPEED     ; 1           ; Untyped                                   ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                   ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                   ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                        ;
+; DEVICE_FAMILY          ; FLEX10K     ; Untyped                                   ;
+; USE_WYS                ; OFF         ; Untyped                                   ;
+; STYLE                  ; FAST        ; Untyped                                   ;
+; CBXI_PARAMETER         ; add_sub_fnh ; Untyped                                   ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                              ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                            ;
++------------------------+-------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Dec 18 17:33:23 2013
+    Info: Processing started: Wed Dec 18 18:05:58 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FinalProcessor -c FinalProcessor
 Info: Found 1 design units, including 1 entities, in source file FinalProcessor.bdf
     Info: Found entity 1: FinalProcessor
@@ -692,19 +694,20 @@ Info: Found 2 design units, including 1 entities, in source file Mux2x8.vhd
     Info: Found design unit 1: mux2x8-SYN
     Info: Found entity 1: Mux2x8
 Info: Elaborating entity "FinalProcessor" for the top level hierarchy
-Warning: Pin "debug_alu_zero" is missing source
-Warning: Pin "debug_alu_overflow" is missing source
+Warning: Pin "debug_clock0" is missing source
+Warning: Pin "debug_clock1" is missing source
+Warning: Pin "debug_clock2" is missing source
+Warning: Pin "debug_clock3" is missing source
+Warning: Pin "debug_clock4" is missing source
 Warning: Pin "debug_jump_mux1sel" is missing source
 Warning: Pin "debug_jump_mux2sel" is missing source
 Warning: Pin "debug_jump_mux3sel" is missing source
-Warning: Pin "debug_alu_aluCode[2..0]" is missing source
-Warning: Pin "debug_alu_inputOne[7..0]" is missing source
-Warning: Pin "debug_alu_inputTwo[7..0]" is missing source
-Warning: Pin "debug_alu_output[7..0]" is missing source
 Warning: Pin "debug_jump_mux1result[7..0]" is missing source
 Warning: Pin "debug_jump_mux2result[7..0]" is missing source
 Warning: Pin "debug_jump_mux3result[7..0]" is missing source
 Warning: Pin "debug_plusone[7..0]" is missing source
+Warning: Pin "debug_regfile_output1[7..0]" is missing source
+Warning: Pin "debug_regfile_output2[7..0]" is missing source
 Warning: Pin "debug_signextender[7..0]" is missing source
 Warning: Using design file ramhelper/RAMHelper.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info: Found design unit 1: RAMHelper-dataflow
@@ -869,33 +872,15 @@ Warning (10492): VHDL Process Statement warning at SevenSegmentDisplay.vhd(156):
 Info: Inferred 1 megafunctions from design logic
     Info: Inferred lpm_counter megafunction (LPM_WIDTH=14) from the following logic: "MegaClock:inst4|clk_sys[0]~0"
 Info: Inferred 3 megafunctions from design logic
-    Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "PlusOne:inst12|Add0"
-    Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "ALU:inst8|Add0"
     Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "ALU:inst8|Add1"
+    Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "ALU:inst8|Add0"
+    Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "PlusOne:inst12|Add0"
 Info: Elaborated megafunction instantiation "MegaClock:inst4|lpm_counter:clk_sys_rtl_0"
 Info: Instantiated megafunction "MegaClock:inst4|lpm_counter:clk_sys_rtl_0" with the following parameter:
     Info: Parameter "LPM_WIDTH" = "14"
     Info: Parameter "LPM_DIRECTION" = "UP"
     Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
 Info: Elaborated megafunction instantiation "MegaClock:inst4|lpm_counter:clk_sys_rtl_0|alt_counter_f10ke:wysi_counter", which is child of megafunction instantiation "MegaClock:inst4|lpm_counter:clk_sys_rtl_0"
-Info: Elaborated megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0"
-Info: Instantiated megafunction "PlusOne:inst12|lpm_add_sub:Add0" with the following parameter:
-    Info: Parameter "LPM_WIDTH" = "8"
-    Info: Parameter "LPM_DIRECTION" = "ADD"
-    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "YES"
-Info: Elaborated megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0|addcore:adder", which is child of megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0"
-Info: Elaborated megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:oflow_node", which is child of megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0"
-Info: Elaborated megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node", which is child of megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0"
-Info: Elaborated megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0|altshift:result_ext_latency_ffs", which is child of megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0"
-Info: Elaborated megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0|altshift:carry_ext_latency_ffs", which is child of megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0"
-Info: Elaborated megafunction instantiation "ALU:inst8|lpm_add_sub:Add0"
-Info: Instantiated megafunction "ALU:inst8|lpm_add_sub:Add0" with the following parameter:
-    Info: Parameter "LPM_WIDTH" = "8"
-    Info: Parameter "LPM_DIRECTION" = "ADD"
-    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
-Info: Elaborated megafunction instantiation "ALU:inst8|lpm_add_sub:Add0|addcore:adder", which is child of megafunction instantiation "ALU:inst8|lpm_add_sub:Add0"
 Info: Elaborated megafunction instantiation "ALU:inst8|lpm_add_sub:Add1"
 Info: Instantiated megafunction "ALU:inst8|lpm_add_sub:Add1" with the following parameter:
     Info: Parameter "LPM_WIDTH" = "9"
@@ -906,6 +891,23 @@ Info: Elaborated megafunction instantiation "ALU:inst8|lpm_add_sub:Add1|addcore:
 Info: Elaborated megafunction instantiation "ALU:inst8|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:oflow_node", which is child of megafunction instantiation "ALU:inst8|lpm_add_sub:Add1"
 Info: Elaborated megafunction instantiation "ALU:inst8|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node", which is child of megafunction instantiation "ALU:inst8|lpm_add_sub:Add1"
 Info: Elaborated megafunction instantiation "ALU:inst8|lpm_add_sub:Add1|altshift:result_ext_latency_ffs", which is child of megafunction instantiation "ALU:inst8|lpm_add_sub:Add1"
+Info: Elaborated megafunction instantiation "ALU:inst8|lpm_add_sub:Add1|altshift:carry_ext_latency_ffs", which is child of megafunction instantiation "ALU:inst8|lpm_add_sub:Add1"
+Info: Elaborated megafunction instantiation "ALU:inst8|lpm_add_sub:Add0"
+Info: Instantiated megafunction "ALU:inst8|lpm_add_sub:Add0" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "9"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
+Info: Elaborated megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0"
+Info: Instantiated megafunction "PlusOne:inst12|lpm_add_sub:Add0" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "8"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "YES"
+Info: Elaborated megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0|addcore:adder", which is child of megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0"
+Info: Elaborated megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:oflow_node", which is child of megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0"
+Info: Elaborated megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node", which is child of megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0"
+Info: Elaborated megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0|altshift:result_ext_latency_ffs", which is child of megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0"
 Warning: Always-enabled tri-state buffer(s) removed
     Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[2]" to the node "debug_alucont_aluCode[2]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[2]" to the node "debug_decod_aluCode[2]" into a wire
@@ -971,6 +973,8 @@ Warning: Latch Controller:inst2|ALUOp[2] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]
 Warning: Latch Controller:inst2|ALUOp[1] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]
+Warning: Latch ALU:inst8|output[7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controller:inst2|ALUOp[2]
 Warning: Latch ALU:inst8|output[6] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal Controller:inst2|ALUOp[2]
 Warning: Latch ALU:inst8|output[5] has unsafe behavior
@@ -985,8 +989,7 @@ Warning: Latch ALU:inst8|output[1] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal Controller:inst2|ALUOp[2]
 Warning: Latch ALU:inst8|output[0] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal Controller:inst2|ALUOp[2]
-Warning: Latch ALU:inst8|output[7] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal Controller:inst2|ALUOp[2]
+Warning: LATCH primitive "ALU:inst8|output[7]" is permanently enabled
 Warning: LATCH primitive "ALU:inst8|output[6]" is permanently enabled
 Warning: LATCH primitive "ALU:inst8|output[5]" is permanently enabled
 Warning: LATCH primitive "ALU:inst8|output[4]" is permanently enabled
@@ -994,40 +997,15 @@ Warning: LATCH primitive "ALU:inst8|output[3]" is permanently enabled
 Warning: LATCH primitive "ALU:inst8|output[2]" is permanently enabled
 Warning: LATCH primitive "ALU:inst8|output[1]" is permanently enabled
 Warning: LATCH primitive "ALU:inst8|output[0]" is permanently enabled
-Warning: LATCH primitive "ALU:inst8|output[7]" is permanently enabled
 Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "debug_alu_zero" is stuck at GND
-    Warning (13410): Pin "debug_alu_overflow" is stuck at GND
+    Warning (13410): Pin "debug_clock0" is stuck at GND
+    Warning (13410): Pin "debug_clock1" is stuck at GND
+    Warning (13410): Pin "debug_clock2" is stuck at GND
+    Warning (13410): Pin "debug_clock3" is stuck at GND
+    Warning (13410): Pin "debug_clock4" is stuck at GND
     Warning (13410): Pin "debug_jump_mux1sel" is stuck at GND
     Warning (13410): Pin "debug_jump_mux2sel" is stuck at GND
     Warning (13410): Pin "debug_jump_mux3sel" is stuck at GND
-    Warning (13410): Pin "debug_alu_aluCode[2]" is stuck at GND
-    Warning (13410): Pin "debug_alu_aluCode[1]" is stuck at GND
-    Warning (13410): Pin "debug_alu_aluCode[0]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputOne[7]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputOne[6]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputOne[5]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputOne[4]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputOne[3]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputOne[2]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputOne[1]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputOne[0]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputTwo[7]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputTwo[6]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputTwo[5]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputTwo[4]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputTwo[3]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputTwo[2]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputTwo[1]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputTwo[0]" is stuck at GND
-    Warning (13410): Pin "debug_alu_output[7]" is stuck at GND
-    Warning (13410): Pin "debug_alu_output[6]" is stuck at GND
-    Warning (13410): Pin "debug_alu_output[5]" is stuck at GND
-    Warning (13410): Pin "debug_alu_output[4]" is stuck at GND
-    Warning (13410): Pin "debug_alu_output[3]" is stuck at GND
-    Warning (13410): Pin "debug_alu_output[2]" is stuck at GND
-    Warning (13410): Pin "debug_alu_output[1]" is stuck at GND
-    Warning (13410): Pin "debug_alu_output[0]" is stuck at GND
     Warning (13410): Pin "debug_alucont_aluOp[0]" is stuck at GND
     Warning (13410): Pin "debug_contr_ALUOp[0]" is stuck at GND
     Warning (13410): Pin "debug_jump_mux1result[7]" is stuck at GND
@@ -1062,6 +1040,22 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "debug_plusone[2]" is stuck at GND
     Warning (13410): Pin "debug_plusone[1]" is stuck at GND
     Warning (13410): Pin "debug_plusone[0]" is stuck at GND
+    Warning (13410): Pin "debug_regfile_output1[7]" is stuck at GND
+    Warning (13410): Pin "debug_regfile_output1[6]" is stuck at GND
+    Warning (13410): Pin "debug_regfile_output1[5]" is stuck at GND
+    Warning (13410): Pin "debug_regfile_output1[4]" is stuck at GND
+    Warning (13410): Pin "debug_regfile_output1[3]" is stuck at GND
+    Warning (13410): Pin "debug_regfile_output1[2]" is stuck at GND
+    Warning (13410): Pin "debug_regfile_output1[1]" is stuck at GND
+    Warning (13410): Pin "debug_regfile_output1[0]" is stuck at GND
+    Warning (13410): Pin "debug_regfile_output2[7]" is stuck at GND
+    Warning (13410): Pin "debug_regfile_output2[6]" is stuck at GND
+    Warning (13410): Pin "debug_regfile_output2[5]" is stuck at GND
+    Warning (13410): Pin "debug_regfile_output2[4]" is stuck at GND
+    Warning (13410): Pin "debug_regfile_output2[3]" is stuck at GND
+    Warning (13410): Pin "debug_regfile_output2[2]" is stuck at GND
+    Warning (13410): Pin "debug_regfile_output2[1]" is stuck at GND
+    Warning (13410): Pin "debug_regfile_output2[0]" is stuck at GND
     Warning (13410): Pin "debug_signextender[7]" is stuck at GND
     Warning (13410): Pin "debug_signextender[6]" is stuck at GND
     Warning (13410): Pin "debug_signextender[5]" is stuck at GND
@@ -1070,14 +1064,14 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "debug_signextender[2]" is stuck at GND
     Warning (13410): Pin "debug_signextender[1]" is stuck at GND
     Warning (13410): Pin "debug_signextender[0]" is stuck at GND
-Info: Implemented 645 device resources after synthesis - the final resource count might be different
+Info: Implemented 647 device resources after synthesis - the final resource count might be different
     Info: Implemented 12 input pins
     Info: Implemented 161 output pins
-    Info: Implemented 448 logic cells
+    Info: Implemented 450 logic cells
     Info: Implemented 24 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 230 warnings
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 223 warnings
     Info: Peak virtual memory: 243 megabytes
-    Info: Processing ended: Wed Dec 18 17:33:26 2013
+    Info: Processing ended: Wed Dec 18 18:06:01 2013
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 
