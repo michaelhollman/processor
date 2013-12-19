@@ -20,9 +20,9 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 192 176)
+	(rect 16 16 192 208)
 	(text "RegFile" (rect 5 0 42 12)(font "Arial" ))
-	(text "inst" (rect 8 144 25 156)(font "Arial" ))
+	(text "inst" (rect 8 176 25 188)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -68,9 +68,16 @@ applicable agreement for further details.
 	(port
 		(pt 0 128)
 		(input)
+		(text "r7_overflow" (rect 0 0 57 12)(font "Arial" ))
+		(text "r7_overflow" (rect 21 123 78 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
+		(pt 0 144)
+		(input)
 		(text "WriteData[7..0]" (rect 0 0 75 12)(font "Arial" ))
-		(text "WriteData[7..0]" (rect 21 123 96 135)(font "Arial" ))
-		(line (pt 0 128)(pt 16 128)(line_width 3))
+		(text "WriteData[7..0]" (rect 21 139 96 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 3))
 	)
 	(port
 		(pt 176 32)
@@ -87,6 +94,6 @@ applicable agreement for further details.
 		(line (pt 176 48)(pt 160 48)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 160 144)(line_width 1))
+		(rectangle (rect 16 16 160 176)(line_width 1))
 	)
 )

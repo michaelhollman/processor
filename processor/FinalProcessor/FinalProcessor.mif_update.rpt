@@ -1,5 +1,5 @@
 MIF/HEX Update report for FinalProcessor
-Wed Dec 18 23:56:03 2013
+Thu Dec 19 02:05:43 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -35,7 +35,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; MIF/HEX Update Summary                                        ;
 +-----------------------+---------------------------------------+
-; MIF/HEX Update Status ; Successful - Wed Dec 18 23:56:03 2013 ;
+; MIF/HEX Update Status ; Successful - Thu Dec 19 02:05:43 2013 ;
 ; Revision Name         ; FinalProcessor                        ;
 ; Top-level Entity Name ; FinalProcessor                        ;
 ; Family                ; FLEX10K                               ;
@@ -43,13 +43,13 @@ applicable agreement for further details.
 +-----------------------+---------------------------------------+
 
 
-+-------------------------------------------------------+
-; MIF/HEX Update Processed Files                        ;
-+-------------------------------------------------------+
-; File Name                                             ;
-+-------------------------------------------------------+
-; C:/git/processor/processor/FinalProcessor/program.mif ;
-+-------------------------------------------------------+
++------------------------------------------------------+
+; MIF/HEX Update Processed Files                       ;
++------------------------------------------------------+
+; File Name                                            ;
++------------------------------------------------------+
+; C:/git/processor/processor/FinalProcessor/addone.mif ;
++------------------------------------------------------+
 
 
 +-------------------------+
@@ -58,7 +58,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II MIF/HEX Update
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Dec 18 23:56:02 2013
+    Info: Processing started: Thu Dec 19 02:05:43 2013
 Info: Command: quartus_cdb FinalProcessor -c FinalProcessor --update_mif
 Warning: Can't find Memory Initialization File none -- skipped updates for this file
 Warning: 10 out of 256 addresses are reinitialized. The latest initialized data will replace the existing data. There are 10 warnings found, and 10 warnings are reported.
@@ -73,11 +73,11 @@ Warning: 10 out of 256 addresses are reinitialized. The latest initialized data 
     Warning: Memory Initialization File address 8 is reinitialized
     Warning: Memory Initialization File address 9 is reinitialized
 Info: Processed the following Memory Initialization File(s)
-    Info: Processed Memory Initialization File C:/git/processor/processor/FinalProcessor/program.mif
+    Info: Processed Memory Initialization File C:/git/processor/processor/FinalProcessor/addone.mif
 Info: Quartus II MIF/HEX Update was successful. 0 errors, 12 warnings
     Info: Peak virtual memory: 223 megabytes
-    Info: Processing ended: Wed Dec 18 23:56:03 2013
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Thu Dec 19 02:05:43 2013
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
 

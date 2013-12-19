@@ -7,6 +7,7 @@ use IEEE.std_logic_1164.all;
 entity PC is 
 	port(
 		clk:	in	std_logic;
+		reset:	in	std_logic;
 		input:	in	std_logic_vector(7 downto 0);
 		output:	out	std_logic_vector(7 downto 0)
 	);
@@ -17,7 +18,11 @@ begin
 	process(clk)
 	begin
 		if rising_edge(clk) then
-			output <= input;
+			if (reset = '1') then
+				output <= "00000000";
+			else
+				output <= input;
+			end if;
 		end if;
 	end process;
 end dataflow;

@@ -9,6 +9,7 @@ entity RegFile is
 		clk_r, clk_w:	in	std_logic;
 		rs, rt, rd:		in 	std_logic_vector(2 downto 0);
 		RegWrite:		in	bit;
+		r7_overflow:	in 	std_logic;
 		WriteData:		in	std_logic_vector(7 downto 0);
 		out1, out2:		out std_logic_vector(7 downto 0)
 	);
@@ -64,6 +65,7 @@ begin
 	process (clk_w)
 	begin
 		if clk_w'event and clk_w='1' then
+			r7 <= "0000000" & r7_overflow;
 			if RegWrite='1' then
 				case rd is
 					when "000" => r0 <= "00000000";

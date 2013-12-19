@@ -3,17 +3,18 @@ use ieee.std_logic_1164.all;
 
 entity Controller is
 	port(
-		opCode : in std_logic_vector(3 downto 0);
-		RegDst : out bit;
-		Branch : out bit;
-		MemRead : out bit;
-		MemtoReg : out bit;
-		MemWrite : out bit;
-		ALUSrc : out bit;
-		RegWrite : out bit;
-		Jump : out bit;
-		JumpReg : out bit;
-		ALUOp : out std_logic_vector(2 downto 0) -- 000 if ALU handles it, 010 for ADD, 110 for SUB
+		opCode 		: in std_logic_vector(3 downto 0);
+		BNE			: out bit;
+		RegDst 		: out bit;
+		Branch 		: out bit;
+		MemRead 	: out bit;
+		MemtoReg 	: out bit;
+		MemWrite 	: out bit;
+		ALUSrc 		: out bit;
+		RegWrite 	: out bit;
+		Jump 		: out bit;
+		JumpReg 	: out bit;
+		ALUOp 		: out std_logic_vector(2 downto 0) -- 000 if ALU handles it, 010 for ADD, 110 for SUB
 	);
 end Controller;
 
@@ -26,6 +27,7 @@ begin
 			when "0000" =>
 				-- R-Type instructions (sent to the ALU)
 				-- and, or, xor, sll, srl, add, sub, slt
+				BNE <= '0';
 				RegDst <= '1';
 				Branch <= '0';
 				MemRead <= '0';
@@ -38,6 +40,7 @@ begin
 				ALUOp <= "000";
 			when "0001" =>
 				-- addiu
+				BNE <= '0';
 				RegDst <= '0';
 				Branch <= '0';
 				MemRead <= '0';
@@ -50,6 +53,7 @@ begin
 				ALUOp <= "010";
 			when "0010" =>
 				-- subiu
+				BNE <= '0';
 				RegDst <= '0';
 				Branch <= '0';
 				MemRead <= '0';
@@ -62,6 +66,7 @@ begin
 				ALUOp <= "110";
 			when "0011" =>
 				-- addi
+				BNE <= '0';
 				RegDst <= '0';
 				Branch <= '0';
 				MemRead <= '0';
@@ -74,6 +79,7 @@ begin
 				ALUOp <= "010";
 			when "0100" =>
 				-- subi
+				BNE <= '0';
 				RegDst <= '0';
 				Branch <= '0';
 				MemRead <= '0';
@@ -86,6 +92,7 @@ begin
 				ALUOp <= "110";
 			when "0101" =>
 				-- j
+				BNE <= '0';
 				RegDst <= '0';
 				Branch <= '0';
 				MemRead <= '0';
@@ -98,6 +105,7 @@ begin
 				ALUOp <= "000";
 			when "0110" =>
 				-- jr
+				BNE <= '0';
 				RegDst <= '0';
 				Branch <= '0';
 				MemRead <= '0';
@@ -113,6 +121,7 @@ begin
 				-- TODO: Figure this one out
 			when "1000" =>
 				-- beq
+				BNE <= '0';
 				RegDst <= '0';
 				Branch <= '1';
 				MemRead <= '0';
@@ -125,6 +134,7 @@ begin
 				ALUOp <= "110";
 			when "1001" =>
 				-- bne
+				BNE <= '1';
 				RegDst <= '0';
 				Branch <= '1';
 				MemRead <= '0';
@@ -137,6 +147,7 @@ begin
 				ALUOp <= "110";
 			when "1010" =>
 				-- lw
+				BNE <= '0';
 				RegDst <= '0';
 				Branch <= '0';
 				MemRead <= '1';
@@ -148,7 +159,8 @@ begin
 				JumpReg <= '0';
 				ALUOp <= "010";
 			when "1011" =>
-				-- sw		
+				-- sw
+				BNE <= '0';		
 				RegDst <= '0';
 				Branch <= '0';
 				MemRead <= '0';

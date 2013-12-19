@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FinalProcessor
-Thu Dec 19 00:05:48 2013
+Thu Dec 19 03:34:10 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -24,7 +24,7 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
  16. Parameter Settings for User Entity Instance: Mux2x8:inst44|LPM_MUX:lpm_mux_component
  17. Parameter Settings for User Entity Instance: Mux2x8:inst42|LPM_MUX:lpm_mux_component
  18. Parameter Settings for User Entity Instance: Mux2x3:inst41|LPM_MUX:lpm_mux_component
- 19. Parameter Settings for User Entity Instance: Mux2x8:inst46|LPM_MUX:lpm_mux_component
+ 19. Parameter Settings for User Entity Instance: Mux2x8:inst47|LPM_MUX:lpm_mux_component
  20. Parameter Settings for User Entity Instance: Mux2x8:inst40|LPM_MUX:lpm_mux_component
  21. Parameter Settings for User Entity Instance: RAM:inst1|lpm_ram_dq:lpm_ram_dq_component
  22. Parameter Settings for User Entity Instance: Mux2x8:inst39|LPM_MUX:lpm_mux_component
@@ -58,13 +58,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Dec 19 00:05:48 2013        ;
+; Analysis & Synthesis Status ; Successful - Thu Dec 19 03:34:10 2013        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; FinalProcessor                               ;
 ; Top-level Entity Name       ; FinalProcessor                               ;
 ; Family                      ; FLEX10K                                      ;
-; Total logic elements        ; 454                                          ;
-; Total pins                  ; 181                                          ;
+; Total logic elements        ; 438                                          ;
+; Total pins                  ; 28                                           ;
 ; Total memory bits           ; 6,144                                        ;
 +-----------------------------+----------------------------------------------+
 
@@ -199,21 +199,21 @@ applicable agreement for further details.
 +-----------------------------------+-----------------------+
 ; Resource                          ; Usage                 ;
 +-----------------------------------+-----------------------+
-; Total logic elements              ; 454                   ;
-; Total combinational functions     ; 442                   ;
-;     -- Total 4-input functions    ; 185                   ;
-;     -- Total 3-input functions    ; 139                   ;
-;     -- Total 2-input functions    ; 94                    ;
-;     -- Total 1-input functions    ; 24                    ;
+; Total logic elements              ; 438                   ;
+; Total combinational functions     ; 425                   ;
+;     -- Total 4-input functions    ; 196                   ;
+;     -- Total 3-input functions    ; 140                   ;
+;     -- Total 2-input functions    ; 40                    ;
+;     -- Total 1-input functions    ; 49                    ;
 ;     -- Total 0-input functions    ; 0                     ;
 ; Total registers                   ; 121                   ;
 ; Total logic cells in carry chains ; 39                    ;
-; I/O pins                          ; 181                   ;
+; I/O pins                          ; 28                    ;
 ; Total memory bits                 ; 6144                  ;
 ; Maximum fan-out node              ; MegaClock:inst4|clk_4 ;
-; Maximum fan-out                   ; 58                    ;
-; Total fan-out                     ; 1970                  ;
-; Average fan-out                   ; 2.99                  ;
+; Maximum fan-out                   ; 57                    ;
+; Total fan-out                     ; 1854                  ;
+; Average fan-out                   ; 3.78                  ;
 +-----------------------------------+-----------------------+
 
 
@@ -222,8 +222,8 @@ applicable agreement for further details.
 +-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                      ; Library Name ;
 +-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------+--------------+
-; |FinalProcessor                           ; 454 (1)     ; 121          ; 6144        ; 181  ; 333 (1)      ; 12 (0)            ; 109 (0)          ; 39 (0)          ; 0 (0)      ; |FinalProcessor                                                                          ; work         ;
-;    |ALU:inst8|                            ; 138 (122)   ; 0            ; 0           ; 0    ; 138 (122)    ; 0 (0)             ; 0 (0)            ; 17 (1)          ; 0 (0)      ; |FinalProcessor|ALU:inst8                                                                ; work         ;
+; |FinalProcessor                           ; 438 (1)     ; 121          ; 6144        ; 28   ; 317 (1)      ; 13 (0)            ; 108 (0)          ; 39 (0)          ; 0 (0)      ; |FinalProcessor                                                                          ; work         ;
+;    |ALU:inst8|                            ; 136 (120)   ; 0            ; 0           ; 0    ; 136 (120)    ; 0 (0)             ; 0 (0)            ; 17 (1)          ; 0 (0)      ; |FinalProcessor|ALU:inst8                                                                ; work         ;
 ;       |lpm_add_sub:Add0|                  ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |FinalProcessor|ALU:inst8|lpm_add_sub:Add0                                               ; work         ;
 ;          |addcore:adder|                  ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |FinalProcessor|ALU:inst8|lpm_add_sub:Add0|addcore:adder                                 ; work         ;
 ;             |a_csnbuffer:result_node|     ; 8 (8)       ; 0            ; 0           ; 0    ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 8 (8)           ; 0 (0)      ; |FinalProcessor|ALU:inst8|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node         ; work         ;
@@ -231,8 +231,8 @@ applicable agreement for further details.
 ;          |addcore:adder|                  ; 8 (1)       ; 0            ; 0           ; 0    ; 8 (1)        ; 0 (0)             ; 0 (0)            ; 8 (1)           ; 0 (0)      ; |FinalProcessor|ALU:inst8|lpm_add_sub:Add1|addcore:adder                                 ; work         ;
 ;             |a_csnbuffer:result_node|     ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |FinalProcessor|ALU:inst8|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node         ; work         ;
 ;    |ALUController:inst15|                 ; 3 (3)       ; 0            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|ALUController:inst15                                                     ; work         ;
-;    |Controller:inst2|                     ; 21 (21)     ; 0            ; 0           ; 0    ; 21 (21)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Controller:inst2                                                         ; work         ;
-;    |MegaClock:inst4|                      ; 33 (19)     ; 22           ; 0           ; 0    ; 11 (11)      ; 2 (2)             ; 20 (6)           ; 14 (0)          ; 0 (0)      ; |FinalProcessor|MegaClock:inst4                                                          ; work         ;
+;    |Controller:inst2|                     ; 23 (23)     ; 0            ; 0           ; 0    ; 23 (23)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Controller:inst2                                                         ; work         ;
+;    |MegaClock:inst4|                      ; 32 (18)     ; 22           ; 0           ; 0    ; 10 (10)      ; 3 (3)             ; 19 (5)           ; 14 (0)          ; 0 (0)      ; |FinalProcessor|MegaClock:inst4                                                          ; work         ;
 ;       |lpm_counter:clk_sys_rtl_0|         ; 14 (0)      ; 14           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 14 (0)           ; 14 (0)          ; 0 (0)      ; |FinalProcessor|MegaClock:inst4|lpm_counter:clk_sys_rtl_0                                ; work         ;
 ;          |alt_counter_f10ke:wysi_counter| ; 14 (14)     ; 14           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 14 (14)          ; 14 (14)         ; 0 (0)      ; |FinalProcessor|MegaClock:inst4|lpm_counter:clk_sys_rtl_0|alt_counter_f10ke:wysi_counter ; work         ;
 ;    |Mux2x3:inst41|                        ; 3 (0)       ; 0            ; 0           ; 0    ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x3:inst41                                                            ; work         ;
@@ -250,38 +250,20 @@ applicable agreement for further details.
 ;          |muxlut:$00019|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00019                    ; work         ;
 ;          |muxlut:$00021|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00021                    ; work         ;
 ;          |muxlut:$00023|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00023                    ; work         ;
-;    |Mux2x8:inst40|                        ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst40                                                            ; work         ;
-;       |lpm_mux:lpm_mux_component|         ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst40|lpm_mux:lpm_mux_component                                  ; work         ;
-;          |muxlut:$00009|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst40|lpm_mux:lpm_mux_component|muxlut:$00009                    ; work         ;
-;          |muxlut:$00011|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst40|lpm_mux:lpm_mux_component|muxlut:$00011                    ; work         ;
-;          |muxlut:$00013|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst40|lpm_mux:lpm_mux_component|muxlut:$00013                    ; work         ;
-;          |muxlut:$00015|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst40|lpm_mux:lpm_mux_component|muxlut:$00015                    ; work         ;
-;          |muxlut:$00017|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst40|lpm_mux:lpm_mux_component|muxlut:$00017                    ; work         ;
-;          |muxlut:$00019|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst40|lpm_mux:lpm_mux_component|muxlut:$00019                    ; work         ;
-;          |muxlut:$00021|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst40|lpm_mux:lpm_mux_component|muxlut:$00021                    ; work         ;
-;          |muxlut:$00023|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst40|lpm_mux:lpm_mux_component|muxlut:$00023                    ; work         ;
-;    |Mux2x8:inst43|                        ; 5 (0)       ; 0            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst43                                                            ; work         ;
-;       |lpm_mux:lpm_mux_component|         ; 5 (0)       ; 0            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst43|lpm_mux:lpm_mux_component                                  ; work         ;
-;          |muxlut:$00011|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst43|lpm_mux:lpm_mux_component|muxlut:$00011                    ; work         ;
-;          |muxlut:$00013|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst43|lpm_mux:lpm_mux_component|muxlut:$00013                    ; work         ;
-;          |muxlut:$00015|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst43|lpm_mux:lpm_mux_component|muxlut:$00015                    ; work         ;
-;          |muxlut:$00017|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst43|lpm_mux:lpm_mux_component|muxlut:$00017                    ; work         ;
-;          |muxlut:$00019|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst43|lpm_mux:lpm_mux_component|muxlut:$00019                    ; work         ;
 ;    |Mux2x8:inst44|                        ; 2 (0)       ; 0            ; 0           ; 0    ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst44                                                            ; work         ;
 ;       |lpm_mux:lpm_mux_component|         ; 2 (0)       ; 0            ; 0           ; 0    ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst44|lpm_mux:lpm_mux_component                                  ; work         ;
-;          |muxlut:$00009|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst44|lpm_mux:lpm_mux_component|muxlut:$00009                    ; work         ;
-;          |muxlut:$00019|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst44|lpm_mux:lpm_mux_component|muxlut:$00019                    ; work         ;
-;    |Mux2x8:inst46|                        ; 16 (0)      ; 0            ; 0           ; 0    ; 16 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst46                                                            ; work         ;
-;       |lpm_mux:lpm_mux_component|         ; 16 (0)      ; 0            ; 0           ; 0    ; 16 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst46|lpm_mux:lpm_mux_component                                  ; work         ;
-;          |muxlut:$00009|                  ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst46|lpm_mux:lpm_mux_component|muxlut:$00009                    ; work         ;
-;          |muxlut:$00011|                  ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst46|lpm_mux:lpm_mux_component|muxlut:$00011                    ; work         ;
-;          |muxlut:$00013|                  ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst46|lpm_mux:lpm_mux_component|muxlut:$00013                    ; work         ;
-;          |muxlut:$00015|                  ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst46|lpm_mux:lpm_mux_component|muxlut:$00015                    ; work         ;
-;          |muxlut:$00017|                  ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst46|lpm_mux:lpm_mux_component|muxlut:$00017                    ; work         ;
-;          |muxlut:$00019|                  ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst46|lpm_mux:lpm_mux_component|muxlut:$00019                    ; work         ;
-;          |muxlut:$00021|                  ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst46|lpm_mux:lpm_mux_component|muxlut:$00021                    ; work         ;
-;          |muxlut:$00023|                  ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst46|lpm_mux:lpm_mux_component|muxlut:$00023                    ; work         ;
-;    |PC:inst10|                            ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 1 (1)           ; 0 (0)      ; |FinalProcessor|PC:inst10                                                                ; work         ;
+;          |muxlut:$00009|                  ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst44|lpm_mux:lpm_mux_component|muxlut:$00009                    ; work         ;
+;    |Mux2x8:inst47|                        ; 13 (0)      ; 0            ; 0           ; 0    ; 13 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst47                                                            ; work         ;
+;       |lpm_mux:lpm_mux_component|         ; 13 (0)      ; 0            ; 0           ; 0    ; 13 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst47|lpm_mux:lpm_mux_component                                  ; work         ;
+;          |muxlut:$00009|                  ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst47|lpm_mux:lpm_mux_component|muxlut:$00009                    ; work         ;
+;          |muxlut:$00011|                  ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst47|lpm_mux:lpm_mux_component|muxlut:$00011                    ; work         ;
+;          |muxlut:$00013|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst47|lpm_mux:lpm_mux_component|muxlut:$00013                    ; work         ;
+;          |muxlut:$00015|                  ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst47|lpm_mux:lpm_mux_component|muxlut:$00015                    ; work         ;
+;          |muxlut:$00017|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst47|lpm_mux:lpm_mux_component|muxlut:$00017                    ; work         ;
+;          |muxlut:$00019|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst47|lpm_mux:lpm_mux_component|muxlut:$00019                    ; work         ;
+;          |muxlut:$00021|                  ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst47|lpm_mux:lpm_mux_component|muxlut:$00021                    ; work         ;
+;          |muxlut:$00023|                  ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst47|lpm_mux:lpm_mux_component|muxlut:$00023                    ; work         ;
+;    |PC:inst10|                            ; 15 (15)     ; 8            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 8 (8)            ; 1 (1)           ; 0 (0)      ; |FinalProcessor|PC:inst10                                                                ; work         ;
 ;    |PlusOne:inst12|                       ; 7 (0)       ; 0            ; 0           ; 0    ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 7 (0)           ; 0 (0)      ; |FinalProcessor|PlusOne:inst12                                                           ; work         ;
 ;       |lpm_add_sub:Add0|                  ; 7 (0)       ; 0            ; 0           ; 0    ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 7 (0)           ; 0 (0)      ; |FinalProcessor|PlusOne:inst12|lpm_add_sub:Add0                                          ; work         ;
 ;          |addcore:adder|                  ; 7 (1)       ; 0            ; 0           ; 0    ; 7 (1)        ; 0 (0)             ; 0 (0)            ; 7 (1)           ; 0 (0)      ; |FinalProcessor|PlusOne:inst12|lpm_add_sub:Add0|addcore:adder                            ; work         ;
@@ -289,25 +271,25 @@ applicable agreement for further details.
 ;    |RAM:inst1|                            ; 0 (0)       ; 0            ; 2048        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|RAM:inst1                                                                ; work         ;
 ;       |lpm_ram_dq:lpm_ram_dq_component|   ; 0 (0)       ; 0            ; 2048        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|RAM:inst1|lpm_ram_dq:lpm_ram_dq_component                                ; work         ;
 ;          |altram:sram|                    ; 0 (0)       ; 0            ; 2048        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram                    ; work         ;
-;    |RAMHelper:inst20|                     ; 37 (37)     ; 19           ; 0           ; 0    ; 18 (18)      ; 10 (10)           ; 9 (9)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|RAMHelper:inst20                                                         ; work         ;
+;    |RAMHelper:inst20|                     ; 38 (38)     ; 19           ; 0           ; 0    ; 19 (19)      ; 10 (10)           ; 9 (9)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|RAMHelper:inst20                                                         ; work         ;
 ;    |ROM:inst|                             ; 0 (0)       ; 0            ; 4096        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|ROM:inst                                                                 ; work         ;
 ;       |lpm_rom:lpm_rom_component|         ; 0 (0)       ; 0            ; 4096        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|ROM:inst|lpm_rom:lpm_rom_component                                       ; work         ;
 ;          |altrom:srom|                    ; 0 (0)       ; 0            ; 4096        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|ROM:inst|lpm_rom:lpm_rom_component|altrom:srom                           ; work         ;
-;    |RegFile:inst13|                       ; 150 (150)   ; 72           ; 0           ; 0    ; 78 (78)      ; 0 (0)             ; 72 (72)          ; 0 (0)           ; 0 (0)      ; |FinalProcessor|RegFile:inst13                                                           ; work         ;
+;    |RegFile:inst13|                       ; 143 (143)   ; 72           ; 0           ; 0    ; 71 (71)      ; 0 (0)             ; 72 (72)          ; 0 (0)           ; 0 (0)      ; |FinalProcessor|RegFile:inst13                                                           ; work         ;
 ;    |SevenSegmentDisplay:inst18|           ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|SevenSegmentDisplay:inst18                                               ; work         ;
 ;    |SevenSegmentDisplay:inst19|           ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|SevenSegmentDisplay:inst19                                               ; work         ;
 +-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                             ;
-+---------------------------------------------------------------+-------------+--------------+--------------+--------------+--------------+------+-------------+
-; Name                                                          ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF         ;
-+---------------------------------------------------------------+-------------+--------------+--------------+--------------+--------------+------+-------------+
-; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|content ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; none        ;
-; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|content        ; ROM         ; 256          ; 16           ; --           ; --           ; 4096 ; program.mif ;
-+---------------------------------------------------------------+-------------+--------------+--------------+--------------+--------------+------+-------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                            ;
++---------------------------------------------------------------+-------------+--------------+--------------+--------------+--------------+------+------------+
+; Name                                                          ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF        ;
++---------------------------------------------------------------+-------------+--------------+--------------+--------------+--------------+------+------------+
+; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|content ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; none       ;
+; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|content        ; ROM         ; 256          ; 16           ; --           ; --           ; 4096 ; addone.mif ;
++---------------------------------------------------------------+-------------+--------------+--------------+--------------+--------------+------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------+
@@ -315,17 +297,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------+------------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal    ; Free of Timing Hazards ;
 +-----------------------------------------------------+------------------------+------------------------+
-; ALU:inst8|overflow                                  ; ALU:inst8|Equal0       ; yes                    ;
-; Controller:inst2|RegDst                             ; Controller:inst2|Mux11 ; yes                    ;
-; Controller:inst2|Branch                             ; Controller:inst2|Mux11 ; yes                    ;
-; Controller:inst2|MemRead                            ; Controller:inst2|Mux11 ; yes                    ;
-; Controller:inst2|MemtoReg                           ; Controller:inst2|Mux11 ; yes                    ;
-; Controller:inst2|MemWrite                           ; Controller:inst2|Mux11 ; yes                    ;
-; Controller:inst2|ALUSrc                             ; Controller:inst2|Mux11 ; yes                    ;
-; Controller:inst2|RegWrite                           ; Controller:inst2|Mux11 ; yes                    ;
-; Controller:inst2|Jump                               ; Controller:inst2|Mux11 ; yes                    ;
-; Controller:inst2|JumpReg                            ; Controller:inst2|Mux11 ; yes                    ;
-; ALU:inst8|output[7]                                 ; ALU:inst8|output[7]~15 ; yes                    ;
+; Controller:inst2|MemWrite                           ; Controller:inst2|Mux12 ; yes                    ;
 ; ALU:inst8|output[6]                                 ; ALU:inst8|output[7]~15 ; yes                    ;
 ; ALU:inst8|output[5]                                 ; ALU:inst8|output[7]~15 ; yes                    ;
 ; ALU:inst8|output[4]                                 ; ALU:inst8|output[7]~15 ; yes                    ;
@@ -333,9 +305,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ALU:inst8|output[2]                                 ; ALU:inst8|output[7]~15 ; yes                    ;
 ; ALU:inst8|output[1]                                 ; ALU:inst8|output[7]~15 ; yes                    ;
 ; ALU:inst8|output[0]                                 ; ALU:inst8|output[7]~15 ; yes                    ;
-; Controller:inst2|ALUOp[2]                           ; Controller:inst2|Mux11 ; yes                    ;
-; Controller:inst2|ALUOp[1]                           ; Controller:inst2|Mux11 ; yes                    ;
-; ALU:inst8|zero                                      ; ALU:inst8|zero~0       ; yes                    ;
+; ALU:inst8|output[7]                                 ; ALU:inst8|output[7]~15 ; yes                    ;
+; Controller:inst2|RegDst                             ; Controller:inst2|Mux12 ; yes                    ;
+; Controller:inst2|ALUSrc                             ; Controller:inst2|Mux12 ; yes                    ;
+; Controller:inst2|ALUOp[2]                           ; Controller:inst2|Mux12 ; yes                    ;
+; Controller:inst2|ALUOp[1]                           ; Controller:inst2|Mux12 ; yes                    ;
+; Controller:inst2|MemtoReg                           ; Controller:inst2|Mux12 ; yes                    ;
+; Controller:inst2|RegWrite                           ; Controller:inst2|Mux12 ; yes                    ;
+; ALU:inst8|overflow_sig                              ; ALU:inst8|Equal0       ; yes                    ;
+; Controller:inst2|Jump                               ; Controller:inst2|Mux12 ; yes                    ;
+; Controller:inst2|Branch                             ; Controller:inst2|Mux12 ; yes                    ;
+; ALU:inst8|zero_sig                                  ; ALU:inst8|zero_sig~0   ; yes                    ;
+; Controller:inst2|BNE                                ; Controller:inst2|Mux12 ; yes                    ;
+; Controller:inst2|JumpReg                            ; Controller:inst2|Mux12 ; yes                    ;
 ; Number of user-specified and inferred latches = 21  ;                        ;                        ;
 +-----------------------------------------------------+------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -347,11 +329,11 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 121   ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Clear  ; 1     ;
 ; Number of registers using Synchronous Load   ; 1     ;
 ; Number of registers using Asynchronous Clear ; 17    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 97    ;
+; Number of registers using Clock Enable       ; 89    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -404,7 +386,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; LPM_NUMWORDS           ; 256          ; Untyped                                 ;
 ; LPM_ADDRESS_CONTROL    ; REGISTERED   ; Untyped                                 ;
 ; LPM_OUTDATA            ; UNREGISTERED ; Untyped                                 ;
-; LPM_FILE               ; program.mif  ; Untyped                                 ;
+; LPM_FILE               ; addone.mif   ; Untyped                                 ;
 ; DEVICE_FAMILY          ; FLEX10K      ; Untyped                                 ;
 ; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                              ;
 ; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                            ;
@@ -491,7 +473,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Mux2x8:inst46|LPM_MUX:lpm_mux_component ;
+; Parameter Settings for User Entity Instance: Mux2x8:inst47|LPM_MUX:lpm_mux_component ;
 +------------------------+---------+---------------------------------------------------+
 ; Parameter Name         ; Value   ; Type                                              ;
 +------------------------+---------+---------------------------------------------------+
@@ -687,7 +669,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Dec 19 00:05:45 2013
+    Info: Processing started: Thu Dec 19 03:34:08 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FinalProcessor -c FinalProcessor
 Info: Found 1 design units, including 1 entities, in source file FinalProcessor.bdf
     Info: Found entity 1: FinalProcessor
@@ -705,22 +687,6 @@ Info: Found 2 design units, including 1 entities, in source file Mux2x8.vhd
     Info: Found design unit 1: mux2x8-SYN
     Info: Found entity 1: Mux2x8
 Info: Elaborating entity "FinalProcessor" for the top level hierarchy
-Warning: Pin "debug_alu_zero" is missing source
-Warning: Pin "debug_alu_overflow" is missing source
-Warning: Pin "debug_jump_mux1sel" is missing source
-Warning: Pin "debug_jump_mux2sel" is missing source
-Warning: Pin "debug_jump_mux3sel" is missing source
-Warning: Pin "debug_alu_aluCode[2..0]" is missing source
-Warning: Pin "debug_alu_inputOne[7..0]" is missing source
-Warning: Pin "debug_alu_inputTwo[7..0]" is missing source
-Warning: Pin "debug_alucont_aluCode[2..0]" is missing source
-Warning: Pin "debug_alucont_aluOp[2..0]" is missing source
-Warning: Pin "debug_alucont_output[2..0]" is missing source
-Warning: Pin "debug_jump_mux1result[7..0]" is missing source
-Warning: Pin "debug_jump_mux2result[7..0]" is missing source
-Warning: Pin "debug_jump_mux3result[7..0]" is missing source
-Warning: Pin "debug_plusone[7..0]" is missing source
-Warning: Pin "debug_signextender[7..0]" is missing source
 Warning: Using design file ramhelper/RAMHelper.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info: Found design unit 1: RAMHelper-dataflow
     Info: Found entity 1: RAMHelper
@@ -733,28 +699,30 @@ Warning: Using design file controller/Controller.vhd, which is not specified as 
     Info: Found design unit 1: Controller-arc
     Info: Found entity 1: Controller
 Info: Elaborating entity "Controller" for hierarchy "Controller:inst2"
-Warning (10631): VHDL Process Statement warning at Controller.vhd(23): inferring latch(es) for signal or variable "RegDst", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at Controller.vhd(23): inferring latch(es) for signal or variable "Branch", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at Controller.vhd(23): inferring latch(es) for signal or variable "MemRead", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at Controller.vhd(23): inferring latch(es) for signal or variable "MemtoReg", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at Controller.vhd(23): inferring latch(es) for signal or variable "MemWrite", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at Controller.vhd(23): inferring latch(es) for signal or variable "ALUSrc", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at Controller.vhd(23): inferring latch(es) for signal or variable "RegWrite", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at Controller.vhd(23): inferring latch(es) for signal or variable "Jump", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at Controller.vhd(23): inferring latch(es) for signal or variable "JumpReg", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at Controller.vhd(23): inferring latch(es) for signal or variable "ALUOp", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "ALUOp[0]" at Controller.vhd(23)
-Info (10041): Inferred latch for "ALUOp[1]" at Controller.vhd(23)
-Info (10041): Inferred latch for "ALUOp[2]" at Controller.vhd(23)
-Info (10041): Inferred latch for "JumpReg" at Controller.vhd(23)
-Info (10041): Inferred latch for "Jump" at Controller.vhd(23)
-Info (10041): Inferred latch for "RegWrite" at Controller.vhd(23)
-Info (10041): Inferred latch for "ALUSrc" at Controller.vhd(23)
-Info (10041): Inferred latch for "MemWrite" at Controller.vhd(23)
-Info (10041): Inferred latch for "MemtoReg" at Controller.vhd(23)
-Info (10041): Inferred latch for "MemRead" at Controller.vhd(23)
-Info (10041): Inferred latch for "Branch" at Controller.vhd(23)
-Info (10041): Inferred latch for "RegDst" at Controller.vhd(23)
+Warning (10631): VHDL Process Statement warning at Controller.vhd(24): inferring latch(es) for signal or variable "BNE", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controller.vhd(24): inferring latch(es) for signal or variable "RegDst", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controller.vhd(24): inferring latch(es) for signal or variable "Branch", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controller.vhd(24): inferring latch(es) for signal or variable "MemRead", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controller.vhd(24): inferring latch(es) for signal or variable "MemtoReg", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controller.vhd(24): inferring latch(es) for signal or variable "MemWrite", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controller.vhd(24): inferring latch(es) for signal or variable "ALUSrc", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controller.vhd(24): inferring latch(es) for signal or variable "RegWrite", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controller.vhd(24): inferring latch(es) for signal or variable "Jump", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controller.vhd(24): inferring latch(es) for signal or variable "JumpReg", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controller.vhd(24): inferring latch(es) for signal or variable "ALUOp", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "ALUOp[0]" at Controller.vhd(24)
+Info (10041): Inferred latch for "ALUOp[1]" at Controller.vhd(24)
+Info (10041): Inferred latch for "ALUOp[2]" at Controller.vhd(24)
+Info (10041): Inferred latch for "JumpReg" at Controller.vhd(24)
+Info (10041): Inferred latch for "Jump" at Controller.vhd(24)
+Info (10041): Inferred latch for "RegWrite" at Controller.vhd(24)
+Info (10041): Inferred latch for "ALUSrc" at Controller.vhd(24)
+Info (10041): Inferred latch for "MemWrite" at Controller.vhd(24)
+Info (10041): Inferred latch for "MemtoReg" at Controller.vhd(24)
+Info (10041): Inferred latch for "MemRead" at Controller.vhd(24)
+Info (10041): Inferred latch for "Branch" at Controller.vhd(24)
+Info (10041): Inferred latch for "RegDst" at Controller.vhd(24)
+Info (10041): Inferred latch for "BNE" at Controller.vhd(24)
 Warning: Using design file decoder/Decoder.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info: Found design unit 1: Decoder-arc
     Info: Found entity 1: Decoder
@@ -765,7 +733,7 @@ Info: Elaborated megafunction instantiation "ROM:inst|lpm_rom:lpm_rom_component"
 Info: Instantiated megafunction "ROM:inst|lpm_rom:lpm_rom_component" with the following parameter:
     Info: Parameter "intended_device_family" = "FLEX10K"
     Info: Parameter "lpm_address_control" = "REGISTERED"
-    Info: Parameter "lpm_file" = "program.mif"
+    Info: Parameter "lpm_file" = "addone.mif"
     Info: Parameter "lpm_outdata" = "UNREGISTERED"
     Info: Parameter "lpm_type" = "LPM_ROM"
     Info: Parameter "lpm_width" = "16"
@@ -794,39 +762,41 @@ Warning: Using design file alu/ALU.vhd, which is not specified as a design file 
     Info: Found design unit 1: ALU-architectureALU
     Info: Found entity 1: ALU
 Info: Elaborating entity "ALU" for hierarchy "ALU:inst8"
-Warning (10492): VHDL Process Statement warning at ALU.vhd(37): signal "inputOne" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(37): signal "inputTwo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(40): signal "inputOne" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(40): signal "inputTwo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(43): signal "inputOne" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(41): signal "inputOne" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(41): signal "inputTwo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(44): signal "inputOne" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at ALU.vhd(44): signal "inputTwo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(53): signal "inputOne" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(53): signal "inputTwo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(56): signal "inputOne" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(56): signal "inputTwo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(59): signal "inputOne" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(59): signal "inputTwo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(66): signal "inputOne" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(66): signal "inputTwo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(69): signal "inputOne" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(69): signal "inputTwo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(47): signal "inputOne" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(48): signal "inputTwo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(57): signal "inputOne" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(57): signal "inputTwo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(60): signal "inputOne" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(60): signal "inputTwo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(63): signal "inputOne" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(63): signal "inputTwo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at ALU.vhd(70): signal "inputOne" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at ALU.vhd(70): signal "inputTwo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(77): signal "inputOne" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(77): signal "inputTwo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at ALU.vhd(32): inferring latch(es) for signal or variable "output", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at ALU.vhd(32): inferring latch(es) for signal or variable "overflow", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at ALU.vhd(32): inferring latch(es) for signal or variable "zero", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "zero" at ALU.vhd(32)
-Info (10041): Inferred latch for "overflow" at ALU.vhd(32)
-Info (10041): Inferred latch for "output[0]" at ALU.vhd(32)
-Info (10041): Inferred latch for "output[1]" at ALU.vhd(32)
-Info (10041): Inferred latch for "output[2]" at ALU.vhd(32)
-Info (10041): Inferred latch for "output[3]" at ALU.vhd(32)
-Info (10041): Inferred latch for "output[4]" at ALU.vhd(32)
-Info (10041): Inferred latch for "output[5]" at ALU.vhd(32)
-Info (10041): Inferred latch for "output[6]" at ALU.vhd(32)
-Info (10041): Inferred latch for "output[7]" at ALU.vhd(32)
+Warning (10492): VHDL Process Statement warning at ALU.vhd(73): signal "inputOne" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(73): signal "inputTwo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(74): signal "inputOne" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(74): signal "inputTwo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(81): signal "inputOne" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(81): signal "inputTwo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(84): signal "overflow_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(85): signal "zero_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at ALU.vhd(36): inferring latch(es) for signal or variable "output", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ALU.vhd(36): inferring latch(es) for signal or variable "overflow_sig", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ALU.vhd(36): inferring latch(es) for signal or variable "zero_sig", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "zero_sig" at ALU.vhd(36)
+Info (10041): Inferred latch for "overflow_sig" at ALU.vhd(36)
+Info (10041): Inferred latch for "output[0]" at ALU.vhd(36)
+Info (10041): Inferred latch for "output[1]" at ALU.vhd(36)
+Info (10041): Inferred latch for "output[2]" at ALU.vhd(36)
+Info (10041): Inferred latch for "output[3]" at ALU.vhd(36)
+Info (10041): Inferred latch for "output[4]" at ALU.vhd(36)
+Info (10041): Inferred latch for "output[5]" at ALU.vhd(36)
+Info (10041): Inferred latch for "output[6]" at ALU.vhd(36)
+Info (10041): Inferred latch for "output[7]" at ALU.vhd(36)
 Warning: Using design file alucontroller/ALUController.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info: Found design unit 1: ALUController-dataflow
     Info: Found entity 1: ALUController
@@ -836,7 +806,7 @@ Warning: Using design file regfile/RegFile.vhd, which is not specified as a desi
     Info: Found design unit 1: RegFile-processRegisters
     Info: Found entity 1: RegFile
 Info: Elaborating entity "RegFile" for hierarchy "RegFile:inst13"
-Warning (10036): Verilog HDL or VHDL warning at RegFile.vhd(20): object "r0" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at RegFile.vhd(21): object "r0" assigned a value but never read
 Info: Elaborating entity "Mux2x3" for hierarchy "Mux2x3:inst41"
 Info: Elaborating entity "LPM_MUX" for hierarchy "Mux2x3:inst41|LPM_MUX:lpm_mux_component"
 Info: Elaborated megafunction instantiation "Mux2x3:inst41|LPM_MUX:lpm_mux_component"
@@ -920,66 +890,25 @@ Info: Elaborated megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0|add
 Info: Elaborated megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:oflow_node", which is child of megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0"
 Info: Elaborated megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node", which is child of megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0"
 Info: Elaborated megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0|altshift:result_ext_latency_ffs", which is child of megafunction instantiation "PlusOne:inst12|lpm_add_sub:Add0"
-Warning: Always-enabled tri-state buffer(s) removed
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[2]" to the node "debug_decod_aluCode[2]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[2]" to the node "debug_decod_Immediate[2]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[1]" to the node "debug_decod_aluCode[1]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[1]" to the node "debug_decod_Immediate[1]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[0]" to the node "debug_decod_aluCode[0]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[0]" to the node "debug_decod_Immediate[0]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[5]" to the node "debug_decod_Immediate[5]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[5]" to the node "debug_decod_rt[2]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[4]" to the node "debug_decod_Immediate[4]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[4]" to the node "debug_decod_rt[1]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[3]" to the node "debug_decod_Immediate[3]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[3]" to the node "debug_decod_rt[0]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[15]" to the node "debug_decod_opCode[3]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[14]" to the node "debug_decod_opCode[2]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[13]" to the node "debug_decod_opCode[1]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[12]" to the node "debug_decod_opCode[0]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[11]" to the node "debug_decod_rd[2]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[10]" to the node "debug_decod_rd[1]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[9]" to the node "debug_decod_rd[0]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[8]" to the node "debug_decod_rs[2]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[7]" to the node "debug_decod_rs[1]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[6]" to the node "debug_decod_rs[0]" into a wire
 Warning: Tri-state node(s) do not directly drive top-level pin(s)
+    Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[11]" to the node "RegFile:inst13|Mux55" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[5]" to the node "Mux2x3:inst41|lpm_mux:lpm_mux_component|muxlut:$00013|result_node" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[10]" to the node "RegFile:inst13|Mux55" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[4]" to the node "Mux2x3:inst41|lpm_mux:lpm_mux_component|muxlut:$00011|result_node" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[9]" to the node "RegFile:inst13|Mux55" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[3]" to the node "Mux2x3:inst41|lpm_mux:lpm_mux_component|muxlut:$00009|result_node" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[15]" to the node "Controller:inst2|Mux10" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[13]" to the node "Controller:inst2|Mux10" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[12]" to the node "Controller:inst2|Mux10" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[14]" to the node "Controller:inst2|Mux10" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[2]" to the node "Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00013|result_node" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[1]" to the node "Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00011|result_node" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[0]" to the node "Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00009|result_node" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[5]" to the node "Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00019|result_node" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[4]" to the node "Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00017|result_node" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[3]" to the node "Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00015|result_node" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[15]" to the node "Controller:inst2|Mux10" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[14]" to the node "Controller:inst2|Mux10" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[13]" to the node "Controller:inst2|Mux10" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[12]" to the node "inst24" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[11]" to the node "Mux2x3:inst41|lpm_mux:lpm_mux_component|muxlut:$00013|result_node" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[10]" to the node "Mux2x3:inst41|lpm_mux:lpm_mux_component|muxlut:$00011|result_node" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[9]" to the node "Mux2x3:inst41|lpm_mux:lpm_mux_component|muxlut:$00009|result_node" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[8]" to the node "RegFile:inst13|out1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[7]" to the node "RegFile:inst13|out1" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[6]" to the node "RegFile:inst13|out1" into an OR gate
-Info: Duplicate LATCH primitives merged into single LATCH primitive
-    Info: Duplicate LATCH primitive "Controller:inst2|MemtoReg" merged with LATCH primitive "Controller:inst2|MemRead"
-Warning: Latch Controller:inst2|RegDst has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]
-Warning: Latch Controller:inst2|Branch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]
-Warning: Latch Controller:inst2|MemRead has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]
+    Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[7]" to the node "RegFile:inst13|out1" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "ROM:inst|lpm_rom:lpm_rom_component|otri[8]" to the node "RegFile:inst13|out1" into an OR gate
 Warning: Latch Controller:inst2|MemWrite has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]
-Warning: Latch Controller:inst2|ALUSrc has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]
-Warning: Latch Controller:inst2|RegWrite has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]
-Warning: Latch Controller:inst2|Jump has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]
-Warning: Latch Controller:inst2|JumpReg has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]
-Warning: Latch ALU:inst8|output[7] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal Controller:inst2|ALUOp[2]
 Warning: Latch ALU:inst8|output[6] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal Controller:inst2|ALUOp[2]
 Warning: Latch ALU:inst8|output[5] has unsafe behavior
@@ -994,11 +923,28 @@ Warning: Latch ALU:inst8|output[1] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal Controller:inst2|ALUOp[2]
 Warning: Latch ALU:inst8|output[0] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal Controller:inst2|ALUOp[2]
+Warning: Latch ALU:inst8|output[7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controller:inst2|ALUOp[2]
+Warning: Latch Controller:inst2|RegDst has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]
+Warning: Latch Controller:inst2|ALUSrc has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]
 Warning: Latch Controller:inst2|ALUOp[2] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]
 Warning: Latch Controller:inst2|ALUOp[1] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]
-Warning: LATCH primitive "ALU:inst8|output[7]" is permanently enabled
+Warning: Latch Controller:inst2|MemtoReg has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]
+Warning: Latch Controller:inst2|RegWrite has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]
+Warning: Latch Controller:inst2|Jump has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]
+Warning: Latch Controller:inst2|Branch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]
+Warning: Latch Controller:inst2|BNE has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]
+Warning: Latch Controller:inst2|JumpReg has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]
 Warning: LATCH primitive "ALU:inst8|output[6]" is permanently enabled
 Warning: LATCH primitive "ALU:inst8|output[5]" is permanently enabled
 Warning: LATCH primitive "ALU:inst8|output[4]" is permanently enabled
@@ -1006,90 +952,16 @@ Warning: LATCH primitive "ALU:inst8|output[3]" is permanently enabled
 Warning: LATCH primitive "ALU:inst8|output[2]" is permanently enabled
 Warning: LATCH primitive "ALU:inst8|output[1]" is permanently enabled
 Warning: LATCH primitive "ALU:inst8|output[0]" is permanently enabled
-Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "debug_alu_zero" is stuck at GND
-    Warning (13410): Pin "debug_alu_overflow" is stuck at GND
-    Warning (13410): Pin "debug_jump_mux1sel" is stuck at GND
-    Warning (13410): Pin "debug_jump_mux2sel" is stuck at GND
-    Warning (13410): Pin "debug_jump_mux3sel" is stuck at GND
-    Warning (13410): Pin "debug_alu_aluCode[2]" is stuck at GND
-    Warning (13410): Pin "debug_alu_aluCode[1]" is stuck at GND
-    Warning (13410): Pin "debug_alu_aluCode[0]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputOne[7]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputOne[6]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputOne[5]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputOne[4]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputOne[3]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputOne[2]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputOne[1]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputOne[0]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputTwo[7]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputTwo[6]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputTwo[5]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputTwo[4]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputTwo[3]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputTwo[2]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputTwo[1]" is stuck at GND
-    Warning (13410): Pin "debug_alu_inputTwo[0]" is stuck at GND
-    Warning (13410): Pin "debug_alucont_aluCode[2]" is stuck at GND
-    Warning (13410): Pin "debug_alucont_aluCode[1]" is stuck at GND
-    Warning (13410): Pin "debug_alucont_aluCode[0]" is stuck at GND
-    Warning (13410): Pin "debug_alucont_aluOp[2]" is stuck at GND
-    Warning (13410): Pin "debug_alucont_aluOp[1]" is stuck at GND
-    Warning (13410): Pin "debug_alucont_aluOp[0]" is stuck at GND
-    Warning (13410): Pin "debug_alucont_output[2]" is stuck at GND
-    Warning (13410): Pin "debug_alucont_output[1]" is stuck at GND
-    Warning (13410): Pin "debug_alucont_output[0]" is stuck at GND
-    Warning (13410): Pin "debug_contr_ALUOp[0]" is stuck at GND
-    Warning (13410): Pin "debug_jump_mux1result[7]" is stuck at GND
-    Warning (13410): Pin "debug_jump_mux1result[6]" is stuck at GND
-    Warning (13410): Pin "debug_jump_mux1result[5]" is stuck at GND
-    Warning (13410): Pin "debug_jump_mux1result[4]" is stuck at GND
-    Warning (13410): Pin "debug_jump_mux1result[3]" is stuck at GND
-    Warning (13410): Pin "debug_jump_mux1result[2]" is stuck at GND
-    Warning (13410): Pin "debug_jump_mux1result[1]" is stuck at GND
-    Warning (13410): Pin "debug_jump_mux1result[0]" is stuck at GND
-    Warning (13410): Pin "debug_jump_mux2result[7]" is stuck at GND
-    Warning (13410): Pin "debug_jump_mux2result[6]" is stuck at GND
-    Warning (13410): Pin "debug_jump_mux2result[5]" is stuck at GND
-    Warning (13410): Pin "debug_jump_mux2result[4]" is stuck at GND
-    Warning (13410): Pin "debug_jump_mux2result[3]" is stuck at GND
-    Warning (13410): Pin "debug_jump_mux2result[2]" is stuck at GND
-    Warning (13410): Pin "debug_jump_mux2result[1]" is stuck at GND
-    Warning (13410): Pin "debug_jump_mux2result[0]" is stuck at GND
-    Warning (13410): Pin "debug_jump_mux3result[7]" is stuck at GND
-    Warning (13410): Pin "debug_jump_mux3result[6]" is stuck at GND
-    Warning (13410): Pin "debug_jump_mux3result[5]" is stuck at GND
-    Warning (13410): Pin "debug_jump_mux3result[4]" is stuck at GND
-    Warning (13410): Pin "debug_jump_mux3result[3]" is stuck at GND
-    Warning (13410): Pin "debug_jump_mux3result[2]" is stuck at GND
-    Warning (13410): Pin "debug_jump_mux3result[1]" is stuck at GND
-    Warning (13410): Pin "debug_jump_mux3result[0]" is stuck at GND
-    Warning (13410): Pin "debug_plusone[7]" is stuck at GND
-    Warning (13410): Pin "debug_plusone[6]" is stuck at GND
-    Warning (13410): Pin "debug_plusone[5]" is stuck at GND
-    Warning (13410): Pin "debug_plusone[4]" is stuck at GND
-    Warning (13410): Pin "debug_plusone[3]" is stuck at GND
-    Warning (13410): Pin "debug_plusone[2]" is stuck at GND
-    Warning (13410): Pin "debug_plusone[1]" is stuck at GND
-    Warning (13410): Pin "debug_plusone[0]" is stuck at GND
-    Warning (13410): Pin "debug_signextender[7]" is stuck at GND
-    Warning (13410): Pin "debug_signextender[6]" is stuck at GND
-    Warning (13410): Pin "debug_signextender[5]" is stuck at GND
-    Warning (13410): Pin "debug_signextender[4]" is stuck at GND
-    Warning (13410): Pin "debug_signextender[3]" is stuck at GND
-    Warning (13410): Pin "debug_signextender[2]" is stuck at GND
-    Warning (13410): Pin "debug_signextender[1]" is stuck at GND
-    Warning (13410): Pin "debug_signextender[0]" is stuck at GND
-Info: Implemented 659 device resources after synthesis - the final resource count might be different
+Warning: LATCH primitive "ALU:inst8|output[7]" is permanently enabled
+Info: Implemented 490 device resources after synthesis - the final resource count might be different
     Info: Implemented 12 input pins
-    Info: Implemented 169 output pins
-    Info: Implemented 454 logic cells
+    Info: Implemented 16 output pins
+    Info: Implemented 438 logic cells
     Info: Implemented 24 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 229 warnings
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 120 warnings
     Info: Peak virtual memory: 243 megabytes
-    Info: Processing ended: Thu Dec 19 00:05:48 2013
-    Info: Elapsed time: 00:00:03
+    Info: Processing ended: Thu Dec 19 03:34:10 2013
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:03
 
 

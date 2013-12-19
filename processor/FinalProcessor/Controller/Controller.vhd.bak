@@ -3,17 +3,18 @@ use ieee.std_logic_1164.all;
 
 entity Controller is
 	port(
-		opCode : in std_logic_vector(3 downto 0);
-		RegDst : out bit;
-		Branch : out bit;
-		MemRead : out bit;
-		MemtoReg : out bit;
-		MemWrite : out bit;
-		ALUSrc : out bit;
-		RegWrite : out bit;
-		Jump : out bit;
-		JumpReg : out bit;
-		ALUOp : out std_logic_vector(2 downto 0) -- 000 if ALU handles it, 010 for ADD, 110 for SUB
+		opCode 		: in std_logic_vector(3 downto 0);
+		BNE			: out bit;
+		RegDst 		: out bit;
+		Branch 		: out bit;
+		MemRead 	: out bit;
+		MemtoReg 	: out bit;
+		MemWrite 	: out bit;
+		ALUSrc 		: out bit;
+		RegWrite 	: out bit;
+		Jump 		: out bit;
+		JumpReg 	: out bit;
+		ALUOp 		: out std_logic_vector(2 downto 0) -- 000 if ALU handles it, 010 for ADD, 110 for SUB
 	);
 end Controller;
 
@@ -137,7 +138,7 @@ begin
 				ALUOp <= "110";
 			when "1010" =>
 				-- lw
-				RegDst <= '1';
+				RegDst <= '0';
 				Branch <= '0';
 				MemRead <= '1';
 				MemtoReg <= '1';
