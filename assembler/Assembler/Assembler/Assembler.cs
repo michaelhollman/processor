@@ -13,7 +13,7 @@ namespace Assembler
 
         public Assembler(string[] assemblyCode)
         {
-            AssemblyCode = assemblyCode;
+            AssemblyCode = CleanAssemblyCode(assemblyCode);
         }
 
         public string[] GetMachineCode()
@@ -46,26 +46,33 @@ namespace Assembler
             var binaryCommands = new List<string>();
             foreach (var command in commands)
             {
-                var instruction = OperationCodes.Instructions[command.Tokens[0]];
-                
-                var machineCode = "";
-                switch (instruction.InstructionType)
+                try
                 {
-                    case InstructionType.NoOp:
-                        machineCode = GetNoOp(command);
-                        break;
-                    case InstructionType.R:
-                        machineCode = GetRType(command);
-                        break;
-                    case InstructionType.I:
-                        machineCode = GetIType(command, labels);
-                        break;
-                    case InstructionType.J:
-                        machineCode = GetJType(command, labels);
-                        break;
+                    var instruction = OperationCodes.Instructions[command.Tokens[0]];
+                    var machineCode = "";
+                    switch (instruction.InstructionType)
+                    {
+                        case InstructionType.NoOp:
+                            machineCode = GetNoOp(command);
+                            break;
+                        case InstructionType.R:
+                            machineCode = GetRType(command);
+                            break;
+                        case InstructionType.I:
+                            machineCode = GetIType(command, labels);
+                            break;
+                        case InstructionType.J:
+                            machineCode = GetJType(command, labels);
+                            break;
+                    }
+
+                    binaryCommands.Add(String.Format("\t{0}\t:\t{1};", command.Index, machineCode));
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Error on line {0}. {1}", command.Index, e.Message);
                 }
 
-                binaryCommands.Add(String.Format("\t{0}\t:\t{1};", command.Index, machineCode));
             }
 
             // Add header
@@ -90,6 +97,35 @@ namespace Assembler
             // Return header + results of second pass
             return Enumerable.Concat(Enumerable.Concat(header, binaryCommands), footer).ToArray();
         }
+
+        private string[] CleanAssemblyCode(string[] rawInput)
+        {
+            var cleanedLines = new List<string>();
+
+            // Add noop to beginning of every program
+            cleanedLines.Add("noop");
+
+            // Remove comments and blank lines from assembly code
+            foreach (var line in rawInput)
+            {
+                var withoutComments = StripComment(line);
+                if (!string.IsNullOrEmpty(withoutComments))
+                {
+                    cleanedLines.Add(withoutComments);
+                }
+            }
+            return cleanedLines.ToArray();
+        }
+
+        private string StripComment(string line)
+        {
+            if (line.Contains(';'))
+            {
+                return line.Substring(0, line.IndexOf(';')).Trim();
+            }
+            return line.Trim();
+        }
+
 
         private string GetNoOp(Command command)
         {
@@ -232,9 +268,7 @@ namespace Assembler
         {
             if (Regex.IsMatch(value, @"^\d+$"))
             {
-                var num = int.Parse(value);
-                var registerWidth = 8;
-                return num * registerWidth;
+                return int.Parse(value);
             }
             else
             {
