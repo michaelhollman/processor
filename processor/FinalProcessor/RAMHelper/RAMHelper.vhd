@@ -47,17 +47,19 @@ begin
 				elsif (address = "00000001") then
 					if (button_1 = '1') then
 						output <= "00000001";
+						override <= '1';
 					else
 						output <= "00000000";
+						override <= '1';
 					end if;
-					override <= '1';
 				elsif (address = "00000010") then
 					if (button_2 = '1') then
 						output <= "00000001";
+						override <= '1';
 					else
 						output <= "00000000";
+						override <= '1';
 					end if;
-					override <= '1';
 				else
 					override <= '0';
 				end if;

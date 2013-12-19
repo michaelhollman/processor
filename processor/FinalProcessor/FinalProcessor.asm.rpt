@@ -1,5 +1,5 @@
 Assembler report for FinalProcessor
-Wed Dec 18 22:54:46 2013
+Thu Dec 19 00:05:59 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Dec 18 22:54:46 2013 ;
+; Assembler Status      ; Successful - Thu Dec 19 00:05:59 2013 ;
 ; Revision Name         ; FinalProcessor                        ;
 ; Top-level Entity Name ; FinalProcessor                        ;
 ; Family                ; FLEX10K                               ;
@@ -91,7 +91,7 @@ applicable agreement for further details.
 +----------------+-----------------------------------------------------------------------+
 ; Device         ; EPF10K70RC240-4                                                       ;
 ; JTAG usercode  ; 0x0000007F                                                            ;
-; Checksum       ; 0x0006853E                                                            ;
+; Checksum       ; 0x0005F3E7                                                            ;
 +----------------+-----------------------------------------------------------------------+
 
 
@@ -102,7 +102,7 @@ applicable agreement for further details.
 +--------------------+-------------------------------------------------------------------+
 ; Device             ; EPC2                                                              ;
 ; JTAG usercode      ; 0x00000000                                                        ;
-; Checksum           ; 0x019127FF                                                        ;
+; Checksum           ; 0x01903A20                                                        ;
 ; Compression Ratio  ; 1                                                                 ;
 +--------------------+-------------------------------------------------------------------+
 
@@ -113,12 +113,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Dec 18 22:54:46 2013
+    Info: Processing started: Thu Dec 19 00:05:59 2013
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off FinalProcessor -c FinalProcessor
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 206 megabytes
-    Info: Processing ended: Wed Dec 18 22:54:46 2013
+    Info: Processing ended: Thu Dec 19 00:05:59 2013
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

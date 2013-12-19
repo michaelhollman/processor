@@ -30,39 +30,6 @@ alu|
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-RAMHelper
-# storage
-db|FinalProcessor.(1).cnf
-db|FinalProcessor.(1).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-ramhelper|RAMHelper.vhd
-493cad4745f9fb1b44d44a797d55df1
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-RAMHelper:inst20
-}
-# lmf
-..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
 MegaClock
 # storage
 db|FinalProcessor.(2).cnf
@@ -3435,6 +3402,159 @@ ae39f15ed67cc9a095d29f68f6ad0f8
 
 # end
 # entity
+Controller
+# storage
+db|FinalProcessor.(3).cnf
+db|FinalProcessor.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+controller|Controller.vhd
+ccf5a45617ffe86274f3b53ccc15791
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+Controller:inst2
+}
+# lmf
+..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+RegFile
+# storage
+db|FinalProcessor.(15).cnf
+db|FinalProcessor.(15).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+regfile|RegFile.vhd
+aab741928c0ed6be6ca2e7f55b18a6
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+RegFile:inst13
+}
+# lmf
+..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+SevenSegmentDisplay
+# storage
+db|FinalProcessor.(24).cnf
+db|FinalProcessor.(24).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+sevensegmentdisplay|SevenSegmentDisplay.vhd
+e7c0aa3a9832b918dd166e81d6454fe
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+SevenSegmentDisplay:inst19
+SevenSegmentDisplay:inst18
+}
+# lmf
+..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+RAMHelper
+# storage
+db|FinalProcessor.(1).cnf
+db|FinalProcessor.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+ramhelper|RAMHelper.vhd
+c7d278f7178be47dd0d045beaa6cb4
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+RAMHelper:inst20
+}
+# lmf
+..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+FinalProcessor
+# storage
+db|FinalProcessor.(0).cnf
+db|FinalProcessor.(0).cnf
+# case_insensitive
+# source_file
+FinalProcessor.bdf
+a365494a7164219ccdc3d912fcafdafa
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
 altrom
 # storage
 db|FinalProcessor.(7).cnf
@@ -3584,6 +3704,8 @@ address0
 3
 }
 # include_file {
+..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
+99832fdf63412df51d7531202d74e75
 ..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altsyncram.inc
 1b5760dd55919ddb45bfb2c0e896218b
 ..|..|..|..|altera|90sp2|quartus|libraries|others|maxplus2|memmodes.inc
@@ -3594,135 +3716,13 @@ c22bfd353214c01495b560fc34e47d79
 74e08939f96a7ea8e7a4d59a5b01fe7
 ..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_decode.inc
 bd0e2f5e01c1bd360461dceb53d48
-..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
-99832fdf63412df51d7531202d74e75
 }
 # memory_file {
 program.mif
-c5fca34530b81f7c85fadd96830aef2
+93b327cc34d2abc38c3446e96a3e1
 }
 # hierarchies {
 ROM:inst|lpm_rom:lpm_rom_component|altrom:srom
-}
-# macro_sequence
-
-# end
-# entity
-Controller
-# storage
-db|FinalProcessor.(3).cnf
-db|FinalProcessor.(3).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-controller|Controller.vhd
-ccf5a45617ffe86274f3b53ccc15791
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-Controller:inst2
-}
-# lmf
-..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
-RegFile
-# storage
-db|FinalProcessor.(15).cnf
-db|FinalProcessor.(15).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-regfile|RegFile.vhd
-aab741928c0ed6be6ca2e7f55b18a6
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-RegFile:inst13
-}
-# lmf
-..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
-SevenSegmentDisplay
-# storage
-db|FinalProcessor.(24).cnf
-db|FinalProcessor.(24).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-sevensegmentdisplay|SevenSegmentDisplay.vhd
-e7c0aa3a9832b918dd166e81d6454fe
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-SevenSegmentDisplay:inst19
-SevenSegmentDisplay:inst18
-}
-# lmf
-..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
-FinalProcessor
-# storage
-db|FinalProcessor.(0).cnf
-db|FinalProcessor.(0).cnf
-# case_insensitive
-# source_file
-FinalProcessor.bdf
-e642f2dac5a4bdc111cf618d1efdc93b
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
 }
 # macro_sequence
 

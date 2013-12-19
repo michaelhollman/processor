@@ -9,8 +9,8 @@ entity RAMHelper is
 		address:	in 	std_logic_vector(7 downto 0);
 		data:		in 	std_logic_vector(7 downto 0);
 		
-		button_l:	in	bit;
-		button_r:	in	bit;
+		button_1:	in	bit;
+		button_2:	in	bit;
 		dipSwitch:	in	std_logic_vector(7 downto 0);
 
 		digit_l:	out	std_logic_vector(3 downto 0);
@@ -45,14 +45,15 @@ begin
 					output <= dipSwitch;
 					override <= '1';
 				elsif (address = "00000001") then
-					if (button_l = '1') then
+					if (button_1 = '1') then
 						output <= "00000001";
+						override <= '1';
 					else
 						output <= "00000000";
+						override <= '1';
 					end if;
-					override <= '1';
 				elsif (address = "00000010") then
-					if (button_r = '1') then
+					if (button_2 = '1') then
 						output <= "00000001";
 					else
 						output <= "00000000";

@@ -1,5 +1,5 @@
 Fitter report for FinalProcessor
-Wed Dec 18 22:54:45 2013
+Thu Dec 19 00:05:58 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -58,15 +58,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------+
 ; Fitter Summary                                                       ;
 +-----------------------+----------------------------------------------+
-; Fitter Status         ; Successful - Wed Dec 18 22:54:45 2013        ;
+; Fitter Status         ; Successful - Thu Dec 19 00:05:58 2013        ;
 ; Quartus II Version    ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name         ; FinalProcessor                               ;
 ; Top-level Entity Name ; FinalProcessor                               ;
 ; Family                ; FLEX10K                                      ;
 ; Device                ; EPF10K70RC240-4                              ;
 ; Timing Models         ; Final                                        ;
-; Total logic elements  ; 509 / 3,744 ( 14 % )                         ;
-; Total pins            ; 183 / 189 ( 97 % )                           ;
+; Total logic elements  ; 461 / 3,744 ( 12 % )                         ;
+; Total pins            ; 181 / 189 ( 96 % )                           ;
 ; Total memory bits     ; 6,144 / 18,432 ( 33 % )                      ;
 +-----------------------+----------------------------------------------+
 
@@ -151,431 +151,429 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+---------------+--------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Output Pins                                                                                                                                                                                            ;
-+----------------------------+-------+-----+------+--------------+--------------------------+---------------+----------------+---------------+---------------+------------+---------------+--------------+
-; Name                       ; Pin # ; Row ; Col. ; I/O Register ; Use Local Routing Output ; Power Up High ; Slow Slew Rate ; Single-Pin OE ; Single-Pin CE ; Open Drain ; TRI Primitive ; I/O Standard ;
-+----------------------------+-------+-----+------+--------------+--------------------------+---------------+----------------+---------------+---------------+------------+---------------+--------------+
-; decimal_l                  ; 14    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; decimal_r                  ; 25    ;  D  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_contr_RegDest        ; 106   ; --  ; 14   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_contr_Branch         ; 233   ; --  ; 44   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_contr_MemRead        ; 231   ; --  ; 44   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_contr_MemReg         ; 71    ; --  ; 43   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_contr_MemWrite       ; 44    ;  G  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_contr_ALUSrc         ; 105   ; --  ; 15   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_contr_RegWrite       ; 147   ;  F  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_contr_Jump           ; 164   ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_contr_JumpReg        ; 161   ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_clock0               ; 185   ; --  ; 7    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_clock1               ; 153   ;  E  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_clock2               ; 138   ;  G  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_clock3               ; 141   ;  G  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_clock4               ; 51    ;  I  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_contr_ALUOp[2]       ; 213   ; --  ; 27   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_contr_ALUOp[1]       ; 214   ; --  ; 28   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_decod_aluCode[2]     ; 43    ;  G  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_decod_aluCode[1]     ; 46    ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_decod_aluCode[0]     ; 134   ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_decod_Immediate[5]   ; 50    ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_decod_Immediate[4]   ; 15    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_decod_Immediate[3]   ; 162   ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_decod_Immediate[2]   ; 45    ;  G  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_decod_Immediate[1]   ; 88    ; --  ; 27   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_decod_Immediate[0]   ; 188   ; --  ; 10   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_decod_opCode[3]      ; 148   ;  F  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_decod_opCode[2]      ; 151   ;  E  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_decod_opCode[1]      ; 144   ;  F  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_decod_opCode[0]      ; 163   ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_decod_rd[2]          ; 31    ;  E  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_decod_rd[1]          ; 126   ;  I  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_decod_rd[0]          ; 49    ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_decod_rs[2]          ; 173   ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_decod_rs[1]          ; 171   ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_decod_rs[0]          ; 174   ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_decod_rt[2]          ; 158   ;  D  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_decod_rt[1]          ; 146   ;  F  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_decod_rt[0]          ; 107   ; --  ; 13   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_ram_muxedout[7]      ; 26    ;  D  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_ram_muxedout[6]      ; 168   ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_ram_muxedout[5]      ; 172   ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_ram_muxedout[4]      ; 139   ;  G  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_ram_muxedout[3]      ; 156   ;  D  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_ram_muxedout[2]      ; 166   ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_ram_muxedout[1]      ; 159   ;  D  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_ram_muxedout[0]      ; 169   ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_ramhelper_digit_l[3] ; 80    ; --  ; 34   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_ramhelper_digit_l[2] ; 133   ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_ramhelper_digit_l[1] ; 220   ; --  ; 33   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_ramhelper_digit_l[0] ; 81    ; --  ; 33   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_ramhelper_digit_r[3] ; 55    ;  I  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_ramhelper_digit_r[2] ; 221   ; --  ; 33   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_ramhelper_digit_r[1] ; 128   ;  I  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_ramhelper_digit_r[0] ; 54    ;  I  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_regdest_mux[2]       ; 157   ;  D  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_regdest_mux[1]       ; 143   ;  G  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_regdest_mux[0]       ; 193   ; --  ; 14   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_regfile_output1[7]   ; 198   ; --  ; 18   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_regfile_output1[6]   ; 183   ; --  ; 5    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_regfile_output1[5]   ; 100   ; --  ; 18   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_regfile_output1[4]   ; 111   ; --  ; 9    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_regfile_output1[3]   ; 186   ; --  ; 8    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_regfile_output1[2]   ; 113   ; --  ; 8    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_regfile_output1[1]   ; 102   ; --  ; 17   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_regfile_output1[0]   ; 114   ; --  ; 7    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_regfile_output2[7]   ; 101   ; --  ; 17   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_regfile_output2[6]   ; 184   ; --  ; 6    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_regfile_output2[5]   ; 110   ; --  ; 10   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_regfile_output2[4]   ; 187   ; --  ; 9    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_regfile_output2[3]   ; 103   ; --  ; 16   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_regfile_output2[2]   ; 192   ; --  ; 12   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_regfile_output2[1]   ; 203   ; --  ; 22   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_regfile_output2[0]   ; 131   ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; digit_l[6]                 ; 6     ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; digit_l[5]                 ; 7     ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; digit_l[4]                 ; 8     ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; digit_l[3]                 ; 9     ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; digit_l[2]                 ; 11    ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; digit_l[1]                 ; 12    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; digit_l[0]                 ; 13    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; digit_r[6]                 ; 17    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; digit_r[5]                 ; 18    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; digit_r[4]                 ; 19    ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; digit_r[3]                 ; 20    ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; digit_r[2]                 ; 21    ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; digit_r[1]                 ; 23    ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; digit_r[0]                 ; 24    ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_zero             ; 127   ;  I  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_overflow         ; 98    ; --  ; 21   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_jump_mux1sel         ; 87    ; --  ; 28   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_jump_mux2sel         ; 238   ; --  ; 49   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_jump_mux3sel         ; 167   ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_aluCode[2]       ; 116   ; --  ; 5    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_aluCode[1]       ; 117   ; --  ; 3    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_aluCode[0]       ; 66    ; --  ; 47   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_inputOne[7]      ; 79    ; --  ; 35   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_inputOne[6]      ; 229   ; --  ; 42   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_inputOne[5]      ; 237   ; --  ; 48   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_inputOne[4]      ; 62    ; --  ; 51   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_inputOne[3]      ; 234   ; --  ; 45   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_inputOne[2]      ; 84    ; --  ; 30   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_inputOne[1]      ; 137   ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_inputOne[0]      ; 230   ; --  ; 43   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_inputTwo[7]      ; 219   ; --  ; 32   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_inputTwo[6]      ; 70    ; --  ; 44   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_inputTwo[5]      ; 195   ; --  ; 16   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_inputTwo[4]      ; 120   ; --  ; 1    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_inputTwo[3]      ; 194   ; --  ; 15   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_inputTwo[2]      ; 181   ; --  ; 2    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_inputTwo[1]      ; 149   ;  E  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_inputTwo[0]      ; 152   ;  E  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_output[7]        ; 204   ; --  ; 24   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_output[6]        ; 239   ; --  ; 51   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_output[5]        ; 75    ; --  ; 37   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_output[4]        ; 142   ;  G  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_output[3]        ; 218   ; --  ; 32   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_output[2]        ; 200   ; --  ; 20   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_output[1]        ; 119   ; --  ; 2    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alu_output[0]        ; 209   ; --  ; 26   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alucont_aluCode[2]   ; 132   ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alucont_aluCode[1]   ; 196   ; --  ; 16   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alucont_aluCode[0]   ; 56    ;  I  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alucont_aluOp[2]     ; 63    ; --  ; 50   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alucont_aluOp[1]     ; 202   ; --  ; 22   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alucont_aluOp[0]     ; 94    ; --  ; 26   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alucont_output[2]    ; 240   ; --  ; 52   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alucont_output[1]    ; 97    ; --  ; 23   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_alucont_output[0]    ; 48    ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_contr_ALUOp[0]       ; 118   ; --  ; 2    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_jump_mux1result[7]   ; 82    ; --  ; 32   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_jump_mux1result[6]   ; 78    ; --  ; 36   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_jump_mux1result[5]   ; 217   ; --  ; 31   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_jump_mux1result[4]   ; 136   ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_jump_mux1result[3]   ; 228   ; --  ; 40   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_jump_mux1result[2]   ; 154   ;  E  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_jump_mux1result[1]   ; 30    ;  E  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_jump_mux1result[0]   ; 223   ; --  ; 36   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_jump_mux2result[7]   ; 207   ; --  ; 25   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_jump_mux2result[6]   ; 226   ; --  ; 38   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_jump_mux2result[5]   ; 53    ;  I  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_jump_mux2result[4]   ; 227   ; --  ; 39   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_jump_mux2result[3]   ; 83    ; --  ; 31   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_jump_mux2result[2]   ; 99    ; --  ; 19   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_jump_mux2result[1]   ; 208   ; --  ; 25   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_jump_mux2result[0]   ; 182   ; --  ; 4    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_jump_mux3result[7]   ; 206   ; --  ; 24   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_jump_mux3result[6]   ; 86    ; --  ; 29   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_jump_mux3result[5]   ; 236   ; --  ; 48   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_jump_mux3result[4]   ; 235   ; --  ; 46   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_jump_mux3result[3]   ; 95    ; --  ; 25   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_jump_mux3result[2]   ; 67    ; --  ; 46   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_jump_mux3result[1]   ; 201   ; --  ; 21   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_jump_mux3result[0]   ; 199   ; --  ; 20   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_plusone[7]           ; 76    ; --  ; 37   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_plusone[6]           ; 72    ; --  ; 42   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_plusone[5]           ; 222   ; --  ; 35   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_plusone[4]           ; 68    ; --  ; 45   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_plusone[3]           ; 129   ;  I  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_plusone[2]           ; 215   ; --  ; 29   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_plusone[1]           ; 65    ; --  ; 47   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_plusone[0]           ; 73    ; --  ; 39   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_signextender[7]      ; 190   ; --  ; 11   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_signextender[6]      ; 74    ; --  ; 39   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_signextender[5]      ; 191   ; --  ; 12   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_signextender[4]      ; 61    ; --  ; 52   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_signextender[3]      ; 175   ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_signextender[2]      ; 64    ; --  ; 49   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_signextender[1]      ; 109   ; --  ; 11   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; debug_signextender[0]      ; 225   ; --  ; 37   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-+----------------------------+-------+-----+------+--------------+--------------------------+---------------+----------------+---------------+---------------+------------+---------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                          ;
++--------------------------+-------+-----+------+--------------+--------------------------+---------------+----------------+---------------+---------------+------------+---------------+--------------+
+; Name                     ; Pin # ; Row ; Col. ; I/O Register ; Use Local Routing Output ; Power Up High ; Slow Slew Rate ; Single-Pin OE ; Single-Pin CE ; Open Drain ; TRI Primitive ; I/O Standard ;
++--------------------------+-------+-----+------+--------------+--------------------------+---------------+----------------+---------------+---------------+------------+---------------+--------------+
+; decimal_l                ; 14    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; decimal_r                ; 25    ;  D  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_contr_RegDest      ; 186   ; --  ; 8    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_contr_Branch       ; 202   ; --  ; 22   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_contr_MemRead      ; 113   ; --  ; 8    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_contr_MemReg       ; 185   ; --  ; 7    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_contr_MemWrite     ; 98    ; --  ; 21   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_contr_ALUSrc       ; 223   ; --  ; 36   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_contr_RegWrite     ; 114   ; --  ; 7    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_contr_Jump         ; 201   ; --  ; 21   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_contr_JumpReg      ; 238   ; --  ; 49   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_clock0             ; 196   ; --  ; 16   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_clock1             ; 134   ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_clock2             ; 133   ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_clock3             ; 195   ; --  ; 16   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_clock4             ; 105   ; --  ; 15   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_RAMHELPER_override ; 95    ; --  ; 25   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_output[7]      ; 86    ; --  ; 29   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_output[6]      ; 148   ;  F  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_output[5]      ; 144   ;  F  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_output[4]      ; 87    ; --  ; 28   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_output[3]      ; 84    ; --  ; 30   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_output[2]      ; 65    ; --  ; 47   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_output[1]      ; 147   ;  F  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_output[0]      ; 214   ; --  ; 28   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_contr_ALUOp[2]     ; 100   ; --  ; 18   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_contr_ALUOp[1]     ; 198   ; --  ; 18   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_decod_aluCode[2]   ; 138   ;  G  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_decod_aluCode[1]   ; 174   ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_decod_aluCode[0]   ; 43    ;  G  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_decod_Immediate[5] ; 172   ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_decod_Immediate[4] ; 166   ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_decod_Immediate[3] ; 53    ;  I  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_decod_Immediate[2] ; 30    ;  E  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_decod_Immediate[1] ; 101   ; --  ; 17   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_decod_Immediate[0] ; 240   ; --  ; 52   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_decod_opCode[3]    ; 161   ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_decod_opCode[2]    ; 129   ;  I  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_decod_opCode[1]    ; 142   ;  G  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_decod_opCode[0]    ; 171   ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_decod_rd[2]        ; 31    ;  E  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_decod_rd[1]        ; 151   ;  E  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_decod_rd[0]        ; 152   ;  E  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_decod_rs[2]        ; 153   ;  E  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_decod_rs[1]        ; 149   ;  E  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_decod_rs[0]        ; 173   ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_decod_rt[2]        ; 146   ;  F  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_decod_rt[1]        ; 218   ; --  ; 32   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_decod_rt[0]        ; 128   ;  I  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_PC[7]              ; 154   ;  E  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_PC[6]              ; 44    ;  G  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_PC[5]              ; 68    ; --  ; 45   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_PC[4]              ; 67    ; --  ; 46   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_PC[3]              ; 64    ; --  ; 49   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_PC[2]              ; 139   ;  G  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_PC[1]              ; 63    ; --  ; 50   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_PC[0]              ; 143   ;  G  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_RAM_muxedout[7]    ; 103   ; --  ; 16   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_RAM_muxedout[6]    ; 55    ;  I  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_RAM_muxedout[5]    ; 194   ; --  ; 15   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_RAM_muxedout[4]    ; 126   ;  I  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_RAM_muxedout[3]    ; 188   ; --  ; 10   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_RAM_muxedout[2]    ; 46    ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_RAM_muxedout[1]    ; 183   ; --  ; 5    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_RAM_muxedout[0]    ; 110   ; --  ; 10   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_regfile_output1[7] ; 83    ; --  ; 31   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_regfile_output1[6] ; 141   ;  G  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_regfile_output1[5] ; 199   ; --  ; 20   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_regfile_output1[4] ; 219   ; --  ; 32   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_regfile_output1[3] ; 72    ; --  ; 42   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_regfile_output1[2] ; 26    ;  D  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_regfile_output1[1] ; 159   ;  D  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_regfile_output1[0] ; 73    ; --  ; 39   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_regfile_output2[7] ; 49    ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_regfile_output2[6] ; 192   ; --  ; 12   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_regfile_output2[5] ; 75    ; --  ; 37   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_regfile_output2[4] ; 206   ; --  ; 24   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_regfile_output2[3] ; 164   ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_regfile_output2[2] ; 226   ; --  ; 38   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_regfile_output2[1] ; 76    ; --  ; 37   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_regfile_output2[0] ; 228   ; --  ; 40   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; digit_l[6]               ; 6     ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; digit_l[5]               ; 7     ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; digit_l[4]               ; 8     ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; digit_l[3]               ; 9     ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; digit_l[2]               ; 11    ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; digit_l[1]               ; 12    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; digit_l[0]               ; 13    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; digit_r[6]               ; 17    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; digit_r[5]               ; 18    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; digit_r[4]               ; 19    ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; digit_r[3]               ; 20    ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; digit_r[2]               ; 21    ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; digit_r[1]               ; 23    ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; digit_r[0]               ; 24    ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_zero           ; 236   ; --  ; 48   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_overflow       ; 187   ; --  ; 9    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_jump_mux1sel       ; 234   ; --  ; 45   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_jump_mux2sel       ; 225   ; --  ; 37   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_jump_mux3sel       ; 230   ; --  ; 43   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_aluCode[2]     ; 191   ; --  ; 12   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_aluCode[1]     ; 193   ; --  ; 14   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_aluCode[0]     ; 54    ;  I  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_inputOne[7]    ; 156   ;  D  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_inputOne[6]    ; 120   ; --  ; 1    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_inputOne[5]    ; 111   ; --  ; 9    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_inputOne[4]    ; 182   ; --  ; 4    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_inputOne[3]    ; 70    ; --  ; 44   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_inputOne[2]    ; 233   ; --  ; 44   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_inputOne[1]    ; 97    ; --  ; 23   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_inputOne[0]    ; 221   ; --  ; 33   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_inputTwo[7]    ; 169   ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_inputTwo[6]    ; 61    ; --  ; 52   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_inputTwo[5]    ; 116   ; --  ; 5    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_inputTwo[4]    ; 229   ; --  ; 42   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_inputTwo[3]    ; 235   ; --  ; 46   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_inputTwo[2]    ; 215   ; --  ; 29   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_inputTwo[1]    ; 108   ; --  ; 12   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alu_inputTwo[0]    ; 167   ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alucont_aluCode[2] ; 109   ; --  ; 11   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alucont_aluCode[1] ; 217   ; --  ; 31   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alucont_aluCode[0] ; 74    ; --  ; 39   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alucont_aluOp[2]   ; 131   ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alucont_aluOp[1]   ; 106   ; --  ; 14   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alucont_aluOp[0]   ; 213   ; --  ; 27   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alucont_output[2]  ; 107   ; --  ; 13   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alucont_output[1]  ; 117   ; --  ; 3    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_alucont_output[0]  ; 115   ; --  ; 6    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_contr_ALUOp[0]     ; 45    ;  G  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_jump_mux1result[7] ; 209   ; --  ; 26   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_jump_mux1result[6] ; 132   ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_jump_mux1result[5] ; 48    ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_jump_mux1result[4] ; 200   ; --  ; 20   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_jump_mux1result[3] ; 181   ; --  ; 2    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_jump_mux1result[2] ; 51    ;  I  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_jump_mux1result[1] ; 190   ; --  ; 11   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_jump_mux1result[0] ; 204   ; --  ; 24   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_jump_mux2result[7] ; 99    ; --  ; 19   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_jump_mux2result[6] ; 175   ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_jump_mux2result[5] ; 80    ; --  ; 34   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_jump_mux2result[4] ; 220   ; --  ; 33   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_jump_mux2result[3] ; 56    ;  I  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_jump_mux2result[2] ; 157   ;  D  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_jump_mux2result[1] ; 119   ; --  ; 2    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_jump_mux2result[0] ; 162   ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_jump_mux3result[7] ; 94    ; --  ; 26   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_jump_mux3result[6] ; 239   ; --  ; 51   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_jump_mux3result[5] ; 222   ; --  ; 35   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_jump_mux3result[4] ; 227   ; --  ; 39   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_jump_mux3result[3] ; 71    ; --  ; 43   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_jump_mux3result[2] ; 237   ; --  ; 48   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_jump_mux3result[1] ; 127   ;  I  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_jump_mux3result[0] ; 136   ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_plusone[7]         ; 168   ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_plusone[6]         ; 203   ; --  ; 22   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_plusone[5]         ; 79    ; --  ; 35   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_plusone[4]         ; 50    ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_plusone[3]         ; 158   ;  D  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_plusone[2]         ; 163   ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_plusone[1]         ; 102   ; --  ; 17   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_plusone[0]         ; 208   ; --  ; 25   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_signextender[7]    ; 231   ; --  ; 44   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_signextender[6]    ; 81    ; --  ; 33   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_signextender[5]    ; 137   ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_signextender[4]    ; 66    ; --  ; 47   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_signextender[3]    ; 118   ; --  ; 2    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_signextender[2]    ; 88    ; --  ; 27   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_signextender[1]    ; 184   ; --  ; 6    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; debug_signextender[0]    ; 62    ; --  ; 51   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
++--------------------------+-------+-----+------+--------------+--------------------------+---------------+----------------+---------------+---------------+------------+---------------+--------------+
 
 
-+---------------------------------------------------+
-; All Package Pins                                  ;
-+-------+----------------------------+--------------+
-; Pin # ; Usage                      ; I/O Standard ;
-+-------+----------------------------+--------------+
-; 1     ; #TCK                       ;              ;
-; 2     ; ^CONF_DONE                 ;              ;
-; 3     ; ^nCEO                      ;              ;
-; 4     ; #TDO                       ;              ;
-; 5     ; VCC_INT                    ;              ;
-; 6     ; digit_l[6]                 ; TTL          ;
-; 7     ; digit_l[5]                 ; TTL          ;
-; 8     ; digit_l[4]                 ; TTL          ;
-; 9     ; digit_l[3]                 ; TTL          ;
-; 10    ; GND_INT                    ;              ;
-; 11    ; digit_l[2]                 ; TTL          ;
-; 12    ; digit_l[1]                 ; TTL          ;
-; 13    ; digit_l[0]                 ; TTL          ;
-; 14    ; decimal_l                  ; TTL          ;
-; 15    ; debug_decod_Immediate[4]   ; TTL          ;
-; 16    ; VCC_INT                    ;              ;
-; 17    ; digit_r[6]                 ; TTL          ;
-; 18    ; digit_r[5]                 ; TTL          ;
-; 19    ; digit_r[4]                 ; TTL          ;
-; 20    ; digit_r[3]                 ; TTL          ;
-; 21    ; digit_r[2]                 ; TTL          ;
-; 22    ; GND_INT                    ;              ;
-; 23    ; digit_r[1]                 ; TTL          ;
-; 24    ; digit_r[0]                 ; TTL          ;
-; 25    ; decimal_r                  ; TTL          ;
-; 26    ; debug_ram_muxedout[7]      ; TTL          ;
-; 27    ; VCC_INT                    ;              ;
-; 28    ; button_1                   ; TTL          ;
-; 29    ; button_2                   ; TTL          ;
-; 30    ; debug_jump_mux1result[1]   ; TTL          ;
-; 31    ; debug_decod_rd[2]          ; TTL          ;
-; 32    ; GND_INT                    ;              ;
-; 33    ; dipswitch[7]               ; TTL          ;
-; 34    ; dipswitch[6]               ; TTL          ;
-; 35    ; dipswitch[5]               ; TTL          ;
-; 36    ; dipswitch[4]               ; TTL          ;
-; 37    ; VCC_INT                    ;              ;
-; 38    ; dipswitch[3]               ; TTL          ;
-; 39    ; dipswitch[2]               ; TTL          ;
-; 40    ; dipswitch[1]               ; TTL          ;
-; 41    ; dipswitch[0]               ; TTL          ;
-; 42    ; GND_INT                    ;              ;
-; 43    ; debug_decod_aluCode[2]     ; TTL          ;
-; 44    ; debug_contr_MemWrite       ; TTL          ;
-; 45    ; debug_decod_Immediate[2]   ; TTL          ;
-; 46    ; debug_decod_aluCode[1]     ; TTL          ;
-; 47    ; VCC_INT                    ;              ;
-; 48    ; debug_alucont_output[0]    ; TTL          ;
-; 49    ; debug_decod_rd[0]          ; TTL          ;
-; 50    ; debug_decod_Immediate[5]   ; TTL          ;
-; 51    ; debug_clock4               ; TTL          ;
-; 52    ; GND_INT                    ;              ;
-; 53    ; debug_jump_mux2result[5]   ; TTL          ;
-; 54    ; debug_ramhelper_digit_r[0] ; TTL          ;
-; 55    ; debug_ramhelper_digit_r[3] ; TTL          ;
-; 56    ; debug_alucont_aluCode[0]   ; TTL          ;
-; 57    ; VCC_INT                    ;              ;
-; 58    ; #TMS                       ;              ;
-; 59    ; #TRST                      ;              ;
-; 60    ; ^nSTATUS                   ;              ;
-; 61    ; debug_signextender[4]      ; TTL          ;
-; 62    ; debug_alu_inputOne[4]      ; TTL          ;
-; 63    ; debug_alucont_aluOp[2]     ; TTL          ;
-; 64    ; debug_signextender[2]      ; TTL          ;
-; 65    ; debug_plusone[1]           ; TTL          ;
-; 66    ; debug_alu_aluCode[0]       ; TTL          ;
-; 67    ; debug_jump_mux3result[2]   ; TTL          ;
-; 68    ; debug_plusone[4]           ; TTL          ;
-; 69    ; GND_INT                    ;              ;
-; 70    ; debug_alu_inputTwo[6]      ; TTL          ;
-; 71    ; debug_contr_MemReg         ; TTL          ;
-; 72    ; debug_plusone[6]           ; TTL          ;
-; 73    ; debug_plusone[0]           ; TTL          ;
-; 74    ; debug_signextender[6]      ; TTL          ;
-; 75    ; debug_alu_output[5]        ; TTL          ;
-; 76    ; debug_plusone[7]           ; TTL          ;
-; 77    ; VCC_INT                    ;              ;
-; 78    ; debug_jump_mux1result[6]   ; TTL          ;
-; 79    ; debug_alu_inputOne[7]      ; TTL          ;
-; 80    ; debug_ramhelper_digit_l[3] ; TTL          ;
-; 81    ; debug_ramhelper_digit_l[0] ; TTL          ;
-; 82    ; debug_jump_mux1result[7]   ; TTL          ;
-; 83    ; debug_jump_mux2result[3]   ; TTL          ;
-; 84    ; debug_alu_inputOne[2]      ; TTL          ;
-; 85    ; GND_INT                    ;              ;
-; 86    ; debug_jump_mux3result[6]   ; TTL          ;
-; 87    ; debug_jump_mux1sel         ; TTL          ;
-; 88    ; debug_decod_Immediate[1]   ; TTL          ;
-; 89    ; VCC_INT                    ;              ;
-; 90    ; GND+                       ;              ;
-; 91    ; board_clk                  ; TTL          ;
-; 92    ; GND+                       ;              ;
-; 93    ; GND_INT                    ;              ;
-; 94    ; debug_alucont_aluOp[0]     ; TTL          ;
-; 95    ; debug_jump_mux3result[3]   ; TTL          ;
-; 96    ; VCC_INT                    ;              ;
-; 97    ; debug_alucont_output[1]    ; TTL          ;
-; 98    ; debug_alu_overflow         ; TTL          ;
-; 99    ; debug_jump_mux2result[2]   ; TTL          ;
-; 100   ; debug_regfile_output1[5]   ; TTL          ;
-; 101   ; debug_regfile_output2[7]   ; TTL          ;
-; 102   ; debug_regfile_output1[1]   ; TTL          ;
-; 103   ; debug_regfile_output2[3]   ; TTL          ;
-; 104   ; GND_INT                    ;              ;
-; 105   ; debug_contr_ALUSrc         ; TTL          ;
-; 106   ; debug_contr_RegDest        ; TTL          ;
-; 107   ; debug_decod_rt[0]          ; TTL          ;
-; 108   ; RESERVED                   ;              ;
-; 109   ; debug_signextender[1]      ; TTL          ;
-; 110   ; debug_regfile_output2[5]   ; TTL          ;
-; 111   ; debug_regfile_output1[4]   ; TTL          ;
-; 112   ; VCC_INT                    ;              ;
-; 113   ; debug_regfile_output1[2]   ; TTL          ;
-; 114   ; debug_regfile_output1[0]   ; TTL          ;
-; 115   ; RESERVED                   ;              ;
-; 116   ; debug_alu_aluCode[2]       ; TTL          ;
-; 117   ; debug_alu_aluCode[1]       ; TTL          ;
-; 118   ; debug_contr_ALUOp[0]       ; TTL          ;
-; 119   ; debug_alu_output[1]        ; TTL          ;
-; 120   ; debug_alu_inputTwo[4]      ; TTL          ;
-; 121   ; ^nCONFIG                   ;              ;
-; 122   ; VCC_INT                    ;              ;
-; 123   ; ^MSEL1                     ;              ;
-; 124   ; ^MSEL0                     ;              ;
-; 125   ; GND_INT                    ;              ;
-; 126   ; debug_decod_rd[1]          ; TTL          ;
-; 127   ; debug_alu_zero             ; TTL          ;
-; 128   ; debug_ramhelper_digit_r[1] ; TTL          ;
-; 129   ; debug_plusone[3]           ; TTL          ;
-; 130   ; VCC_INT                    ;              ;
-; 131   ; debug_regfile_output2[0]   ; TTL          ;
-; 132   ; debug_alucont_aluCode[2]   ; TTL          ;
-; 133   ; debug_ramhelper_digit_l[2] ; TTL          ;
-; 134   ; debug_decod_aluCode[0]     ; TTL          ;
-; 135   ; GND_INT                    ;              ;
-; 136   ; debug_jump_mux1result[4]   ; TTL          ;
-; 137   ; debug_alu_inputOne[1]      ; TTL          ;
-; 138   ; debug_clock2               ; TTL          ;
-; 139   ; debug_ram_muxedout[4]      ; TTL          ;
-; 140   ; VCC_INT                    ;              ;
-; 141   ; debug_clock3               ; TTL          ;
-; 142   ; debug_alu_output[4]        ; TTL          ;
-; 143   ; debug_regdest_mux[1]       ; TTL          ;
-; 144   ; debug_decod_opCode[1]      ; TTL          ;
-; 145   ; GND_INT                    ;              ;
-; 146   ; debug_decod_rt[1]          ; TTL          ;
-; 147   ; debug_contr_RegWrite       ; TTL          ;
-; 148   ; debug_decod_opCode[3]      ; TTL          ;
-; 149   ; debug_alu_inputTwo[1]      ; TTL          ;
-; 150   ; VCC_INT                    ;              ;
-; 151   ; debug_decod_opCode[2]      ; TTL          ;
-; 152   ; debug_alu_inputTwo[0]      ; TTL          ;
-; 153   ; debug_clock1               ; TTL          ;
-; 154   ; debug_jump_mux1result[2]   ; TTL          ;
-; 155   ; GND_INT                    ;              ;
-; 156   ; debug_ram_muxedout[3]      ; TTL          ;
-; 157   ; debug_regdest_mux[2]       ; TTL          ;
-; 158   ; debug_decod_rt[2]          ; TTL          ;
-; 159   ; debug_ram_muxedout[1]      ; TTL          ;
-; 160   ; VCC_INT                    ;              ;
-; 161   ; debug_contr_JumpReg        ; TTL          ;
-; 162   ; debug_decod_Immediate[3]   ; TTL          ;
-; 163   ; debug_decod_opCode[0]      ; TTL          ;
-; 164   ; debug_contr_Jump           ; TTL          ;
-; 165   ; GND_INT                    ;              ;
-; 166   ; debug_ram_muxedout[2]      ; TTL          ;
-; 167   ; debug_jump_mux3sel         ; TTL          ;
-; 168   ; debug_ram_muxedout[6]      ; TTL          ;
-; 169   ; debug_ram_muxedout[0]      ; TTL          ;
-; 170   ; VCC_INT                    ;              ;
-; 171   ; debug_decod_rs[1]          ; TTL          ;
-; 172   ; debug_ram_muxedout[5]      ; TTL          ;
-; 173   ; debug_decod_rs[2]          ; TTL          ;
-; 174   ; debug_decod_rs[0]          ; TTL          ;
-; 175   ; debug_signextender[3]      ; TTL          ;
-; 176   ; GND_INT                    ;              ;
-; 177   ; #TDI                       ;              ;
-; 178   ; ^nCE                       ;              ;
-; 179   ; ^DCLK                      ;              ;
-; 180   ; ^DATA0                     ;              ;
-; 181   ; debug_alu_inputTwo[2]      ; TTL          ;
-; 182   ; debug_jump_mux2result[0]   ; TTL          ;
-; 183   ; debug_regfile_output1[6]   ; TTL          ;
-; 184   ; debug_regfile_output2[6]   ; TTL          ;
-; 185   ; debug_clock0               ; TTL          ;
-; 186   ; debug_regfile_output1[3]   ; TTL          ;
-; 187   ; debug_regfile_output2[4]   ; TTL          ;
-; 188   ; debug_decod_Immediate[0]   ; TTL          ;
-; 189   ; VCC_INT                    ;              ;
-; 190   ; debug_signextender[7]      ; TTL          ;
-; 191   ; debug_signextender[5]      ; TTL          ;
-; 192   ; debug_regfile_output2[2]   ; TTL          ;
-; 193   ; debug_regdest_mux[0]       ; TTL          ;
-; 194   ; debug_alu_inputTwo[3]      ; TTL          ;
-; 195   ; debug_alu_inputTwo[5]      ; TTL          ;
-; 196   ; debug_alucont_aluCode[1]   ; TTL          ;
-; 197   ; GND_INT                    ;              ;
-; 198   ; debug_regfile_output1[7]   ; TTL          ;
-; 199   ; debug_jump_mux3result[0]   ; TTL          ;
-; 200   ; debug_alu_output[2]        ; TTL          ;
-; 201   ; debug_jump_mux3result[1]   ; TTL          ;
-; 202   ; debug_alucont_aluOp[1]     ; TTL          ;
-; 203   ; debug_regfile_output2[1]   ; TTL          ;
-; 204   ; debug_alu_output[7]        ; TTL          ;
-; 205   ; VCC_INT                    ;              ;
-; 206   ; debug_jump_mux3result[7]   ; TTL          ;
-; 207   ; debug_jump_mux2result[7]   ; TTL          ;
-; 208   ; debug_jump_mux2result[1]   ; TTL          ;
-; 209   ; debug_alu_output[0]        ; TTL          ;
-; 210   ; GND+                       ;              ;
-; 211   ; GND+                       ;              ;
-; 212   ; reset                      ; TTL          ;
-; 213   ; debug_contr_ALUOp[2]       ; TTL          ;
-; 214   ; debug_contr_ALUOp[1]       ; TTL          ;
-; 215   ; debug_plusone[2]           ; TTL          ;
-; 216   ; GND_INT                    ;              ;
-; 217   ; debug_jump_mux1result[5]   ; TTL          ;
-; 218   ; debug_alu_output[3]        ; TTL          ;
-; 219   ; debug_alu_inputTwo[7]      ; TTL          ;
-; 220   ; debug_ramhelper_digit_l[1] ; TTL          ;
-; 221   ; debug_ramhelper_digit_r[2] ; TTL          ;
-; 222   ; debug_plusone[5]           ; TTL          ;
-; 223   ; debug_jump_mux1result[0]   ; TTL          ;
-; 224   ; VCC_INT                    ;              ;
-; 225   ; debug_signextender[0]      ; TTL          ;
-; 226   ; debug_jump_mux2result[6]   ; TTL          ;
-; 227   ; debug_jump_mux2result[4]   ; TTL          ;
-; 228   ; debug_jump_mux1result[3]   ; TTL          ;
-; 229   ; debug_alu_inputOne[6]      ; TTL          ;
-; 230   ; debug_alu_inputOne[0]      ; TTL          ;
-; 231   ; debug_contr_MemRead        ; TTL          ;
-; 232   ; GND_INT                    ;              ;
-; 233   ; debug_contr_Branch         ; TTL          ;
-; 234   ; debug_alu_inputOne[3]      ; TTL          ;
-; 235   ; debug_jump_mux3result[4]   ; TTL          ;
-; 236   ; debug_jump_mux3result[5]   ; TTL          ;
-; 237   ; debug_alu_inputOne[5]      ; TTL          ;
-; 238   ; debug_jump_mux2sel         ; TTL          ;
-; 239   ; debug_alu_output[6]        ; TTL          ;
-; 240   ; debug_alucont_output[2]    ; TTL          ;
-+-------+----------------------------+--------------+
++-------------------------------------------------+
+; All Package Pins                                ;
++-------+--------------------------+--------------+
+; Pin # ; Usage                    ; I/O Standard ;
++-------+--------------------------+--------------+
+; 1     ; #TCK                     ;              ;
+; 2     ; ^CONF_DONE               ;              ;
+; 3     ; ^nCEO                    ;              ;
+; 4     ; #TDO                     ;              ;
+; 5     ; VCC_INT                  ;              ;
+; 6     ; digit_l[6]               ; TTL          ;
+; 7     ; digit_l[5]               ; TTL          ;
+; 8     ; digit_l[4]               ; TTL          ;
+; 9     ; digit_l[3]               ; TTL          ;
+; 10    ; GND_INT                  ;              ;
+; 11    ; digit_l[2]               ; TTL          ;
+; 12    ; digit_l[1]               ; TTL          ;
+; 13    ; digit_l[0]               ; TTL          ;
+; 14    ; decimal_l                ; TTL          ;
+; 15    ; RESERVED                 ;              ;
+; 16    ; VCC_INT                  ;              ;
+; 17    ; digit_r[6]               ; TTL          ;
+; 18    ; digit_r[5]               ; TTL          ;
+; 19    ; digit_r[4]               ; TTL          ;
+; 20    ; digit_r[3]               ; TTL          ;
+; 21    ; digit_r[2]               ; TTL          ;
+; 22    ; GND_INT                  ;              ;
+; 23    ; digit_r[1]               ; TTL          ;
+; 24    ; digit_r[0]               ; TTL          ;
+; 25    ; decimal_r                ; TTL          ;
+; 26    ; debug_regfile_output1[2] ; TTL          ;
+; 27    ; VCC_INT                  ;              ;
+; 28    ; button_1                 ; TTL          ;
+; 29    ; button_2                 ; TTL          ;
+; 30    ; debug_decod_Immediate[2] ; TTL          ;
+; 31    ; debug_decod_rd[2]        ; TTL          ;
+; 32    ; GND_INT                  ;              ;
+; 33    ; dipswitch[7]             ; TTL          ;
+; 34    ; dipswitch[6]             ; TTL          ;
+; 35    ; dipswitch[5]             ; TTL          ;
+; 36    ; dipswitch[4]             ; TTL          ;
+; 37    ; VCC_INT                  ;              ;
+; 38    ; dipswitch[3]             ; TTL          ;
+; 39    ; dipswitch[2]             ; TTL          ;
+; 40    ; dipswitch[1]             ; TTL          ;
+; 41    ; dipswitch[0]             ; TTL          ;
+; 42    ; GND_INT                  ;              ;
+; 43    ; debug_decod_aluCode[0]   ; TTL          ;
+; 44    ; debug_PC[6]              ; TTL          ;
+; 45    ; debug_contr_ALUOp[0]     ; TTL          ;
+; 46    ; debug_RAM_muxedout[2]    ; TTL          ;
+; 47    ; VCC_INT                  ;              ;
+; 48    ; debug_jump_mux1result[5] ; TTL          ;
+; 49    ; debug_regfile_output2[7] ; TTL          ;
+; 50    ; debug_plusone[4]         ; TTL          ;
+; 51    ; debug_jump_mux1result[2] ; TTL          ;
+; 52    ; GND_INT                  ;              ;
+; 53    ; debug_decod_Immediate[3] ; TTL          ;
+; 54    ; debug_alu_aluCode[0]     ; TTL          ;
+; 55    ; debug_RAM_muxedout[6]    ; TTL          ;
+; 56    ; debug_jump_mux2result[3] ; TTL          ;
+; 57    ; VCC_INT                  ;              ;
+; 58    ; #TMS                     ;              ;
+; 59    ; #TRST                    ;              ;
+; 60    ; ^nSTATUS                 ;              ;
+; 61    ; debug_alu_inputTwo[6]    ; TTL          ;
+; 62    ; debug_signextender[0]    ; TTL          ;
+; 63    ; debug_PC[1]              ; TTL          ;
+; 64    ; debug_PC[3]              ; TTL          ;
+; 65    ; debug_alu_output[2]      ; TTL          ;
+; 66    ; debug_signextender[4]    ; TTL          ;
+; 67    ; debug_PC[4]              ; TTL          ;
+; 68    ; debug_PC[5]              ; TTL          ;
+; 69    ; GND_INT                  ;              ;
+; 70    ; debug_alu_inputOne[3]    ; TTL          ;
+; 71    ; debug_jump_mux3result[3] ; TTL          ;
+; 72    ; debug_regfile_output1[3] ; TTL          ;
+; 73    ; debug_regfile_output1[0] ; TTL          ;
+; 74    ; debug_alucont_aluCode[0] ; TTL          ;
+; 75    ; debug_regfile_output2[5] ; TTL          ;
+; 76    ; debug_regfile_output2[1] ; TTL          ;
+; 77    ; VCC_INT                  ;              ;
+; 78    ; RESERVED                 ;              ;
+; 79    ; debug_plusone[5]         ; TTL          ;
+; 80    ; debug_jump_mux2result[5] ; TTL          ;
+; 81    ; debug_signextender[6]    ; TTL          ;
+; 82    ; RESERVED                 ;              ;
+; 83    ; debug_regfile_output1[7] ; TTL          ;
+; 84    ; debug_alu_output[3]      ; TTL          ;
+; 85    ; GND_INT                  ;              ;
+; 86    ; debug_alu_output[7]      ; TTL          ;
+; 87    ; debug_alu_output[4]      ; TTL          ;
+; 88    ; debug_signextender[2]    ; TTL          ;
+; 89    ; VCC_INT                  ;              ;
+; 90    ; GND+                     ;              ;
+; 91    ; board_clk                ; TTL          ;
+; 92    ; GND+                     ;              ;
+; 93    ; GND_INT                  ;              ;
+; 94    ; debug_jump_mux3result[7] ; TTL          ;
+; 95    ; debug_RAMHELPER_override ; TTL          ;
+; 96    ; VCC_INT                  ;              ;
+; 97    ; debug_alu_inputOne[1]    ; TTL          ;
+; 98    ; debug_contr_MemWrite     ; TTL          ;
+; 99    ; debug_jump_mux2result[7] ; TTL          ;
+; 100   ; debug_contr_ALUOp[2]     ; TTL          ;
+; 101   ; debug_decod_Immediate[1] ; TTL          ;
+; 102   ; debug_plusone[1]         ; TTL          ;
+; 103   ; debug_RAM_muxedout[7]    ; TTL          ;
+; 104   ; GND_INT                  ;              ;
+; 105   ; debug_clock4             ; TTL          ;
+; 106   ; debug_alucont_aluOp[1]   ; TTL          ;
+; 107   ; debug_alucont_output[2]  ; TTL          ;
+; 108   ; debug_alu_inputTwo[1]    ; TTL          ;
+; 109   ; debug_alucont_aluCode[2] ; TTL          ;
+; 110   ; debug_RAM_muxedout[0]    ; TTL          ;
+; 111   ; debug_alu_inputOne[5]    ; TTL          ;
+; 112   ; VCC_INT                  ;              ;
+; 113   ; debug_contr_MemRead      ; TTL          ;
+; 114   ; debug_contr_RegWrite     ; TTL          ;
+; 115   ; debug_alucont_output[0]  ; TTL          ;
+; 116   ; debug_alu_inputTwo[5]    ; TTL          ;
+; 117   ; debug_alucont_output[1]  ; TTL          ;
+; 118   ; debug_signextender[3]    ; TTL          ;
+; 119   ; debug_jump_mux2result[1] ; TTL          ;
+; 120   ; debug_alu_inputOne[6]    ; TTL          ;
+; 121   ; ^nCONFIG                 ;              ;
+; 122   ; VCC_INT                  ;              ;
+; 123   ; ^MSEL1                   ;              ;
+; 124   ; ^MSEL0                   ;              ;
+; 125   ; GND_INT                  ;              ;
+; 126   ; debug_RAM_muxedout[4]    ; TTL          ;
+; 127   ; debug_jump_mux3result[1] ; TTL          ;
+; 128   ; debug_decod_rt[0]        ; TTL          ;
+; 129   ; debug_decod_opCode[2]    ; TTL          ;
+; 130   ; VCC_INT                  ;              ;
+; 131   ; debug_alucont_aluOp[2]   ; TTL          ;
+; 132   ; debug_jump_mux1result[6] ; TTL          ;
+; 133   ; debug_clock2             ; TTL          ;
+; 134   ; debug_clock1             ; TTL          ;
+; 135   ; GND_INT                  ;              ;
+; 136   ; debug_jump_mux3result[0] ; TTL          ;
+; 137   ; debug_signextender[5]    ; TTL          ;
+; 138   ; debug_decod_aluCode[2]   ; TTL          ;
+; 139   ; debug_PC[2]              ; TTL          ;
+; 140   ; VCC_INT                  ;              ;
+; 141   ; debug_regfile_output1[6] ; TTL          ;
+; 142   ; debug_decod_opCode[1]    ; TTL          ;
+; 143   ; debug_PC[0]              ; TTL          ;
+; 144   ; debug_alu_output[5]      ; TTL          ;
+; 145   ; GND_INT                  ;              ;
+; 146   ; debug_decod_rt[2]        ; TTL          ;
+; 147   ; debug_alu_output[1]      ; TTL          ;
+; 148   ; debug_alu_output[6]      ; TTL          ;
+; 149   ; debug_decod_rs[1]        ; TTL          ;
+; 150   ; VCC_INT                  ;              ;
+; 151   ; debug_decod_rd[1]        ; TTL          ;
+; 152   ; debug_decod_rd[0]        ; TTL          ;
+; 153   ; debug_decod_rs[2]        ; TTL          ;
+; 154   ; debug_PC[7]              ; TTL          ;
+; 155   ; GND_INT                  ;              ;
+; 156   ; debug_alu_inputOne[7]    ; TTL          ;
+; 157   ; debug_jump_mux2result[2] ; TTL          ;
+; 158   ; debug_plusone[3]         ; TTL          ;
+; 159   ; debug_regfile_output1[1] ; TTL          ;
+; 160   ; VCC_INT                  ;              ;
+; 161   ; debug_decod_opCode[3]    ; TTL          ;
+; 162   ; debug_jump_mux2result[0] ; TTL          ;
+; 163   ; debug_plusone[2]         ; TTL          ;
+; 164   ; debug_regfile_output2[3] ; TTL          ;
+; 165   ; GND_INT                  ;              ;
+; 166   ; debug_decod_Immediate[4] ; TTL          ;
+; 167   ; debug_alu_inputTwo[0]    ; TTL          ;
+; 168   ; debug_plusone[7]         ; TTL          ;
+; 169   ; debug_alu_inputTwo[7]    ; TTL          ;
+; 170   ; VCC_INT                  ;              ;
+; 171   ; debug_decod_opCode[0]    ; TTL          ;
+; 172   ; debug_decod_Immediate[5] ; TTL          ;
+; 173   ; debug_decod_rs[0]        ; TTL          ;
+; 174   ; debug_decod_aluCode[1]   ; TTL          ;
+; 175   ; debug_jump_mux2result[6] ; TTL          ;
+; 176   ; GND_INT                  ;              ;
+; 177   ; #TDI                     ;              ;
+; 178   ; ^nCE                     ;              ;
+; 179   ; ^DCLK                    ;              ;
+; 180   ; ^DATA0                   ;              ;
+; 181   ; debug_jump_mux1result[3] ; TTL          ;
+; 182   ; debug_alu_inputOne[4]    ; TTL          ;
+; 183   ; debug_RAM_muxedout[1]    ; TTL          ;
+; 184   ; debug_signextender[1]    ; TTL          ;
+; 185   ; debug_contr_MemReg       ; TTL          ;
+; 186   ; debug_contr_RegDest      ; TTL          ;
+; 187   ; debug_alu_overflow       ; TTL          ;
+; 188   ; debug_RAM_muxedout[3]    ; TTL          ;
+; 189   ; VCC_INT                  ;              ;
+; 190   ; debug_jump_mux1result[1] ; TTL          ;
+; 191   ; debug_alu_aluCode[2]     ; TTL          ;
+; 192   ; debug_regfile_output2[6] ; TTL          ;
+; 193   ; debug_alu_aluCode[1]     ; TTL          ;
+; 194   ; debug_RAM_muxedout[5]    ; TTL          ;
+; 195   ; debug_clock3             ; TTL          ;
+; 196   ; debug_clock0             ; TTL          ;
+; 197   ; GND_INT                  ;              ;
+; 198   ; debug_contr_ALUOp[1]     ; TTL          ;
+; 199   ; debug_regfile_output1[5] ; TTL          ;
+; 200   ; debug_jump_mux1result[4] ; TTL          ;
+; 201   ; debug_contr_Jump         ; TTL          ;
+; 202   ; debug_contr_Branch       ; TTL          ;
+; 203   ; debug_plusone[6]         ; TTL          ;
+; 204   ; debug_jump_mux1result[0] ; TTL          ;
+; 205   ; VCC_INT                  ;              ;
+; 206   ; debug_regfile_output2[4] ; TTL          ;
+; 207   ; RESERVED                 ;              ;
+; 208   ; debug_plusone[0]         ; TTL          ;
+; 209   ; debug_jump_mux1result[7] ; TTL          ;
+; 210   ; GND+                     ;              ;
+; 211   ; GND+                     ;              ;
+; 212   ; reset                    ; TTL          ;
+; 213   ; debug_alucont_aluOp[0]   ; TTL          ;
+; 214   ; debug_alu_output[0]      ; TTL          ;
+; 215   ; debug_alu_inputTwo[2]    ; TTL          ;
+; 216   ; GND_INT                  ;              ;
+; 217   ; debug_alucont_aluCode[1] ; TTL          ;
+; 218   ; debug_decod_rt[1]        ; TTL          ;
+; 219   ; debug_regfile_output1[4] ; TTL          ;
+; 220   ; debug_jump_mux2result[4] ; TTL          ;
+; 221   ; debug_alu_inputOne[0]    ; TTL          ;
+; 222   ; debug_jump_mux3result[5] ; TTL          ;
+; 223   ; debug_contr_ALUSrc       ; TTL          ;
+; 224   ; VCC_INT                  ;              ;
+; 225   ; debug_jump_mux2sel       ; TTL          ;
+; 226   ; debug_regfile_output2[2] ; TTL          ;
+; 227   ; debug_jump_mux3result[4] ; TTL          ;
+; 228   ; debug_regfile_output2[0] ; TTL          ;
+; 229   ; debug_alu_inputTwo[4]    ; TTL          ;
+; 230   ; debug_jump_mux3sel       ; TTL          ;
+; 231   ; debug_signextender[7]    ; TTL          ;
+; 232   ; GND_INT                  ;              ;
+; 233   ; debug_alu_inputOne[2]    ; TTL          ;
+; 234   ; debug_jump_mux1sel       ; TTL          ;
+; 235   ; debug_alu_inputTwo[3]    ; TTL          ;
+; 236   ; debug_alu_zero           ; TTL          ;
+; 237   ; debug_jump_mux3result[2] ; TTL          ;
+; 238   ; debug_contr_JumpReg      ; TTL          ;
+; 239   ; debug_jump_mux3result[6] ; TTL          ;
+; 240   ; debug_decod_Immediate[0] ; TTL          ;
++-------+--------------------------+--------------+
 
 
 +---------------------------------------------------------------------------------+
@@ -583,41 +581,41 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------+---------+---------+--------------+--------------+
 ; Name                          ; Pin #   ; Fan-Out ; Usage        ; Global Usage ;
 +-------------------------------+---------+---------+--------------+--------------+
-; Controller:inst2|MemWrite     ; LC5_F43 ; 14      ; Write enable ; Non-global   ;
-; RAMHelper:inst20|decimal_l~2  ; LC7_F27 ; 1       ; Clock enable ; Non-global   ;
-; RAMHelper:inst20|decimal_r~3  ; LC8_F27 ; 1       ; Clock enable ; Non-global   ;
-; RAMHelper:inst20|digit_l[3]~4 ; LC8_F33 ; 8       ; Clock enable ; Non-global   ;
-; RegFile:inst13|r5[7]~9        ; LC2_F5  ; 8       ; Clock enable ; Non-global   ;
-; RegFile:inst13|r6[7]~9        ; LC5_F5  ; 8       ; Clock enable ; Non-global   ;
-; RegFile:inst13|r4[7]~9        ; LC8_F5  ; 8       ; Clock enable ; Non-global   ;
-; RegFile:inst13|r7[7]~9        ; LC7_F5  ; 8       ; Clock enable ; Non-global   ;
-; RegFile:inst13|r3[7]~9        ; LC6_F5  ; 8       ; Clock enable ; Non-global   ;
-; RegFile:inst13|r1[7]~9        ; LC4_F5  ; 8       ; Clock enable ; Non-global   ;
-; RegFile:inst13|r2[7]~9        ; LC3_F5  ; 8       ; Clock enable ; Non-global   ;
-; Controller:inst2|JumpReg      ; LC8_C20 ; 10      ; Sync. load   ; Non-global   ;
-; MegaClock:inst4|clk_0         ; LC2_E8  ; 10      ; Clock        ; Non-global   ;
-; MegaClock:inst4|clk_1         ; LC3_E8  ; 18      ; Clock        ; Non-global   ;
-; MegaClock:inst4|clk_2         ; LC8_E8  ; 18      ; Clock        ; Non-global   ;
-; MegaClock:inst4|clk_3         ; LC4_E8  ; 29      ; Clock        ; Non-global   ;
-; MegaClock:inst4|clk_4         ; LC1_E8  ; 58      ; Clock        ; Internal     ;
+; Controller:inst2|MemWrite     ; LC4_F21 ; 14      ; Write enable ; Non-global   ;
+; RAMHelper:inst20|decimal_l~2  ; LC6_F26 ; 1       ; Clock enable ; Non-global   ;
+; RAMHelper:inst20|decimal_r~3  ; LC7_F26 ; 1       ; Clock enable ; Non-global   ;
+; RAMHelper:inst20|digit_l[3]~4 ; LC1_F23 ; 8       ; Clock enable ; Non-global   ;
+; RegFile:inst13|r5[7]~25       ; LC8_E2  ; 8       ; Clock enable ; Non-global   ;
+; RegFile:inst13|r6[7]~25       ; LC3_E2  ; 8       ; Clock enable ; Non-global   ;
+; RegFile:inst13|r4[7]~25       ; LC6_E2  ; 8       ; Clock enable ; Non-global   ;
+; RegFile:inst13|r7[7]~25       ; LC4_E2  ; 8       ; Clock enable ; Non-global   ;
+; RegFile:inst13|r3[7]~25       ; LC7_E2  ; 8       ; Clock enable ; Non-global   ;
+; RegFile:inst13|r1[7]~25       ; LC5_E2  ; 8       ; Clock enable ; Non-global   ;
+; RegFile:inst13|r2[7]~25       ; LC1_E4  ; 8       ; Clock enable ; Non-global   ;
+; Controller:inst2|JumpReg      ; LC1_A49 ; 10      ; Sync. load   ; Non-global   ;
+; MegaClock:inst4|clk_0         ; LC7_H15 ; 10      ; Clock        ; Non-global   ;
+; MegaClock:inst4|clk_1         ; LC3_H15 ; 18      ; Clock        ; Non-global   ;
+; MegaClock:inst4|clk_2         ; LC4_H15 ; 18      ; Clock        ; Non-global   ;
+; MegaClock:inst4|clk_3         ; LC5_H15 ; 29      ; Clock        ; Non-global   ;
+; MegaClock:inst4|clk_4         ; LC1_H15 ; 58      ; Clock        ; Internal     ;
 ; board_clk                     ; 91      ; 22      ; Clock        ; Pin          ;
 ; reset                         ; 212     ; 18      ; Async. clear ; Pin          ;
-; MegaClock:inst4|clk_0~10      ; LC6_E8  ; 5       ; Clock enable ; Non-global   ;
-; MegaClock:inst4|Equal0~3      ; LC7_E8  ; 16      ; Clock enable ; Non-global   ;
-; MegaClock:inst4|clk_out[2]~21 ; LC3_E7  ; 3       ; Clock enable ; Non-global   ;
-; RAMHelper:inst20|output[7]~63 ; LC2_F43 ; 9       ; Clock enable ; Non-global   ;
+; MegaClock:inst4|clk_0~10      ; LC6_H15 ; 5       ; Clock enable ; Non-global   ;
+; MegaClock:inst4|Equal0~3      ; LC1_H19 ; 16      ; Clock enable ; Non-global   ;
+; MegaClock:inst4|clk_out[2]~21 ; LC8_H14 ; 3       ; Clock enable ; Non-global   ;
+; RAMHelper:inst20|override~6   ; LC1_F21 ; 9       ; Clock enable ; Non-global   ;
 +-------------------------------+---------+---------+--------------+--------------+
 
 
-+---------------------------------------------------+
-; Global & Other Fast Signals                       ;
-+-----------------------+--------+---------+--------+
-; Name                  ; Pin #  ; Fan-Out ; Global ;
-+-----------------------+--------+---------+--------+
-; MegaClock:inst4|clk_4 ; LC1_E8 ; 58      ; yes    ;
-; board_clk             ; 91     ; 22      ; yes    ;
-; reset                 ; 212    ; 18      ; yes    ;
-+-----------------------+--------+---------+--------+
++----------------------------------------------------+
+; Global & Other Fast Signals                        ;
++-----------------------+---------+---------+--------+
+; Name                  ; Pin #   ; Fan-Out ; Global ;
++-----------------------+---------+---------+--------+
+; MegaClock:inst4|clk_4 ; LC1_H15 ; 58      ; yes    ;
+; board_clk             ; 91      ; 22      ; yes    ;
+; reset                 ; 212     ; 18      ; yes    ;
++-----------------------+---------+---------+--------+
 
 
 +---------------------------------------------+
@@ -657,30 +655,30 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------+------------------------------------------------------------+------+-------+
 ; Cell # ; Name                                                       ; Mode ; Turbo ;
 +--------+------------------------------------------------------------+------+-------+
-; EC1_G  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[7] ; RAM  ; Off   ;
-; EC4_G  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[6] ; RAM  ; Off   ;
-; EC5_G  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[5] ; RAM  ; Off   ;
-; EC3_G  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[4] ; RAM  ; Off   ;
-; EC6_G  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[3] ; RAM  ; Off   ;
-; EC2_G  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[2] ; RAM  ; Off   ;
-; EC8_G  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[1] ; RAM  ; Off   ;
-; EC7_G  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[0] ; RAM  ; Off   ;
-; EC1_E  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[2]        ; RAM  ; Off   ;
-; EC7_E  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]       ; RAM  ; Off   ;
+; EC8_F  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[7] ; RAM  ; Off   ;
+; EC6_F  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[6] ; RAM  ; Off   ;
+; EC2_F  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[5] ; RAM  ; Off   ;
+; EC1_F  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[4] ; RAM  ; Off   ;
+; EC3_F  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[3] ; RAM  ; Off   ;
+; EC4_F  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[2] ; RAM  ; Off   ;
+; EC5_F  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[1] ; RAM  ; Off   ;
+; EC7_F  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[0] ; RAM  ; Off   ;
+; EC1_E  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[0]        ; RAM  ; Off   ;
+; EC8_E  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]       ; RAM  ; Off   ;
 ; EC5_E  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[11]       ; RAM  ; Off   ;
-; EC3_E  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[10]       ; RAM  ; Off   ;
-; EC6_E  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[9]        ; RAM  ; Off   ;
-; EC2_E  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[8]        ; RAM  ; Off   ;
-; EC8_E  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[7]        ; RAM  ; Off   ;
-; EC4_E  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[6]        ; RAM  ; Off   ;
-; EC3_F  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[1]        ; RAM  ; Off   ;
-; EC8_F  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[0]        ; RAM  ; Off   ;
-; EC2_F  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[5]        ; RAM  ; Off   ;
-; EC5_F  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]        ; RAM  ; Off   ;
-; EC4_F  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[3]        ; RAM  ; Off   ;
-; EC1_F  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]       ; RAM  ; Off   ;
-; EC7_F  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]       ; RAM  ; Off   ;
-; EC6_F  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]       ; RAM  ; Off   ;
+; EC4_E  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[10]       ; RAM  ; Off   ;
+; EC2_E  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[9]        ; RAM  ; Off   ;
+; EC6_E  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[8]        ; RAM  ; Off   ;
+; EC3_E  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[7]        ; RAM  ; Off   ;
+; EC7_E  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[6]        ; RAM  ; Off   ;
+; EC2_G  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[1]        ; RAM  ; Off   ;
+; EC1_G  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[2]        ; RAM  ; Off   ;
+; EC3_G  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[5]        ; RAM  ; Off   ;
+; EC4_G  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]        ; RAM  ; Off   ;
+; EC5_G  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[3]        ; RAM  ; Off   ;
+; EC8_G  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]       ; RAM  ; Off   ;
+; EC6_G  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]       ; RAM  ; Off   ;
+; EC7_G  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]       ; RAM  ; Off   ;
 +--------+------------------------------------------------------------+------+-------+
 
 
@@ -689,66 +687,66 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------------------------------------------------------+---------+
 ; Name                                                                                    ; Fan-Out ;
 +-----------------------------------------------------------------------------------------+---------+
-; Controller:inst2|MemRead~1                                                              ; 67      ;
 ; Controller:inst2|ALUSrc~1                                                               ; 46      ;
-; ALU:inst8|output[0]~182                                                                 ; 31      ;
-; MegaClock:inst4|clk_3~11                                                                ; 29      ;
 ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[7]                                     ; 29      ;
-; Mux2x3:inst41|lpm_mux:lpm_mux_component|muxlut:$00011|result_node~3                     ; 29      ;
+; MegaClock:inst4|clk_3~11                                                                ; 29      ;
+; Mux2x3:inst41|lpm_mux:lpm_mux_component|muxlut:$00011|result_node~3                     ; 28      ;
 ; RegFile:inst13|out2[0]~104                                                              ; 26      ;
 ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[0]                                     ; 26      ;
+; ALU:inst8|output[0]~182                                                                 ; 25      ;
 ; Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00011|result_node~3                     ; 25      ;
 ; ALUController:inst15|output[1]~6                                                        ; 22      ;
-; ALU:inst8|output[1]~176                                                                 ; 21      ;
-; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[6]                                     ; 21      ;
-; Mux2x3:inst41|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~3                     ; 21      ;
 ; ALUController:inst15|output[2]~7                                                        ; 21      ;
+; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[6]                                     ; 21      ;
+; Mux2x3:inst41|lpm_mux:lpm_mux_component|muxlut:$00013|result_node~3                     ; 20      ;
+; PlusOne:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT ; 19      ;
+; Controller:inst2|MemRead~1                                                              ; 19      ;
 ; MegaClock:inst4|clk_2~10                                                                ; 18      ;
-; PlusOne:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT ; 18      ;
+; PC:inst10|output[1]~9                                                                   ; 18      ;
 ; MegaClock:inst4|clk_1~10                                                                ; 18      ;
-; ALU:inst8|output[5]~149                                                                 ; 17      ;
-; ALU:inst8|output[4]~157                                                                 ; 17      ;
-; ALU:inst8|output[3]~163                                                                 ; 17      ;
-; ALU:inst8|output[2]~171                                                                 ; 17      ;
-; ALU:inst8|output[7]~136                                                                 ; 17      ;
-; ALU:inst8|output[6]~143                                                                 ; 17      ;
-; PC:inst10|output[6]~9                                                                   ; 17      ;
-; PC:inst10|output[3]~6                                                                   ; 17      ;
-; PC:inst10|output[5]~8                                                                   ; 17      ;
-; PC:inst10|output[4]~7                                                                   ; 17      ;
-; PC:inst10|output[2]~5                                                                   ; 17      ;
-; PC:inst10|output[1]~4                                                                   ; 17      ;
-; PC:inst10|output[7]~10                                                                  ; 17      ;
-; MegaClock:inst4|Equal0~12                                                               ; 16      ;
-; ALU:inst8|ShiftRight0~29                                                                ; 16      ;
+; PC:inst10|output[7]~3                                                                   ; 18      ;
+; PC:inst10|output[6]~4                                                                   ; 18      ;
+; PC:inst10|output[3]~7                                                                   ; 18      ;
+; PC:inst10|output[2]~8                                                                   ; 18      ;
+; PC:inst10|output[5]~5                                                                   ; 18      ;
+; PC:inst10|output[4]~6                                                                   ; 18      ;
+; RAMHelper:inst20|override~7                                                             ; 17      ;
 ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[11]                                    ; 16      ;
 ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[10]                                    ; 16      ;
 ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[9]                                     ; 16      ;
+; MegaClock:inst4|Equal0~12                                                               ; 16      ;
+; ALU:inst8|ShiftRight0~29                                                                ; 16      ;
+; ALU:inst8|output[1]~176                                                                 ; 15      ;
 ; Controller:inst2|MemWrite~2                                                             ; 14      ;
-; RAMHelper:inst20|Equal0~5                                                               ; 11      ;
-; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]                                    ; 11      ;
 ; RegFile:inst13|out1[7]~110                                                              ; 11      ;
+; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]                                    ; 11      ;
 ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[2]                                     ; 11      ;
+; ALU:inst8|output[4]~157                                                                 ; 11      ;
+; ALU:inst8|output[2]~171                                                                 ; 11      ;
+; ALU:inst8|output[3]~163                                                                 ; 11      ;
+; ALU:inst8|output[7]~136                                                                 ; 11      ;
+; ALU:inst8|output[6]~143                                                                 ; 11      ;
+; ALU:inst8|output[5]~149                                                                 ; 11      ;
 ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]                                    ; 11      ;
+; RAMHelper:inst20|Equal0~5                                                               ; 11      ;
 ; Controller:inst2|Mux11~1                                                                ; 11      ;
-; RegFile:inst13|out1[2]~104                                                              ; 10      ;
 ; RegFile:inst13|out1[0]~106                                                              ; 10      ;
+; ALUController:inst15|output[0]~8                                                        ; 10      ;
+; RegFile:inst13|out1[2]~104                                                              ; 10      ;
 ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]                                    ; 10      ;
 ; MegaClock:inst4|clk_0~12                                                                ; 10      ;
-; ALUController:inst15|output[0]~8                                                        ; 10      ;
 ; Controller:inst2|JumpReg~1                                                              ; 10      ;
-; Controller:inst2|RegWrite~1                                                             ; 9       ;
-; RAMHelper:inst20|output[7]~93                                                           ; 9       ;
+; RegFile:inst13|out1[4]~108                                                              ; 9       ;
 +-----------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------+
-; Peripheral Signals                                                                              ;
-+-----------------------+--------+-------+-----------------+---------------------------+----------+
-; Peripheral Signal     ; Source ; Usage ; Dedicated Clock ; Peripheral Control Signal ; Polarity ;
-+-----------------------+--------+-------+-----------------+---------------------------+----------+
-; MegaClock:inst4|clk_4 ; LC1_E8 ; Clock ; no              ; yes                       ; +ve      ;
-+-----------------------+--------+-------+-----------------+---------------------------+----------+
++--------------------------------------------------------------------------------------------------+
+; Peripheral Signals                                                                               ;
++-----------------------+---------+-------+-----------------+---------------------------+----------+
+; Peripheral Signal     ; Source  ; Usage ; Dedicated Clock ; Peripheral Control Signal ; Polarity ;
++-----------------------+---------+-------+-----------------+---------------------------+----------+
+; MegaClock:inst4|clk_4 ; LC1_H15 ; Clock ; no              ; yes                       ; +ve      ;
++-----------------------+---------+-------+-----------------+---------------------------+----------+
 
 
 +-------------------------------------------+
@@ -756,15 +754,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------+----------------+
 ; Number of Logic Elements ; Number of LABs ;
 +--------------------------+----------------+
-; 0                        ; 394            ;
+; 0                        ; 399            ;
 ; 1                        ; 8              ;
-; 2                        ; 2              ;
-; 3                        ; 0              ;
-; 4                        ; 0              ;
-; 5                        ; 1              ;
-; 6                        ; 3              ;
-; 7                        ; 6              ;
-; 8                        ; 54             ;
+; 2                        ; 1              ;
+; 3                        ; 1              ;
+; 4                        ; 1              ;
+; 5                        ; 2              ;
+; 6                        ; 2              ;
+; 7                        ; 10             ;
+; 8                        ; 44             ;
 +--------------------------+----------------+
 
 
@@ -773,14 +771,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------+----------------+
 ; Local Routing Interconnects ; Number of LABs ;
 +-----------------------------+----------------+
-; 0                           ; 410            ;
-; 1                           ; 3              ;
-; 2                           ; 6              ;
+; 0                           ; 423            ;
+; 1                           ; 2              ;
+; 2                           ; 2              ;
 ; 3                           ; 8              ;
 ; 4                           ; 9              ;
-; 5                           ; 14             ;
-; 6                           ; 16             ;
-; 7                           ; 1              ;
+; 5                           ; 12             ;
+; 6                           ; 8              ;
+; 7                           ; 3              ;
 ; 8                           ; 1              ;
 +-----------------------------+----------------+
 
@@ -790,96 +788,96 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+----------------+
 ; LAB External Interconnects ; Number of LABs ;
 +----------------------------+----------------+
-; 0 - 1                      ; 397            ;
-; 2 - 3                      ; 6              ;
-; 4 - 5                      ; 8              ;
-; 6 - 7                      ; 3              ;
-; 8 - 9                      ; 4              ;
+; 0 - 1                      ; 403            ;
+; 2 - 3                      ; 5              ;
+; 4 - 5                      ; 7              ;
+; 6 - 7                      ; 5              ;
+; 8 - 9                      ; 5              ;
 ; 10 - 11                    ; 20             ;
-; 12 - 13                    ; 12             ;
-; 14 - 15                    ; 13             ;
-; 16 - 17                    ; 3              ;
-; 18 - 19                    ; 2              ;
+; 12 - 13                    ; 10             ;
+; 14 - 15                    ; 8              ;
+; 16 - 17                    ; 4              ;
+; 18 - 19                    ; 1              ;
 +----------------------------+----------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Row Interconnect                                                                         ;
-+-------+---------------------+-----------------------------+------------------------------+
-; Row   ; Interconnect Used   ; Left Half Interconnect Used ; Right Half Interconnect Used ;
-+-------+---------------------+-----------------------------+------------------------------+
-;  A    ;  10 / 208 ( 5 % )   ;  31 / 104 ( 30 % )          ;  9 / 104 ( 9 % )             ;
-;  B    ;  18 / 208 ( 9 % )   ;  50 / 104 ( 48 % )          ;  10 / 104 ( 10 % )           ;
-;  C    ;  14 / 208 ( 7 % )   ;  29 / 104 ( 28 % )          ;  9 / 104 ( 9 % )             ;
-;  D    ;  15 / 208 ( 7 % )   ;  27 / 104 ( 26 % )          ;  3 / 104 ( 3 % )             ;
-;  E    ;  9 / 208 ( 4 % )    ;  28 / 104 ( 27 % )          ;  0 / 104 ( 0 % )             ;
-;  F    ;  69 / 208 ( 33 % )  ;  78 / 104 ( 75 % )          ;  15 / 104 ( 14 % )           ;
-;  G    ;  19 / 208 ( 9 % )   ;  36 / 104 ( 35 % )          ;  9 / 104 ( 9 % )             ;
-;  H    ;  4 / 208 ( 2 % )    ;  1 / 104 ( < 1 % )          ;  1 / 104 ( < 1 % )           ;
-;  I    ;  3 / 208 ( 1 % )    ;  0 / 104 ( 0 % )            ;  2 / 104 ( 2 % )             ;
-; Total ;  161 / 1872 ( 9 % ) ;  280 / 936 ( 30 % )         ;  58 / 936 ( 6 % )            ;
-+-------+---------------------+-----------------------------+------------------------------+
++-------------------------------------------------------------------------------------------+
+; Row Interconnect                                                                          ;
++-------+----------------------+-----------------------------+------------------------------+
+; Row   ; Interconnect Used    ; Left Half Interconnect Used ; Right Half Interconnect Used ;
++-------+----------------------+-----------------------------+------------------------------+
+;  A    ;  24 / 208 ( 12 % )   ;  0 / 104 ( 0 % )            ;  26 / 104 ( 25 % )           ;
+;  B    ;  6 / 208 ( 3 % )     ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
+;  C    ;  7 / 208 ( 3 % )     ;  1 / 104 ( < 1 % )          ;  0 / 104 ( 0 % )             ;
+;  D    ;  3 / 208 ( 1 % )     ;  1 / 104 ( < 1 % )          ;  1 / 104 ( < 1 % )           ;
+;  E    ;  65 / 208 ( 31 % )   ;  52 / 104 ( 50 % )          ;  4 / 104 ( 4 % )             ;
+;  F    ;  58 / 208 ( 28 % )   ;  29 / 104 ( 28 % )          ;  74 / 104 ( 71 % )           ;
+;  G    ;  14 / 208 ( 7 % )    ;  2 / 104 ( 2 % )            ;  1 / 104 ( < 1 % )           ;
+;  H    ;  1 / 208 ( < 1 % )   ;  21 / 104 ( 20 % )          ;  1 / 104 ( < 1 % )           ;
+;  I    ;  3 / 208 ( 1 % )     ;  2 / 104 ( 2 % )            ;  0 / 104 ( 0 % )             ;
+; Total ;  181 / 1872 ( 10 % ) ;  108 / 936 ( 12 % )         ;  107 / 936 ( 11 % )          ;
++-------+----------------------+-----------------------------+------------------------------+
 
 
-+------------------------------+
-; LAB Column Interconnect      ;
-+-------+----------------------+
-; Col.  ; Interconnect Used    ;
-+-------+----------------------+
-; 1     ;  0 / 24 ( 0 % )      ;
-; 2     ;  0 / 24 ( 0 % )      ;
-; 3     ;  2 / 24 ( 8 % )      ;
-; 4     ;  0 / 24 ( 0 % )      ;
-; 5     ;  9 / 24 ( 38 % )     ;
-; 6     ;  2 / 24 ( 8 % )      ;
-; 7     ;  2 / 24 ( 8 % )      ;
-; 8     ;  12 / 24 ( 50 % )    ;
-; 9     ;  3 / 24 ( 13 % )     ;
-; 10    ;  4 / 24 ( 17 % )     ;
-; 11    ;  0 / 24 ( 0 % )      ;
-; 12    ;  3 / 24 ( 13 % )     ;
-; 13    ;  3 / 24 ( 13 % )     ;
-; 14    ;  5 / 24 ( 21 % )     ;
-; 15    ;  4 / 24 ( 17 % )     ;
-; 16    ;  2 / 24 ( 8 % )      ;
-; 17    ;  3 / 24 ( 13 % )     ;
-; 18    ;  3 / 24 ( 13 % )     ;
-; 19    ;  0 / 24 ( 0 % )      ;
-; 20    ;  4 / 24 ( 17 % )     ;
-; 21    ;  5 / 24 ( 21 % )     ;
-; 22    ;  1 / 24 ( 4 % )      ;
-; 23    ;  3 / 24 ( 13 % )     ;
-; 24    ;  1 / 24 ( 4 % )      ;
-; 25    ;  4 / 24 ( 17 % )     ;
-; 26    ;  2 / 24 ( 8 % )      ;
-; 27    ;  4 / 24 ( 17 % )     ;
-; 28    ;  3 / 24 ( 13 % )     ;
-; 29    ;  1 / 24 ( 4 % )      ;
-; 30    ;  3 / 24 ( 13 % )     ;
-; 31    ;  8 / 24 ( 33 % )     ;
-; 32    ;  3 / 24 ( 13 % )     ;
-; 33    ;  7 / 24 ( 29 % )     ;
-; 34    ;  7 / 24 ( 29 % )     ;
-; 35    ;  0 / 24 ( 0 % )      ;
-; 36    ;  1 / 24 ( 4 % )      ;
-; 37    ;  0 / 24 ( 0 % )      ;
-; 38    ;  0 / 24 ( 0 % )      ;
-; 39    ;  0 / 24 ( 0 % )      ;
-; 40    ;  0 / 24 ( 0 % )      ;
-; 41    ;  0 / 24 ( 0 % )      ;
-; 42    ;  0 / 24 ( 0 % )      ;
-; 43    ;  3 / 24 ( 13 % )     ;
-; 44    ;  3 / 24 ( 13 % )     ;
-; 45    ;  0 / 24 ( 0 % )      ;
-; 46    ;  1 / 24 ( 4 % )      ;
-; 47    ;  1 / 24 ( 4 % )      ;
-; 48    ;  3 / 24 ( 13 % )     ;
-; 49    ;  3 / 24 ( 13 % )     ;
-; 50    ;  0 / 24 ( 0 % )      ;
-; 51    ;  2 / 24 ( 8 % )      ;
-; 52    ;  0 / 24 ( 0 % )      ;
-; Total ;  130 / 1248 ( 10 % ) ;
-+-------+----------------------+
++-----------------------------+
+; LAB Column Interconnect     ;
++-------+---------------------+
+; Col.  ; Interconnect Used   ;
++-------+---------------------+
+; 1     ;  0 / 24 ( 0 % )     ;
+; 2     ;  0 / 24 ( 0 % )     ;
+; 3     ;  0 / 24 ( 0 % )     ;
+; 4     ;  0 / 24 ( 0 % )     ;
+; 5     ;  1 / 24 ( 4 % )     ;
+; 6     ;  4 / 24 ( 17 % )    ;
+; 7     ;  2 / 24 ( 8 % )     ;
+; 8     ;  3 / 24 ( 13 % )    ;
+; 9     ;  3 / 24 ( 13 % )    ;
+; 10    ;  2 / 24 ( 8 % )     ;
+; 11    ;  1 / 24 ( 4 % )     ;
+; 12    ;  2 / 24 ( 8 % )     ;
+; 13    ;  0 / 24 ( 0 % )     ;
+; 14    ;  0 / 24 ( 0 % )     ;
+; 15    ;  7 / 24 ( 29 % )    ;
+; 16    ;  3 / 24 ( 13 % )    ;
+; 17    ;  2 / 24 ( 8 % )     ;
+; 18    ;  3 / 24 ( 13 % )    ;
+; 19    ;  1 / 24 ( 4 % )     ;
+; 20    ;  3 / 24 ( 13 % )    ;
+; 21    ;  4 / 24 ( 17 % )    ;
+; 22    ;  7 / 24 ( 29 % )    ;
+; 23    ;  0 / 24 ( 0 % )     ;
+; 24    ;  8 / 24 ( 33 % )    ;
+; 25    ;  1 / 24 ( 4 % )     ;
+; 26    ;  2 / 24 ( 8 % )     ;
+; 27    ;  2 / 24 ( 8 % )     ;
+; 28    ;  2 / 24 ( 8 % )     ;
+; 29    ;  1 / 24 ( 4 % )     ;
+; 30    ;  1 / 24 ( 4 % )     ;
+; 31    ;  1 / 24 ( 4 % )     ;
+; 32    ;  4 / 24 ( 17 % )    ;
+; 33    ;  0 / 24 ( 0 % )     ;
+; 34    ;  0 / 24 ( 0 % )     ;
+; 35    ;  3 / 24 ( 13 % )    ;
+; 36    ;  1 / 24 ( 4 % )     ;
+; 37    ;  2 / 24 ( 8 % )     ;
+; 38    ;  1 / 24 ( 4 % )     ;
+; 39    ;  1 / 24 ( 4 % )     ;
+; 40    ;  1 / 24 ( 4 % )     ;
+; 41    ;  1 / 24 ( 4 % )     ;
+; 42    ;  2 / 24 ( 8 % )     ;
+; 43    ;  1 / 24 ( 4 % )     ;
+; 44    ;  0 / 24 ( 0 % )     ;
+; 45    ;  3 / 24 ( 13 % )    ;
+; 46    ;  2 / 24 ( 8 % )     ;
+; 47    ;  4 / 24 ( 17 % )    ;
+; 48    ;  1 / 24 ( 4 % )     ;
+; 49    ;  4 / 24 ( 17 % )    ;
+; 50    ;  3 / 24 ( 13 % )    ;
+; 51    ;  0 / 24 ( 0 % )     ;
+; 52    ;  2 / 24 ( 8 % )     ;
+; Total ;  102 / 1248 ( 8 % ) ;
++-------+---------------------+
 
 
 +---------------------------+
@@ -887,34 +885,34 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+-------------------+
 ; Col.  ; Interconnect Used ;
 +-------+-------------------+
-; 1     ;  14 / 24 ( 58 % ) ;
-; Total ;  14 / 24 ( 58 % ) ;
+; 1     ;  9 / 24 ( 38 % )  ;
+; Total ;  9 / 24 ( 38 % )  ;
 +-------+-------------------+
 
 
-+--------------------------------------------------------------+
-; Fitter Resource Usage Summary                                ;
-+-----------------------------------+--------------------------+
-; Resource                          ; Usage                    ;
-+-----------------------------------+--------------------------+
-; Total logic elements              ; 509 / 3,744 ( 14 % )     ;
-; Registers                         ; 121 / 3,744 ( 3 % )      ;
-; Logic elements in carry chains    ; 39                       ;
-; User inserted logic elements      ; 0                        ;
-; I/O pins                          ; 183 / 189 ( 97 % )       ;
-;     -- Clock pins                 ; 3 / 2 ( 150 % )          ;
-;     -- Dedicated input pins       ; 4 / 4 ( 100 % )          ;
-; Global signals                    ; 3                        ;
-; EABs                              ; 3 / 9 ( 33 % )           ;
-; Total memory bits                 ; 6,144 / 18,432 ( 33 % )  ;
-; Total RAM block bits              ; 6,144 / 18,432 ( 33 % )  ;
-; Maximum fan-out node              ; Controller:inst2|MemRead ;
-; Maximum fan-out                   ; 67                       ;
-; Highest non-global fan-out signal ; Controller:inst2|MemRead ;
-; Highest non-global fan-out        ; 67                       ;
-; Total fan-out                     ; 2109                     ;
-; Average fan-out                   ; 2.95                     ;
-+-----------------------------------+--------------------------+
++-------------------------------------------------------------+
+; Fitter Resource Usage Summary                               ;
++-----------------------------------+-------------------------+
+; Resource                          ; Usage                   ;
++-----------------------------------+-------------------------+
+; Total logic elements              ; 461 / 3,744 ( 12 % )    ;
+; Registers                         ; 121 / 3,744 ( 3 % )     ;
+; Logic elements in carry chains    ; 39                      ;
+; User inserted logic elements      ; 0                       ;
+; I/O pins                          ; 181 / 189 ( 96 % )      ;
+;     -- Clock pins                 ; 3 / 2 ( 150 % )         ;
+;     -- Dedicated input pins       ; 4 / 4 ( 100 % )         ;
+; Global signals                    ; 3                       ;
+; EABs                              ; 3 / 9 ( 33 % )          ;
+; Total memory bits                 ; 6,144 / 18,432 ( 33 % ) ;
+; Total RAM block bits              ; 6,144 / 18,432 ( 33 % ) ;
+; Maximum fan-out node              ; MegaClock:inst4|clk_4   ;
+; Maximum fan-out                   ; 58                      ;
+; Highest non-global fan-out signal ; Controller:inst2|ALUSrc ;
+; Highest non-global fan-out        ; 46                      ;
+; Total fan-out                     ; 1979                    ;
+; Average fan-out                   ; 2.97                    ;
++-----------------------------------+-------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -922,7 +920,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                      ; Library Name ;
 +-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------+--------------+
-; |FinalProcessor                           ; 509 (7)     ; 121          ; 6144        ; 183  ; 388 (7)      ; 68 (0)            ; 53 (0)           ; 39 (0)          ; 0 (0)      ; |FinalProcessor                                                                          ; work         ;
+; |FinalProcessor                           ; 461 (7)     ; 121          ; 6144        ; 181  ; 340 (7)      ; 12 (0)            ; 109 (0)          ; 39 (0)          ; 0 (0)      ; |FinalProcessor                                                                          ; work         ;
 ;    |ALU:inst8|                            ; 138 (122)   ; 0            ; 0           ; 0    ; 138 (122)    ; 0 (0)             ; 0 (0)            ; 17 (1)          ; 0 (0)      ; |FinalProcessor|ALU:inst8                                                                ; work         ;
 ;       |lpm_add_sub:Add0|                  ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |FinalProcessor|ALU:inst8|lpm_add_sub:Add0                                               ; work         ;
 ;          |addcore:adder|                  ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |FinalProcessor|ALU:inst8|lpm_add_sub:Add0|addcore:adder                                 ; work         ;
@@ -950,6 +948,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |muxlut:$00019|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00019                    ; work         ;
 ;          |muxlut:$00021|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00021                    ; work         ;
 ;          |muxlut:$00023|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00023                    ; work         ;
+;    |Mux2x8:inst40|                        ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst40                                                            ; work         ;
+;       |lpm_mux:lpm_mux_component|         ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst40|lpm_mux:lpm_mux_component                                  ; work         ;
+;          |muxlut:$00009|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst40|lpm_mux:lpm_mux_component|muxlut:$00009                    ; work         ;
+;          |muxlut:$00011|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst40|lpm_mux:lpm_mux_component|muxlut:$00011                    ; work         ;
+;          |muxlut:$00013|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst40|lpm_mux:lpm_mux_component|muxlut:$00013                    ; work         ;
+;          |muxlut:$00015|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst40|lpm_mux:lpm_mux_component|muxlut:$00015                    ; work         ;
+;          |muxlut:$00017|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst40|lpm_mux:lpm_mux_component|muxlut:$00017                    ; work         ;
+;          |muxlut:$00019|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst40|lpm_mux:lpm_mux_component|muxlut:$00019                    ; work         ;
+;          |muxlut:$00021|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst40|lpm_mux:lpm_mux_component|muxlut:$00021                    ; work         ;
+;          |muxlut:$00023|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst40|lpm_mux:lpm_mux_component|muxlut:$00023                    ; work         ;
 ;    |Mux2x8:inst43|                        ; 5 (0)       ; 0            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst43                                                            ; work         ;
 ;       |lpm_mux:lpm_mux_component|         ; 5 (0)       ; 0            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst43|lpm_mux:lpm_mux_component                                  ; work         ;
 ;          |muxlut:$00011|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst43|lpm_mux:lpm_mux_component|muxlut:$00011                    ; work         ;
@@ -959,7 +967,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |muxlut:$00019|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst43|lpm_mux:lpm_mux_component|muxlut:$00019                    ; work         ;
 ;    |Mux2x8:inst44|                        ; 2 (0)       ; 0            ; 0           ; 0    ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst44                                                            ; work         ;
 ;       |lpm_mux:lpm_mux_component|         ; 2 (0)       ; 0            ; 0           ; 0    ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst44|lpm_mux:lpm_mux_component                                  ; work         ;
-;          |muxlut:$00009|                  ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst44|lpm_mux:lpm_mux_component|muxlut:$00009                    ; work         ;
+;          |muxlut:$00009|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst44|lpm_mux:lpm_mux_component|muxlut:$00009                    ; work         ;
+;          |muxlut:$00019|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst44|lpm_mux:lpm_mux_component|muxlut:$00019                    ; work         ;
 ;    |Mux2x8:inst46|                        ; 16 (0)      ; 0            ; 0           ; 0    ; 16 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst46                                                            ; work         ;
 ;       |lpm_mux:lpm_mux_component|         ; 16 (0)      ; 0            ; 0           ; 0    ; 16 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst46|lpm_mux:lpm_mux_component                                  ; work         ;
 ;          |muxlut:$00009|                  ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|Mux2x8:inst46|lpm_mux:lpm_mux_component|muxlut:$00009                    ; work         ;
@@ -982,202 +991,200 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |ROM:inst|                             ; 0 (0)       ; 0            ; 4096        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|ROM:inst                                                                 ; work         ;
 ;       |lpm_rom:lpm_rom_component|         ; 0 (0)       ; 0            ; 4096        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|ROM:inst|lpm_rom:lpm_rom_component                                       ; work         ;
 ;          |altrom:srom|                    ; 0 (0)       ; 0            ; 4096        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|ROM:inst|lpm_rom:lpm_rom_component|altrom:srom                           ; work         ;
-;    |RegFile:inst13|                       ; 206 (206)   ; 72           ; 0           ; 0    ; 134 (134)    ; 56 (56)           ; 16 (16)          ; 0 (0)           ; 0 (0)      ; |FinalProcessor|RegFile:inst13                                                           ; work         ;
+;    |RegFile:inst13|                       ; 150 (150)   ; 72           ; 0           ; 0    ; 78 (78)      ; 0 (0)             ; 72 (72)          ; 0 (0)           ; 0 (0)      ; |FinalProcessor|RegFile:inst13                                                           ; work         ;
 ;    |SevenSegmentDisplay:inst18|           ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|SevenSegmentDisplay:inst18                                               ; work         ;
 ;    |SevenSegmentDisplay:inst19|           ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FinalProcessor|SevenSegmentDisplay:inst19                                               ; work         ;
 +-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------+
-; Delay Chain Summary                                 ;
-+----------------------------+----------+-------------+
-; Name                       ; Pin Type ; Pad to Core ;
-+----------------------------+----------+-------------+
-; board_clk                  ; Input    ; OFF         ;
-; reset                      ; Input    ; OFF         ;
-; dipswitch[7]               ; Input    ; OFF         ;
-; dipswitch[6]               ; Input    ; OFF         ;
-; dipswitch[5]               ; Input    ; OFF         ;
-; dipswitch[4]               ; Input    ; OFF         ;
-; dipswitch[3]               ; Input    ; OFF         ;
-; dipswitch[2]               ; Input    ; OFF         ;
-; dipswitch[1]               ; Input    ; OFF         ;
-; dipswitch[0]               ; Input    ; OFF         ;
-; button_1                   ; Input    ; OFF         ;
-; button_2                   ; Input    ; OFF         ;
-; decimal_l                  ; Output   ; OFF         ;
-; decimal_r                  ; Output   ; OFF         ;
-; debug_contr_RegDest        ; Output   ; OFF         ;
-; debug_contr_Branch         ; Output   ; OFF         ;
-; debug_contr_MemRead        ; Output   ; OFF         ;
-; debug_contr_MemReg         ; Output   ; OFF         ;
-; debug_contr_MemWrite       ; Output   ; OFF         ;
-; debug_contr_ALUSrc         ; Output   ; OFF         ;
-; debug_contr_RegWrite       ; Output   ; OFF         ;
-; debug_contr_Jump           ; Output   ; OFF         ;
-; debug_contr_JumpReg        ; Output   ; OFF         ;
-; debug_clock0               ; Output   ; OFF         ;
-; debug_clock1               ; Output   ; OFF         ;
-; debug_clock2               ; Output   ; OFF         ;
-; debug_clock3               ; Output   ; OFF         ;
-; debug_clock4               ; Output   ; OFF         ;
-; debug_alu_zero             ; Output   ; OFF         ;
-; debug_alu_overflow         ; Output   ; OFF         ;
-; debug_jump_mux1sel         ; Output   ; OFF         ;
-; debug_jump_mux2sel         ; Output   ; OFF         ;
-; debug_jump_mux3sel         ; Output   ; OFF         ;
-; debug_alu_aluCode[2]       ; Output   ; OFF         ;
-; debug_alu_aluCode[1]       ; Output   ; OFF         ;
-; debug_alu_aluCode[0]       ; Output   ; OFF         ;
-; debug_alu_inputOne[7]      ; Output   ; OFF         ;
-; debug_alu_inputOne[6]      ; Output   ; OFF         ;
-; debug_alu_inputOne[5]      ; Output   ; OFF         ;
-; debug_alu_inputOne[4]      ; Output   ; OFF         ;
-; debug_alu_inputOne[3]      ; Output   ; OFF         ;
-; debug_alu_inputOne[2]      ; Output   ; OFF         ;
-; debug_alu_inputOne[1]      ; Output   ; OFF         ;
-; debug_alu_inputOne[0]      ; Output   ; OFF         ;
-; debug_alu_inputTwo[7]      ; Output   ; OFF         ;
-; debug_alu_inputTwo[6]      ; Output   ; OFF         ;
-; debug_alu_inputTwo[5]      ; Output   ; OFF         ;
-; debug_alu_inputTwo[4]      ; Output   ; OFF         ;
-; debug_alu_inputTwo[3]      ; Output   ; OFF         ;
-; debug_alu_inputTwo[2]      ; Output   ; OFF         ;
-; debug_alu_inputTwo[1]      ; Output   ; OFF         ;
-; debug_alu_inputTwo[0]      ; Output   ; OFF         ;
-; debug_alu_output[7]        ; Output   ; OFF         ;
-; debug_alu_output[6]        ; Output   ; OFF         ;
-; debug_alu_output[5]        ; Output   ; OFF         ;
-; debug_alu_output[4]        ; Output   ; OFF         ;
-; debug_alu_output[3]        ; Output   ; OFF         ;
-; debug_alu_output[2]        ; Output   ; OFF         ;
-; debug_alu_output[1]        ; Output   ; OFF         ;
-; debug_alu_output[0]        ; Output   ; OFF         ;
-; debug_alucont_aluCode[2]   ; Output   ; OFF         ;
-; debug_alucont_aluCode[1]   ; Output   ; OFF         ;
-; debug_alucont_aluCode[0]   ; Output   ; OFF         ;
-; debug_alucont_aluOp[2]     ; Output   ; OFF         ;
-; debug_alucont_aluOp[1]     ; Output   ; OFF         ;
-; debug_alucont_aluOp[0]     ; Output   ; OFF         ;
-; debug_alucont_output[2]    ; Output   ; OFF         ;
-; debug_alucont_output[1]    ; Output   ; OFF         ;
-; debug_alucont_output[0]    ; Output   ; OFF         ;
-; debug_contr_ALUOp[2]       ; Output   ; OFF         ;
-; debug_contr_ALUOp[1]       ; Output   ; OFF         ;
-; debug_contr_ALUOp[0]       ; Output   ; OFF         ;
-; debug_decod_aluCode[2]     ; Output   ; OFF         ;
-; debug_decod_aluCode[1]     ; Output   ; OFF         ;
-; debug_decod_aluCode[0]     ; Output   ; OFF         ;
-; debug_decod_Immediate[5]   ; Output   ; OFF         ;
-; debug_decod_Immediate[4]   ; Output   ; OFF         ;
-; debug_decod_Immediate[3]   ; Output   ; OFF         ;
-; debug_decod_Immediate[2]   ; Output   ; OFF         ;
-; debug_decod_Immediate[1]   ; Output   ; OFF         ;
-; debug_decod_Immediate[0]   ; Output   ; OFF         ;
-; debug_decod_opCode[3]      ; Output   ; OFF         ;
-; debug_decod_opCode[2]      ; Output   ; OFF         ;
-; debug_decod_opCode[1]      ; Output   ; OFF         ;
-; debug_decod_opCode[0]      ; Output   ; OFF         ;
-; debug_decod_rd[2]          ; Output   ; OFF         ;
-; debug_decod_rd[1]          ; Output   ; OFF         ;
-; debug_decod_rd[0]          ; Output   ; OFF         ;
-; debug_decod_rs[2]          ; Output   ; OFF         ;
-; debug_decod_rs[1]          ; Output   ; OFF         ;
-; debug_decod_rs[0]          ; Output   ; OFF         ;
-; debug_decod_rt[2]          ; Output   ; OFF         ;
-; debug_decod_rt[1]          ; Output   ; OFF         ;
-; debug_decod_rt[0]          ; Output   ; OFF         ;
-; debug_jump_mux1result[7]   ; Output   ; OFF         ;
-; debug_jump_mux1result[6]   ; Output   ; OFF         ;
-; debug_jump_mux1result[5]   ; Output   ; OFF         ;
-; debug_jump_mux1result[4]   ; Output   ; OFF         ;
-; debug_jump_mux1result[3]   ; Output   ; OFF         ;
-; debug_jump_mux1result[2]   ; Output   ; OFF         ;
-; debug_jump_mux1result[1]   ; Output   ; OFF         ;
-; debug_jump_mux1result[0]   ; Output   ; OFF         ;
-; debug_jump_mux2result[7]   ; Output   ; OFF         ;
-; debug_jump_mux2result[6]   ; Output   ; OFF         ;
-; debug_jump_mux2result[5]   ; Output   ; OFF         ;
-; debug_jump_mux2result[4]   ; Output   ; OFF         ;
-; debug_jump_mux2result[3]   ; Output   ; OFF         ;
-; debug_jump_mux2result[2]   ; Output   ; OFF         ;
-; debug_jump_mux2result[1]   ; Output   ; OFF         ;
-; debug_jump_mux2result[0]   ; Output   ; OFF         ;
-; debug_jump_mux3result[7]   ; Output   ; OFF         ;
-; debug_jump_mux3result[6]   ; Output   ; OFF         ;
-; debug_jump_mux3result[5]   ; Output   ; OFF         ;
-; debug_jump_mux3result[4]   ; Output   ; OFF         ;
-; debug_jump_mux3result[3]   ; Output   ; OFF         ;
-; debug_jump_mux3result[2]   ; Output   ; OFF         ;
-; debug_jump_mux3result[1]   ; Output   ; OFF         ;
-; debug_jump_mux3result[0]   ; Output   ; OFF         ;
-; debug_plusone[7]           ; Output   ; OFF         ;
-; debug_plusone[6]           ; Output   ; OFF         ;
-; debug_plusone[5]           ; Output   ; OFF         ;
-; debug_plusone[4]           ; Output   ; OFF         ;
-; debug_plusone[3]           ; Output   ; OFF         ;
-; debug_plusone[2]           ; Output   ; OFF         ;
-; debug_plusone[1]           ; Output   ; OFF         ;
-; debug_plusone[0]           ; Output   ; OFF         ;
-; debug_ram_muxedout[7]      ; Output   ; OFF         ;
-; debug_ram_muxedout[6]      ; Output   ; OFF         ;
-; debug_ram_muxedout[5]      ; Output   ; OFF         ;
-; debug_ram_muxedout[4]      ; Output   ; OFF         ;
-; debug_ram_muxedout[3]      ; Output   ; OFF         ;
-; debug_ram_muxedout[2]      ; Output   ; OFF         ;
-; debug_ram_muxedout[1]      ; Output   ; OFF         ;
-; debug_ram_muxedout[0]      ; Output   ; OFF         ;
-; debug_ramhelper_digit_l[3] ; Output   ; OFF         ;
-; debug_ramhelper_digit_l[2] ; Output   ; OFF         ;
-; debug_ramhelper_digit_l[1] ; Output   ; OFF         ;
-; debug_ramhelper_digit_l[0] ; Output   ; OFF         ;
-; debug_ramhelper_digit_r[3] ; Output   ; OFF         ;
-; debug_ramhelper_digit_r[2] ; Output   ; OFF         ;
-; debug_ramhelper_digit_r[1] ; Output   ; OFF         ;
-; debug_ramhelper_digit_r[0] ; Output   ; OFF         ;
-; debug_regdest_mux[2]       ; Output   ; OFF         ;
-; debug_regdest_mux[1]       ; Output   ; OFF         ;
-; debug_regdest_mux[0]       ; Output   ; OFF         ;
-; debug_regfile_output1[7]   ; Output   ; OFF         ;
-; debug_regfile_output1[6]   ; Output   ; OFF         ;
-; debug_regfile_output1[5]   ; Output   ; OFF         ;
-; debug_regfile_output1[4]   ; Output   ; OFF         ;
-; debug_regfile_output1[3]   ; Output   ; OFF         ;
-; debug_regfile_output1[2]   ; Output   ; OFF         ;
-; debug_regfile_output1[1]   ; Output   ; OFF         ;
-; debug_regfile_output1[0]   ; Output   ; OFF         ;
-; debug_regfile_output2[7]   ; Output   ; OFF         ;
-; debug_regfile_output2[6]   ; Output   ; OFF         ;
-; debug_regfile_output2[5]   ; Output   ; OFF         ;
-; debug_regfile_output2[4]   ; Output   ; OFF         ;
-; debug_regfile_output2[3]   ; Output   ; OFF         ;
-; debug_regfile_output2[2]   ; Output   ; OFF         ;
-; debug_regfile_output2[1]   ; Output   ; OFF         ;
-; debug_regfile_output2[0]   ; Output   ; OFF         ;
-; debug_signextender[7]      ; Output   ; OFF         ;
-; debug_signextender[6]      ; Output   ; OFF         ;
-; debug_signextender[5]      ; Output   ; OFF         ;
-; debug_signextender[4]      ; Output   ; OFF         ;
-; debug_signextender[3]      ; Output   ; OFF         ;
-; debug_signextender[2]      ; Output   ; OFF         ;
-; debug_signextender[1]      ; Output   ; OFF         ;
-; debug_signextender[0]      ; Output   ; OFF         ;
-; digit_l[6]                 ; Output   ; OFF         ;
-; digit_l[5]                 ; Output   ; OFF         ;
-; digit_l[4]                 ; Output   ; OFF         ;
-; digit_l[3]                 ; Output   ; OFF         ;
-; digit_l[2]                 ; Output   ; OFF         ;
-; digit_l[1]                 ; Output   ; OFF         ;
-; digit_l[0]                 ; Output   ; OFF         ;
-; digit_r[6]                 ; Output   ; OFF         ;
-; digit_r[5]                 ; Output   ; OFF         ;
-; digit_r[4]                 ; Output   ; OFF         ;
-; digit_r[3]                 ; Output   ; OFF         ;
-; digit_r[2]                 ; Output   ; OFF         ;
-; digit_r[1]                 ; Output   ; OFF         ;
-; digit_r[0]                 ; Output   ; OFF         ;
-+----------------------------+----------+-------------+
++---------------------------------------------------+
+; Delay Chain Summary                               ;
++--------------------------+----------+-------------+
+; Name                     ; Pin Type ; Pad to Core ;
++--------------------------+----------+-------------+
+; board_clk                ; Input    ; OFF         ;
+; reset                    ; Input    ; OFF         ;
+; dipswitch[7]             ; Input    ; OFF         ;
+; dipswitch[6]             ; Input    ; OFF         ;
+; dipswitch[5]             ; Input    ; OFF         ;
+; dipswitch[4]             ; Input    ; OFF         ;
+; dipswitch[3]             ; Input    ; OFF         ;
+; dipswitch[2]             ; Input    ; OFF         ;
+; dipswitch[1]             ; Input    ; OFF         ;
+; dipswitch[0]             ; Input    ; OFF         ;
+; button_1                 ; Input    ; OFF         ;
+; button_2                 ; Input    ; OFF         ;
+; decimal_l                ; Output   ; OFF         ;
+; decimal_r                ; Output   ; OFF         ;
+; debug_contr_RegDest      ; Output   ; OFF         ;
+; debug_contr_Branch       ; Output   ; OFF         ;
+; debug_contr_MemRead      ; Output   ; OFF         ;
+; debug_contr_MemReg       ; Output   ; OFF         ;
+; debug_contr_MemWrite     ; Output   ; OFF         ;
+; debug_contr_ALUSrc       ; Output   ; OFF         ;
+; debug_contr_RegWrite     ; Output   ; OFF         ;
+; debug_contr_Jump         ; Output   ; OFF         ;
+; debug_contr_JumpReg      ; Output   ; OFF         ;
+; debug_clock0             ; Output   ; OFF         ;
+; debug_clock1             ; Output   ; OFF         ;
+; debug_clock2             ; Output   ; OFF         ;
+; debug_clock3             ; Output   ; OFF         ;
+; debug_clock4             ; Output   ; OFF         ;
+; debug_alu_zero           ; Output   ; OFF         ;
+; debug_alu_overflow       ; Output   ; OFF         ;
+; debug_jump_mux1sel       ; Output   ; OFF         ;
+; debug_jump_mux2sel       ; Output   ; OFF         ;
+; debug_jump_mux3sel       ; Output   ; OFF         ;
+; debug_RAMHELPER_override ; Output   ; OFF         ;
+; debug_alu_aluCode[2]     ; Output   ; OFF         ;
+; debug_alu_aluCode[1]     ; Output   ; OFF         ;
+; debug_alu_aluCode[0]     ; Output   ; OFF         ;
+; debug_alu_inputOne[7]    ; Output   ; OFF         ;
+; debug_alu_inputOne[6]    ; Output   ; OFF         ;
+; debug_alu_inputOne[5]    ; Output   ; OFF         ;
+; debug_alu_inputOne[4]    ; Output   ; OFF         ;
+; debug_alu_inputOne[3]    ; Output   ; OFF         ;
+; debug_alu_inputOne[2]    ; Output   ; OFF         ;
+; debug_alu_inputOne[1]    ; Output   ; OFF         ;
+; debug_alu_inputOne[0]    ; Output   ; OFF         ;
+; debug_alu_inputTwo[7]    ; Output   ; OFF         ;
+; debug_alu_inputTwo[6]    ; Output   ; OFF         ;
+; debug_alu_inputTwo[5]    ; Output   ; OFF         ;
+; debug_alu_inputTwo[4]    ; Output   ; OFF         ;
+; debug_alu_inputTwo[3]    ; Output   ; OFF         ;
+; debug_alu_inputTwo[2]    ; Output   ; OFF         ;
+; debug_alu_inputTwo[1]    ; Output   ; OFF         ;
+; debug_alu_inputTwo[0]    ; Output   ; OFF         ;
+; debug_alu_output[7]      ; Output   ; OFF         ;
+; debug_alu_output[6]      ; Output   ; OFF         ;
+; debug_alu_output[5]      ; Output   ; OFF         ;
+; debug_alu_output[4]      ; Output   ; OFF         ;
+; debug_alu_output[3]      ; Output   ; OFF         ;
+; debug_alu_output[2]      ; Output   ; OFF         ;
+; debug_alu_output[1]      ; Output   ; OFF         ;
+; debug_alu_output[0]      ; Output   ; OFF         ;
+; debug_alucont_aluCode[2] ; Output   ; OFF         ;
+; debug_alucont_aluCode[1] ; Output   ; OFF         ;
+; debug_alucont_aluCode[0] ; Output   ; OFF         ;
+; debug_alucont_aluOp[2]   ; Output   ; OFF         ;
+; debug_alucont_aluOp[1]   ; Output   ; OFF         ;
+; debug_alucont_aluOp[0]   ; Output   ; OFF         ;
+; debug_alucont_output[2]  ; Output   ; OFF         ;
+; debug_alucont_output[1]  ; Output   ; OFF         ;
+; debug_alucont_output[0]  ; Output   ; OFF         ;
+; debug_contr_ALUOp[2]     ; Output   ; OFF         ;
+; debug_contr_ALUOp[1]     ; Output   ; OFF         ;
+; debug_contr_ALUOp[0]     ; Output   ; OFF         ;
+; debug_decod_aluCode[2]   ; Output   ; OFF         ;
+; debug_decod_aluCode[1]   ; Output   ; OFF         ;
+; debug_decod_aluCode[0]   ; Output   ; OFF         ;
+; debug_decod_Immediate[5] ; Output   ; OFF         ;
+; debug_decod_Immediate[4] ; Output   ; OFF         ;
+; debug_decod_Immediate[3] ; Output   ; OFF         ;
+; debug_decod_Immediate[2] ; Output   ; OFF         ;
+; debug_decod_Immediate[1] ; Output   ; OFF         ;
+; debug_decod_Immediate[0] ; Output   ; OFF         ;
+; debug_decod_opCode[3]    ; Output   ; OFF         ;
+; debug_decod_opCode[2]    ; Output   ; OFF         ;
+; debug_decod_opCode[1]    ; Output   ; OFF         ;
+; debug_decod_opCode[0]    ; Output   ; OFF         ;
+; debug_decod_rd[2]        ; Output   ; OFF         ;
+; debug_decod_rd[1]        ; Output   ; OFF         ;
+; debug_decod_rd[0]        ; Output   ; OFF         ;
+; debug_decod_rs[2]        ; Output   ; OFF         ;
+; debug_decod_rs[1]        ; Output   ; OFF         ;
+; debug_decod_rs[0]        ; Output   ; OFF         ;
+; debug_decod_rt[2]        ; Output   ; OFF         ;
+; debug_decod_rt[1]        ; Output   ; OFF         ;
+; debug_decod_rt[0]        ; Output   ; OFF         ;
+; debug_jump_mux1result[7] ; Output   ; OFF         ;
+; debug_jump_mux1result[6] ; Output   ; OFF         ;
+; debug_jump_mux1result[5] ; Output   ; OFF         ;
+; debug_jump_mux1result[4] ; Output   ; OFF         ;
+; debug_jump_mux1result[3] ; Output   ; OFF         ;
+; debug_jump_mux1result[2] ; Output   ; OFF         ;
+; debug_jump_mux1result[1] ; Output   ; OFF         ;
+; debug_jump_mux1result[0] ; Output   ; OFF         ;
+; debug_jump_mux2result[7] ; Output   ; OFF         ;
+; debug_jump_mux2result[6] ; Output   ; OFF         ;
+; debug_jump_mux2result[5] ; Output   ; OFF         ;
+; debug_jump_mux2result[4] ; Output   ; OFF         ;
+; debug_jump_mux2result[3] ; Output   ; OFF         ;
+; debug_jump_mux2result[2] ; Output   ; OFF         ;
+; debug_jump_mux2result[1] ; Output   ; OFF         ;
+; debug_jump_mux2result[0] ; Output   ; OFF         ;
+; debug_jump_mux3result[7] ; Output   ; OFF         ;
+; debug_jump_mux3result[6] ; Output   ; OFF         ;
+; debug_jump_mux3result[5] ; Output   ; OFF         ;
+; debug_jump_mux3result[4] ; Output   ; OFF         ;
+; debug_jump_mux3result[3] ; Output   ; OFF         ;
+; debug_jump_mux3result[2] ; Output   ; OFF         ;
+; debug_jump_mux3result[1] ; Output   ; OFF         ;
+; debug_jump_mux3result[0] ; Output   ; OFF         ;
+; debug_PC[7]              ; Output   ; OFF         ;
+; debug_PC[6]              ; Output   ; OFF         ;
+; debug_PC[5]              ; Output   ; OFF         ;
+; debug_PC[4]              ; Output   ; OFF         ;
+; debug_PC[3]              ; Output   ; OFF         ;
+; debug_PC[2]              ; Output   ; OFF         ;
+; debug_PC[1]              ; Output   ; OFF         ;
+; debug_PC[0]              ; Output   ; OFF         ;
+; debug_plusone[7]         ; Output   ; OFF         ;
+; debug_plusone[6]         ; Output   ; OFF         ;
+; debug_plusone[5]         ; Output   ; OFF         ;
+; debug_plusone[4]         ; Output   ; OFF         ;
+; debug_plusone[3]         ; Output   ; OFF         ;
+; debug_plusone[2]         ; Output   ; OFF         ;
+; debug_plusone[1]         ; Output   ; OFF         ;
+; debug_plusone[0]         ; Output   ; OFF         ;
+; debug_RAM_muxedout[7]    ; Output   ; OFF         ;
+; debug_RAM_muxedout[6]    ; Output   ; OFF         ;
+; debug_RAM_muxedout[5]    ; Output   ; OFF         ;
+; debug_RAM_muxedout[4]    ; Output   ; OFF         ;
+; debug_RAM_muxedout[3]    ; Output   ; OFF         ;
+; debug_RAM_muxedout[2]    ; Output   ; OFF         ;
+; debug_RAM_muxedout[1]    ; Output   ; OFF         ;
+; debug_RAM_muxedout[0]    ; Output   ; OFF         ;
+; debug_regfile_output1[7] ; Output   ; OFF         ;
+; debug_regfile_output1[6] ; Output   ; OFF         ;
+; debug_regfile_output1[5] ; Output   ; OFF         ;
+; debug_regfile_output1[4] ; Output   ; OFF         ;
+; debug_regfile_output1[3] ; Output   ; OFF         ;
+; debug_regfile_output1[2] ; Output   ; OFF         ;
+; debug_regfile_output1[1] ; Output   ; OFF         ;
+; debug_regfile_output1[0] ; Output   ; OFF         ;
+; debug_regfile_output2[7] ; Output   ; OFF         ;
+; debug_regfile_output2[6] ; Output   ; OFF         ;
+; debug_regfile_output2[5] ; Output   ; OFF         ;
+; debug_regfile_output2[4] ; Output   ; OFF         ;
+; debug_regfile_output2[3] ; Output   ; OFF         ;
+; debug_regfile_output2[2] ; Output   ; OFF         ;
+; debug_regfile_output2[1] ; Output   ; OFF         ;
+; debug_regfile_output2[0] ; Output   ; OFF         ;
+; debug_signextender[7]    ; Output   ; OFF         ;
+; debug_signextender[6]    ; Output   ; OFF         ;
+; debug_signextender[5]    ; Output   ; OFF         ;
+; debug_signextender[4]    ; Output   ; OFF         ;
+; debug_signextender[3]    ; Output   ; OFF         ;
+; debug_signextender[2]    ; Output   ; OFF         ;
+; debug_signextender[1]    ; Output   ; OFF         ;
+; debug_signextender[0]    ; Output   ; OFF         ;
+; digit_l[6]               ; Output   ; OFF         ;
+; digit_l[5]               ; Output   ; OFF         ;
+; digit_l[4]               ; Output   ; OFF         ;
+; digit_l[3]               ; Output   ; OFF         ;
+; digit_l[2]               ; Output   ; OFF         ;
+; digit_l[1]               ; Output   ; OFF         ;
+; digit_l[0]               ; Output   ; OFF         ;
+; digit_r[6]               ; Output   ; OFF         ;
+; digit_r[5]               ; Output   ; OFF         ;
+; digit_r[4]               ; Output   ; OFF         ;
+; digit_r[3]               ; Output   ; OFF         ;
+; digit_r[2]               ; Output   ; OFF         ;
+; digit_r[1]               ; Output   ; OFF         ;
+; digit_r[0]               ; Output   ; OFF         ;
++--------------------------+----------+-------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1185,8 +1192,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+------+-------------+--------------+
 ; Name                                                          ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; EABs ; MIF         ; Location     ;
 +---------------------------------------------------------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+------+-------------+--------------+
-; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|content ; Single Port ; 256          ; 8            ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 2048 ; 1    ; none        ; ESB_G        ;
-; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|content        ; ROM         ; 256          ; 16           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 4096 ; 2    ; program.mif ; ESB_E, ESB_F ;
+; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|content ; Single Port ; 256          ; 8            ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 2048 ; 1    ; none        ; ESB_F        ;
+; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|content        ; ROM         ; 256          ; 16           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 4096 ; 2    ; program.mif ; ESB_E, ESB_G ;
 +---------------------------------------------------------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+------+-------------+--------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -1203,7 +1210,7 @@ The pin-out file can be found in C:/git/processor/processor/FinalProcessor/Final
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Dec 18 22:54:35 2013
+    Info: Processing started: Thu Dec 19 00:05:49 2013
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off FinalProcessor -c FinalProcessor
 Info: Selected device EPF10K70RC240-4 for design "FinalProcessor"
 Info: Fitter is using the Classic Timing Analyzer
@@ -1213,17 +1220,17 @@ Info: Timing requirements not specified -- optimizing circuit to achieve the fol
     Info: Not setting a global tco requirement
     Info: Not setting a global tpd requirement
 Info: Inserted 7 logic cells in first fitting attempt
-Info: Started fitting attempt 1 on Wed Dec 18 2013 at 22:54:35
+Info: Started fitting attempt 1 on Thu Dec 19 2013 at 00:05:49
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
-Info: Fitter placement operations ending: elapsed time is 00:00:02
+Info: Fitter placement operations ending: elapsed time is 00:00:03
 Info: Fitter routing operations beginning
-Info: Fitter routing operations ending: elapsed time is 00:00:05
+Info: Fitter routing operations ending: elapsed time is 00:00:04
 Info: Quartus II Fitter was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 233 megabytes
-    Info: Processing ended: Wed Dec 18 22:54:45 2013
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Processing ended: Thu Dec 19 00:05:58 2013
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:09
 
 
