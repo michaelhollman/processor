@@ -26,9 +26,16 @@ namespace Assembler
                 var assembler = new Assembler(lines);
                 var mif = assembler.GetMachineCode();
 
-                var outputPath = String.Format("{0}\\{1}.mif", basePath, fileName);
-                File.WriteAllLines(outputPath, mif);
-                Console.WriteLine("MIF file saved to {0}", outputPath);
+                if (assembler.Success)
+                {
+                    var outputPath = String.Format("{0}\\{1}.mif", basePath, fileName);
+                    File.WriteAllLines(outputPath, mif);
+                    Console.WriteLine("MIF file saved to {0}", outputPath);
+                }
+                else
+                {
+                    Console.WriteLine("Due to errors, the program was not assembled");
+                }
             }
             catch (Exception e)
             {
@@ -36,7 +43,7 @@ namespace Assembler
             }
 
             Console.WriteLine("Press any key to exit...");
-            Console.ReadLine();
+            Console.Read();
         }
     }
 }

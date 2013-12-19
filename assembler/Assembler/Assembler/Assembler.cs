@@ -10,9 +10,11 @@ namespace Assembler
     public class Assembler
     {
         public string[] AssemblyCode { get; set; }
+        public bool Success { get; set; }
 
         public Assembler(string[] assemblyCode)
         {
+            Success = true;
             AssemblyCode = CleanAssemblyCode(assemblyCode);
         }
 
@@ -48,6 +50,10 @@ namespace Assembler
             {
                 try
                 {
+                    if (!OperationCodes.Instructions.ContainsKey(command.Tokens[0]))
+                    {
+                        throw new Exception(String.Format("{0} is not a valid instruction", command.Tokens[0]));
+                    }
                     var instruction = OperationCodes.Instructions[command.Tokens[0]];
                     var machineCode = "";
                     switch (instruction.InstructionType)
@@ -71,6 +77,7 @@ namespace Assembler
                 catch (Exception e)
                 {
                     Console.WriteLine("Error on line {0}. {1}", command.Index, e.Message);
+                    Success = false;
                 }
 
             }
@@ -135,24 +142,28 @@ namespace Assembler
                 Index = command.Index,
                 Tokens = new string[] { "add", "$0", "$0", "$0" }
             };
-            return GetRType(noopCommand);
+            return GetRType(noopCommand, true);
         }
 
-        private string GetRType(Command command)
+        private string GetRType(Command command, bool suppressRdWarning = false)
         {
             var instruction = OperationCodes.Instructions[command.Tokens[0]];
 
             if (instruction.Instruction == "jr")
             {
-                return ""; // TODO: implement
-            }
-            
-            if (command.Tokens.Length != 4)
-            {
-                throw new Exception("RType instuctions must have the command and 3 arguments");
+                ValidateTokens(command.Tokens, 2);
+                var jumpReg = ParseRegisterIndex(command.Tokens[1]);
+                return String.Format("{0}{1}{2}",
+                    instruction.OpCode,
+                    DecToBinary(0, 3),
+                    DecToBinary(jumpReg, 3),
+                    DecToBinary(0, 6)); 
             }
 
+            ValidateTokens(command.Tokens, 4);
+
             var rd = ParseRegisterIndex(command.Tokens[1]);
+            WarnRd(rd, suppressRdWarning);
             var rs = ParseRegisterIndex(command.Tokens[2]);
             var rt = ParseRegisterIndex(command.Tokens[3]);
 
@@ -170,12 +181,14 @@ namespace Assembler
             var code = instruction.Instruction;
             
             var rd = ParseRegisterIndex(command.Tokens[1]);
+            WarnRd(rd);
             var rs = 0;
             var immediate = 0;
 
             if (code == "beq" || code == "bne")
             {
                 // Format: beq $rd, $rs, label
+                ValidateTokens(command.Tokens, 4);
                 rs = ParseRegisterIndex(command.Tokens[2]);
 
                 var label = labels.FirstOrDefault(l => l.Name == command.Tokens[3]);
@@ -188,12 +201,19 @@ namespace Assembler
             else if (code == "lw" || code == "sw")
             {
                 // Format: lw $rd, offset($rs)
-                var offsetAndRegister = command.Tokens[2].Split(new char[] { '(', ')' }, StringSplitOptions.RemoveEmptyEntries);
+                ValidateTokens(command.Tokens, 3);
+
+                var thirdVal = command.Tokens[2];
+                ValidateParenthesis(thirdVal);
+
+                var offsetAndRegister = thirdVal.Split(new char[] { '(', ')' }, StringSplitOptions.RemoveEmptyEntries);
                 immediate = ParseOffset(offsetAndRegister[0]);
                 rs = ParseRegisterIndex(offsetAndRegister[1]);
             }
             else
             {
+                // Format: XXXX $rd, $rs, imm
+                ValidateTokens(command.Tokens, 4);
                 rs = ParseRegisterIndex(command.Tokens[2]);
                 immediate = ParseImmediate(command.Tokens[3]);
             }
@@ -207,6 +227,7 @@ namespace Assembler
 
         private string GetJType(Command command, List<Label> labels)
         {
+            ValidateTokens(command.Tokens, 2);
             var instruction = OperationCodes.Instructions[command.Tokens[0]];
 
             var immediate = 0;
@@ -224,7 +245,7 @@ namespace Assembler
                 var label = labels.FirstOrDefault(l => l.Name == command.Tokens[1]);
                 if (label == null)
                 {
-                    throw new Exception("Cannot find label");
+                    throw new Exception(String.Format("Cannot find label {0}", command.Tokens[1]));
                 }
                 immediate = label.Index;
             }
@@ -233,6 +254,36 @@ namespace Assembler
                 instruction.OpCode,
                 DecToBinary(0, 6),
                 DecToBinary(immediate, 6));
+        }
+
+        private void WarnRd(int rd, bool suppressRdWarning = false)
+        {
+            if (rd == 0 && !suppressRdWarning)
+            {
+                Console.WriteLine("Warning: attemping to set a value to R0 will have no effect");
+            }
+        }
+
+        private void ValidateParenthesis(string value)
+        {
+            if (value.Count(c => c == '(') != value.Count(c => c == ')'))
+            {
+                throw new Exception("Mismatched parenthesis");
+            }
+        }
+
+        private void ValidateTokens(string[] tokens, int expectedCount)
+        {
+            if (tokens.Length != expectedCount)
+            {
+                if (tokens.Length > 0) {
+                    throw new Exception(String.Format("Expected {0} arguments for {1}", expectedCount, tokens[0]));
+                }
+                else
+                {
+                    throw new Exception(String.Format("Expected {0} values", expectedCount));
+                }
+            }
         }
 
         private int ParseRegisterIndex(string value)
