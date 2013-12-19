@@ -1,5 +1,5 @@
 Flow report for FinalProcessor
-Thu Dec 19 03:34:18 2013
+Thu Dec 19 03:46:44 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Flow Summary                                                           ;
 +-------------------------+----------------------------------------------+
-; Flow Status             ; Successful - Thu Dec 19 03:34:18 2013        ;
+; Flow Status             ; Successful - Thu Dec 19 03:46:44 2013        ;
 ; Quartus II Version      ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name           ; FinalProcessor                               ;
 ; Top-level Entity Name   ; FinalProcessor                               ;
@@ -46,7 +46,7 @@ applicable agreement for further details.
 ; Device                  ; EPF10K70RC240-4                              ;
 ; Timing Models           ; Final                                        ;
 ; Met timing requirements ; No                                           ;
-; Total logic elements    ; 438 / 3,744 ( 12 % )                         ;
+; Total logic elements    ; 454 / 3,744 ( 12 % )                         ;
 ; Total pins              ; 28 / 189 ( 15 % )                            ;
 ; Total memory bits       ; 6,144 / 18,432 ( 33 % )                      ;
 +-------------------------+----------------------------------------------+
@@ -57,7 +57,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/19/2013 03:34:08 ;
+; Start date & time ; 12/19/2013 03:46:34 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; FinalProcessor      ;
 +-------------------+---------------------+
@@ -68,7 +68,7 @@ applicable agreement for further details.
 +------------------------------------+--------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                                                        ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+--------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 137240371535419.138744564802428                              ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 137240371535419.138744639404896                              ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; ROM: 1-PORT                                                  ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; RAM: 1-PORT                                                  ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_MUX                                                      ; --            ; --          ; --             ;

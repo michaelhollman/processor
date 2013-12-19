@@ -1,5 +1,5 @@
 Fitter report for FinalProcessor
-Thu Dec 19 03:34:16 2013
+Thu Dec 19 03:46:42 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -58,14 +58,14 @@ applicable agreement for further details.
 +----------------------------------------------------------------------+
 ; Fitter Summary                                                       ;
 +-----------------------+----------------------------------------------+
-; Fitter Status         ; Successful - Thu Dec 19 03:34:16 2013        ;
+; Fitter Status         ; Successful - Thu Dec 19 03:46:42 2013        ;
 ; Quartus II Version    ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name         ; FinalProcessor                               ;
 ; Top-level Entity Name ; FinalProcessor                               ;
 ; Family                ; FLEX10K                                      ;
 ; Device                ; EPF10K70RC240-4                              ;
 ; Timing Models         ; Final                                        ;
-; Total logic elements  ; 438 / 3,744 ( 12 % )                         ;
+; Total logic elements  ; 454 / 3,744 ( 12 % )                         ;
 ; Total pins            ; 28 / 189 ( 15 % )                            ;
 ; Total memory bits     ; 6,144 / 18,432 ( 33 % )                      ;
 +-----------------------+----------------------------------------------+
@@ -429,28 +429,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Name                          ; Pin #   ; Fan-Out ; Usage        ; Global Usage ;
 +-------------------------------+---------+---------+--------------+--------------+
 ; board_clk                     ; 91      ; 22      ; Clock        ; Pin          ;
-; MegaClock:inst4|clk_3         ; LC2_A36 ; 28      ; Clock        ; Non-global   ;
-; MegaClock:inst4|clk_2         ; LC7_A36 ; 17      ; Clock        ; Non-global   ;
-; MegaClock:inst4|clk_1         ; LC4_A36 ; 17      ; Clock        ; Non-global   ;
-; MegaClock:inst4|clk_4         ; LC1_A36 ; 57      ; Clock        ; Internal     ;
-; MegaClock:inst4|clk_0         ; LC3_A36 ; 9       ; Clock        ; Non-global   ;
+; MegaClock:inst4|clk_3         ; LC2_C27 ; 28      ; Clock        ; Non-global   ;
+; MegaClock:inst4|clk_2         ; LC3_C27 ; 17      ; Clock        ; Non-global   ;
+; MegaClock:inst4|clk_1         ; LC5_C27 ; 17      ; Clock        ; Non-global   ;
+; MegaClock:inst4|clk_4         ; LC1_C27 ; 57      ; Clock        ; Internal     ;
+; MegaClock:inst4|clk_0         ; LC6_C27 ; 9       ; Clock        ; Non-global   ;
 ; reset                         ; 212     ; 26      ; Async. clear ; Pin          ;
-; reset~_wirecell               ; LC2_I13 ; 1       ; Sync. clear  ; Non-global   ;
-; MegaClock:inst4|clk_3~9       ; LC5_A36 ; 5       ; Clock enable ; Non-global   ;
-; Controller:inst2|MemWrite     ; LC1_E50 ; 13      ; Write enable ; Non-global   ;
-; RAMHelper:inst20|decimal_l~2  ; LC1_F14 ; 1       ; Clock enable ; Non-global   ;
-; RAMHelper:inst20|output[0]~59 ; LC3_F21 ; 9       ; Clock enable ; Non-global   ;
-; RAMHelper:inst20|decimal_r~3  ; LC8_F29 ; 1       ; Clock enable ; Non-global   ;
-; RAMHelper:inst20|digit_l[3]~4 ; LC4_F29 ; 8       ; Clock enable ; Non-global   ;
-; MegaClock:inst4|Equal0~3      ; LC1_A39 ; 16      ; Clock enable ; Non-global   ;
-; MegaClock:inst4|clk_out[0]~18 ; LC7_A27 ; 3       ; Clock enable ; Non-global   ;
-; Controller:inst2|JumpReg      ; LC2_E4  ; 9       ; Sync. load   ; Non-global   ;
-; RegFile:inst13|r3[0]~13       ; LC3_E35 ; 8       ; Clock enable ; Non-global   ;
-; RegFile:inst13|r5[0]~13       ; LC6_E35 ; 8       ; Clock enable ; Non-global   ;
-; RegFile:inst13|r1[0]~13       ; LC8_E35 ; 8       ; Clock enable ; Non-global   ;
-; RegFile:inst13|r6[0]~13       ; LC7_E35 ; 8       ; Clock enable ; Non-global   ;
-; RegFile:inst13|r4[0]~13       ; LC5_E35 ; 8       ; Clock enable ; Non-global   ;
-; RegFile:inst13|r2[0]~13       ; LC4_E35 ; 8       ; Clock enable ; Non-global   ;
+; reset~_wirecell               ; LC2_D49 ; 1       ; Sync. clear  ; Non-global   ;
+; MegaClock:inst4|clk_3~9       ; LC4_C27 ; 5       ; Clock enable ; Non-global   ;
+; Controller:inst2|MemWrite     ; LC1_F15 ; 13      ; Write enable ; Non-global   ;
+; RAMHelper:inst20|digit_l[3]~4 ; LC2_F17 ; 8       ; Clock enable ; Non-global   ;
+; RAMHelper:inst20|output[0]~59 ; LC3_F15 ; 9       ; Clock enable ; Non-global   ;
+; RAMHelper:inst20|decimal_l~2  ; LC4_F15 ; 1       ; Clock enable ; Non-global   ;
+; RAMHelper:inst20|decimal_r~3  ; LC6_F15 ; 1       ; Clock enable ; Non-global   ;
+; Controller:inst2|JumpReg      ; LC3_I46 ; 9       ; Sync. load   ; Non-global   ;
+; MegaClock:inst4|Equal0~3      ; LC1_C29 ; 16      ; Clock enable ; Non-global   ;
+; MegaClock:inst4|clk_out[0]~18 ; LC8_C31 ; 3       ; Clock enable ; Non-global   ;
+; RegFile:inst13|r3[0]~13       ; LC4_I36 ; 8       ; Clock enable ; Non-global   ;
+; RegFile:inst13|r5[0]~13       ; LC3_I36 ; 8       ; Clock enable ; Non-global   ;
+; RegFile:inst13|r1[0]~13       ; LC8_I36 ; 8       ; Clock enable ; Non-global   ;
+; RegFile:inst13|r6[0]~13       ; LC2_I36 ; 8       ; Clock enable ; Non-global   ;
+; RegFile:inst13|r4[0]~13       ; LC5_I36 ; 8       ; Clock enable ; Non-global   ;
+; RegFile:inst13|r2[0]~13       ; LC6_I36 ; 8       ; Clock enable ; Non-global   ;
 +-------------------------------+---------+---------+--------------+--------------+
 
 
@@ -460,7 +460,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Name                  ; Pin #   ; Fan-Out ; Global ;
 +-----------------------+---------+---------+--------+
 ; board_clk             ; 91      ; 22      ; yes    ;
-; MegaClock:inst4|clk_4 ; LC1_A36 ; 57      ; yes    ;
+; MegaClock:inst4|clk_4 ; LC1_C27 ; 57      ; yes    ;
 ; reset                 ; 212     ; 26      ; yes    ;
 +-----------------------+---------+---------+--------+
 
@@ -493,8 +493,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------+-------+
 ; Length ; Count ;
 +--------+-------+
-; 2      ; 7     ;
 ; 3      ; 1     ;
+; 2      ; 10    ;
 +--------+-------+
 
 
@@ -503,30 +503,30 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------+------------------------------------------------------------+------+-------+
 ; Cell # ; Name                                                       ; Mode ; Turbo ;
 +--------+------------------------------------------------------------+------+-------+
-; EC1_F  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[0] ; RAM  ; Off   ;
-; EC6_F  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[2] ; RAM  ; Off   ;
+; EC6_F  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[0] ; RAM  ; Off   ;
+; EC4_F  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[2] ; RAM  ; Off   ;
 ; EC3_F  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[5] ; RAM  ; Off   ;
-; EC7_F  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[4] ; RAM  ; Off   ;
-; EC4_F  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[1] ; RAM  ; Off   ;
-; EC5_F  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[3] ; RAM  ; Off   ;
+; EC8_F  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[4] ; RAM  ; Off   ;
+; EC7_F  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[1] ; RAM  ; Off   ;
+; EC1_F  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[3] ; RAM  ; Off   ;
 ; EC2_F  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[6] ; RAM  ; Off   ;
-; EC8_F  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[7] ; RAM  ; Off   ;
-; EC5_E  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[1]        ; RAM  ; Off   ;
-; EC6_E  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[0]        ; RAM  ; Off   ;
-; EC1_E  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]        ; RAM  ; Off   ;
-; EC7_E  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[10]       ; RAM  ; Off   ;
-; EC3_E  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[5]        ; RAM  ; Off   ;
-; EC4_E  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[11]       ; RAM  ; Off   ;
-; EC8_E  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[3]        ; RAM  ; Off   ;
-; EC2_E  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[9]        ; RAM  ; Off   ;
-; EC3_D  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[2]        ; RAM  ; Off   ;
-; EC5_D  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]       ; RAM  ; Off   ;
-; EC8_D  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]       ; RAM  ; Off   ;
-; EC6_D  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]       ; RAM  ; Off   ;
-; EC7_D  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]       ; RAM  ; Off   ;
-; EC2_D  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[6]        ; RAM  ; Off   ;
-; EC1_D  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[7]        ; RAM  ; Off   ;
-; EC4_D  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[8]        ; RAM  ; Off   ;
+; EC5_F  ; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[7] ; RAM  ; Off   ;
+; EC1_I  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[2]        ; RAM  ; Off   ;
+; EC6_I  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]       ; RAM  ; Off   ;
+; EC7_I  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]       ; RAM  ; Off   ;
+; EC5_I  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]       ; RAM  ; Off   ;
+; EC8_I  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]       ; RAM  ; Off   ;
+; EC2_I  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[6]        ; RAM  ; Off   ;
+; EC4_I  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[7]        ; RAM  ; Off   ;
+; EC3_I  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[8]        ; RAM  ; Off   ;
+; EC4_G  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[1]        ; RAM  ; Off   ;
+; EC2_G  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[0]        ; RAM  ; Off   ;
+; EC3_G  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[3]        ; RAM  ; Off   ;
+; EC6_G  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[4]        ; RAM  ; Off   ;
+; EC5_G  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[10]       ; RAM  ; Off   ;
+; EC1_G  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[5]        ; RAM  ; Off   ;
+; EC8_G  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[11]       ; RAM  ; Off   ;
+; EC7_G  ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[9]        ; RAM  ; Off   ;
 +--------+------------------------------------------------------------+------+-------+
 
 
@@ -535,56 +535,56 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------------------------------------------------------+---------+
 ; Name                                                                                    ; Fan-Out ;
 +-----------------------------------------------------------------------------------------+---------+
-; Controller:inst2|ALUSrc~1                                                               ; 47      ;
+; Controller:inst2|ALUSrc~1                                                               ; 56      ;
 ; Controller:inst2|MemtoReg~1                                                             ; 37      ;
-; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[7]                                     ; 28      ;
-; MegaClock:inst4|clk_3~13                                                                ; 28      ;
 ; Mux2x3:inst41|lpm_mux:lpm_mux_component|muxlut:$00011|result_node~3                     ; 28      ;
-; ALU:inst8|output[0]~138                                                                 ; 26      ;
-; RegFile:inst13|out2[0]~104                                                              ; 25      ;
-; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[0]                                     ; 23      ;
+; MegaClock:inst4|clk_3~13                                                                ; 28      ;
+; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[7]                                     ; 28      ;
+; ALU:inst8|output[0]~141                                                                 ; 26      ;
+; RegFile:inst13|out2[0]~104                                                              ; 26      ;
+; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[0]                                     ; 24      ;
 ; ALUController:inst15|output[1]~7                                                        ; 23      ;
 ; ALUController:inst15|output[2]~6                                                        ; 22      ;
-; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[6]                                     ; 20      ;
 ; Mux2x3:inst41|lpm_mux:lpm_mux_component|muxlut:$00013|result_node~3                     ; 20      ;
+; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[6]                                     ; 20      ;
 ; ALUController:inst15|output[0]~8                                                        ; 19      ;
 ; PlusOne:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT ; 18      ;
-; PC:inst10|output[6]~34                                                                  ; 17      ;
-; PC:inst10|output[7]~35                                                                  ; 17      ;
+; PC:inst10|output[3]~31                                                                  ; 17      ;
 ; PC:inst10|output[5]~33                                                                  ; 17      ;
+; MegaClock:inst4|clk_2~10                                                                ; 17      ;
+; PC:inst10|output[7]~35                                                                  ; 17      ;
 ; PC:inst10|output[1]~29                                                                  ; 17      ;
 ; PC:inst10|output[2]~30                                                                  ; 17      ;
-; PC:inst10|output[3]~31                                                                  ; 17      ;
-; MegaClock:inst4|clk_1~10                                                                ; 17      ;
+; PC:inst10|output[6]~34                                                                  ; 17      ;
+; Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00011|result_node~3                     ; 17      ;
 ; PC:inst10|output[4]~32                                                                  ; 17      ;
-; MegaClock:inst4|clk_2~10                                                                ; 17      ;
-; ALU:inst8|output[4]~165                                                                 ; 16      ;
-; ALU:inst8|output[2]~151                                                                 ; 16      ;
-; ALU:inst8|output[5]~159                                                                 ; 16      ;
-; Mux2x8:inst39|lpm_mux:lpm_mux_component|muxlut:$00011|result_node~3                     ; 16      ;
+; MegaClock:inst4|clk_1~10                                                                ; 17      ;
+; ALU:inst8|output[4]~168                                                                 ; 16      ;
+; ALU:inst8|output[2]~154                                                                 ; 16      ;
+; ALU:inst8|output[5]~162                                                                 ; 16      ;
 ; MegaClock:inst4|Equal0~12                                                               ; 16      ;
-; Controller:inst2|MemWrite~2                                                             ; 13      ;
 ; ALU:inst8|ShiftRight0~26                                                                ; 13      ;
+; Controller:inst2|MemWrite~2                                                             ; 13      ;
 ; RAMHelper:inst20|Equal0~16                                                              ; 13      ;
-; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]                                    ; 11      ;
+; RegFile:inst13|out1[6]~110                                                              ; 12      ;
+; RegFile:inst13|out1[1]~107                                                              ; 11      ;
 ; Controller:inst2|Mux12~1                                                                ; 11      ;
+; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[13]                                    ; 11      ;
+; RegFile:inst13|out1[5]~108                                                              ; 10      ;
+; RegFile:inst13|out1[2]~106                                                              ; 10      ;
+; RegFile:inst13|out1[7]~111                                                              ; 10      ;
 ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[12]                                    ; 10      ;
 ; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]                                    ; 10      ;
-; RegFile:inst13|out1[1]~107                                                              ; 10      ;
+; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[2]                                     ; 9       ;
+; RegFile:inst13|out1[3]~105                                                              ; 9       ;
+; RegFile:inst13|out1[4]~109                                                              ; 9       ;
+; MegaClock:inst4|clk_0~9                                                                 ; 9       ;
 ; RAMHelper:inst20|output[0]~85                                                           ; 9       ;
 ; Controller:inst2|JumpReg~1                                                              ; 9       ;
-; RegFile:inst13|out1[6]~110                                                              ; 9       ;
-; RegFile:inst13|out1[5]~108                                                              ; 9       ;
-; MegaClock:inst4|clk_0~9                                                                 ; 9       ;
-; RAMHelper:inst20|digit_l[3]~13                                                          ; 8       ;
 ; Mux2x8:inst44|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~4                     ; 8       ;
-; RAMHelper:inst20|override~6                                                             ; 8       ;
-; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[8]                                     ; 8       ;
-; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[14]                                    ; 8       ;
-; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[11]                                    ; 8       ;
-; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[9]                                     ; 8       ;
-; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[1]                                     ; 8       ;
-; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|q[10]                                    ; 8       ;
+; Mux2x3:inst41|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~3                     ; 8       ;
+; RegFile:inst13|out1[0]~104                                                              ; 8       ;
+; RegFile:inst13|Mux55~2                                                                  ; 8       ;
 +-----------------------------------------------------------------------------------------+---------+
 
 
@@ -593,7 +593,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------+---------+-------+-----------------+---------------------------+----------+
 ; Peripheral Signal     ; Source  ; Usage ; Dedicated Clock ; Peripheral Control Signal ; Polarity ;
 +-----------------------+---------+-------+-----------------+---------------------------+----------+
-; MegaClock:inst4|clk_4 ; LC1_A36 ; Clock ; no              ; yes                       ; +ve      ;
+; MegaClock:inst4|clk_4 ; LC1_C27 ; Clock ; no              ; yes                       ; +ve      ;
 +-----------------------+---------+-------+-----------------+---------------------------+----------+
 
 
@@ -602,15 +602,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------+----------------+
 ; Number of Logic Elements ; Number of LABs ;
 +--------------------------+----------------+
-; 0                        ; 401            ;
-; 1                        ; 7              ;
-; 2                        ; 5              ;
-; 3                        ; 1              ;
-; 4                        ; 1              ;
-; 5                        ; 0              ;
-; 6                        ; 1              ;
-; 7                        ; 8              ;
-; 8                        ; 44             ;
+; 0                        ; 400            ;
+; 1                        ; 6              ;
+; 2                        ; 1              ;
+; 3                        ; 2              ;
+; 4                        ; 0              ;
+; 5                        ; 3              ;
+; 6                        ; 7              ;
+; 7                        ; 9              ;
+; 8                        ; 40             ;
 +--------------------------+----------------+
 
 
@@ -619,14 +619,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------+----------------+
 ; Local Routing Interconnects ; Number of LABs ;
 +-----------------------------+----------------+
-; 0                           ; 420            ;
-; 1                           ; 5              ;
-; 2                           ; 5              ;
-; 3                           ; 7              ;
-; 4                           ; 10             ;
-; 5                           ; 8              ;
-; 6                           ; 8              ;
-; 7                           ; 3              ;
+; 0                           ; 414            ;
+; 1                           ; 4              ;
+; 2                           ; 8              ;
+; 3                           ; 3              ;
+; 4                           ; 13             ;
+; 5                           ; 13             ;
+; 6                           ; 10             ;
+; 7                           ; 1              ;
 ; 8                           ; 2              ;
 +-----------------------------+----------------+
 
@@ -637,34 +637,34 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; LAB External Interconnects ; Number of LABs ;
 +----------------------------+----------------+
 ; 0 - 1                      ; 403            ;
-; 2 - 3                      ; 4              ;
-; 4 - 5                      ; 9              ;
+; 2 - 3                      ; 0              ;
+; 4 - 5                      ; 10             ;
 ; 6 - 7                      ; 7              ;
-; 8 - 9                      ; 4              ;
-; 10 - 11                    ; 13             ;
-; 12 - 13                    ; 7              ;
-; 14 - 15                    ; 9              ;
-; 16 - 17                    ; 11             ;
-; 18 - 19                    ; 1              ;
+; 8 - 9                      ; 5              ;
+; 10 - 11                    ; 16             ;
+; 12 - 13                    ; 11             ;
+; 14 - 15                    ; 5              ;
+; 16 - 17                    ; 9              ;
+; 18 - 19                    ; 2              ;
 +----------------------------+----------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Row Interconnect                                                                         ;
-+-------+---------------------+-----------------------------+------------------------------+
-; Row   ; Interconnect Used   ; Left Half Interconnect Used ; Right Half Interconnect Used ;
-+-------+---------------------+-----------------------------+------------------------------+
-;  A    ;  0 / 208 ( 0 % )    ;  0 / 104 ( 0 % )            ;  28 / 104 ( 27 % )           ;
-;  B    ;  1 / 208 ( < 1 % )  ;  0 / 104 ( 0 % )            ;  4 / 104 ( 4 % )             ;
-;  C    ;  6 / 208 ( 3 % )    ;  0 / 104 ( 0 % )            ;  17 / 104 ( 16 % )           ;
-;  D    ;  4 / 208 ( 2 % )    ;  8 / 104 ( 8 % )            ;  1 / 104 ( < 1 % )           ;
-;  E    ;  96 / 208 ( 46 % )  ;  86 / 104 ( 83 % )          ;  54 / 104 ( 52 % )           ;
-;  F    ;  37 / 208 ( 18 % )  ;  37 / 104 ( 36 % )          ;  7 / 104 ( 7 % )             ;
-;  G    ;  5 / 208 ( 2 % )    ;  0 / 104 ( 0 % )            ;  12 / 104 ( 12 % )           ;
-;  H    ;  0 / 208 ( 0 % )    ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
-;  I    ;  0 / 208 ( 0 % )    ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
-; Total ;  149 / 1872 ( 8 % ) ;  131 / 936 ( 14 % )         ;  123 / 936 ( 13 % )          ;
-+-------+---------------------+-----------------------------+------------------------------+
++-------------------------------------------------------------------------------------------+
+; Row Interconnect                                                                          ;
++-------+----------------------+-----------------------------+------------------------------+
+; Row   ; Interconnect Used    ; Left Half Interconnect Used ; Right Half Interconnect Used ;
++-------+----------------------+-----------------------------+------------------------------+
+;  A    ;  9 / 208 ( 4 % )     ;  0 / 104 ( 0 % )            ;  13 / 104 ( 13 % )           ;
+;  B    ;  5 / 208 ( 2 % )     ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
+;  C    ;  6 / 208 ( 3 % )     ;  0 / 104 ( 0 % )            ;  20 / 104 ( 19 % )           ;
+;  D    ;  22 / 208 ( 11 % )   ;  0 / 104 ( 0 % )            ;  34 / 104 ( 33 % )           ;
+;  E    ;  8 / 208 ( 4 % )     ;  0 / 104 ( 0 % )            ;  21 / 104 ( 20 % )           ;
+;  F    ;  112 / 208 ( 54 % )  ;  32 / 104 ( 31 % )          ;  85 / 104 ( 82 % )           ;
+;  G    ;  10 / 208 ( 5 % )    ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
+;  H    ;  0 / 208 ( 0 % )     ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
+;  I    ;  21 / 208 ( 10 % )   ;  0 / 104 ( 0 % )            ;  20 / 104 ( 19 % )           ;
+; Total ;  193 / 1872 ( 10 % ) ;  32 / 936 ( 3 % )           ;  193 / 936 ( 21 % )          ;
++-------+----------------------+-----------------------------+------------------------------+
 
 
 +----------------------------+
@@ -675,56 +675,56 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 1     ;  1 / 24 ( 4 % )    ;
 ; 2     ;  1 / 24 ( 4 % )    ;
 ; 3     ;  0 / 24 ( 0 % )    ;
-; 4     ;  4 / 24 ( 17 % )   ;
-; 5     ;  4 / 24 ( 17 % )   ;
-; 6     ;  4 / 24 ( 17 % )   ;
-; 7     ;  0 / 24 ( 0 % )    ;
-; 8     ;  2 / 24 ( 8 % )    ;
-; 9     ;  1 / 24 ( 4 % )    ;
-; 10    ;  1 / 24 ( 4 % )    ;
-; 11    ;  1 / 24 ( 4 % )    ;
-; 12    ;  2 / 24 ( 8 % )    ;
-; 13    ;  4 / 24 ( 17 % )   ;
-; 14    ;  2 / 24 ( 8 % )    ;
-; 15    ;  2 / 24 ( 8 % )    ;
-; 16    ;  1 / 24 ( 4 % )    ;
-; 17    ;  1 / 24 ( 4 % )    ;
-; 18    ;  1 / 24 ( 4 % )    ;
-; 19    ;  1 / 24 ( 4 % )    ;
+; 4     ;  0 / 24 ( 0 % )    ;
+; 5     ;  1 / 24 ( 4 % )    ;
+; 6     ;  0 / 24 ( 0 % )    ;
+; 7     ;  1 / 24 ( 4 % )    ;
+; 8     ;  0 / 24 ( 0 % )    ;
+; 9     ;  0 / 24 ( 0 % )    ;
+; 10    ;  0 / 24 ( 0 % )    ;
+; 11    ;  0 / 24 ( 0 % )    ;
+; 12    ;  0 / 24 ( 0 % )    ;
+; 13    ;  2 / 24 ( 8 % )    ;
+; 14    ;  0 / 24 ( 0 % )    ;
+; 15    ;  3 / 24 ( 13 % )   ;
+; 16    ;  5 / 24 ( 21 % )   ;
+; 17    ;  3 / 24 ( 13 % )   ;
+; 18    ;  5 / 24 ( 21 % )   ;
+; 19    ;  0 / 24 ( 0 % )    ;
 ; 20    ;  0 / 24 ( 0 % )    ;
-; 21    ;  1 / 24 ( 4 % )    ;
-; 22    ;  4 / 24 ( 17 % )   ;
-; 23    ;  2 / 24 ( 8 % )    ;
-; 24    ;  1 / 24 ( 4 % )    ;
+; 21    ;  0 / 24 ( 0 % )    ;
+; 22    ;  1 / 24 ( 4 % )    ;
+; 23    ;  0 / 24 ( 0 % )    ;
+; 24    ;  2 / 24 ( 8 % )    ;
 ; 25    ;  1 / 24 ( 4 % )    ;
-; 26    ;  4 / 24 ( 17 % )   ;
-; 27    ;  1 / 24 ( 4 % )    ;
-; 28    ;  1 / 24 ( 4 % )    ;
-; 29    ;  6 / 24 ( 25 % )   ;
+; 26    ;  1 / 24 ( 4 % )    ;
+; 27    ;  7 / 24 ( 29 % )   ;
+; 28    ;  4 / 24 ( 17 % )   ;
+; 29    ;  2 / 24 ( 8 % )    ;
 ; 30    ;  1 / 24 ( 4 % )    ;
-; 31    ;  6 / 24 ( 25 % )   ;
-; 32    ;  4 / 24 ( 17 % )   ;
-; 33    ;  0 / 24 ( 0 % )    ;
+; 31    ;  2 / 24 ( 8 % )    ;
+; 32    ;  8 / 24 ( 33 % )   ;
+; 33    ;  6 / 24 ( 25 % )   ;
 ; 34    ;  0 / 24 ( 0 % )    ;
-; 35    ;  9 / 24 ( 38 % )   ;
-; 36    ;  7 / 24 ( 29 % )   ;
-; 37    ;  1 / 24 ( 4 % )    ;
-; 38    ;  1 / 24 ( 4 % )    ;
+; 35    ;  1 / 24 ( 4 % )    ;
+; 36    ;  8 / 24 ( 33 % )   ;
+; 37    ;  2 / 24 ( 8 % )    ;
+; 38    ;  0 / 24 ( 0 % )    ;
 ; 39    ;  0 / 24 ( 0 % )    ;
-; 40    ;  4 / 24 ( 17 % )   ;
-; 41    ;  1 / 24 ( 4 % )    ;
-; 42    ;  1 / 24 ( 4 % )    ;
+; 40    ;  0 / 24 ( 0 % )    ;
+; 41    ;  0 / 24 ( 0 % )    ;
+; 42    ;  0 / 24 ( 0 % )    ;
 ; 43    ;  0 / 24 ( 0 % )    ;
 ; 44    ;  0 / 24 ( 0 % )    ;
-; 45    ;  2 / 24 ( 8 % )    ;
-; 46    ;  2 / 24 ( 8 % )    ;
-; 47    ;  0 / 24 ( 0 % )    ;
+; 45    ;  1 / 24 ( 4 % )    ;
+; 46    ;  4 / 24 ( 17 % )   ;
+; 47    ;  1 / 24 ( 4 % )    ;
 ; 48    ;  1 / 24 ( 4 % )    ;
-; 49    ;  1 / 24 ( 4 % )    ;
-; 50    ;  1 / 24 ( 4 % )    ;
-; 51    ;  0 / 24 ( 0 % )    ;
-; 52    ;  0 / 24 ( 0 % )    ;
-; Total ;  96 / 1248 ( 8 % ) ;
+; 49    ;  5 / 24 ( 21 % )   ;
+; 50    ;  2 / 24 ( 8 % )    ;
+; 51    ;  2 / 24 ( 8 % )    ;
+; 52    ;  1 / 24 ( 4 % )    ;
+; Total ;  85 / 1248 ( 7 % ) ;
 +-------+--------------------+
 
 
@@ -733,8 +733,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+-------------------+
 ; Col.  ; Interconnect Used ;
 +-------+-------------------+
-; 1     ;  8 / 24 ( 33 % )  ;
-; Total ;  8 / 24 ( 33 % )  ;
+; 1     ;  12 / 24 ( 50 % ) ;
+; Total ;  12 / 24 ( 50 % ) ;
 +-------+-------------------+
 
 
@@ -743,7 +743,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------+-------------------------+
 ; Resource                          ; Usage                   ;
 +-----------------------------------+-------------------------+
-; Total logic elements              ; 438 / 3,744 ( 12 % )    ;
+; Total logic elements              ; 454 / 3,744 ( 12 % )    ;
 ; Registers                         ; 121 / 3,744 ( 3 % )     ;
 ; Logic elements in carry chains    ; 39                      ;
 ; User inserted logic elements      ; 0                       ;
@@ -757,9 +757,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Maximum fan-out node              ; MegaClock:inst4|clk_4   ;
 ; Maximum fan-out                   ; 57                      ;
 ; Highest non-global fan-out signal ; Controller:inst2|ALUSrc ;
-; Highest non-global fan-out        ; 47                      ;
-; Total fan-out                     ; 1854                    ;
-; Average fan-out                   ; 3.78                    ;
+; Highest non-global fan-out        ; 56                      ;
+; Total fan-out                     ; 1918                    ;
+; Average fan-out                   ; 3.79                    ;
 +-----------------------------------+-------------------------+
 
 
@@ -768,8 +768,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                      ; Library Name ;
 +-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------+--------------+
-; |FinalProcessor                           ; 438 (1)     ; 121          ; 6144        ; 28   ; 317 (1)      ; 13 (0)            ; 108 (0)          ; 39 (0)          ; 0 (0)      ; |FinalProcessor                                                                          ; work         ;
-;    |ALU:inst8|                            ; 136 (120)   ; 0            ; 0           ; 0    ; 136 (120)    ; 0 (0)             ; 0 (0)            ; 17 (1)          ; 0 (0)      ; |FinalProcessor|ALU:inst8                                                                ; work         ;
+; |FinalProcessor                           ; 454 (1)     ; 121          ; 6144        ; 28   ; 333 (1)      ; 13 (0)            ; 108 (0)          ; 39 (0)          ; 0 (0)      ; |FinalProcessor                                                                          ; work         ;
+;    |ALU:inst8|                            ; 152 (136)   ; 0            ; 0           ; 0    ; 152 (136)    ; 0 (0)             ; 0 (0)            ; 17 (1)          ; 0 (0)      ; |FinalProcessor|ALU:inst8                                                                ; work         ;
 ;       |lpm_add_sub:Add0|                  ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |FinalProcessor|ALU:inst8|lpm_add_sub:Add0                                               ; work         ;
 ;          |addcore:adder|                  ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |FinalProcessor|ALU:inst8|lpm_add_sub:Add0|addcore:adder                                 ; work         ;
 ;             |a_csnbuffer:result_node|     ; 8 (8)       ; 0            ; 0           ; 0    ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 8 (8)           ; 0 (0)      ; |FinalProcessor|ALU:inst8|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node         ; work         ;
@@ -864,14 +864,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------+----------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter RAM Summary                                                                                                                                                                                                                                                                      ;
-+---------------------------------------------------------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+------+------------+--------------+
-; Name                                                          ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; EABs ; MIF        ; Location     ;
-+---------------------------------------------------------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+------+------------+--------------+
-; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|content ; Single Port ; 256          ; 8            ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 2048 ; 1    ; none       ; ESB_F        ;
-; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|content        ; ROM         ; 256          ; 16           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 4096 ; 2    ; addone.mif ; ESB_D, ESB_E ;
-+---------------------------------------------------------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+------+------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter RAM Summary                                                                                                                                                                                                                                                                                                               ;
++---------------------------------------------------------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+------+-----------------------------------------------------+--------------+
+; Name                                                          ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; EABs ; MIF                                                 ; Location     ;
++---------------------------------------------------------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+------+-----------------------------------------------------+--------------+
+; RAM:inst1|lpm_ram_dq:lpm_ram_dq_component|altram:sram|content ; Single Port ; 256          ; 8            ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 2048 ; 1    ; none                                                ; ESB_F        ;
+; ROM:inst|lpm_rom:lpm_rom_component|altrom:srom|content        ; ROM         ; 256          ; 16           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 4096 ; 2    ; ../../../../../Users/Michael/Desktop/multiplier.mif ; ESB_I, ESB_G ;
++---------------------------------------------------------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+------+-----------------------------------------------------+--------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
 
@@ -887,7 +887,7 @@ The pin-out file can be found in C:/git/processor/processor/FinalProcessor/Final
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Dec 19 03:34:11 2013
+    Info: Processing started: Thu Dec 19 03:46:37 2013
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off FinalProcessor -c FinalProcessor
 Info: Selected device EPF10K70RC240-4 for design "FinalProcessor"
 Info: Fitter is using the Classic Timing Analyzer
@@ -899,7 +899,7 @@ Info: Timing requirements not specified -- optimizing circuit to achieve the fol
 Info: Inserted 0 logic cells in first fitting attempt
 Warning: Ignored locations or region assignments to the following nodes
     Warning: Node "reset_src" is assigned to location or region, but does not exist in design
-Info: Started fitting attempt 1 on Thu Dec 19 2013 at 03:34:11
+Info: Started fitting attempt 1 on Thu Dec 19 2013 at 03:46:37
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
@@ -908,7 +908,7 @@ Info: Fitter routing operations beginning
 Info: Fitter routing operations ending: elapsed time is 00:00:02
 Info: Quartus II Fitter was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 232 megabytes
-    Info: Processing ended: Thu Dec 19 03:34:16 2013
+    Info: Processing ended: Thu Dec 19 03:46:42 2013
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:05
 
