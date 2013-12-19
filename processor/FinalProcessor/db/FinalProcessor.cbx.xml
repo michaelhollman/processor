@@ -37,7 +37,6 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux54" CBX_FILE_NAME="mux_vbc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux9" CBX_FILE_NAME="mux_vbc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Controller:inst2|LPM_MUX:Mux6" CBX_FILE_NAME="mux_fdc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Mux2x3:inst38|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_und.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Mux2x8:inst42|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_3od.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux19" CBX_FILE_NAME="mux_vbc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux28" CBX_FILE_NAME="mux_vbc.tdf"/>
@@ -70,6 +69,7 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux21" CBX_FILE_NAME="mux_vbc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|SevenSegmentDisplay:inst19|LPM_MUX:Mux1" CBX_FILE_NAME="mux_fdc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Controller:inst2|LPM_MUX:Mux0" CBX_FILE_NAME="mux_fdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|Mux2x3:inst41|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_und.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux22" CBX_FILE_NAME="mux_vbc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|RegFile:inst13|LPM_MUX:Mux40" CBX_FILE_NAME="mux_vbc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|FinalProcessor|SevenSegmentDisplay:inst19|LPM_MUX:Mux2" CBX_FILE_NAME="mux_fdc.tdf"/>

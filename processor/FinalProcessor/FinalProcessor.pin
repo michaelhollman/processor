@@ -37,7 +37,7 @@
  ------------------------------------------------------------------------------
 
 
-File Generation Date & Time: Wed Dec 18 18:06:12 2013
+File Generation Date & Time: Wed Dec 18 21:04:51 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 CHIP  "FinalProcessor"  ASSIGNED TO AN: EPF10K70RC240-4
 
@@ -57,7 +57,7 @@ digit_l[4]                   : 11        : output : TTL               :         
 digit_l[5]                   : 12        : output : TTL               :         :           : Y              
 digit_l[6]                   : 13        : output : TTL               :         :           : Y              
 decimal_l                    : 14        : output : TTL               :         :           : Y              
-debug_pc[1]                  : 15        : output : TTL               :         :           : N              
+debug_contr_ALUOp[2]         : 15        : output : TTL               :         :           : N              
 VCC_INT                      : 16        : power  :                   : 5.0V    :           :                
 digit_r[0]                   : 17        : output : TTL               :         :           : Y              
 digit_r[1]                   : 18        : output : TTL               :         :           : Y              
@@ -68,12 +68,12 @@ GND_INT                      : 22        : gnd    :                   :         
 digit_r[5]                   : 23        : output : TTL               :         :           : Y              
 digit_r[6]                   : 24        : output : TTL               :         :           : Y              
 decimal_r                    : 25        : output : TTL               :         :           : Y              
-debug_jump_mux3result[1]     : 26        : output : TTL               :         :           : N              
+debug_ram_muxedout[0]        : 26        : output : TTL               :         :           : N              
 VCC_INT                      : 27        : power  :                   : 5.0V    :           :                
 button_1                     : 28        : input  : TTL               :         :           : Y              
 button_2                     : 29        : input  : TTL               :         :           : Y              
-debug_regfile_output1[4]     : 30        : output : TTL               :         :           : N              
-debug_alucont_aluCode[2]     : 31        : output : TTL               :         :           : N              
+debug_decod_rt[2]            : 30        : output : TTL               :         :           : N              
+debug_decod_aluCode[1]       : 31        : output : TTL               :         :           : N              
 GND_INT                      : 32        : gnd    :                   :         :           :                
 dipswitch[7]                 : 33        : input  : TTL               :         :           : Y              
 dipswitch[6]                 : 34        : input  : TTL               :         :           : Y              
@@ -85,201 +85,201 @@ dipswitch[2]                 : 39        : input  : TTL               :         
 dipswitch[1]                 : 40        : input  : TTL               :         :           : Y              
 dipswitch[0]                 : 41        : input  : TTL               :         :           : Y              
 GND_INT                      : 42        : gnd    :                   :         :           :                
-debug_decod_opCode[2]        : 43        : output : TTL               :         :           : N              
-debug_contr_ALUOp[0]         : 44        : output : TTL               :         :           : N              
-debug_decod_rs[0]            : 45        : output : TTL               :         :           : N              
-debug_decod_rs[1]            : 46        : output : TTL               :         :           : N              
+debug_ram_muxedout[6]        : 43        : output : TTL               :         :           : N              
+debug_ram_muxedout[4]        : 44        : output : TTL               :         :           : N              
+debug_ram_muxedout[2]        : 45        : output : TTL               :         :           : N              
+debug_alu_inputTwo[7]        : 46        : output : TTL               :         :           : N              
 VCC_INT                      : 47        : power  :                   : 5.0V    :           :                
-debug_pc[6]                  : 48        : output : TTL               :         :           : N              
-debug_pc[2]                  : 49        : output : TTL               :         :           : N              
-debug_pc[3]                  : 50        : output : TTL               :         :           : N              
-debug_alu_output[1]          : 51        : output : TTL               :         :           : N              
+debug_contr_ALUOp[0]         : 48        : output : TTL               :         :           : N              
+debug_plusone[6]             : 49        : output : TTL               :         :           : N              
+debug_regfile_output1[1]     : 50        : output : TTL               :         :           : N              
+debug_regdest_mux[2]         : 51        : output : TTL               :         :           : N              
 GND_INT                      : 52        : gnd    :                   :         :           :                
-debug_alu_output[3]          : 53        : output : TTL               :         :           : N              
-debug_decod_aluCode[2]       : 54        : output : TTL               :         :           : N              
-debug_alu_aluCode[2]         : 55        : output : TTL               :         :           : N              
-debug_alu_output[2]          : 56        : output : TTL               :         :           : N              
+debug_jump_mux2result[4]     : 53        : output : TTL               :         :           : N              
+debug_ram_muxedout[1]        : 54        : output : TTL               :         :           : N              
+debug_regdest_mux[1]         : 55        : output : TTL               :         :           : N              
+debug_decod_rd[1]            : 56        : output : TTL               :         :           : N              
 VCC_INT                      : 57        : power  :                   : 5.0V    :           :                
 TMS                          : 58        : input  :                   :         :           :                
 TRST                         : 59        : input  :                   :         :           :                
 nSTATUS                      : 60        : bidir  :                   :         :           :                
-debug_clock1                 : 61        : output : TTL               :         :           : N              
-debug_jump_mux1result[6]     : 62        : output : TTL               :         :           : N              
-debug_jump_mux1result[2]     : 63        : output : TTL               :         :           : N              
-debug_jump_mux2sel           : 64        : output : TTL               :         :           : N              
-debug_regfile_output1[6]     : 65        : output : TTL               :         :           : N              
-debug_jump_mux2result[1]     : 66        : output : TTL               :         :           : N              
-debug_signextender[5]        : 67        : output : TTL               :         :           : N              
-debug_jump_mux1result[4]     : 68        : output : TTL               :         :           : N              
+debug_alucont_aluOp[1]       : 61        : output : TTL               :         :           : N              
+debug_alu_inputTwo[6]        : 62        : output : TTL               :         :           : N              
+debug_ramhelper_digit_r[3]   : 63        : output : TTL               :         :           : N              
+debug_ramhelper_digit_l[3]   : 64        : output : TTL               :         :           : N              
+debug_ramhelper_digit_r[2]   : 65        : output : TTL               :         :           : N              
+debug_ramhelper_digit_r[1]   : 66        : output : TTL               :         :           : N              
+debug_ramhelper_digit_r[0]   : 67        : output : TTL               :         :           : N              
+debug_jump_mux1result[6]     : 68        : output : TTL               :         :           : N              
 GND_INT                      : 69        : gnd    :                   :         :           :                
-RESERVED                     : 70        :        :                   :         :           :                
-debug_jump_mux2result[2]     : 71        : output : TTL               :         :           : N              
-debug_regfile_output1[3]     : 72        : output : TTL               :         :           : N              
-debug_alu_inputOne[0]        : 73        : output : TTL               :         :           : N              
-debug_alu_inputOne[1]        : 74        : output : TTL               :         :           : N              
-debug_jump_mux3result[3]     : 75        : output : TTL               :         :           : N              
-debug_jump_mux1result[1]     : 76        : output : TTL               :         :           : N              
+debug_jump_mux2sel           : 70        : output : TTL               :         :           : N              
+debug_jump_mux2result[3]     : 71        : output : TTL               :         :           : N              
+debug_plusone[7]             : 72        : output : TTL               :         :           : N              
+debug_jump_mux1result[0]     : 73        : output : TTL               :         :           : N              
+debug_regdest_mux[0]         : 74        : output : TTL               :         :           : N              
+debug_regfile_output1[2]     : 75        : output : TTL               :         :           : N              
+debug_regfile_output2[4]     : 76        : output : TTL               :         :           : N              
 VCC_INT                      : 77        : power  :                   : 5.0V    :           :                
-debug_regfile_output1[5]     : 78        : output : TTL               :         :           : N              
-debug_signextender[6]        : 79        : output : TTL               :         :           : N              
-debug_contr_MemWrite         : 80        : output : TTL               :         :           : N              
-debug_regfile_output2[3]     : 81        : output : TTL               :         :           : N              
-debug_signextender[2]        : 82        : output : TTL               :         :           : N              
-RESERVED                     : 83        :        :                   :         :           :                
-debug_jump_mux2result[4]     : 84        : output : TTL               :         :           : N              
+debug_alu_inputOne[4]        : 78        : output : TTL               :         :           : N              
+debug_jump_mux1sel           : 79        : output : TTL               :         :           : N              
+debug_regfile_output2[7]     : 80        : output : TTL               :         :           : N              
+debug_jump_mux2result[6]     : 81        : output : TTL               :         :           : N              
+debug_contr_Jump             : 82        : output : TTL               :         :           : N              
+debug_signextender[5]        : 83        : output : TTL               :         :           : N              
+debug_jump_mux1result[2]     : 84        : output : TTL               :         :           : N              
 GND_INT                      : 85        : gnd    :                   :         :           :                
-debug_jump_mux2result[0]     : 86        : output : TTL               :         :           : N              
-debug_alu_output[0]          : 87        : output : TTL               :         :           : N              
-debug_decod_rt[2]            : 88        : output : TTL               :         :           : N              
+debug_alu_output[2]          : 86        : output : TTL               :         :           : N              
+debug_regfile_output1[3]     : 87        : output : TTL               :         :           : N              
+debug_regfile_output1[0]     : 88        : output : TTL               :         :           : N              
 VCC_INT                      : 89        : power  :                   : 5.0V    :           :                
 GND+                         : 90        :        :                   :         :           :                
 board_clk                    : 91        : input  : TTL               :         :           : Y              
 GND+                         : 92        :        :                   :         :           :                
 GND_INT                      : 93        : gnd    :                   :         :           :                
-RESERVED                     : 94        :        :                   :         :           :                
-debug_decod_aluCode[0]       : 95        : output : TTL               :         :           : N              
+debug_plusone[3]             : 94        : output : TTL               :         :           : N              
+debug_jump_mux3result[6]     : 95        : output : TTL               :         :           : N              
 VCC_INT                      : 96        : power  :                   : 5.0V    :           :                
-debug_regfile_output2[7]     : 97        : output : TTL               :         :           : N              
-RESERVED                     : 98        :        :                   :         :           :                
-debug_alu_inputOne[7]        : 99        : output : TTL               :         :           : N              
-debug_jump_mux1result[7]     : 100       : output : TTL               :         :           : N              
-debug_plusone[0]             : 101       : output : TTL               :         :           : N              
-debug_jump_mux3result[7]     : 102       : output : TTL               :         :           : N              
-debug_alu_overflow           : 103       : output : TTL               :         :           : N              
+debug_clock4                 : 97        : output : TTL               :         :           : N              
+debug_jump_mux2result[1]     : 98        : output : TTL               :         :           : N              
+debug_jump_mux2result[2]     : 99        : output : TTL               :         :           : N              
+debug_signextender[6]        : 100       : output : TTL               :         :           : N              
+debug_alucont_output[2]      : 101       : output : TTL               :         :           : N              
+debug_alu_inputOne[5]        : 102       : output : TTL               :         :           : N              
+debug_alucont_aluCode[1]     : 103       : output : TTL               :         :           : N              
 GND_INT                      : 104       : gnd    :                   :         :           :                
-debug_alucont_aluOp[0]       : 105       : output : TTL               :         :           : N              
-debug_jump_mux3result[5]     : 106       : output : TTL               :         :           : N              
-debug_alu_output[6]          : 107       : output : TTL               :         :           : N              
-debug_alu_output[5]          : 108       : output : TTL               :         :           : N              
-RESERVED                     : 109       :        :                   :         :           :                
-RESERVED                     : 110       :        :                   :         :           :                
-debug_jump_mux2result[6]     : 111       : output : TTL               :         :           : N              
+debug_contr_RegWrite         : 105       : output : TTL               :         :           : N              
+debug_alu_overflow           : 106       : output : TTL               :         :           : N              
+debug_plusone[1]             : 107       : output : TTL               :         :           : N              
+debug_contr_MemWrite         : 108       : output : TTL               :         :           : N              
+debug_jump_mux3result[5]     : 109       : output : TTL               :         :           : N              
+debug_alu_aluCode[2]         : 110       : output : TTL               :         :           : N              
+debug_alu_output[1]          : 111       : output : TTL               :         :           : N              
 VCC_INT                      : 112       : power  :                   : 5.0V    :           :                
-RESERVED                     : 113       :        :                   :         :           :                
-debug_alucont_aluOp[2]       : 114       : output : TTL               :         :           : N              
-debug_contr_Jump             : 115       : output : TTL               :         :           : N              
-debug_contr_MemReg           : 116       : output : TTL               :         :           : N              
-debug_regfile_output2[5]     : 117       : output : TTL               :         :           : N              
-debug_contr_ALUOp[1]         : 118       : output : TTL               :         :           : N              
-debug_alucont_output[0]      : 119       : output : TTL               :         :           : N              
-debug_alucont_output[1]      : 120       : output : TTL               :         :           : N              
+debug_alu_output[3]          : 113       : output : TTL               :         :           : N              
+debug_signextender[2]        : 114       : output : TTL               :         :           : N              
+debug_alucont_output[0]      : 115       : output : TTL               :         :           : N              
+debug_plusone[2]             : 116       : output : TTL               :         :           : N              
+debug_jump_mux3result[2]     : 117       : output : TTL               :         :           : N              
+RESERVED                     : 118       :        :                   :         :           :                
+debug_alu_inputOne[1]        : 119       : output : TTL               :         :           : N              
+debug_jump_mux3result[4]     : 120       : output : TTL               :         :           : N              
 nCONFIG                      : 121       : input  :                   :         :           :                
 VCC_INT                      : 122       : power  :                   : 5.0V    :           :                
 MSEL1                        : 123       : input  :                   :         :           :                
 MSEL0                        : 124       : input  :                   :         :           :                
 GND_INT                      : 125       : gnd    :                   :         :           :                
-debug_alu_inputTwo[0]        : 126       : output : TTL               :         :           : N              
-debug_alu_output[7]          : 127       : output : TTL               :         :           : N              
-debug_contr_MemRead          : 128       : output : TTL               :         :           : N              
-debug_alu_aluCode[0]         : 129       : output : TTL               :         :           : N              
+debug_decod_rd[2]            : 126       : output : TTL               :         :           : N              
+debug_decod_Immediate[4]     : 127       : output : TTL               :         :           : N              
+debug_decod_rs[0]            : 128       : output : TTL               :         :           : N              
+debug_decod_rd[0]            : 129       : output : TTL               :         :           : N              
 VCC_INT                      : 130       : power  :                   : 5.0V    :           :                
-debug_decod_opCode[1]        : 131       : output : TTL               :         :           : N              
-debug_pc[5]                  : 132       : output : TTL               :         :           : N              
-debug_regfile_output1[1]     : 133       : output : TTL               :         :           : N              
-debug_pc[7]                  : 134       : output : TTL               :         :           : N              
+debug_jump_mux3result[0]     : 131       : output : TTL               :         :           : N              
+debug_jump_mux1result[7]     : 132       : output : TTL               :         :           : N              
+debug_alu_inputTwo[4]        : 133       : output : TTL               :         :           : N              
+debug_clock0                 : 134       : output : TTL               :         :           : N              
 GND_INT                      : 135       : gnd    :                   :         :           :                
-debug_alucont_aluCode[0]     : 136       : output : TTL               :         :           : N              
-debug_pc[0]                  : 137       : output : TTL               :         :           : N              
-debug_contr_Branch           : 138       : output : TTL               :         :           : N              
-debug_alu_inputTwo[3]        : 139       : output : TTL               :         :           : N              
+debug_ramhelper_digit_l[2]   : 136       : output : TTL               :         :           : N              
+debug_plusone[0]             : 137       : output : TTL               :         :           : N              
+debug_jump_mux3result[3]     : 138       : output : TTL               :         :           : N              
+debug_decod_opCode[0]        : 139       : output : TTL               :         :           : N              
 VCC_INT                      : 140       : power  :                   : 5.0V    :           :                
-debug_decod_Immediate[5]     : 141       : output : TTL               :         :           : N              
-debug_clk_board              : 142       : output : TTL               :         :           : N              
-RESERVED                     : 143       :        :                   :         :           :                
-debug_decod_rd[1]            : 144       : output : TTL               :         :           : N              
+debug_decod_rs[2]            : 141       : output : TTL               :         :           : N              
+debug_alucont_aluCode[2]     : 142       : output : TTL               :         :           : N              
+debug_alu_inputTwo[3]        : 143       : output : TTL               :         :           : N              
+debug_decod_opCode[1]        : 144       : output : TTL               :         :           : N              
 GND_INT                      : 145       : gnd    :                   :         :           :                
-debug_decod_rt[1]            : 146       : output : TTL               :         :           : N              
-debug_decod_rd[0]            : 147       : output : TTL               :         :           : N              
-debug_decod_rd[2]            : 148       : output : TTL               :         :           : N              
-debug_plusone[1]             : 149       : output : TTL               :         :           : N              
+debug_contr_MemReg           : 146       : output : TTL               :         :           : N              
+debug_ram_muxedout[5]        : 147       : output : TTL               :         :           : N              
+debug_decod_opCode[3]        : 148       : output : TTL               :         :           : N              
+debug_regfile_output1[5]     : 149       : output : TTL               :         :           : N              
 VCC_INT                      : 150       : power  :                   : 5.0V    :           :                
-debug_regfile_output2[4]     : 151       : output : TTL               :         :           : N              
-debug_regfile_output1[0]     : 152       : output : TTL               :         :           : N              
-debug_jump_mux2result[5]     : 153       : output : TTL               :         :           : N              
-debug_signextender[7]        : 154       : output : TTL               :         :           : N              
+debug_regfile_output2[5]     : 151       : output : TTL               :         :           : N              
+debug_decod_Immediate[5]     : 152       : output : TTL               :         :           : N              
+debug_regfile_output1[4]     : 153       : output : TTL               :         :           : N              
+debug_contr_JumpReg          : 154       : output : TTL               :         :           : N              
 GND_INT                      : 155       : gnd    :                   :         :           :                
-debug_alu_zero               : 156       : output : TTL               :         :           : N              
-debug_decod_Immediate[4]     : 157       : output : TTL               :         :           : N              
-debug_decod_Immediate[3]     : 158       : output : TTL               :         :           : N              
-debug_contr_JumpReg          : 159       : output : TTL               :         :           : N              
+debug_jump_mux2result[7]     : 156       : output : TTL               :         :           : N              
+debug_decod_Immediate[0]     : 157       : output : TTL               :         :           : N              
+debug_decod_aluCode[0]       : 158       : output : TTL               :         :           : N              
+debug_alu_inputTwo[5]        : 159       : output : TTL               :         :           : N              
 VCC_INT                      : 160       : power  :                   : 5.0V    :           :                
-debug_regfile_output1[2]     : 161       : output : TTL               :         :           : N              
-debug_decod_rs[2]            : 162       : output : TTL               :         :           : N              
-debug_plusone[7]             : 163       : output : TTL               :         :           : N              
-debug_decod_Immediate[2]     : 164       : output : TTL               :         :           : N              
+debug_ram_muxedout[7]        : 161       : output : TTL               :         :           : N              
+debug_contr_MemRead          : 162       : output : TTL               :         :           : N              
+debug_decod_rs[1]            : 163       : output : TTL               :         :           : N              
+debug_ram_muxedout[3]        : 164       : output : TTL               :         :           : N              
 GND_INT                      : 165       : gnd    :                   :         :           :                
-debug_alu_inputTwo[7]        : 166       : output : TTL               :         :           : N              
-debug_alucont_aluCode[1]     : 167       : output : TTL               :         :           : N              
-debug_jump_mux1result[0]     : 168       : output : TTL               :         :           : N              
-debug_decod_aluCode[1]       : 169       : output : TTL               :         :           : N              
+debug_decod_opCode[2]        : 166       : output : TTL               :         :           : N              
+debug_decod_Immediate[1]     : 167       : output : TTL               :         :           : N              
+debug_contr_ALUOp[1]         : 168       : output : TTL               :         :           : N              
+debug_contr_ALUSrc           : 169       : output : TTL               :         :           : N              
 VCC_INT                      : 170       : power  :                   : 5.0V    :           :                
-debug_contr_ALUSrc           : 171       : output : TTL               :         :           : N              
-debug_decod_opCode[0]        : 172       : output : TTL               :         :           : N              
-debug_clock4                 : 173       : output : TTL               :         :           : N              
-debug_decod_opCode[3]        : 174       : output : TTL               :         :           : N              
-debug_alu_aluCode[1]         : 175       : output : TTL               :         :           : N              
+debug_decod_aluCode[2]       : 171       : output : TTL               :         :           : N              
+debug_clock1                 : 172       : output : TTL               :         :           : N              
+debug_decod_Immediate[3]     : 173       : output : TTL               :         :           : N              
+debug_decod_rt[0]            : 174       : output : TTL               :         :           : N              
+debug_decod_Immediate[2]     : 175       : output : TTL               :         :           : N              
 GND_INT                      : 176       : gnd    :                   :         :           :                
 TDI                          : 177       : input  :                   :         :           :                
 nCE                          : 178       : input  :                   :         :           :                
 DCLK                         : 179       : bidir  :                   :         :           :                
 DATA0                        : 180       : input  :                   :         :           :                
-debug_alucont_output[2]      : 181       : output : TTL               :         :           : N              
-debug_plusone[5]             : 182       : output : TTL               :         :           : N              
-debug_contr_RegWrite         : 183       : output : TTL               :         :           : N              
-RESERVED                     : 184       :        :                   :         :           :                
-debug_contr_ALUOp[2]         : 185       : output : TTL               :         :           : N              
-debug_alucont_aluOp[1]       : 186       : output : TTL               :         :           : N              
-debug_jump_mux3result[6]     : 187       : output : TTL               :         :           : N              
-RESERVED                     : 188       :        :                   :         :           :                
+debug_alu_inputOne[7]        : 181       : output : TTL               :         :           : N              
+RESERVED                     : 182       :        :                   :         :           :                
+debug_alu_output[0]          : 183       : output : TTL               :         :           : N              
+debug_jump_mux1result[1]     : 184       : output : TTL               :         :           : N              
+debug_alucont_aluCode[0]     : 185       : output : TTL               :         :           : N              
+debug_jump_mux2result[5]     : 186       : output : TTL               :         :           : N              
+debug_alucont_aluOp[0]       : 187       : output : TTL               :         :           : N              
+debug_alu_aluCode[0]         : 188       : output : TTL               :         :           : N              
 VCC_INT                      : 189       : power  :                   : 5.0V    :           :                
-debug_plusone[2]             : 190       : output : TTL               :         :           : N              
-debug_jump_mux1sel           : 191       : output : TTL               :         :           : N              
-debug_alu_inputTwo[4]        : 192       : output : TTL               :         :           : N              
-debug_clock2                 : 193       : output : TTL               :         :           : N              
-debug_alu_inputTwo[6]        : 194       : output : TTL               :         :           : N              
-debug_alu_inputOne[3]        : 195       : output : TTL               :         :           : N              
-debug_alu_inputTwo[5]        : 196       : output : TTL               :         :           : N              
+debug_jump_mux2result[0]     : 190       : output : TTL               :         :           : N              
+debug_signextender[3]        : 191       : output : TTL               :         :           : N              
+debug_contr_Branch           : 192       : output : TTL               :         :           : N              
+debug_alucont_aluOp[2]       : 193       : output : TTL               :         :           : N              
+debug_alu_inputOne[3]        : 194       : output : TTL               :         :           : N              
+debug_jump_mux3result[7]     : 195       : output : TTL               :         :           : N              
+debug_jump_mux1result[4]     : 196       : output : TTL               :         :           : N              
 GND_INT                      : 197       : gnd    :                   :         :           :                
-debug_regfile_output2[2]     : 198       : output : TTL               :         :           : N              
-debug_alu_inputTwo[2]        : 199       : output : TTL               :         :           : N              
-debug_regfile_output2[1]     : 200       : output : TTL               :         :           : N              
-debug_signextender[1]        : 201       : output : TTL               :         :           : N              
-debug_alu_inputTwo[1]        : 202       : output : TTL               :         :           : N              
-debug_decod_Immediate[1]     : 203       : output : TTL               :         :           : N              
-debug_signextender[4]        : 204       : output : TTL               :         :           : N              
+debug_alu_zero               : 198       : output : TTL               :         :           : N              
+debug_alu_aluCode[1]         : 199       : output : TTL               :         :           : N              
+debug_alu_output[5]          : 200       : output : TTL               :         :           : N              
+debug_alu_inputTwo[0]        : 201       : output : TTL               :         :           : N              
+debug_signextender[7]        : 202       : output : TTL               :         :           : N              
+debug_alu_inputOne[6]        : 203       : output : TTL               :         :           : N              
+debug_clock3                 : 204       : output : TTL               :         :           : N              
 VCC_INT                      : 205       : power  :                   : 5.0V    :           :                
-debug_jump_mux1result[3]     : 206       : output : TTL               :         :           : N              
-debug_signextender[0]        : 207       : output : TTL               :         :           : N              
-debug_regfile_output1[7]     : 208       : output : TTL               :         :           : N              
-debug_decod_Immediate[0]     : 209       : output : TTL               :         :           : N              
+debug_clock2                 : 206       : output : TTL               :         :           : N              
+debug_plusone[4]             : 207       : output : TTL               :         :           : N              
+debug_alucont_output[1]      : 208       : output : TTL               :         :           : N              
+debug_alu_output[4]          : 209       : output : TTL               :         :           : N              
 GND+                         : 210       :        :                   :         :           :                
 GND+                         : 211       :        :                   :         :           :                
 reset                        : 212       : input  : TTL               :         :           : N              
-RESERVED                     : 213       :        :                   :         :           :                
-debug_alu_inputOne[2]        : 214       : output : TTL               :         :           : N              
-debug_pc[4]                  : 215       : output : TTL               :         :           : N              
+debug_regfile_output1[7]     : 213       : output : TTL               :         :           : N              
+debug_regfile_output1[6]     : 214       : output : TTL               :         :           : N              
+debug_alu_inputOne[2]        : 215       : output : TTL               :         :           : N              
 GND_INT                      : 216       : gnd    :                   :         :           :                
-debug_contr_RegDest          : 217       : output : TTL               :         :           : N              
-debug_jump_mux3result[0]     : 218       : output : TTL               :         :           : N              
-debug_jump_mux1result[5]     : 219       : output : TTL               :         :           : N              
-debug_jump_mux2result[7]     : 220       : output : TTL               :         :           : N              
-RESERVED                     : 221       :        :                   :         :           :                
-debug_jump_mux3result[4]     : 222       : output : TTL               :         :           : N              
-debug_alu_output[4]          : 223       : output : TTL               :         :           : N              
+debug_jump_mux1result[3]     : 217       : output : TTL               :         :           : N              
+debug_contr_RegDest          : 218       : output : TTL               :         :           : N              
+debug_alu_inputTwo[2]        : 219       : output : TTL               :         :           : N              
+debug_regfile_output2[0]     : 220       : output : TTL               :         :           : N              
+debug_decod_rt[1]            : 221       : output : TTL               :         :           : N              
+debug_alu_inputOne[0]        : 222       : output : TTL               :         :           : N              
+debug_alu_inputTwo[1]        : 223       : output : TTL               :         :           : N              
 VCC_INT                      : 224       : power  :                   : 5.0V    :           :                
-debug_jump_mux3result[2]     : 225       : output : TTL               :         :           : N              
-debug_regfile_output2[0]     : 226       : output : TTL               :         :           : N              
-debug_alu_inputOne[5]        : 227       : output : TTL               :         :           : N              
-debug_alu_inputOne[4]        : 228       : output : TTL               :         :           : N              
-debug_signextender[3]        : 229       : output : TTL               :         :           : N              
-debug_plusone[6]             : 230       : output : TTL               :         :           : N              
-debug_decod_rt[0]            : 231       : output : TTL               :         :           : N              
+debug_signextender[1]        : 225       : output : TTL               :         :           : N              
+debug_regfile_output2[2]     : 226       : output : TTL               :         :           : N              
+debug_jump_mux1result[5]     : 227       : output : TTL               :         :           : N              
+debug_plusone[5]             : 228       : output : TTL               :         :           : N              
+debug_signextender[4]        : 229       : output : TTL               :         :           : N              
+debug_regfile_output2[1]     : 230       : output : TTL               :         :           : N              
+debug_jump_mux3result[1]     : 231       : output : TTL               :         :           : N              
 GND_INT                      : 232       : gnd    :                   :         :           :                
-debug_alu_inputOne[6]        : 233       : output : TTL               :         :           : N              
-debug_clock3                 : 234       : output : TTL               :         :           : N              
-debug_jump_mux2result[3]     : 235       : output : TTL               :         :           : N              
-debug_clock0                 : 236       : output : TTL               :         :           : N              
-debug_plusone[3]             : 237       : output : TTL               :         :           : N              
-debug_jump_mux3sel           : 238       : output : TTL               :         :           : N              
-debug_plusone[4]             : 239       : output : TTL               :         :           : N              
-debug_regfile_output2[6]     : 240       : output : TTL               :         :           : N              
+debug_signextender[0]        : 233       : output : TTL               :         :           : N              
+debug_regfile_output2[3]     : 234       : output : TTL               :         :           : N              
+debug_jump_mux3sel           : 235       : output : TTL               :         :           : N              
+debug_ramhelper_digit_l[0]   : 236       : output : TTL               :         :           : N              
+debug_ramhelper_digit_l[1]   : 237       : output : TTL               :         :           : N              
+debug_regfile_output2[6]     : 238       : output : TTL               :         :           : N              
+debug_alu_output[6]          : 239       : output : TTL               :         :           : N              
+debug_alu_output[7]          : 240       : output : TTL               :         :           : N              

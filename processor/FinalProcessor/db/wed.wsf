@@ -146,11 +146,11 @@ VECTOR("C:/git/processor/processor/FinalProcessor/FinalProcessor.vwf")
 VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 {
 	ZOOM{
-		ZBEGIN = 59744;
-		ZEND = 60401;
-		NUMERATOR = 1123;
-		DENOMINATOR = 548;
-		TOP_INDEX = 12;
+		ZBEGIN = 59984;
+		ZEND = 60090;
+		NUMERATOR = 1256;
+		DENOMINATOR = 106;
+		TOP_INDEX = 0;
 	}
 	CLOCK{
 		PERIOD = 10000;
@@ -265,7 +265,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_alu_aluCode";
+		SIGNAL = "debug_decod_aluCode";
 		INDEX = 13;
 		FORMAT = T;
 		SCALE = 1;
@@ -273,7 +273,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_alu_aluCode[2]";
+		SIGNAL = "debug_decod_aluCode[2]";
 		INDEX = 14;
 		FORMAT = E;
 		SCALE = 1;
@@ -281,7 +281,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_alu_aluCode[1]";
+		SIGNAL = "debug_decod_aluCode[1]";
 		INDEX = 15;
 		FORMAT = E;
 		SCALE = 1;
@@ -289,7 +289,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_alu_aluCode[0]";
+		SIGNAL = "debug_decod_aluCode[0]";
 		INDEX = 16;
 		FORMAT = E;
 		SCALE = 1;
@@ -297,7 +297,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_alu_inputOne";
+		SIGNAL = "debug_decod_Immediate";
 		INDEX = 17;
 		FORMAT = T;
 		SCALE = 1;
@@ -305,7 +305,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_alu_inputOne[7]";
+		SIGNAL = "debug_decod_Immediate[5]";
 		INDEX = 18;
 		FORMAT = E;
 		SCALE = 1;
@@ -313,7 +313,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_alu_inputOne[6]";
+		SIGNAL = "debug_decod_Immediate[4]";
 		INDEX = 19;
 		FORMAT = E;
 		SCALE = 1;
@@ -321,7 +321,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_alu_inputOne[5]";
+		SIGNAL = "debug_decod_Immediate[3]";
 		INDEX = 20;
 		FORMAT = E;
 		SCALE = 1;
@@ -329,7 +329,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_alu_inputOne[4]";
+		SIGNAL = "debug_decod_Immediate[2]";
 		INDEX = 21;
 		FORMAT = E;
 		SCALE = 1;
@@ -337,7 +337,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_alu_inputOne[3]";
+		SIGNAL = "debug_decod_Immediate[1]";
 		INDEX = 22;
 		FORMAT = E;
 		SCALE = 1;
@@ -345,7 +345,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_alu_inputOne[2]";
+		SIGNAL = "debug_decod_Immediate[0]";
 		INDEX = 23;
 		FORMAT = E;
 		SCALE = 1;
@@ -353,520 +353,8 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_alu_inputOne[1]";
-		INDEX = 24;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alu_inputOne[0]";
-		INDEX = 25;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alu_inputTwo";
-		INDEX = 26;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alu_inputTwo[7]";
-		INDEX = 27;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alu_inputTwo[6]";
-		INDEX = 28;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alu_inputTwo[5]";
-		INDEX = 29;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alu_inputTwo[4]";
-		INDEX = 30;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alu_inputTwo[3]";
-		INDEX = 31;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alu_inputTwo[2]";
-		INDEX = 32;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alu_inputTwo[1]";
-		INDEX = 33;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alu_inputTwo[0]";
-		INDEX = 34;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alu_output";
-		INDEX = 35;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alu_output[7]";
-		INDEX = 36;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alu_output[6]";
-		INDEX = 37;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alu_output[5]";
-		INDEX = 38;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alu_output[4]";
-		INDEX = 39;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alu_output[3]";
-		INDEX = 40;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alu_output[2]";
-		INDEX = 41;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alu_output[1]";
-		INDEX = 42;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alu_output[0]";
-		INDEX = 43;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alu_overflow";
-		INDEX = 44;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alu_zero";
-		INDEX = 45;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alucont_aluCode";
-		INDEX = 46;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alucont_aluCode[2]";
-		INDEX = 47;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alucont_aluCode[1]";
-		INDEX = 48;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alucont_aluCode[0]";
-		INDEX = 49;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alucont_aluOp";
-		INDEX = 50;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alucont_aluOp[2]";
-		INDEX = 51;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alucont_aluOp[1]";
-		INDEX = 52;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alucont_aluOp[0]";
-		INDEX = 53;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alucont_output";
-		INDEX = 54;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alucont_output[2]";
-		INDEX = 55;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alucont_output[1]";
-		INDEX = 56;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_alucont_output[0]";
-		INDEX = 57;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_clk_board";
-		INDEX = 58;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_clock0";
-		INDEX = 59;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_clock1";
-		INDEX = 60;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_clock2";
-		INDEX = 61;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_clock3";
-		INDEX = 62;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_clock4";
-		INDEX = 63;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_contr_ALUOp";
-		INDEX = 64;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_contr_ALUOp[2]";
-		INDEX = 65;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_contr_ALUOp[1]";
-		INDEX = 66;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_contr_ALUOp[0]";
-		INDEX = 67;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_contr_ALUSrc";
-		INDEX = 68;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_contr_Branch";
-		INDEX = 69;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_contr_Jump";
-		INDEX = 70;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_contr_JumpReg";
-		INDEX = 71;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_contr_MemRead";
-		INDEX = 72;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_contr_MemReg";
-		INDEX = 73;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_contr_MemWrite";
-		INDEX = 74;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_contr_RegDest";
-		INDEX = 75;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_contr_RegWrite";
-		INDEX = 76;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_decod_aluCode";
-		INDEX = 77;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_decod_aluCode[2]";
-		INDEX = 78;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_decod_aluCode[1]";
-		INDEX = 79;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_decod_aluCode[0]";
-		INDEX = 80;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_decod_Immediate";
-		INDEX = 81;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_decod_Immediate[5]";
-		INDEX = 82;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_decod_Immediate[4]";
-		INDEX = 83;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_decod_Immediate[3]";
-		INDEX = 84;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_decod_Immediate[2]";
-		INDEX = 85;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_decod_Immediate[1]";
-		INDEX = 86;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_decod_Immediate[0]";
-		INDEX = 87;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
 		SIGNAL = "debug_decod_opCode";
-		INDEX = 88;
+		INDEX = 24;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -874,7 +362,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_decod_opCode[3]";
-		INDEX = 89;
+		INDEX = 25;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -882,7 +370,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_decod_opCode[2]";
-		INDEX = 90;
+		INDEX = 26;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -890,7 +378,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_decod_opCode[1]";
-		INDEX = 91;
+		INDEX = 27;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -898,7 +386,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_decod_opCode[0]";
-		INDEX = 92;
+		INDEX = 28;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -906,7 +394,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_decod_rd";
-		INDEX = 93;
+		INDEX = 29;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -914,7 +402,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_decod_rd[2]";
-		INDEX = 94;
+		INDEX = 30;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -922,7 +410,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_decod_rd[1]";
-		INDEX = 95;
+		INDEX = 31;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -930,7 +418,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_decod_rd[0]";
-		INDEX = 96;
+		INDEX = 32;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -938,7 +426,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_decod_rs";
-		INDEX = 97;
+		INDEX = 33;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -946,7 +434,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_decod_rs[2]";
-		INDEX = 98;
+		INDEX = 34;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -954,7 +442,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_decod_rs[1]";
-		INDEX = 99;
+		INDEX = 35;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -962,7 +450,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_decod_rs[0]";
-		INDEX = 100;
+		INDEX = 36;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -970,7 +458,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_decod_rt";
-		INDEX = 101;
+		INDEX = 37;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -978,7 +466,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_decod_rt[2]";
-		INDEX = 102;
+		INDEX = 38;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -986,7 +474,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_decod_rt[1]";
-		INDEX = 103;
+		INDEX = 39;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -994,391 +482,175 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_decod_rt[0]";
-		INDEX = 104;
+		INDEX = 40;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_jump_mux1result";
-		INDEX = 105;
+		SIGNAL = "debug_contr_ALUOp";
+		INDEX = 41;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_jump_mux1result[7]";
-		INDEX = 106;
+		SIGNAL = "debug_contr_ALUOp[2]";
+		INDEX = 42;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_jump_mux1result[6]";
-		INDEX = 107;
+		SIGNAL = "debug_contr_ALUOp[1]";
+		INDEX = 43;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_jump_mux1result[5]";
-		INDEX = 108;
+		SIGNAL = "debug_contr_ALUOp[0]";
+		INDEX = 44;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_jump_mux1result[4]";
-		INDEX = 109;
+		SIGNAL = "debug_contr_ALUSrc";
+		INDEX = 45;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_jump_mux1result[3]";
-		INDEX = 110;
+		SIGNAL = "debug_contr_Branch";
+		INDEX = 46;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_jump_mux1result[2]";
-		INDEX = 111;
+		SIGNAL = "debug_contr_Jump";
+		INDEX = 47;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_jump_mux1result[1]";
-		INDEX = 112;
+		SIGNAL = "debug_contr_JumpReg";
+		INDEX = 48;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_jump_mux1result[0]";
-		INDEX = 113;
+		SIGNAL = "debug_contr_MemRead";
+		INDEX = 49;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_jump_mux1sel";
-		INDEX = 114;
+		SIGNAL = "debug_contr_MemReg";
+		INDEX = 50;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_jump_mux2result";
-		INDEX = 115;
+		SIGNAL = "debug_contr_MemWrite";
+		INDEX = 51;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_contr_RegDest";
+		INDEX = 52;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_ram_muxedout";
+		INDEX = 53;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_jump_mux2result[7]";
-		INDEX = 116;
+		SIGNAL = "debug_ram_muxedout[7]";
+		INDEX = 54;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_jump_mux2result[6]";
-		INDEX = 117;
+		SIGNAL = "debug_ram_muxedout[6]";
+		INDEX = 55;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_jump_mux2result[5]";
-		INDEX = 118;
+		SIGNAL = "debug_ram_muxedout[5]";
+		INDEX = 56;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_jump_mux2result[4]";
-		INDEX = 119;
+		SIGNAL = "debug_ram_muxedout[4]";
+		INDEX = 57;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_jump_mux2result[3]";
-		INDEX = 120;
+		SIGNAL = "debug_ram_muxedout[3]";
+		INDEX = 58;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_jump_mux2result[2]";
-		INDEX = 121;
+		SIGNAL = "debug_ram_muxedout[2]";
+		INDEX = 59;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_jump_mux2result[1]";
-		INDEX = 122;
+		SIGNAL = "debug_ram_muxedout[1]";
+		INDEX = 60;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_jump_mux2result[0]";
-		INDEX = 123;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_jump_mux2sel";
-		INDEX = 124;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_jump_mux3result";
-		INDEX = 125;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_jump_mux3result[7]";
-		INDEX = 126;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_jump_mux3result[6]";
-		INDEX = 127;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_jump_mux3result[5]";
-		INDEX = 128;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_jump_mux3result[4]";
-		INDEX = 129;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_jump_mux3result[3]";
-		INDEX = 130;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_jump_mux3result[2]";
-		INDEX = 131;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_jump_mux3result[1]";
-		INDEX = 132;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_jump_mux3result[0]";
-		INDEX = 133;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_jump_mux3sel";
-		INDEX = 134;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_pc";
-		INDEX = 135;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_pc[7]";
-		INDEX = 136;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_pc[6]";
-		INDEX = 137;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_pc[5]";
-		INDEX = 138;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_pc[4]";
-		INDEX = 139;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_pc[3]";
-		INDEX = 140;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_pc[2]";
-		INDEX = 141;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_pc[1]";
-		INDEX = 142;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_pc[0]";
-		INDEX = 143;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_plusone";
-		INDEX = 144;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_plusone[7]";
-		INDEX = 145;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_plusone[6]";
-		INDEX = 146;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_plusone[5]";
-		INDEX = 147;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_plusone[4]";
-		INDEX = 148;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_plusone[3]";
-		INDEX = 149;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_plusone[2]";
-		INDEX = 150;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_plusone[1]";
-		INDEX = 151;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_plusone[0]";
-		INDEX = 152;
+		SIGNAL = "debug_ram_muxedout[0]";
+		INDEX = 61;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1386,7 +658,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_regfile_output1";
-		INDEX = 153;
+		INDEX = 62;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1394,7 +666,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_regfile_output1[7]";
-		INDEX = 154;
+		INDEX = 63;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1402,7 +674,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_regfile_output1[6]";
-		INDEX = 155;
+		INDEX = 64;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1410,7 +682,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_regfile_output1[5]";
-		INDEX = 156;
+		INDEX = 65;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1418,7 +690,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_regfile_output1[4]";
-		INDEX = 157;
+		INDEX = 66;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1426,7 +698,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_regfile_output1[3]";
-		INDEX = 158;
+		INDEX = 67;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1434,7 +706,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_regfile_output1[2]";
-		INDEX = 159;
+		INDEX = 68;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1442,7 +714,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_regfile_output1[1]";
-		INDEX = 160;
+		INDEX = 69;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1450,7 +722,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_regfile_output1[0]";
-		INDEX = 161;
+		INDEX = 70;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1458,7 +730,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_regfile_output2";
-		INDEX = 162;
+		INDEX = 71;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1466,7 +738,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_regfile_output2[7]";
-		INDEX = 163;
+		INDEX = 72;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1474,7 +746,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_regfile_output2[6]";
-		INDEX = 164;
+		INDEX = 73;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1482,7 +754,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_regfile_output2[5]";
-		INDEX = 165;
+		INDEX = 74;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1490,7 +762,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_regfile_output2[4]";
-		INDEX = 166;
+		INDEX = 75;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1498,7 +770,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_regfile_output2[3]";
-		INDEX = 167;
+		INDEX = 76;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1506,7 +778,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_regfile_output2[2]";
-		INDEX = 168;
+		INDEX = 77;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1514,7 +786,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_regfile_output2[1]";
-		INDEX = 169;
+		INDEX = 78;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1522,79 +794,39 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "debug_regfile_output2[0]";
-		INDEX = 170;
+		INDEX = 79;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_signextender";
-		INDEX = 171;
+		SIGNAL = "debug_regdest_mux";
+		INDEX = 80;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_signextender[7]";
-		INDEX = 172;
+		SIGNAL = "debug_regdest_mux[2]";
+		INDEX = 81;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_signextender[6]";
-		INDEX = 173;
+		SIGNAL = "debug_regdest_mux[1]";
+		INDEX = 82;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "debug_signextender[5]";
-		INDEX = 174;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_signextender[4]";
-		INDEX = 175;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_signextender[3]";
-		INDEX = 176;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_signextender[2]";
-		INDEX = 177;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_signextender[1]";
-		INDEX = 178;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "debug_signextender[0]";
-		INDEX = 179;
+		SIGNAL = "debug_regdest_mux[0]";
+		INDEX = 83;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1602,7 +834,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "decimal_l";
-		INDEX = 180;
+		INDEX = 84;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1610,6 +842,774 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "decimal_r";
+		INDEX = 85;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_contr_RegWrite";
+		INDEX = 86;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_clock0";
+		INDEX = 87;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_clock1";
+		INDEX = 88;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_clock2";
+		INDEX = 89;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_clock3";
+		INDEX = 90;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_clock4";
+		INDEX = 91;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_zero";
+		INDEX = 92;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_overflow";
+		INDEX = 93;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_jump_mux1sel";
+		INDEX = 94;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_jump_mux2sel";
+		INDEX = 95;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_jump_mux3sel";
+		INDEX = 96;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_aluCode[2]";
+		INDEX = 97;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_aluCode[1]";
+		INDEX = 98;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_aluCode[0]";
+		INDEX = 99;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_inputOne[7]";
+		INDEX = 100;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_inputOne[6]";
+		INDEX = 101;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_inputOne[5]";
+		INDEX = 102;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_inputOne[4]";
+		INDEX = 103;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_inputOne[3]";
+		INDEX = 104;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_inputOne[2]";
+		INDEX = 105;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_inputOne[1]";
+		INDEX = 106;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_inputOne[0]";
+		INDEX = 107;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_inputTwo[7]";
+		INDEX = 108;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_inputTwo[6]";
+		INDEX = 109;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_inputTwo[5]";
+		INDEX = 110;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_inputTwo[4]";
+		INDEX = 111;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_inputTwo[3]";
+		INDEX = 112;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_inputTwo[2]";
+		INDEX = 113;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_inputTwo[1]";
+		INDEX = 114;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_inputTwo[0]";
+		INDEX = 115;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_output[7]";
+		INDEX = 116;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_output[6]";
+		INDEX = 117;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_output[5]";
+		INDEX = 118;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_output[4]";
+		INDEX = 119;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_output[3]";
+		INDEX = 120;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_output[2]";
+		INDEX = 121;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_output[1]";
+		INDEX = 122;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alu_output[0]";
+		INDEX = 123;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alucont_aluCode[2]";
+		INDEX = 124;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alucont_aluCode[1]";
+		INDEX = 125;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alucont_aluCode[0]";
+		INDEX = 126;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alucont_aluOp[2]";
+		INDEX = 127;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alucont_aluOp[1]";
+		INDEX = 128;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alucont_aluOp[0]";
+		INDEX = 129;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alucont_output[2]";
+		INDEX = 130;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alucont_output[1]";
+		INDEX = 131;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_alucont_output[0]";
+		INDEX = 132;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_jump_mux1result[7]";
+		INDEX = 133;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_jump_mux1result[6]";
+		INDEX = 134;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_jump_mux1result[5]";
+		INDEX = 135;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_jump_mux1result[4]";
+		INDEX = 136;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_jump_mux1result[3]";
+		INDEX = 137;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_jump_mux1result[2]";
+		INDEX = 138;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_jump_mux1result[1]";
+		INDEX = 139;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_jump_mux1result[0]";
+		INDEX = 140;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_jump_mux2result[7]";
+		INDEX = 141;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_jump_mux2result[6]";
+		INDEX = 142;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_jump_mux2result[5]";
+		INDEX = 143;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_jump_mux2result[4]";
+		INDEX = 144;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_jump_mux2result[3]";
+		INDEX = 145;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_jump_mux2result[2]";
+		INDEX = 146;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_jump_mux2result[1]";
+		INDEX = 147;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_jump_mux2result[0]";
+		INDEX = 148;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_jump_mux3result[7]";
+		INDEX = 149;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_jump_mux3result[6]";
+		INDEX = 150;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_jump_mux3result[5]";
+		INDEX = 151;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_jump_mux3result[4]";
+		INDEX = 152;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_jump_mux3result[3]";
+		INDEX = 153;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_jump_mux3result[2]";
+		INDEX = 154;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_jump_mux3result[1]";
+		INDEX = 155;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_jump_mux3result[0]";
+		INDEX = 156;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_plusone[7]";
+		INDEX = 157;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_plusone[6]";
+		INDEX = 158;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_plusone[5]";
+		INDEX = 159;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_plusone[4]";
+		INDEX = 160;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_plusone[3]";
+		INDEX = 161;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_plusone[2]";
+		INDEX = 162;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_plusone[1]";
+		INDEX = 163;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_plusone[0]";
+		INDEX = 164;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_ramhelper_digit_l[3]";
+		INDEX = 165;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_ramhelper_digit_l[2]";
+		INDEX = 166;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_ramhelper_digit_l[1]";
+		INDEX = 167;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_ramhelper_digit_l[0]";
+		INDEX = 168;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_ramhelper_digit_r[3]";
+		INDEX = 169;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_ramhelper_digit_r[2]";
+		INDEX = 170;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_ramhelper_digit_r[1]";
+		INDEX = 171;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_ramhelper_digit_r[0]";
+		INDEX = 172;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_signextender[7]";
+		INDEX = 173;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_signextender[6]";
+		INDEX = 174;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_signextender[5]";
+		INDEX = 175;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_signextender[4]";
+		INDEX = 176;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_signextender[3]";
+		INDEX = 177;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_signextender[2]";
+		INDEX = 178;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_signextender[1]";
+		INDEX = 179;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug_signextender[0]";
+		INDEX = 180;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "digit_l[6]";
 		INDEX = 181;
 		FORMAT = E;
 		SCALE = 1;
@@ -1617,24 +1617,8 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digit_l";
-		INDEX = 182;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "digit_l[6]";
-		INDEX = 183;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
 		SIGNAL = "digit_l[5]";
-		INDEX = 184;
+		INDEX = 182;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1642,7 +1626,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "digit_l[4]";
-		INDEX = 185;
+		INDEX = 183;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1650,7 +1634,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "digit_l[3]";
-		INDEX = 186;
+		INDEX = 184;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1658,7 +1642,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "digit_l[2]";
-		INDEX = 187;
+		INDEX = 185;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1666,7 +1650,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "digit_l[1]";
-		INDEX = 188;
+		INDEX = 186;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1674,23 +1658,15 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "digit_l[0]";
-		INDEX = 189;
+		INDEX = 187;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digit_r";
-		INDEX = 190;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
 		SIGNAL = "digit_r[6]";
-		INDEX = 191;
+		INDEX = 188;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1698,7 +1674,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "digit_r[5]";
-		INDEX = 192;
+		INDEX = 189;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1706,7 +1682,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "digit_r[4]";
-		INDEX = 193;
+		INDEX = 190;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1714,7 +1690,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "digit_r[3]";
-		INDEX = 194;
+		INDEX = 191;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1722,7 +1698,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "digit_r[2]";
-		INDEX = 195;
+		INDEX = 192;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1730,7 +1706,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "digit_r[1]";
-		INDEX = 196;
+		INDEX = 193;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1738,7 +1714,7 @@ VECTOR("C:/git/processor/processor/FinalProcessor/db/FinalProcessor.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "digit_r[0]";
-		INDEX = 197;
+		INDEX = 194;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
