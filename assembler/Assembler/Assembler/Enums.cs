@@ -8,6 +8,6 @@ namespace Assembler
 {
     public enum InstructionType
     {
-        R, I, J
+        R, I, J, NoOp
     }
 }
