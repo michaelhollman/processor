@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for FinalProcessor
-Thu Dec 19 03:46:44 2013
+Thu Dec 19 09:49:07 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -657,7 +657,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Dec 19 03:46:44 2013
+    Info: Processing started: Thu Dec 19 09:49:06 2013
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off FinalProcessor -c FinalProcessor
 Info: Started post-fitting delay annotation
 Info: Delay annotation completed successfully
@@ -859,8 +859,8 @@ Info: th for register "PC:inst10|output[4]" (data pin = "reset", clock pin = "bo
         Info: Total interconnect delay = 7.000 ns ( 58.82 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 18 warnings
     Info: Peak virtual memory: 187 megabytes
-    Info: Processing ended: Thu Dec 19 03:46:44 2013
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Thu Dec 19 09:49:07 2013
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
 
