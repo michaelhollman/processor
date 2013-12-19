@@ -23,6 +23,11 @@ namespace Assembler
             var labels = new List<Label>();
             var commands = new List<Command>();
 
+            if (commands.Count > 255)
+            {
+                throw new Exception("The maximum number of instructions is 255"); // We add a noop at the beginning
+            }
+
             // First pass.  Parse out labels and commands
             for (var i = 0; i < AssemblyCode.Count(); i++)
             {
@@ -307,7 +312,10 @@ namespace Assembler
         {
             if (Regex.IsMatch(value, @"^\d+$")) // X
             {
-                return int.Parse(value);
+                var num =  int.Parse(value);
+                if (num > 63)
+                    throw new Exception("Immediate value can be at most 6 bits");
+                return num;
             }
             else
             {
